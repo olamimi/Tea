@@ -18,7 +18,7 @@ document.body.appendChild(renderer.domElement);
 const camera = new THREE.PerspectiveCamera(40, W / H, 0.2, 4000);
 const composer = new EffectComposer(renderer);
 const renderPass = new RenderPass(new THREE.Scene(), camera); composer.addPass(renderPass);
-const bloom = new UnrealBloomPass(new THREE.Vector2(W / 2, H / 2), 0.32, 0.55, 0.86); composer.addPass(bloom);
+const bloom = new UnrealBloomPass(new THREE.Vector2(W / 2, H / 2), 0.3, 0.5, 1.6); composer.addPass(bloom);
 composer.addPass(new OutputPass());
 const acc = document.createElement('canvas'); acc.width = W; acc.height = H; const actx = acc.getContext('2d');
 

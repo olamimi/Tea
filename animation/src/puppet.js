@@ -177,7 +177,7 @@ function mats() {
   if (MAT.ink) return MAT;
   MAT.ink = new THREE.MeshBasicMaterial({ color: 0x141414 });
   MAT.inkBack = new THREE.MeshBasicMaterial({ color: 0x141414, side: THREE.BackSide });
-  MAT.skin = toon(0xfbf9f4, { emissive: 0xfbf9f4, emissiveIntensity: 0.45 });
+  MAT.skin = toon(0xfbf9f4, { emissive: 0xfbf9f4, emissiveIntensity: 0.3 });
   MAT.shoe = new THREE.MeshStandardMaterial({ color: 0x2a2320, roughness: 0.6 });
   MAT.metal = new THREE.MeshStandardMaterial({ color: 0xaab2bc, metalness: 0.8, roughness: 0.35 });
   MAT.wood = new THREE.MeshStandardMaterial({ color: 0x7a5a34, roughness: 0.8 });
@@ -299,8 +299,8 @@ export class Puppet {
         break;
       }
       case 'helmet': {
-        const dome = mk(new THREE.SphereGeometry(hr * 1.07, 40, 20, 0, Math.PI * 2, 0, Math.PI * 0.42), 0xa9b1bb); dome.material.metalness = 0.25; dome.material.roughness = 0.45; dome.material.emissive = new THREE.Color(0x30343a);
-        const brim = new THREE.Mesh(new THREE.TorusGeometry(hr * 0.98, hr * 0.08, 10, 40), M.gold); brim.rotation.x = Math.PI / 2; brim.position.y = hr * 0.25; h.add(brim);
+        const dome = mk(new THREE.SphereGeometry(hr * 1.07, 40, 20, 0, Math.PI * 2, 0, Math.PI * 0.36), 0xa9b1bb); dome.material.metalness = 0.25; dome.material.roughness = 0.45; dome.material.emissive = new THREE.Color(0x30343a);
+        const brim = new THREE.Mesh(new THREE.TorusGeometry(hr * 0.98, hr * 0.08, 10, 40), M.gold); brim.rotation.x = Math.PI / 2; brim.position.y = hr * 0.43; brim.scale.setScalar(0.92); h.add(brim);
         this.plume = mk(new THREE.SphereGeometry(hr * 0.22, 16, 12), 0xd23b30); this.plume.scale.set(0.5, 1.4, 1.6); this.plume.position.set(0, hr * 1.2, -hr * 0.15);
         break;
       }

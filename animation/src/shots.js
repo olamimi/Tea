@@ -169,7 +169,7 @@ export function buildShots(T) {
         init(H) { H.feast.visible = false; const c = H.cast;
           show(c.duke, V(0, 0.5, -14.2), 0, [
             { t: s0 - 1, expr: 'smug', look: 'camera', pose: 'gesture', work: 'gesture' },
-            { t: tl - 0.15, lean: 20, headLean: 12, eyes: 'half', brows: 'raised', blend: 0.3 },
+            { t: tl - 0.15, lean: 16, headLean: -8, eyes: 'half', brows: 'raised', blend: 0.3 },
             { t: db - 0.05, expr: 'laugh', pose: 'shrug', squash: 1, lean: 4, headLean: -10 }], T.words('decree', 'called', 'doorbell,'));
           show(c.g1, V(-2.2, 0.5, -13.8), 0.3, [{ t: s0 - 1, pose: 'hold', look: head(c.duke) }, { t: db + 0.15, expr: 'laugh' }]);
           show(c.g2, V(2.2, 0.5, -13.8), -0.3, [{ t: s0 - 1, pose: 'hold', expr: 'happy', look: head(c.duke) }, { t: db + 0.1, expr: 'laugh' }]); },
@@ -248,7 +248,7 @@ export function buildShots(T) {
       { at: 0, set: 'world', light: 'night', focus: V(2, 0, 0),
         init(W) { const c = W.cast; W.portc.visible = true; W.rig.group.position.set(0, -50, 0);
           show(c.g1, V(2.3, 8.0, 0.6), V(5.6, 8, 2.6), [
-            { t: s0 - 1, expr: 'smug', pose: 'lean', look: 'camera', lean: 12, headLean: 6 },
+            { t: s0 - 1, expr: 'smug', pose: 'lean', look: 'camera', lean: 10, headLean: -10 },
             { t: tth - 0.05, eyes: 'squint', mouth: 'smirk', headTilt: 12, squash: 1 },
             { t: tt - 0.3, expr: 'laugh', lean: 4 }], T.words('guard', 'Hey,', 'again?'));
           show(c.g2, V(2.2, 8.0, -1.8), V(5.6, 8, 2.6), [{ t: s0 - 1, expr: 'bored', pose: 'hold', look: head(c.g1) }, { t: tth + 0.1, expr: 'happy' }]); },
