@@ -17,15 +17,19 @@ k = Kokoro(str(models / "kokoro-v1.0.onnx"), str(models / "voices-v1.0.bin"))
 
 SR = 24000
 LEAD_IN = 0.15
-GAP = 0.12          # pause between lines (fast, reel-style pacing)
-SHOT_GAP = 0.18     # slightly longer pause when the shot changes
+GAP = 0.08          # pause between lines (fast, reel-style pacing)
+SHOT_GAP = 0.14     # slightly longer pause when the shot changes
 
 
-def trim(a, thresh=0.01):
+def trim(a, thresh=0.004):
+    # generous margins so soft onsets ("sh", "f") and word tails are never clipped
     idx = np.where(np.abs(a) > thresh)[0]
     if len(idx) == 0:
         return a
-    return a[max(0, idx[0] - 240): idx[-1] + 480]
+    a = a[max(0, idx[0] - int(0.06 * SR)): idx[-1] + int(0.12 * SR)]
+    fade = int(0.01 * SR)
+    a[:fade] *= np.linspace(0, 1, fade); a[-fade:] *= np.linspace(1, 0, fade)
+    return a
 
 
 def syllables(word):

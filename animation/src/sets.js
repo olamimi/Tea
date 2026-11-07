@@ -137,7 +137,7 @@ export function makeBellRig({ well = true } = {}) {
   const tail = new THREE.Mesh(new THREE.SphereGeometry(0.08), m.iron); tail.position.x = 0.12; hp.add(tail);
   // ring waves
   const waveMat = () => new THREE.MeshBasicMaterial({ color: 0xffe7a8, transparent: true, opacity: 0, depthWrite: false, blending: THREE.AdditiveBlending, side: THREE.DoubleSide });
-  const waves = [0, 1, 2].map(() => { const w = new THREE.Mesh(new THREE.RingGeometry(0.92, 1, 64), waveMat()); w.position.set(0, 3.7, 0); g.add(w); return w; });
+  const waves = [0, 1, 2].map(() => { const w = new THREE.Mesh(new THREE.RingGeometry(0.95, 1, 64), waveMat()); w.position.set(0, 3.7, 0); g.add(w); return w; });
   let wellParts = null;
   if (well) {
     const wellG = new THREE.Group(); g.add(wellG);
@@ -168,10 +168,10 @@ export function makeBellRig({ well = true } = {}) {
       // bell sway: sum of damped responses
       let sway = 0; for (const s of past.slice(-6)) { const d = t - s; sway += Math.sin(d * 9) * Math.exp(-d * 1.6) * 0.09; }
       pivot.rotation.z = Math.max(-0.35, Math.min(0.35, sway));
-      pivot.position.x = Math.sin(t * 80) * Math.min(0.02, Math.exp(-a * 6) * 0.04);
+      pivot.position.x = 0;
       waves.forEach((w, k) => {
         const age = a - k * 0.1; const life = 0.75;
-        if (age >= 0 && age < life) { const s = 1 + age * 4.5; w.scale.set(s, s, s); w.material.opacity = (1 - age / life) * 0.75; } else w.material.opacity = 0;
+        if (age >= 0 && age < life) { const s = 1 + age * 2.6; w.scale.set(s, s, s); w.material.opacity = (1 - age / life) * 0.32; } else w.material.opacity = 0;
         w.lookAt(camera.position);
       });
       if (this.wellParts) {
@@ -489,7 +489,7 @@ export function buildWorld() {
     day:     { sky: 'day', fog: [0xa9cdea, 140, 900], hemi: [0xcfe6ff, 0x4a6a2a, 1.15], sun: [0xffe6c0, 2.8], sunDir: [40, 70, 35], sunSprite: [[300, 260, -600], 160], moon: false, stars: false, clouds: true, torches: 0, exposure: 1.0 },
     sunset:  { sky: 'sunset', fog: [0xe8835e, 90, 700], hemi: [0xff9a6a, 0x3a2050, 0.9], sun: [0xff8a40, 3.4], sunDir: [10, 14, -60], sunSprite: [[40, 70, -700], 420], moon: false, stars: false, clouds: true, torches: 0, exposure: 1.0 },
     dusk:    { sky: 'sunset', fog: [0xd9805e, 120, 900], hemi: [0xffb080, 0x4a3060, 1.15], sun: [0xffa060, 3.2], sunDir: [50, 45, 110], sunSprite: [[40, 70, -700], 420], moon: false, stars: false, clouds: true, torches: 0, exposure: 1.0 },
-    night:   { sky: 'night', fog: [0x16204a, 60, 520], hemi: [0x4a5ab0, 0x0a1028, 0.45], sun: [0x8aa0ff, 0.55], sunDir: [-30, 60, -40], sunSprite: null, moon: [-120, 150, -520], stars: true, clouds: false, torches: 9, exposure: 0.85 },
+    night:   { sky: 'night', fog: [0x16204a, 60, 520], hemi: [0x4a5ab0, 0x0a1028, 0.6], sun: [0x8aa0ff, 0.55], sunDir: [-30, 60, -40], sunSprite: null, moon: [-120, 150, -520], stars: true, clouds: false, torches: 9, exposure: 0.85 },
     morning: { sky: 'morning', fog: [0xeac39e, 40, 420], hemi: [0xffe0c0, 0x6a5a3a, 1.05], sun: [0xffe0b8, 1.6], sunDir: [60, 40, 20], sunSprite: [[500, 180, 200], 260], moon: false, stars: false, clouds: false, torches: 0, exposure: 1.0 },
   };
   const world = {
@@ -520,9 +520,9 @@ export function buildWorld() {
       if (storm.visible) {
         rain.position.y = -((t * 60) % 6);
         const fl = (t % 2.3) < 0.09 || ((t + 0.8) % 3.1) < 0.06;
-        bolt.material.opacity = fl ? 1 : 0; flash.intensity = fl ? 2.5 : 0; bolt.position.x = 18 + Math.floor(t / 2.3) * 13 % 50 - 25;
+        bolt.material.opacity = fl ? 1 : 0; flash.intensity = fl ? 1.0 : 0; bolt.position.x = 18 + Math.floor(t / 2.3) * 13 % 50 - 25;
       } else flash.intensity = 0;
-      if (flood.visible) { debris.children.forEach((d, i) => { d.position.x += Math.sin(i) * 0.004; d.rotation.z += 0.002 * (i % 3 - 1); }); }
+      if (flood.visible) { debris.children.forEach((d, i) => { d.userData.x ??= d.position.x; d.userData.r ??= d.rotation.z; d.position.x = d.userData.x + Math.sin(i) * 0.12 * t; d.rotation.z = d.userData.r + 0.06 * (i % 3 - 1) * t; }); }
       cart.userData.wheels?.forEach((w) => (w.rotation.y = -t * 3));
       rig.update(t, cam);
       Object.values(cast).forEach((c) => c.update(t, cam));

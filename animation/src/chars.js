@@ -245,7 +245,7 @@ export class Character {
     const breathe = 1 + Math.sin((t + this.seed) * 2.4) * 0.012;
     this.mesh.position.y = hop;
     this.mesh.scale.set(1 / Math.sqrt(sq * breathe), sq * breathe, 1);
-    this.mesh.position.x = this.shake ? Math.sin(t * 60) * 0.03 * this.shake : 0;
+    this.mesh.position.x = this.shake ? (Math.sin(t * 17) + Math.sin(t * 23.3)) * 0.012 * this.shake : 0;
     this.mesh.rotation.z = this.run ? Math.sin(t * 14) * 0.06 : (this.state.expr === 'laugh' ? Math.sin((t + this.seed) * 5) * 0.05 : 0);
   }
 }

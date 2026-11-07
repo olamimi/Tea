@@ -8,14 +8,14 @@ import { buildHall, buildWorld, buildCutaway, MOUNT } from './sets.js';
 import { buildShots } from './shots.js';
 
 const W = 720, H = 1280, FPS = 30;
-const WHIP = 0.14; // seconds of whip-pan on each side of a line change
+const WHIP = 0; // hard cuts (sub-frame whip blur produced ghosting)
 
-const renderer = new THREE.WebGLRenderer({ antialias: true, preserveDrawingBuffer: true });
+const renderer = new THREE.WebGLRenderer({ antialias: true, preserveDrawingBuffer: true, logarithmicDepthBuffer: true });
 renderer.setSize(W, H); renderer.setPixelRatio(1);
 renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 renderer.toneMapping = THREE.NeutralToneMapping; renderer.outputColorSpace = THREE.SRGBColorSpace;
 document.body.appendChild(renderer.domElement);
-const camera = new THREE.PerspectiveCamera(40, W / H, 0.1, 4000);
+const camera = new THREE.PerspectiveCamera(40, W / H, 0.2, 4000);
 const composer = new EffectComposer(renderer);
 const renderPass = new RenderPass(new THREE.Scene(), camera); composer.addPass(renderPass);
 const bloom = new UnrealBloomPass(new THREE.Vector2(W / 2, H / 2), 0.32, 0.55, 0.86); composer.addPass(bloom);

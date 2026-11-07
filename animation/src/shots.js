@@ -128,7 +128,7 @@ export function buildShots(T) {
       { at: tr - s0 - 0.55, set: 'world', light: 'night', focus: T.MOUNT, inherit: true,
         cam: (lt, u) => { const M = T.MOUNT; return { p: M.clone().add(V(-2.2, 1.85, 3.6 - u * 0.3)), l: M.clone().add(V(-3.0, 1.75, 0.6)), fov: 34 }; } },
       { at: T.word('night', 'And') - s0 - 0.05, set: 'world', light: 'night', focus: T.MOUNT, inherit: true,
-        cam: (lt, u) => { const M = T.MOUNT; const sh = 0.04; return { p: M.clone().add(V(1.8 - u * 0.4 + Math.sin(lt * 47) * sh, 1.0 + Math.sin(lt * 61) * sh, 4.4 - u * 0.8)), l: M.clone().add(V(0, 3.7, 0)), fov: 46 }; } },
+        cam: (lt, u) => { const M = T.MOUNT; const sh = 0.035; return { p: M.clone().add(V(1.8 - u * 0.4 + Math.sin(lt * 9) * sh, 1.0 + Math.sin(lt * 12.7) * sh, 4.4 - u * 0.8)), l: M.clone().add(V(0, 3.7, 0)), fov: 46 }; } },
     ];
   };
 
