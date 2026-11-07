@@ -183,3 +183,68 @@ At the same time, the world reacts: **red crack lines grow across the walls and 
 4. **Emotion escalation helper:** builds a staged sequence of expression holds (3–6 frames each) leading into a climax pose.
 5. **Prop actions:** a looping work motion where the body follows the hands (pull, push, saw, hammer, ring), with effects (sparks, dust, debris) at the contact point.
 6. **Lean-into-lens beats:** bend at the waist toward the camera, using a wide lens.
+
+---
+
+# Character design study: how the characters are built
+Studied at full resolution from both 720p references (scientist, big inmate, painter guard, knitter, pacing inmate, two cafeteria guards, railroad boss, worker, train passenger) and the original clip (scholar, emperor).
+
+## 1. They read as 2D drawings living in a 3D world
+- **Every silhouette has a bold, hand-drawn black outline**, about **1% of the character's height**. The line is consistent all around the head, torso, hats and hair, and slightly organic: not machine-perfect, and a touch heavier at the bottom of shapes.
+- **Fills are almost flat.** The head is near-pure white with only a faint cool-grey falloff on one edge. Clothing is flat color with one soft shade band. There's no glossy 3D shading, no specular, and no dark terminator.
+- The contrast between **crisp, flat characters** and **painterly, lit environments** is what makes them pop. Mine are lit like the environment (grey-shaded spheres), so they sink into it.
+
+## 2. Proportions (measured on the scientist; the others vary around this)
+| Part | Share of total height | Notes |
+|---|---|---|
+| Head | ~0.26 (diameter) | A slightly irregular circle or egg, a bit wider at the top. No neck. |
+| Torso | ~0.30 | A soft **pill or bean** that tucks *under* the head; the head overlaps its top by ~15%. |
+| Legs | ~0.45–0.50 | **Very long, thin single black strokes.** |
+
+- **Width:** the torso is about as wide as the head (scientist), or 1.3–1.6× wider for heavy characters (big inmate, knitter: a wide egg).
+- **Variation comes from the torso shape and leg length:**
+  - The boss has a hunched, rounded-rectangle torso and short, slightly bowed legs.
+  - The worker has a stocky barrel torso.
+  - The scientist is tall and narrow.
+- **Robes** (scholar, emperor) are long pills that taper slightly toward a rounded hem. The legs hide inside and the feet only peek out when walking.
+
+## 3. Limbs, hands and feet
+- **Arms and legs are the same thin black line**, roughly the outline weight × 1.0–1.3. They're **2–2.5× thinner than mine**.
+- **Arms start high on the torso sides**, just under the head overlap. They're long and noodly, hang slightly away from the body at rest, and bend in one smooth curve.
+- **Hands:** a tiny black dot (≈ 2× the line width) or a simple small mitten. When holding something, the dot sits *on* the object. Mine are ~3× too big.
+- **Feet:** tiny black nubs, slightly longer toward the front, or just the line ending with a small blob. There are no big shoes.
+
+## 4. Faces
+- **The face sits mid-to-low on the head**, leaving a broad white forehead. The eyes are at or just below the horizontal centre, and the mouth is about 0.3 of the radius below.
+- **The features are small and graphic:**
+  - eyes: dots, half-lidded ovals, or squint lines, about 8–10% of the head width
+  - eyebrows: **thick short strokes**, the most expressive feature
+  - mouth: small
+- **The spacing between the eyes is wide**, about 0.35–0.4 of the head width.
+- **Extras:**
+  - **pink blush ovals** on content or happy faces (knitter)
+  - freckle dots
+  - mustaches as solid black shapes (guard, passenger, emperor)
+  - stubble or sideburns painted on (worker)
+
+## 5. Hair and hats
+- **Hats are real 3D props, but painted:** a bowler with a soft highlight, a striped newsboy cap with bold stripes, a guard cap with a gold badge. They have the same black outline as the body and are **generously sized**, wider than the head.
+- **Hair is a few big sculpted clumps** (curly red hair), or a **painted patch on the head itself** (the worker's brown side hair, the boss's grey hair at the back and sides with brush-stroke texture).
+
+## 6. Clothing details
+- **Details are drawn, not modelled:** tie, buttons, pockets, chain, badge, name tag, stripes, collar lines. They're painted onto the torso texture with thin dark lines, and the torso keeps its clean pill silhouette.
+
+## 7. What to change in my puppets
+1. **Shading:** near-flat toon shading for skin and clothes (high ambient, one soft shade step), so the white heads stay white in any light.
+2. **Outline:** thicker and consistent everywhere, including hats and hair.
+3. **Proportions:**
+   - head ~0.26H, overlapping a pill torso of ~0.30H
+   - legs ~0.47H (very long, thin)
+   - robes as tapered pills with a rounded hem
+4. **Limbs:** arm and leg lines 2–2.5× thinner, hands as small dots, feet as tiny nubs.
+5. **Face:**
+   - features lower on the head, with a broad forehead
+   - smaller eyes and wider spacing
+   - thick short eyebrows
+   - blush on happy faces
+6. **Hats:** sized up and outlined.
