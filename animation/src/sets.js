@@ -310,9 +310,9 @@ export function buildWorld() {
   const skyMat = new THREE.MeshBasicMaterial({ side: THREE.BackSide, fog: false, depthWrite: false });
   const sky = add(new THREE.Mesh(new THREE.SphereGeometry(1400, 32, 16), skyMat)); sky.userData.noCollide = true;
   const skies = {
-    day: skyTex([[0, '#4f9be0'], [0.42, '#a9d4f2'], [0.5, '#e6f2f8'], [1, '#e6f2f8']]),
+    day: skyTex([[0, '#1f6fd0'], [0.38, '#5aa8ec'], [0.48, '#bfe2f8'], [0.5, '#d8eefa'], [1, '#d8eefa']]),
     sunset: skyTex([[0, '#2a2560'], [0.3, '#8a4a8a'], [0.44, '#ff8f5a'], [0.5, '#ffd08a'], [1, '#ffd08a']]),
-    night: skyTex([[0, '#070b2a'], [0.35, '#16246a'], [0.5, '#3c4f9a'], [1, '#3c4f9a']]),
+    night: skyTex([[0, '#0b1442'], [0.35, '#1f3496'], [0.5, '#4a63c0'], [1, '#4a63c0']]),
     morning: skyTex([[0, '#c9b9c8'], [0.4, '#f2d2b8'], [0.5, '#fbe6cf'], [1, '#fbe6cf']]),
   };
   // ground
@@ -486,11 +486,11 @@ export function buildWorld() {
   Object.values(cast).forEach((c) => add(c.root));
 
   const LIGHTS = {
-    day:     { sky: 'day', fog: [0xa9cdea, 160, 1000], hemi: [0xcfe6ff, 0x3a5a22, 0.8], sun: [0xfff0d0, 3.6], sunDir: [40, 70, 35], sunSprite: [[300, 260, -600], 160], moon: false, stars: false, clouds: true, torches: 0, exposure: 1.0 },
-    sunset:  { sky: 'sunset', fog: [0xe8835e, 90, 700], hemi: [0xff9a6a, 0x3a2050, 0.7], sun: [0xff8a40, 4.0], sunDir: [10, 14, -60], sunSprite: [[40, 70, -700], 420], moon: false, stars: false, clouds: true, torches: 0, exposure: 1.0 },
-    dusk:    { sky: 'sunset', fog: [0xd9805e, 120, 900], hemi: [0xffb080, 0x4a3060, 1.15], sun: [0xffa060, 3.2], sunDir: [50, 45, 110], sunSprite: [[40, 70, -700], 420], moon: false, stars: false, clouds: true, torches: 0, exposure: 1.0 },
-    night:   { sky: 'night', fog: [0x16204a, 60, 520], hemi: [0x4a5ab0, 0x0a1028, 0.6], sun: [0x8aa0ff, 0.55], sunDir: [-30, 60, -40], sunSprite: null, moon: [-120, 150, -520], stars: true, clouds: false, torches: 9, exposure: 0.85 },
-    morning: { sky: 'morning', fog: [0xeac39e, 40, 420], hemi: [0xffe0c0, 0x6a5a3a, 1.05], sun: [0xffe0b8, 1.6], sunDir: [60, 40, 20], sunSprite: [[500, 180, 200], 260], moon: false, stars: false, clouds: false, torches: 0, exposure: 1.0 },
+    day:     { sky: 'day', fog: [0x9cc8ee, 260, 1400], hemi: [0xcfe6ff, 0x3a5a22, 0.75], sun: [0xfff2d8, 3.8], sunDir: [40, 70, 35], sunSprite: [[300, 260, -600], 160], moon: false, stars: false, clouds: true, torches: 0, exposure: 1.0 },
+    sunset:  { sky: 'sunset', fog: [0xe8835e, 160, 1000], hemi: [0xffb080, 0x5a3070, 1.0], sun: [0xff9a50, 4.2], sunDir: [10, 14, -60], sunSprite: [[40, 70, -700], 420], moon: false, stars: false, clouds: true, torches: 0, exposure: 1.12 },
+    dusk:    { sky: 'sunset', fog: [0xd9805e, 220, 1300], hemi: [0xffc090, 0x5a3a70, 1.2], sun: [0xffb070, 3.6], sunDir: [50, 45, 110], sunSprite: [[40, 70, -700], 420], moon: false, stars: false, clouds: true, torches: 0, exposure: 1.0 },
+    night:   { sky: 'night', fog: [0x1d2c66, 120, 800], hemi: [0x6a82e0, 0x18204a, 1.05], sun: [0xa8bcff, 1.1], sunDir: [-30, 60, -40], sunSprite: null, moon: [-120, 150, -520], stars: true, clouds: false, torches: 12, exposure: 1.15 },
+    morning: { sky: 'morning', fog: [0xeac39e, 90, 700], hemi: [0xffe0c0, 0x6a5a3a, 0.95], sun: [0xffe6c0, 2.6], sunDir: [60, 40, 20], sunSprite: [[500, 180, 200], 260], moon: false, stars: false, clouds: false, torches: 0, exposure: 1.0 },
   };
   const world = {
     scene, cast, rig, cart, rope, boat, flood, storm, portc, lantern, fire, fireLight, sun, MOUNT, skies, skyMat,
