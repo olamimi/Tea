@@ -40,6 +40,12 @@ window.setup = async () => {
       for (const ln of timeline.lines) if (ln.shot === shot) for (const w of ln.words) if (norm(w.w) === norm(word) && ++n === nth) return w.start;
       throw new Error(`word not found: ${shot}/${word}`);
     },
+    words(shot, from, to) { // narration words of a shot from word `from` to word `to` (inclusive) -> lip-sync track
+      const all = timeline.lines.filter((l) => l.shot === shot).flatMap((l) => l.words);
+      const i = all.findIndex((x) => norm(x.w) === norm(from)); const j = all.findIndex((x, k) => k >= i && norm(x.w) === norm(to));
+      if (i < 0 || j < 0) throw new Error(`words not found: ${shot}/${from}..${to}`);
+      return all.slice(i, j + 1);
+    },
   };
   const S = buildShots(T);
   segs = [];
@@ -56,7 +62,7 @@ window.setup = async () => {
 
 function resetSet(name) {
   const s = sets[name];
-  Object.values(s.cast || {}).forEach((c) => { c.group.visible = false; c.set({ talking: false, run: false, shake: 0 }); });
+  Object.values(s.cast || {}).forEach((c) => { c.root.visible = false; c.reset(); });
   if (name === 'world') {
     s.boat.visible = s.cart.visible = s.flood.visible = s.storm.visible = s.portc.visible = false;
     s.lantern.intensity = 0; s.rig.setStrikes([]); s.rig.continuous = null; s.rig.group.position.set(4.6, 0, -7);
@@ -96,30 +102,41 @@ function poseCamera(seg, t) {
   return { lt, u, whip };
 }
 
-function renderOnce(t) {
-  const seg = segAt(t); activate(seg);
+function renderOnce(t, forced) {
+  const seg = forced || segAt(t); activate(seg);
   const set = sets[seg.set];
-  const { u, whip } = poseCamera(seg, t);
-  // latest tick defined in this shot up to the current segment
+  const { u } = poseCamera(seg, t);
   if (seg.tick) seg.tick(set, t, u); else if (seg.inherit) for (let k = seg.k - 1; k >= 0; k--) { const sg = seg.list[k]; if (sg.tick && sg.set === seg.set) { sg.tick(set, t, u); break; } }
   set.update(t, camera);
   renderer.toneMappingExposure = seg.set === 'world' ? (sets.world.exposure || 1) * 0.92 : 0.95;
   renderPass.scene = set.scene;
   composer.render();
-  return whip;
+  return seg;
+}
+
+const DISSOLVE = 4 / FPS; // the reference cuts with 3-5 frame cross-dissolves while the camera keeps moving
+function speedLines(t, k) { // white radial streaks for sudden moves (deterministic per frame)
+  const n = 26; actx.save(); actx.translate(W / 2, H * 0.45);
+  for (let i = 0; i < n; i++) {
+    const h = Math.sin(i * 91.7 + Math.floor(t * 30) * 13.3) * 43758.5453; const r = h - Math.floor(h);
+    const a = (i / n) * Math.PI * 2 + r * 0.2; const r0 = 260 + r * 160, r1 = r0 + 160 + r * 260;
+    actx.strokeStyle = `rgba(255,255,255,${0.55 * k})`; actx.lineWidth = 2 + r * 4;
+    actx.beginPath(); actx.moveTo(Math.cos(a) * r0, Math.sin(a) * r0 * 1.6); actx.lineTo(Math.cos(a) * r1, Math.sin(a) * r1 * 1.6); actx.stroke();
+  }
+  actx.restore();
 }
 
 window.renderFrame = (f) => {
   const t = f / FPS;
-  const whip = renderOnce(t);
-  if (!whip) return renderer.domElement.toDataURL('image/jpeg', 0.93);
-  // motion blur for whip pans: average sub-frames across the shutter
-  const N = 6;
-  actx.globalAlpha = 1; actx.clearRect(0, 0, W, H);
-  for (let i = 0; i < N; i++) {
-    renderOnce(t + (i / N) * (1 / FPS) * 1.4);
-    actx.globalAlpha = 1 / (i + 1); actx.drawImage(renderer.domElement, 0, 0);
-  }
+  const seg = segAt(t);
+  actx.globalAlpha = 1;
+  if (seg.first && seg.si > 0 && t - seg.start < DISSOLVE) {
+    const prev = segs[segs.indexOf(seg) - 1];
+    renderOnce(t, prev); actx.drawImage(renderer.domElement, 0, 0);
+    renderOnce(t, seg); actx.globalAlpha = (t - seg.start + 1 / FPS) / (DISSOLVE + 1 / FPS); actx.drawImage(renderer.domElement, 0, 0); actx.globalAlpha = 1;
+  } else { renderOnce(t, seg); actx.drawImage(renderer.domElement, 0, 0); }
+  const sp = seg.speed || seg.list[0].speed;
+  if (sp && t >= sp[0] && t < sp[1]) speedLines(t, Math.sin(Math.PI * (t - sp[0]) / (sp[1] - sp[0])));
   return acc.toDataURL('image/jpeg', 0.93);
 };
 window.ready = true;

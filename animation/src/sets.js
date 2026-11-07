@@ -1,6 +1,6 @@
 // Painterly-ish 3D sets built from primitives + canvas textures.
 import * as THREE from 'three';
-import { Character } from './chars.js';
+import { Puppet } from './puppet.js';
 
 // ---------- deterministic randomness ----------
 let _s = 1337;
@@ -278,18 +278,18 @@ export function buildHall() {
 
   // cast
   const cast = {
-    duke: new Character('duke', { height: 2.25 }),
-    g1: new Character('guard', { height: 2.3 }), g2: new Character('guard', { height: 2.3 }),
-    c1: new Character('councilA', { height: 2.15 }), c2: new Character('councilB', { height: 2.1 }),
-    c3: new Character('councilA', { height: 2.1 }), c4: new Character('councilB', { height: 2.15 }),
+    duke: new Puppet('duke', { seedOffset: 1 }),
+    g1: new Puppet('guard', { seedOffset: 2 }), g2: new Puppet('guard', { seedOffset: 3 }),
+    c1: new Puppet('councilA', { seedOffset: 4 }), c2: new Puppet('councilB', { seedOffset: 5 }),
+    c3: new Puppet('councilA', { seedOffset: 6, H: 2.0 }), c4: new Puppet('councilB', { seedOffset: 7 }),
   };
-  Object.values(cast).forEach((c) => add(c.group));
+  Object.values(cast).forEach((c) => add(c.root));
   return {
     scene, cast, feast,
     update(t, cam) {
       flames.forEach((f, i) => { const k = 1 + Math.sin(t * 13 + i * 1.7) * 0.08 + Math.sin(t * 29 + i) * 0.05; f.scale.set(0.85 * k, 1.1 * k, 1); });
       dust.rotation.y = t * 0.01; dust.position.y = Math.sin(t * 0.4) * 0.2;
-      Object.values(cast).forEach((c) => c.update(t, cam));
+      Object.values(cast).forEach((c) => { if (c.root.visible) c.update(t, cam); });
     },
   };
 }
@@ -478,12 +478,12 @@ export function buildWorld() {
   add(sun.target);
 
   const cast = {
-    eng: new Character('engineer', { height: 2.05 }),
-    duke: new Character('duke', { height: 2.25 }),
-    g1: new Character('guard', { height: 2.3 }), g2: new Character('guard', { height: 2.3 }), g3: new Character('guard', { height: 2.3 }),
-    c1: new Character('councilA', { height: 2.1 }), c2: new Character('councilB', { height: 2.1 }),
+    eng: new Puppet('engineer', { seedOffset: 10 }),
+    duke: new Puppet('duke', { seedOffset: 11 }),
+    g1: new Puppet('guard', { seedOffset: 12 }), g2: new Puppet('guard', { seedOffset: 13 }), g3: new Puppet('guard', { seedOffset: 14 }),
+    c1: new Puppet('councilA', { seedOffset: 15 }), c2: new Puppet('councilB', { seedOffset: 16 }),
   };
-  Object.values(cast).forEach((c) => add(c.group));
+  Object.values(cast).forEach((c) => add(c.root));
 
   const LIGHTS = {
     day:     { sky: 'day', fog: [0xa9cdea, 140, 900], hemi: [0xcfe6ff, 0x4a6a2a, 1.15], sun: [0xffe6c0, 2.8], sunDir: [40, 70, 35], sunSprite: [[300, 260, -600], 160], moon: false, stars: false, clouds: true, torches: 0, exposure: 1.0 },
@@ -525,7 +525,7 @@ export function buildWorld() {
       if (flood.visible) { debris.children.forEach((d, i) => { d.userData.x ??= d.position.x; d.userData.r ??= d.rotation.z; d.position.x = d.userData.x + Math.sin(i) * 0.12 * t; d.rotation.z = d.userData.r + 0.06 * (i % 3 - 1) * t; }); }
       cart.userData.wheels?.forEach((w) => (w.rotation.y = -t * 3));
       rig.update(t, cam);
-      Object.values(cast).forEach((c) => c.update(t, cam));
+      Object.values(cast).forEach((c) => { if (c.root.visible) c.update(t, cam); });
     },
   };
   return world;
