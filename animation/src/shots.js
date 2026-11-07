@@ -37,23 +37,23 @@ export function buildShots(T) {
         const eng = show(c.eng, V(3.9, 0, -4.4), V(5.2, 0, 0.5), [
           { t: s0 - 1, expr: 'smug', pose: 'present', look: V(4.6, 3.6, -7), tilt: 3 },
           { t: s0 + 0.9, pose: 'point', look: 'camera' },
-          { t: tDuke - 0.1, look: V(6.6, 1.9, -2.2), eyes: 'half' },
+          { t: tDuke - 0.1, look: V(5.5, 1.9, -1.4), eyes: 'half' },
           { t: tIf - 0.05, expr: 'smug', look: 'camera', pose: 'gesture', work: 'gesture' },
           { t: tRings - 0.04, expr: 'shock', pose: 'point', squash: 1, lean: 4 },
           { t: tClimb - 0.08, expr: 'panic', pose: 'raise', squash: 1, lean: -4 },
         ], T.words('hook', 'if', 'climb.'));
-        show(c.duke, V(6.6, 0, -2.2), V(3.9, 0, -4.4), [
+        show(c.duke, V(5.5, 0, -1.4), V(3.9, 0, -4.4), [
           { t: s0 - 1, expr: 'bored', pose: 'hips', tilt: -3, look: V(3.9, 1.8, -4.4) },
           { t: tDuke + 0.15, brows: 'skeptic' }, { t: tRings + 0.1, expr: 'skeptic' }]);
-        show(c.g1, V(5.9, 0, -3.6), V(3.9, 0, -4.4), [{ t: s0 - 1, pose: 'hold', look: V(3.9, 1.8, -4.4) }]);
-        show(c.g2, V(7.5, 0, -3.4), V(3.9, 0, -4.4), [{ t: s0 - 1, pose: 'hold', expr: 'bored' }, { t: tClimb + 0.1, expr: 'skeptic' }]);
+        show(c.g1, V(4.8, 0, -2.4), V(3.9, 0, -4.4), [{ t: s0 - 1, pose: 'hold', look: V(3.9, 1.8, -4.4) }]);
+        show(c.g2, V(5.7, 0, 0.2), V(3.9, 0, -4.4), [{ t: s0 - 1, pose: 'hold', expr: 'bored' }, { t: tClimb + 0.1, expr: 'skeptic' }]);
         void eng;
       },
     };
     return [
       { at: 0, set: 'world', light: 'day', focus: RIG, ...seg0, cam: move(V(2.6, 1.8, 1.4), V(4.4, 2.0, -6), V(3.1, 1.75, -0.8), V(4.5, 2.1, -6.2), 44, 40) },
       { at: 1.4, set: 'world', light: 'day', focus: RIG, cam: move(V(5.6, 3.3, -5.0), V(4.6, 3.6, -7), V(3.7, 3.4, -5.1), V(4.6, 3.6, -7), 30, 28) },
-      { at: tDuke - s0 - 0.12, set: 'world', light: 'day', focus: RIG, cam: move(V(6.4, 2.25, 1.6), V(6.6, 2.0, -2.2), V(6.5, 2.25, 0.8), V(6.6, 2.0, -2.2), 36, 34) },
+      { at: tDuke - s0 - 0.12, set: 'world', light: 'day', focus: RIG, cam: move(V(5.0, 2.25, 2.4), V(5.5, 2.0, -1.4), V(5.1, 2.25, 1.6), V(5.5, 2.0, -1.4), 36, 34) },
       { at: tIf - s0 - 0.05, set: 'world', light: 'day', focus: RIG, cam: move(V(2.9, 2.05, -0.9), V(3.9, 1.7, -4.4), V(3.15, 2.05, -1.7), V(3.9, 1.75, -4.4), 38, 35) },
     ];
   };
@@ -178,7 +178,7 @@ export function buildShots(T) {
         init(W) { const c = W.cast; W.rig.group.position.set(0, -50, 0); W.cart.visible = true;
           show(c.eng, V(3.6, 0, 0.6), 2.4, [{ t: thr - 1, expr: 'sad', pose: 'pull', work: 'pull' }]).walk({ t0: thr - 0.1, t1: thr + 3.0, from: V(3.4, 0, 1.0), to: V(5.0, 0, -3.4), mode: 'pull', ease: false });
           show(c.g1, V(2.4, 0, -2.6), V(6, 0, 0.4), [{ t: thr - 1, expr: 'laugh', pose: 'point', look: V(6, 1.6, 0.4) }]);
-          show(c.g2, V(2.4, 0, 2.8), V(6, 0, 0.4), [{ t: thr - 1, expr: 'laugh', pose: 'hold', look: head(c.g1) }]);
+          show(c.g2, V(5.6, 0, 2.2), V(4, 0, -1), [{ t: thr - 1, expr: 'laugh', pose: 'hold', look: head(c.eng) }]);
           show(c.duke, V(2.0, 8.0, 0.8), V(8, 0, 0.4), [{ t: thr - 1, expr: 'smug', pose: 'wave', look: V(6, 1, 0.4) }]); },
         tick(W) { const e = W.cast.eng; const f = e.facing; const p = e.root.position; W.cart.position.set(p.x - Math.sin(f) * 2.2, 0, p.z - Math.cos(f) * 2.2); W.cart.rotation.y = f - Math.PI / 2; W.tieRope(e); },
         cam: move(V(9.5, 2.2, 5.5), V(3.4, 2.0, -0.6), V(9.0, 2.1, 4.6), V(3.9, 2.0, -1.4), 48, 46) },

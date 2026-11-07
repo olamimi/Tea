@@ -494,7 +494,7 @@ export function buildWorld() {
   };
   const world = {
     scene, cast, rig, cart, rope, boat, flood, storm, portc, lantern, fire, fireLight, sun, MOUNT, skies, skyMat,
-    onWater(p) { let d = 1e9; for (const q of pts) { const dd = Math.hypot(q.x - p.x, q.z - p.z); if (dd < d) d = dd; } return !flood.visible && p.y < 0.5 && d < 3.9; },
+    onWater(p) { let d = 1e9; for (const q of pts) { const dd = Math.hypot(q.x - p.x, q.z - p.z); if (dd < d) d = dd; } return !flood.visible && !boat.visible && p.y < 0.5 && d < 3.9; },
     tieRope(puppet) { // taut rope from the cart shafts to the puller's shoulder
       const a = cart.localToWorld(cart.userData.tip.clone()); const b = puppet.torso.localToWorld(new THREE.Vector3(0, puppet.shoulderY, -puppet.shoulderX * 0.6));
       rope.visible = true; rope.position.copy(a).add(b).multiplyScalar(0.5); rope.scale.set(1, a.distanceTo(b), 1); rope.quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0), b.clone().sub(a).normalize());
