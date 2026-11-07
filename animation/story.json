@@ -1,71 +1,109 @@
 {
   "title": "The Flood Bell",
-  "voice": "af_heart",
-  "speed": 1.05,
   "lines": [
     {
       "shot": "hook",
-      "text": "She hung a bronze bell over the river, and told the Duke: if this ever rings, climb."
+      "text": "She hung a bronze bell over the river, and told the Duke: if this ever rings, climb.",
+      "exaggeration": 0.6,
+      "cfg": 0.5
     },
     {
       "shot": "laugh",
-      "text": "The whole council burst out laughing."
+      "text": "The whole council burst out laughing.",
+      "exaggeration": 0.75,
+      "cfg": 0.45
     },
     {
       "shot": "device",
-      "text": "Under the bell, a stone well. In the well, a copper float. And from the float, a chain to the hammer."
+      "text": "Under the bell, a stone well. In the well, a copper float. And from the float, a chain to the hammer.",
+      "exaggeration": 0.45,
+      "cfg": 0.5
     },
     {
       "shot": "walls",
-      "text": "The Duke had the tallest walls in the world. And she wanted him scared of a bucket."
+      "text": "The Duke had the tallest walls in the world. And she wanted him scared of a bucket.",
+      "exaggeration": 0.65,
+      "cfg": 0.45
     },
     {
       "shot": "ring1",
-      "text": "Weeks later, the bell rang once. But the river stayed calm."
+      "text": "Weeks later, the bell rang once. But the river stayed calm.",
+      "exaggeration": 0.55,
+      "cfg": 0.45
     },
     {
       "shot": "boat",
-      "text": "Not even a wave rocked the Duke's boat."
+      "text": "Not even a wave rocked the Duke's boat.",
+      "exaggeration": 0.6,
+      "cfg": 0.45
     },
     {
       "shot": "feast",
-      "text": "Now they laughed even harder."
+      "text": "Now they laughed even harder.",
+      "exaggeration": 0.8,
+      "cfg": 0.4
     },
     {
       "shot": "decree",
-      "text": "The Duke called it the world's loudest doorbell, and threw it out of the city."
+      "text": "The Duke called it the world's loudest doorbell, and threw it out of the city.",
+      "exaggeration": 0.7,
+      "cfg": 0.45
     },
     {
       "shot": "haul",
-      "text": "So she dragged it up the river, all the way to the mountains, and lived there."
+      "text": "So she dragged it up the river, all the way to the mountains, and lived there.",
+      "exaggeration": 0.4,
+      "cfg": 0.4
     },
     {
       "shot": "night",
-      "text": "Then one night, under a clear sky, the bell rang. And rang. And did not stop."
+      "text": "Then one night, under a clear sky, the bell rang. And rang. And did not stop.",
+      "exaggeration": 0.8,
+      "cfg": 0.3
     },
     {
       "shot": "gate",
-      "text": "She ran all night to the city gates. Everyone! Get to high ground!"
+      "text": "She ran all night to the city gates.",
+      "exaggeration": 0.65,
+      "cfg": 0.35
+    },
+    {
+      "shot": "gate",
+      "text": "Everyone! Get to high ground!",
+      "exaggeration": 1.0,
+      "cfg": 0.3
     },
     {
       "shot": "guard",
-      "text": "Hey, bell lady. Your bucket thirsty again?"
+      "text": "Hey, bell lady. Your bucket thirsty again?",
+      "speaker": "guard",
+      "exaggeration": 0.8,
+      "cfg": 0.4
     },
     {
       "shot": "guard",
-      "text": "They laughed her all the way back up the hill."
+      "text": "They laughed her all the way back up the hill.",
+      "exaggeration": 0.6,
+      "cfg": 0.45
     },
     {
       "shot": "flood",
-      "text": "By morning, the lower city was underwater."
+      "text": "By morning, the lower city was underwater.",
+      "exaggeration": 0.75,
+      "cfg": 0.3
     },
     {
       "shot": "inside",
-      "text": "Inside the well, a pipe ran to the river. A little water lifted the float a little. A flood lifted it all the way, yanked the pin, and the hammer never stopped swinging."
+      "text": "Inside the well, a pipe ran to the river. A little water lifted the float a little. A flood lifted it all the way, yanked the pin, and the hammer never stopped swinging.",
+      "exaggeration": 0.5,
+      "cfg": 0.45
     },
     {
       "shot": "finale",
-      "text": "One ring meant rain, far away. And by throwing the bell out, the Duke had moved it closer to the storm."
+      "text": "One ring meant rain, far away. And by throwing the bell out, the Duke had moved it closer to the storm.",
+      "exaggeration": 0.7,
+      "cfg": 0.3
     }
-  ]
+  ],
+  "engine": "chatterbox"
 }
