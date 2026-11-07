@@ -84,7 +84,7 @@ export function buildShots(T) {
     return [
       { at: 0, set: 'world', light: 'day', focus: RIG,
         init(W) { W.rig.group.position.copy(RIG);
-          show(W.cast.eng, V(2.6, 0, -6.2), V(8, 0, -2), [
+          show(W.cast.eng, V(3.4, 0, -5.3), V(8, 0, -1), [
             { t: s0 - 1, expr: 'happy', pose: 'present', look: V(4.6, 3.6, -7) },
             { t: tw - 0.1, pose: 'gesture', look: V(4.6, 0.6, -7), eyes: 'wide' },
             { t: tf - 0.1, pose: 'point', look: V(4.8, 0.6, -7), expr: 'hopeful' },
@@ -106,10 +106,10 @@ export function buildShots(T) {
           show(c.duke, V(2.0, 8.0, 0.8), V(8, 8, 5), [{ t: s0 - 1, expr: 'smug', pose: 'hips', look: 'camera', headLean: -8, tilt: -4 }, { t: w('walls', 'tallest') - 0.05, brows: 'raised', squash: 1 }]);
           show(c.g1, V(2.0, 8.0, -1.2), V(8, 8, 3), [{ t: s0 - 1, pose: 'hold', expr: 'bored' }]);
           show(c.g2, V(2.0, 8.0, 2.8), V(8, 8, 3), [{ t: s0 - 1, pose: 'hold', look: head(c.duke) }]);
-          show(c.eng, V(3.6, 0, -5.0), V(6.2, 0, -1.2), [{ t: s0 - 1, expr: 'neutral', look: 'camera' }, { t: ta - 0.05, expr: 'smug', pose: 'shrug', squash: 1, tilt: 5 }, { t: tb - 0.1, expr: 'happy' }]); },
+          show(c.eng, V(6.1, 0, -5.1), V(6.2, 0, -1.2), [{ t: s0 - 1, expr: 'neutral', look: 'camera' }, { t: ta - 0.05, expr: 'smug', pose: 'shrug', squash: 1, tilt: 5 }, { t: tb - 0.1, expr: 'happy' }]); },
         cam: path([[0, V(7.0, 9.3, 4.6), V(2.0, 9.1, 0.8), 34], [0.25, V(8.5, 10.5, 6.0), V(1.5, 8.6, 0.6), 38], [1, V(30, 30, 30), V(-10, 3, -2), 50]]) },
       { at: ta - s0 - 0.05, set: 'world', light: 'day', focus: RIG,
-        cam: move(V(6.2, 0.5, -1.2), V(3.6, 3.6, -8), V(6.0, 0.55, -2.0), V(3.6, 3.7, -8), 56, 54) },
+        cam: move(V(6.4, 0.6, -0.8), V(4.2, 3.2, -7.5), V(6.2, 0.65, -1.6), V(4.2, 3.3, -7.5), 58, 56) },
     ];
   };
 
@@ -119,7 +119,7 @@ export function buildShots(T) {
     return [
       { at: 0, set: 'world', light: 'day', focus: RIG,
         init(W) { W.rig.group.position.copy(RIG); W.rig.setStrikes([tr]);
-          show(W.cast.eng, V(4.6, 0, -5.95), V(3.6, 0, 0.5), [
+          show(W.cast.eng, V(4.6, 0, -5.55), V(3.6, 0, 0.5), [
             { t: s0 - 1, expr: 'bored', sit: 0.92, headTilt: 12, pose: 'idle' },
             { t: tr - 0.12, squash: 1 },
             { t: tr + 0.02, expr: 'shock', sit: null, pose: 'raise', headTilt: 0, lean: -6 },
@@ -180,7 +180,7 @@ export function buildShots(T) {
           show(c.g1, V(2.4, 0, -2.6), V(6, 0, 0.4), [{ t: thr - 1, expr: 'laugh', pose: 'point', look: V(6, 1.6, 0.4) }]);
           show(c.g2, V(2.4, 0, 2.8), V(6, 0, 0.4), [{ t: thr - 1, expr: 'laugh', pose: 'hold', look: head(c.g1) }]);
           show(c.duke, V(2.0, 8.0, 0.8), V(8, 0, 0.4), [{ t: thr - 1, expr: 'smug', pose: 'wave', look: V(6, 1, 0.4) }]); },
-        tick(W) { const p = W.cast.eng.root.position; W.cart.position.set(p.x - 1.9, 0, 0.4); W.cart.rotation.y = 0; },
+        tick(W) { const p = W.cast.eng.root.position; W.cart.position.set(p.x - 2.2, 0, 0.4); W.cart.rotation.y = 0; W.tieRope(W.cast.eng); },
         cam: move(V(12.5, 2.0, 3.6), V(3.2, 2.4, 0), V(11.4, 1.9, 2.8), V(3.8, 2.3, 0), 44, 42) },
     ];
   };
@@ -193,8 +193,8 @@ export function buildShots(T) {
         init(W) { W.cart.visible = true; W.rig.group.position.set(0, -50, 0);
           show(W.cast.eng, V(4.5, 0, -32), Math.PI, [{ t: s0 - 1, expr: 'sad', pose: 'pull', work: 'pull' }, { t: s0 + 1.5, eyes: 'squint', brows: 'angry' }])
             .walk({ t0: s0 - 0.5, t1: s0 + 6, from: V(4.5, 0, -31.2), to: V(4.5, 0, -38.0), mode: 'pull', ease: false }); },
-        tick(W) { const p = W.cast.eng.root.position; W.cart.position.set(4.5, 0, p.z + 1.9); W.cart.rotation.y = Math.PI / 2; },
-        cam: (lt) => { const z = -31.2 - (lt + 0.5) * (6.8 / 6.5); return { p: V(-2.5, 1.3, z + 3.5), l: V(4.5, 1.6, z - 1.2), fov: 46 }; } },
+        tick(W) { const p = W.cast.eng.root.position; W.cart.position.set(4.5, 0, p.z + 2.2); W.cart.rotation.y = Math.PI / 2; W.tieRope(W.cast.eng); },
+        cam: (lt) => { const z = -31.2 - (lt + 0.5) * (6.8 / 6.5); return { p: V(-6.0, 1.9, z + 1.4), l: V(4.5, 1.2, z + 1.1), fov: 50 }; } },
       { at: tl - s0 - 0.05, set: 'world', light: 'dusk', focus: V(6, 0, -150),
         init(W) { W.cart.visible = false; W.rig.group.position.copy(W.MOUNT);
           show(W.cast.eng, M.clone().add(V(-3.0, 0, 0.6)), M.clone().add(V(2, 0, 9)), [{ t: tl - 1, expr: 'content', sit: 0.5, lean: -4, look: M.clone().add(V(0, 3.5, 0)) }, { t: tl + 0.6, eyes: 'happy' }]); },
@@ -211,12 +211,12 @@ export function buildShots(T) {
           show(W.cast.eng, P, M.clone().add(V(0, 0, 9)), [
             { t: s0 - 1, expr: 'sleep', sit: 0.5, headTilt: 16, lean: -6 },
             { t: tr - 0.02, squash: 1 },
-            { t: tr + 0.06, expr: 'shock', headTilt: 0, lean: 2, look: M.clone().add(V(0, 3.6, 0)) },
+            { t: tr + 0.06, expr: 'shock', headTilt: 0, lean: 2, look: 'camera' },
             { t: tr + 0.3, expr: 'panic', sit: null, pose: 'raise', squash: 1, shake: 1 },
-            { t: tr + 1.2, pose: 'cower' }]); },
+            { t: tr + 0.9, look: M.clone().add(V(0, 3.6, 0)) }, { t: tr + 1.2, pose: 'cower' }]); },
         cam: (lt, u) => ({ p: M.clone().add(V(lerp(7, 5.5, ease(u)), 3.4, lerp(15, 12.5, ease(u)))), l: M.clone().add(V(-1.5, 3.2, -2)), fov: 48 }) },
       { at: tr - s0 - 0.55, set: 'world', light: 'night', focus: M,
-        cam: (lt, u) => ({ p: M.clone().add(V(-2.4, 1.6, 3.6 - u * 0.4)), l: P.clone().add(V(0, 1.5, 0)), fov: 34 }) },
+        cam: (lt, u) => ({ p: M.clone().add(V(-1.4, 1.9, 5.0 - u * 0.4)), l: P.clone().add(V(0, 1.55, 0)), fov: 40 }) },
       { at: w('night', 'And') - s0 - 0.05, set: 'world', light: 'night', focus: M,
         cam: (lt, u) => { const sh = 0.035; return { p: M.clone().add(V(1.8 - u * 0.4 + Math.sin(lt * 9) * sh, 1.0 + Math.sin(lt * 12.7) * sh, 4.4 - u * 0.8)), l: M.clone().add(V(0, 3.7, 0)), fov: 46 }; } },
     ];
@@ -246,7 +246,7 @@ export function buildShots(T) {
     const tt = w('guard', 'They'), tth = w('guard', 'thirsty');
     return [
       { at: 0, set: 'world', light: 'night', focus: V(2, 0, 0),
-        init(W) { const c = W.cast; W.portc.visible = true;
+        init(W) { const c = W.cast; W.portc.visible = true; W.rig.group.position.set(0, -50, 0);
           show(c.g1, V(2.3, 8.0, 0.6), V(5.6, 8, 2.6), [
             { t: s0 - 1, expr: 'smug', pose: 'lean', look: 'camera', lean: 12, headLean: 6 },
             { t: tth - 0.05, eyes: 'squint', mouth: 'smirk', headTilt: 12, squash: 1 },
@@ -254,13 +254,13 @@ export function buildShots(T) {
           show(c.g2, V(2.2, 8.0, -1.8), V(5.6, 8, 2.6), [{ t: s0 - 1, expr: 'bored', pose: 'hold', look: head(c.g1) }, { t: tth + 0.1, expr: 'happy' }]); },
         cam: move(V(5.8, 9.9, 2.8), V(2.3, 9.6, 0.6), V(5.2, 9.9, 2.4), V(2.3, 9.6, 0.6), 38, 36) },
       { at: tt - s0 - 0.05, set: 'world', light: 'night', focus: V(6, 0, 4),
-        init(W) { const c = W.cast; W.lantern.intensity = 0;
-          show(c.g1, V(2.3, 8.0, -1.0), V(8, 0, 4), [{ t: tt - 1, expr: 'laugh', pose: 'point', look: V(9, 1, 2) }]);
-          show(c.g2, V(2.4, 8.0, -3.0), V(8, 0, 4), [{ t: tt - 1, expr: 'laugh', pose: 'hold', look: head(c.g1) }]);
-          show(c.g3, V(2.3, 8.0, 1.4), V(8, 0, 4), [{ t: tt - 1, expr: 'laugh', pose: 'hold', look: head(c.g1) }]);
-          show(c.eng, V(8, 0, 4), 0, [{ t: tt - 1, expr: 'sad', pose: 'lantern', lantern: true, headTilt: -8 }])
-            .walk({ t0: tt - 0.1, t1: tt + 3.5, from: V(8, 0, 4), to: V(11.2, 0, -1.6), mode: 'waddle', ease: false }); },
-        cam: move(V(0.6, 11.6, 2.6), V(9, 0.6, 1.5), V(0.6, 11.9, 3.0), V(10, 0.6, 0.5), 50, 48) },
+        init(W) { const c = W.cast; W.lantern.intensity = 0; W.rig.group.position.set(0, -50, 0);
+          show(c.g1, V(2.0, 8.0, -0.4), V(8, 0, 4), [{ t: tt - 1, expr: 'laugh', pose: 'point', look: V(9, 1, 2) }]);
+          show(c.g2, V(2.0, 8.0, -1.8), V(8, 0, 4), [{ t: tt - 1, expr: 'laugh', pose: 'hold', look: head(c.g1) }]);
+          show(c.g3, V(2.0, 8.0, 1.3), V(8, 0, 4), [{ t: tt - 1, expr: 'laugh', pose: 'hold', look: head(c.g1) }]);
+          show(c.eng, V(4.8, 0, 1.2), Math.PI, [{ t: tt - 1, expr: 'sad', pose: 'lantern', lantern: true, headTilt: -8 }])
+            .walk({ t0: tt - 0.1, t1: tt + 4.0, from: V(4.8, 0, 1.4), to: V(5.0, 0, -4.6), mode: 'waddle', ease: false }); },
+        cam: move(V(8.6, 2.0, 5.6), V(3.0, 5.4, -1.6), V(8.3, 2.1, 4.9), V(3.0, 5.2, -1.9), 58, 56) },
     ];
   };
 

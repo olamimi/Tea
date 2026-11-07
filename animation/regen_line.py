@@ -19,14 +19,25 @@ tl = json.loads((B / "timeline.json").read_text())
 voice, SR = sf.read(B / "voice.wav")
 ln = story["lines"][idx]
 
+# reference voices: narrator = mean of lines spoken without a cloned speaker; guard etc. from their lines
+refs = {}
+for i, l in enumerate(tl["lines"]):
+    spk = story["lines"][i].get("speaker") or "narrator"
+    if i == idx or (spk == "narrator" and i >= 12):  # lines after the guard may be contaminated
+        continue
+    refs.setdefault(spk, []).append(L.speaker_embedding(voice[int(l["start"] * SR): int(l["end"] * SR)], SR))
+want = ln.get("speaker") or "narrator"
+ref = np.mean(refs[want], 0); ref /= np.linalg.norm(ref)
+
 best = None
 for take in range(12):
     torch.manual_seed(5000 + 97 * take)
     a = L.generate(ln, seed=None)
     words = L.transcribe(a); sc = L.score(ln["text"], words)
     heard = L.norm(" ".join(w.word for w in words))
-    ok = sc >= 0.95 and all(r in heard for r in required) and len(a) / L.SR >= MIN_DUR
-    print(f"take {take}: match={sc:.2f} {len(a)/L.SR:.1f}s {'OK' if ok else 'retry'} | {' '.join(heard)}", flush=True)
+    sim = float(L.speaker_embedding(a) @ ref)
+    ok = sc >= 0.95 and all(r in heard for r in required) and len(a) / L.SR >= MIN_DUR and sim >= 0.9
+    print(f"take {take}: match={sc:.2f} voice={sim:.2f} {len(a)/L.SR:.1f}s {'OK' if ok else 'retry'} | {' '.join(heard)}", flush=True)
     if ok:
         best = (a, words); break
 if best is None:

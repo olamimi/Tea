@@ -66,9 +66,23 @@ def word_times(text, words, dur):
 
 
 
+import copy
+DEFAULT_CONDS = copy.deepcopy(tts.conds)  # the built-in narrator voice
+
+
 def generate(ln, seed=None):
     if seed is not None:
         torch.manual_seed(seed)
+    # Chatterbox keeps the last cloned voice in tts.conds, so restore the narrator before every un-cloned line.
+    if not ln.get("speaker"):
+        tts.conds = copy.deepcopy(DEFAULT_CONDS)
     wav = tts.generate(ln["text"], audio_prompt_path=SPEAKERS.get(ln.get("speaker")),
                        exaggeration=ln.get("exaggeration", 0.5), cfg_weight=ln.get("cfg", 0.5), temperature=0.75)
     return trim(wav.squeeze(0).numpy().astype(np.float32))
+
+
+def speaker_embedding(a, sr=None):
+    """L2-normalised speaker embedding (Chatterbox voice encoder) for identity checks."""
+    a16 = resample_poly(a, 16000, sr or SR).astype(np.float32)
+    e = tts.ve.embeds_from_wavs([a16], sample_rate=16000)[0]
+    return e / np.linalg.norm(e)

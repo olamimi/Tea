@@ -64,7 +64,7 @@ function resetSet(name) {
   const s = sets[name];
   Object.values(s.cast || {}).forEach((c) => { c.root.visible = false; c.reset(); });
   if (name === 'world') {
-    s.boat.visible = s.cart.visible = s.flood.visible = s.storm.visible = s.portc.visible = false;
+    s.boat.visible = s.cart.visible = s.flood.visible = s.storm.visible = s.portc.visible = s.rope.visible = false;
     s.lantern.intensity = 0; s.rig.setStrikes([]); s.rig.continuous = null; s.rig.group.position.set(4.6, 0, -7);
   }
   if (name === 'hall') s.feast.visible = false;
@@ -145,4 +145,32 @@ window.debugRay = (f) => {
   const rc = new THREE.Raycaster(); rc.setFromCamera(new THREE.Vector2(0, 0), camera);
   const set = sets[active.set];
   return rc.intersectObjects(set.scene.children, true).slice(0, 4).map((h) => `${h.object.type} ${h.object.geometry?.type} d=${h.distance.toFixed(2)} pos=${h.object.getWorldPosition(new THREE.Vector3()).toArray().map((v) => v.toFixed(1))}`);
+};
+
+// ---- QA: does any visible character overlap scene geometry (or another character)? Is the camera inside something?
+window.clipCheck = (f) => {
+  const t = f / FPS; const seg = segAt(t); renderOnce(t, seg);
+  const set = sets[seg.set]; const out = [];
+  const rc = new THREE.Raycaster();
+  const solids = []; set.scene.traverse((o) => { if (o.isMesh && o.visible && !o.userData.noCollide && !(o.material && (o.material.transparent || o.material.blending === THREE.AdditiveBlending))) { let p = o, vis = true; while (p) { if (!p.visible) { vis = false; break; } p = p.parent; } if (vis) solids.push(o); } });
+  const owner = new Map(); for (const [n, c] of Object.entries(set.cast || {})) c.root.traverse((o) => owner.set(o, n));
+  for (const [name, c] of Object.entries(set.cast || {})) {
+    if (!c.root.visible) continue;
+    const others = solids.filter((o) => owner.get(o) !== name && !(o.parent && o.parent.isMesh && owner.get(o.parent) === name));
+    const base = c.root.getWorldPosition(new THREE.Vector3()); const R = c.spec.width * c.u * 0.95 + 0.05;
+    for (const hf of [0.3, 0.55, 0.8]) for (let k = 0; k < 8; k++) {
+      const a = k / 8 * Math.PI * 2, dir = new THREE.Vector3(Math.sin(a), 0, Math.cos(a));
+      const p = base.clone().add(new THREE.Vector3(0, c.spec.H * hf, 0));
+      for (const D of [2.5, 7]) {
+        rc.set(p.clone().addScaledVector(dir, D), dir.clone().negate()); rc.far = D;
+        const hit = rc.intersectObjects(others, false)[0];
+        if (hit && D - hit.distance < R) { out.push(`${name} h${hf} by ${owner.get(hit.object) || hit.object.geometry?.type} @(${hit.point.toArray().map((v) => v.toFixed(1))}) depth ${(R - (D - hit.distance)).toFixed(2)}`); break; }
+      }
+    }
+  }
+  // camera inside geometry: cast rays out in 6 directions; if most hit back-faces nearby it is enclosed
+  const cp = camera.position.clone(); let enclosed = 0;
+  for (const d of [[1, 0, 0], [-1, 0, 0], [0, 1, 0], [0, -1, 0], [0, 0, 1], [0, 0, -1]]) { rc.set(cp, new THREE.Vector3(...d)); rc.far = 0.6; if (rc.intersectObjects(solids, false).length) enclosed++; }
+  if (enclosed >= 2) out.push(`camera near/inside geometry (${enclosed}/6 within 0.6)`);
+  return { f, t: +t.toFixed(2), shot: seg.shot, k: seg.k, issues: [...new Set(out)] };
 };

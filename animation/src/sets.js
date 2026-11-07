@@ -191,7 +191,7 @@ function makeCart(withBell = true) {
   const m = mats(); const g = new THREE.Group();
   const bed = new THREE.Mesh(new THREE.BoxGeometry(1.6, 0.15, 1.1), m.wood); bed.position.y = 0.55; bed.castShadow = true; g.add(bed);
   for (const z of [-0.6, 0.6]) { const w = new THREE.Mesh(new THREE.CylinderGeometry(0.42, 0.42, 0.08, 20), m.darkwood); w.rotation.x = Math.PI / 2; w.position.set(0, 0.42, z); w.castShadow = true; g.add(w); g.userData.wheels = (g.userData.wheels || []).concat(w); }
-  const pole = new THREE.Mesh(new THREE.CylinderGeometry(0.035, 0.035, 1.6), m.wood); pole.rotation.z = Math.PI / 2 - 0.25; pole.position.set(1.4, 0.75, 0); g.add(pole);
+  const pole = new THREE.Mesh(new THREE.CylinderGeometry(0.035, 0.035, 0.9), m.wood); pole.rotation.z = Math.PI / 2 - 0.3; pole.position.set(1.15, 0.72, 0); g.add(pole); g.userData.tip = new THREE.Vector3(1.58, 0.86, 0);
   if (withBell) {
     const prof = [[0.001, 0], [0.16, 0], [0.24, -0.06], [0.3, -0.25], [0.33, -0.55], [0.38, -0.8], [0.5, -1.02], [0.6, -1.12], [0.001, -1.12]].map(([r, y]) => new THREE.Vector2(r, y));
     const bell = new THREE.Mesh(new THREE.LatheGeometry(prof, 40), m.bronze); bell.position.y = 0.62 + 1.12; bell.castShadow = true; g.add(bell);
@@ -209,9 +209,9 @@ export function buildHall() {
   scene.fog = new THREE.Fog(0x3a2418, 18, 60);
   const add = (o) => { scene.add(o); return o; };
   const floor = add(new THREE.Mesh(new THREE.PlaneGeometry(30, 50), new THREE.MeshStandardMaterial({ map: stoneTex([8, 14], '#8a7f72'), roughness: 0.6, metalness: 0.05 })));
-  floor.rotation.x = -Math.PI / 2; floor.receiveShadow = true;
+  floor.rotation.x = -Math.PI / 2; floor.receiveShadow = true; floor.userData.noCollide = true;
   const carpet = add(new THREE.Mesh(new THREE.PlaneGeometry(3.4, 30), new THREE.MeshStandardMaterial({ map: carpetTex(), roughness: 0.95 })));
-  carpet.rotation.x = -Math.PI / 2; carpet.position.set(0, 0.01, -2); carpet.receiveShadow = true;
+  carpet.rotation.x = -Math.PI / 2; carpet.position.set(0, 0.01, -2); carpet.receiveShadow = true; carpet.userData.noCollide = true;
   // walls
   const wallMat = new THREE.MeshStandardMaterial({ map: stoneTex([5, 3], '#a39684'), roughness: 0.95 });
   const back = add(new THREE.Mesh(new THREE.PlaneGeometry(30, 16), wallMat)); back.position.set(0, 8, -17);
@@ -308,7 +308,7 @@ export function buildWorld() {
 
   // sky dome
   const skyMat = new THREE.MeshBasicMaterial({ side: THREE.BackSide, fog: false, depthWrite: false });
-  const sky = add(new THREE.Mesh(new THREE.SphereGeometry(1400, 32, 16), skyMat));
+  const sky = add(new THREE.Mesh(new THREE.SphereGeometry(1400, 32, 16), skyMat)); sky.userData.noCollide = true;
   const skies = {
     day: skyTex([[0, '#4f9be0'], [0.42, '#a9d4f2'], [0.5, '#e6f2f8'], [1, '#e6f2f8']]),
     sunset: skyTex([[0, '#2a2560'], [0.3, '#8a4a8a'], [0.44, '#ff8f5a'], [0.5, '#ffd08a'], [1, '#ffd08a']]),
@@ -317,9 +317,9 @@ export function buildWorld() {
   };
   // ground
   const ground = add(new THREE.Mesh(new THREE.PlaneGeometry(3000, 3000), new THREE.MeshStandardMaterial({ map: grassTex(), roughness: 1 })));
-  ground.rotation.x = -Math.PI / 2; ground.receiveShadow = true;
+  ground.rotation.x = -Math.PI / 2; ground.receiveShadow = true; ground.userData.noCollide = true;
   const farm = add(new THREE.Mesh(new THREE.PlaneGeometry(400, 400), new THREE.MeshStandardMaterial({ map: fieldTex(), roughness: 1, transparent: true, opacity: 0.6, depthWrite: false })));
-  farm.rotation.x = -Math.PI / 2; farm.position.set(-40, 0.02, -80);
+  farm.rotation.x = -Math.PI / 2; farm.position.set(-40, 0.02, -80); farm.userData.noCollide = true;
 
   // river ribbon along a curve
   const curve = new THREE.CatmullRomCurve3([[10, 0, 120], [10, 0, 40], [10, 0, 0], [10, 0, -40], [16, 0, -80], [8, 0, -120], [12, 0, -150], [24, 0, -200], [10, 0, -280], [0, 0, -400]].map((p) => new THREE.Vector3(...p)));
@@ -334,12 +334,12 @@ export function buildWorld() {
   const rg = new THREE.BufferGeometry(); rg.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3)); rg.setAttribute('uv', new THREE.Float32BufferAttribute(uv, 2)); rg.setIndex(idx); rg.computeVertexNormals();
   const wtex = waterTex(); wtex.repeat.set(1, 1);
   const riverMat = new THREE.MeshStandardMaterial({ map: wtex, color: 0x9fd0f0, roughness: 0.12, metalness: 0.3, side: THREE.DoubleSide });
-  const river = add(new THREE.Mesh(rg, riverMat)); river.receiveShadow = true;
+  const river = add(new THREE.Mesh(rg, riverMat)); river.receiveShadow = true; river.userData.noCollide = true;
   // sandy banks
   const bankPos = pos.map((v, i) => (i % 3 === 1 ? 0.03 : v));
   const bank = new THREE.BufferGeometry(); bank.setAttribute('position', new THREE.Float32BufferAttribute(bankPos, 3)); bank.setIndex(idx);
   const bankMesh = add(new THREE.Mesh(bank, new THREE.MeshStandardMaterial({ color: 0xc9b07a, roughness: 1, side: THREE.DoubleSide }))); bankMesh.scale.set(1, 1, 1);
-  bankMesh.position.y = -0.01; bankMesh.geometry = rg.clone(); bankMesh.scale.set(1.0, 1, 1);
+  bankMesh.position.y = -0.01; bankMesh.userData.noCollide = true; bankMesh.geometry = rg.clone(); bankMesh.scale.set(1.0, 1, 1);
   { // widen bank by offsetting each pair outward
     const p = bankMesh.geometry.attributes.position; for (let i = 0; i < p.count; i += 2) { const ax = p.getX(i), az = p.getZ(i), bx = p.getX(i + 1), bz = p.getZ(i + 1); const cx = (ax + bx) / 2, cz = (az + bz) / 2; p.setXYZ(i, cx + (ax - cx) * 1.35, 0.02, cz + (az - cz) * 1.35); p.setXYZ(i + 1, cx + (bx - cx) * 1.35, 0.02, cz + (bz - cz) * 1.35); }
   }
@@ -351,7 +351,7 @@ export function buildWorld() {
     const len = Math.hypot(x2 - x1, z2 - z1); const w = shadowy(new THREE.Mesh(new THREE.BoxGeometry(len, wallH, 1.6), m.stoneWall));
     w.position.set((x1 + x2) / 2, wallH / 2, (z1 + z2) / 2); w.rotation.y = -Math.atan2(z2 - z1, x2 - x1); city.add(w);
     const n = Math.floor(len / 1.2);
-    for (let i = 0; i < n; i++) { if (i % 2) continue; const c = shadowy(new THREE.Mesh(new THREE.BoxGeometry(0.7, 0.8, 1.7), m.stoneWall)); const f = (i + 0.5) / n; c.position.set(x1 + (x2 - x1) * f, wallH + 0.4, z1 + (z2 - z1) * f); c.rotation.y = w.rotation.y; city.add(c); }
+    for (let i = 0; i < n; i++) { if (i % 2) continue; const f = (i + 0.5) / n; for (const side of [-1, 1]) { const c = shadowy(new THREE.Mesh(new THREE.BoxGeometry(0.7, 0.8, 0.28), m.stoneWall)); c.position.set(x1 + (x2 - x1) * f, wallH + 0.4, z1 + (z2 - z1) * f); c.rotation.y = w.rotation.y; c.translateZ(side * 0.66); city.add(c); } }
   };
   wallSeg(-26, -18, 2, -18); wallSeg(-26, 18, 2, 18); wallSeg(-26, -18, -26, 18);
   wallSeg(2, -18, 2, -2.2); wallSeg(2, 2.2, 2, 18);
@@ -401,7 +401,7 @@ export function buildWorld() {
   const snowMat = new THREE.MeshStandardMaterial({ color: 0xf4f6fb, roughness: 0.9, flatShading: true });
   for (let i = 0; i < 18; i++) {
     const r = R(30, 70), h = R(60, 130); const x = (i - 9) * 34 + R(-10, 10); const z = R(-200, -330);
-    if (Math.abs(x - 15) < 22 && z > -240) continue;
+    { const rp = pts.reduce((b, q) => (Math.abs(q.z - z) < Math.abs(b.z - z) ? q : b), pts[0]); if (Math.abs(x - rp.x) < r + 14) continue; }
     const mt = add(new THREE.Mesh(new THREE.ConeGeometry(r, h, 7), mtnMat)); mt.position.set(x, h / 2 - 2, z); mt.rotation.y = R(0, 3);
     const sn = add(new THREE.Mesh(new THREE.ConeGeometry(r * 0.36, h * 0.36, 7), snowMat)); sn.position.set(x, h - 2 - h * 0.18 + 0.4, z); sn.rotation.y = mt.rotation.y;
   }
@@ -453,7 +453,7 @@ export function buildWorld() {
 
   // flood water
   const flood = add(new THREE.Mesh(new THREE.PlaneGeometry(400, 300), new THREE.MeshStandardMaterial({ color: 0x6a7f6a, roughness: 0.25, metalness: 0.2, transparent: true, opacity: 0.93 })));
-  flood.rotation.x = -Math.PI / 2; flood.position.set(-10, 3.1, -20); flood.visible = false;
+  flood.rotation.x = -Math.PI / 2; flood.position.set(-10, 3.1, -20); flood.visible = false; flood.userData.noCollide = true;
   const debris = new THREE.Group(); flood.add(debris);
   for (let i = 0; i < 40; i++) { const d = new THREE.Mesh(new THREE.BoxGeometry(R(0.5, 1.6), R(0.2, 0.5), 0.15), m.wood); d.position.set(R(-40, 30), R(-30, 30), 0.05); d.rotation.z = R(0, 3); debris.add(d); }
 
@@ -469,6 +469,7 @@ export function buildWorld() {
   // props
   const rig = makeBellRig(); add(rig.group);
   const cart = makeCart(); add(cart); cart.visible = false;
+  const rope = add(new THREE.Mesh(new THREE.CylinderGeometry(0.018, 0.018, 1, 6), new THREE.MeshStandardMaterial({ color: 0x8a6a3a, roughness: 0.9 }))); rope.visible = false;
   const lantern = add(new THREE.PointLight(0xffb060, 0, 10, 1.5));
 
   // lights
@@ -493,7 +494,11 @@ export function buildWorld() {
     morning: { sky: 'morning', fog: [0xeac39e, 40, 420], hemi: [0xffe0c0, 0x6a5a3a, 1.05], sun: [0xffe0b8, 1.6], sunDir: [60, 40, 20], sunSprite: [[500, 180, 200], 260], moon: false, stars: false, clouds: false, torches: 0, exposure: 1.0 },
   };
   const world = {
-    scene, cast, rig, cart, boat, flood, storm, portc, lantern, fire, fireLight, sun, MOUNT,
+    scene, cast, rig, cart, rope, boat, flood, storm, portc, lantern, fire, fireLight, sun, MOUNT,
+    tieRope(puppet) { // taut rope from the cart shafts to the puller's shoulder
+      const a = cart.localToWorld(cart.userData.tip.clone()); const b = puppet.torso.localToWorld(new THREE.Vector3(0, puppet.shoulderY, -puppet.shoulderX * 0.6));
+      rope.visible = true; rope.position.copy(a).add(b).multiplyScalar(0.5); rope.scale.set(1, a.distanceTo(b), 1); rope.quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0), b.clone().sub(a).normalize());
+    },
     light: null,
     setLight(name, focus = new THREE.Vector3()) {
       const L = LIGHTS[name]; this.light = name;
