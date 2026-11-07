@@ -97,3 +97,89 @@ Frame numbers are in the reference at 30 fps (frame / 30 = seconds).
 3. **Acting tracks.** Per shot, a list of `{t, expr, brow, gaze, lean, headTilt, armPose}` keys, eased between, with expression holds and accents on stressed words.
 4. **Procedural layers.** Idle sway, breathing, blinks on phrase boundaries, laugh bounce, waddle walk cycle, heavy pull, panic run, follow-through on props and hair/braid.
 5. **Effects.** Sweat drops, speed lines, dust puffs; 4-frame cross-dissolves between shots.
+
+---
+
+# Additional references: "The Pink Prison Cell Experiment" and "Why Perfect Railroads Don't Work"
+Both are 720×1280, 30 fps, about 65 s, and in the same house style. Frame numbers below are per video.
+
+## A. Bodies and costume (confirms the 3D-puppet build)
+- **Most characters have visible legs:** two thin black stick legs with small dark shoes.
+  - The knees bend in smooth arcs.
+  - Weight shifts from one leg to the other, and a character may lift one foot while idling (big inmate, f.756–762).
+  - Robed characters (first reference) simply hide the legs.
+- **The body is a soft 3D capsule** whose shape varies by character:
+  - tall and thin (scientist)
+  - a wide egg (big inmate)
+  - a hunched barrel (railroad boss)
+- **Hats and hair are real 3D objects that ride on the head:**
+  - a striped newsboy cap
+  - a bowler hat
+  - a guard's cap
+  - a curly hair mass
+  - grey hair wrapping the back of the head (boss, f.427–462)
+  - When a head tilts or turns, they tilt with it and stay attached.
+- **Costume details are painted on the body:** ties, buttons, name badges, chest patches, waistcoats.
+- **Props are held in the hands and animate with them:** a long-pole paint roller, a saw, knitting needles, a cane, a stopwatch.
+
+## B. Faces: an expanded vocabulary
+- **Gritted-teeth grimace:** a rectangle of teeth with vertical lines, used for anxiety or rage (pacing inmate f.1464–1469; rage f.1922–1934).
+- **An evil grin with dark, narrowed eyes** at the peak of rage (f.1935–1945).
+- **Content closed-eye smile ("^ ^" plus a soft smile) held for a long time**, alive only through breathing and the hands (knitting, f.1740–1787).
+- **Side-glance:** the eyes shift to the corner of the face before the head turns (f.1901–1910).
+- **Skin color is an emotion.** Anger floods the face purple **from the chin upward like rising liquid** over about 5 frames (f.517–521), then stays purple while the character talks.
+- **Steam puffs:** white cloud puffs burst from both sides of the head, rise, puff up and fade, re-spawning every ~8–10 frames (f.525–569).
+
+## C. Escalation is staged in beats, not switched
+The rage beat (f.1899–1945, ~1.5 s) goes through about eight readable steps, each held 3–6 frames:
+1. Calm smile.
+2. Side-glance.
+3. Flat stare.
+4. Brows knit.
+5. Grimace with teeth.
+6. Goggle eyes plus gritted teeth.
+7. The knitting needles **snap**, and fragments fly off as small objects.
+8. Arms fly up into a flex pose, followed by an evil grin.
+
+At the same time, the world reacts: **red crack lines grow across the walls and floor**, the image darkens at the edges, and the camera pulls back.
+
+## D. Action cycles
+- **Painting with a roller (f.1–48):**
+  - The arm and pole sweep up and down in arcs.
+  - The body bobs and leans to follow each stroke, and the head tilts with the effort.
+  - The paint **appears exactly where the roller has passed**.
+  - Midway, the character turns to the camera while still working.
+- **Sawing (railroad f.1–48):**
+  - The character crouches, and the arm pumps back and forth about every 6 frames.
+  - The body pumps with each stroke, and **sparks** fly at the contact point.
+  - The head turns from the work (eyes shut with effort) to the camera with a smug look.
+- **Knitting (f.1740–1787):**
+  - The two needles circle in small alternating loops about every 4–6 frames.
+  - The scarf grows longer, and the ball of yarn sits beside the character.
+- **Walking with legs (scientist scene, f.512–527):**
+  - Straight stick legs alternate, about **8 frames per step**.
+  - The arms swing opposite to the legs, with a small vertical bob.
+- **Panic pacing (f.1458–1469):**
+  - Longer strides with the body leaning forward, and the hair bouncing on top.
+  - The character walks **at the camera**, which pulls back.
+- **Sitting:**
+  - Legs dangle off the bench and swing a little.
+  - Hands gesture (raised palm, scratching) while the face does small reactions (f.1410–1450).
+
+## E. Staging with the camera
+- **Characters lean right into a wide-angle lens:**
+  - The boss bends ~45° toward the camera until his head fills the frame (f.427–466).
+  - Then he straightens up as the camera pulls back.
+  - The wide lens makes the head huge and the body small, which gives comic emphasis.
+- **Two-shots with characters interacting:**
+  - The worker leans into the foreground while the boss reacts behind him (f.1335–1379).
+  - Heads turn toward whoever is speaking.
+- Sparks, debris and puffs are **small 3D effects lit by the scene**, not flat overlays.
+
+## F. Additions to the rebuild plan
+1. **Leg rig:** stick legs with knee bend, a walk cycle (~8 frames per step), idle weight shifts, a sitting pose with dangling legs, and a crouch.
+2. **Hat and hair attachments** parented to the head.
+3. **Face-tint channel:** color fills from the chin upward over ~5 frames. Plus a steam-puff emitter.
+4. **Emotion escalation helper:** builds a staged sequence of expression holds (3–6 frames each) leading into a climax pose.
+5. **Prop actions:** a looping work motion where the body follows the hands (pull, push, saw, hammer, ring), with effects (sparks, dust, debris) at the contact point.
+6. **Lean-into-lens beats:** bend at the waist toward the camera, using a wide lens.
