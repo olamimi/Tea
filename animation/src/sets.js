@@ -101,13 +101,13 @@ function mats() {
   M.bronze = new THREE.MeshStandardMaterial({ color: 0xc8913f, metalness: 1, roughness: 0.3 });
   M.copper = new THREE.MeshStandardMaterial({ color: 0xd07a4a, metalness: 1, roughness: 0.28 });
   M.gold = new THREE.MeshStandardMaterial({ color: 0xe6b53c, metalness: 1, roughness: 0.25 });
-  M.wood = new THREE.MeshStandardMaterial({ color: 0x7a4f2c, roughness: 0.8 });
-  M.darkwood = new THREE.MeshStandardMaterial({ color: 0x4f3220, roughness: 0.85 });
+  M.wood = new THREE.MeshStandardMaterial({ color: 0x8a5a30, roughness: 0.5 });
+  M.darkwood = new THREE.MeshStandardMaterial({ color: 0x5a3822, roughness: 0.55 });
   M.iron = new THREE.MeshStandardMaterial({ color: 0x3a3a40, metalness: 0.7, roughness: 0.5 });
-  M.stone = new THREE.MeshStandardMaterial({ map: stoneTex([3, 1]), roughness: 0.95 });
-  M.stoneWall = new THREE.MeshStandardMaterial({ map: stoneTex([6, 2], '#a8a197'), roughness: 0.95 });
+  M.stone = new THREE.MeshStandardMaterial({ map: stoneTex([3, 1]), roughness: 0.62 });
+  M.stoneWall = new THREE.MeshStandardMaterial({ map: stoneTex([6, 2], '#b0a796'), roughness: 0.68 });
   M.red = new THREE.MeshStandardMaterial({ color: 0xa8232a, roughness: 0.7 });
-  M.velvet = new THREE.MeshStandardMaterial({ color: 0xb8282c, roughness: 0.9 });
+  M.velvet = new THREE.MeshStandardMaterial({ color: 0xc8202a, roughness: 0.6 });
   M.cloth = new THREE.MeshStandardMaterial({ color: 0xf3ecdc, roughness: 0.9 });
   M.ready = true; return M;
 }
@@ -137,7 +137,7 @@ export function makeBellRig({ well = true } = {}) {
   const tail = new THREE.Mesh(new THREE.SphereGeometry(0.08), m.iron); tail.position.x = 0.12; hp.add(tail);
   // ring waves
   const waveMat = () => new THREE.MeshBasicMaterial({ color: 0xffe7a8, transparent: true, opacity: 0, depthWrite: false, blending: THREE.AdditiveBlending, side: THREE.DoubleSide });
-  const waves = [0, 1, 2].map(() => { const w = new THREE.Mesh(new THREE.RingGeometry(0.95, 1, 64), waveMat()); w.position.set(0, 3.7, 0); g.add(w); return w; });
+  const waves = [0, 1, 2, 3].map(() => { const w = new THREE.Mesh(new THREE.RingGeometry(0.95, 1, 64), waveMat()); w.position.set(0, 3.7, 0); g.add(w); return w; });
   let wellParts = null;
   if (well) {
     const wellG = new THREE.Group(); g.add(wellG);
@@ -170,8 +170,8 @@ export function makeBellRig({ well = true } = {}) {
       pivot.rotation.z = Math.max(-0.35, Math.min(0.35, sway));
       pivot.position.x = 0;
       waves.forEach((w, k) => {
-        const age = a - k * 0.1; const life = 0.75;
-        if (age >= 0 && age < life) { const s = 1 + age * 2.6; w.scale.set(s, s, s); w.material.opacity = (1 - age / life) * 0.32; } else w.material.opacity = 0;
+        const s0 = past[past.length - 1 - k]; const age = s0 === undefined ? 99 : t - s0; const life = 0.95;
+        if (age >= 0 && age < life) { const s = 1 + age * 2.4; w.scale.set(s, s, s); w.material.opacity = Math.pow(1 - age / life, 1.5) * 0.3; } else w.material.opacity = 0;
         w.lookAt(camera.position);
       });
       if (this.wellParts) {
@@ -208,12 +208,12 @@ export function buildHall() {
   scene.background = new THREE.Color(0x1d1410);
   scene.fog = new THREE.Fog(0x3a2418, 18, 60);
   const add = (o) => { scene.add(o); return o; };
-  const floor = add(new THREE.Mesh(new THREE.PlaneGeometry(30, 50), new THREE.MeshStandardMaterial({ map: stoneTex([8, 14], '#8a7f72'), roughness: 0.6, metalness: 0.05 })));
+  const floor = add(new THREE.Mesh(new THREE.PlaneGeometry(30, 50), new THREE.MeshStandardMaterial({ map: stoneTex([8, 14], '#8a7f72'), roughness: 0.2, metalness: 0.05 })));
   floor.rotation.x = -Math.PI / 2; floor.receiveShadow = true; floor.userData.noCollide = true;
   const carpet = add(new THREE.Mesh(new THREE.PlaneGeometry(3.4, 30), new THREE.MeshStandardMaterial({ map: carpetTex(), roughness: 0.95 })));
   carpet.rotation.x = -Math.PI / 2; carpet.position.set(0, 0.01, -2); carpet.receiveShadow = true; carpet.userData.noCollide = true;
   // walls
-  const wallMat = new THREE.MeshStandardMaterial({ map: stoneTex([5, 3], '#a39684'), roughness: 0.95 });
+  const wallMat = new THREE.MeshStandardMaterial({ map: stoneTex([5, 3], '#a39684'), roughness: 0.7 });
   const back = add(new THREE.Mesh(new THREE.PlaneGeometry(30, 16), wallMat)); back.position.set(0, 8, -17);
   for (const s of [-1, 1]) { const w = add(new THREE.Mesh(new THREE.PlaneGeometry(50, 16), wallMat)); w.rotation.y = -s * Math.PI / 2; w.position.set(s * 12, 8, 0); }
   // rose window
@@ -297,7 +297,7 @@ export function buildHall() {
 // =====================================================================
 // WORLD (river valley: city, walls, river, mountains)
 // =====================================================================
-export const MOUNT = new THREE.Vector3(12, 0, -150); // where she lives later
+export const MOUNT = new THREE.Vector3(2.5, 0, -150); // where she lives later (west bank, clear of the river)
 
 export function buildWorld() {
   const m = mats();
@@ -316,10 +316,9 @@ export function buildWorld() {
     morning: skyTex([[0, '#c9b9c8'], [0.4, '#f2d2b8'], [0.5, '#fbe6cf'], [1, '#fbe6cf']]),
   };
   // ground
-  const ground = add(new THREE.Mesh(new THREE.PlaneGeometry(3000, 3000), new THREE.MeshStandardMaterial({ map: grassTex(), roughness: 1 })));
+  const ground = add(new THREE.Mesh(new THREE.PlaneGeometry(3000, 3000), new THREE.MeshStandardMaterial({ map: grassTex(), roughness: 0.85 })));
   ground.rotation.x = -Math.PI / 2; ground.receiveShadow = true; ground.userData.noCollide = true;
-  const farm = add(new THREE.Mesh(new THREE.PlaneGeometry(400, 400), new THREE.MeshStandardMaterial({ map: fieldTex(), roughness: 1, transparent: true, opacity: 0.6, depthWrite: false })));
-  farm.rotation.x = -Math.PI / 2; farm.position.set(-40, 0.02, -80); farm.userData.noCollide = true;
+
 
   // river ribbon along a curve
   const curve = new THREE.CatmullRomCurve3([[10, 0, 120], [10, 0, 40], [10, 0, 0], [10, 0, -40], [16, 0, -80], [8, 0, -120], [12, 0, -150], [24, 0, -200], [10, 0, -280], [0, 0, -400]].map((p) => new THREE.Vector3(...p)));
@@ -333,8 +332,8 @@ export function buildWorld() {
   });
   const rg = new THREE.BufferGeometry(); rg.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3)); rg.setAttribute('uv', new THREE.Float32BufferAttribute(uv, 2)); rg.setIndex(idx); rg.computeVertexNormals();
   const wtex = waterTex(); wtex.repeat.set(1, 1);
-  const riverMat = new THREE.MeshStandardMaterial({ map: wtex, color: 0x9fd0f0, roughness: 0.12, metalness: 0.3, side: THREE.DoubleSide });
-  const river = add(new THREE.Mesh(rg, riverMat)); river.receiveShadow = true; river.userData.noCollide = true;
+  const riverMat = new THREE.MeshStandardMaterial({ map: wtex, color: 0x8cc8f0, roughness: 0.04, metalness: 0.15, side: THREE.DoubleSide });
+  const river = add(new THREE.Mesh(rg, riverMat)); river.receiveShadow = true; river.userData.noCollide = true; river.position.y = 0.03;
   // sandy banks
   const bankPos = pos.map((v, i) => (i % 3 === 1 ? 0.03 : v));
   const bank = new THREE.BufferGeometry(); bank.setAttribute('position', new THREE.Float32BufferAttribute(bankPos, 3)); bank.setIndex(idx);
@@ -377,8 +376,8 @@ export function buildWorld() {
   for (let i = 0; i < 70; i++) {
     const x = R(-24, -1), z = R(-16, 16); if (Math.abs(x + 14) < 5 && Math.abs(z) < 6) continue;
     const w = R(2, 3.4), d = R(2, 3.4), h = R(2.4, 4.2);
-    const hb = shadowy(new THREE.Mesh(new THREE.BoxGeometry(w, h, d), new THREE.MeshStandardMaterial({ color: wallCols[i % 5], roughness: 0.9 }))); hb.position.set(x, h / 2, z); city.add(hb);
-    const rf = shadowy(new THREE.Mesh(new THREE.ConeGeometry(Math.max(w, d) * 0.78, R(1.4, 2.4), 4), new THREE.MeshStandardMaterial({ color: roofCols[i % 4], roughness: 0.8 }))); rf.position.set(x, h + rf.geometry.parameters.height / 2, z); rf.rotation.y = Math.PI / 4; city.add(rf);
+    const hb = shadowy(new THREE.Mesh(new THREE.BoxGeometry(w, h, d), new THREE.MeshStandardMaterial({ color: wallCols[i % 5], roughness: 0.6 }))); hb.position.set(x, h / 2, z); city.add(hb);
+    const rf = shadowy(new THREE.Mesh(new THREE.ConeGeometry(Math.max(w, d) * 0.78, R(1.4, 2.4), 4), new THREE.MeshStandardMaterial({ color: roofCols[i % 4], roughness: 0.35 }))); rf.position.set(x, h + rf.geometry.parameters.height / 2, z); rf.rotation.y = Math.PI / 4; city.add(rf);
   }
   // palace on a mound
   const mound = shadowy(new THREE.Mesh(new THREE.CylinderGeometry(6, 8, 4, 24), new THREE.MeshStandardMaterial({ color: 0x7da352, roughness: 1 }))); mound.position.set(-14, 2, 0); city.add(mound);
@@ -397,7 +396,7 @@ export function buildWorld() {
   // hills + mountains
   const hillMat = new THREE.MeshStandardMaterial({ color: 0x4f7f34, roughness: 1 });
   for (let i = 0; i < 26; i++) { const h = add(new THREE.Mesh(new THREE.SphereGeometry(R(14, 30), 20, 12), hillMat)); h.scale.y = R(0.25, 0.45); const side = i % 2 ? -1 : 1; h.position.set(10 + side * R(75, 160), 0, R(-160, 60)); h.receiveShadow = true; }
-  const mtnMat = new THREE.MeshStandardMaterial({ color: 0x8a8fa8, roughness: 1, flatShading: true });
+  const mtnMat = new THREE.MeshStandardMaterial({ color: 0x8a8fb0, roughness: 0.75, flatShading: true });
   const snowMat = new THREE.MeshStandardMaterial({ color: 0xf4f6fb, roughness: 0.9, flatShading: true });
   for (let i = 0; i < 18; i++) {
     const r = R(30, 70), h = R(60, 130); const x = (i - 9) * 34 + R(-10, 10); const z = R(-200, -330);
@@ -487,14 +486,15 @@ export function buildWorld() {
   Object.values(cast).forEach((c) => add(c.root));
 
   const LIGHTS = {
-    day:     { sky: 'day', fog: [0xa9cdea, 140, 900], hemi: [0xcfe6ff, 0x4a6a2a, 1.15], sun: [0xffe6c0, 2.8], sunDir: [40, 70, 35], sunSprite: [[300, 260, -600], 160], moon: false, stars: false, clouds: true, torches: 0, exposure: 1.0 },
-    sunset:  { sky: 'sunset', fog: [0xe8835e, 90, 700], hemi: [0xff9a6a, 0x3a2050, 0.9], sun: [0xff8a40, 3.4], sunDir: [10, 14, -60], sunSprite: [[40, 70, -700], 420], moon: false, stars: false, clouds: true, torches: 0, exposure: 1.0 },
+    day:     { sky: 'day', fog: [0xa9cdea, 160, 1000], hemi: [0xcfe6ff, 0x3a5a22, 0.8], sun: [0xfff0d0, 3.6], sunDir: [40, 70, 35], sunSprite: [[300, 260, -600], 160], moon: false, stars: false, clouds: true, torches: 0, exposure: 1.0 },
+    sunset:  { sky: 'sunset', fog: [0xe8835e, 90, 700], hemi: [0xff9a6a, 0x3a2050, 0.7], sun: [0xff8a40, 4.0], sunDir: [10, 14, -60], sunSprite: [[40, 70, -700], 420], moon: false, stars: false, clouds: true, torches: 0, exposure: 1.0 },
     dusk:    { sky: 'sunset', fog: [0xd9805e, 120, 900], hemi: [0xffb080, 0x4a3060, 1.15], sun: [0xffa060, 3.2], sunDir: [50, 45, 110], sunSprite: [[40, 70, -700], 420], moon: false, stars: false, clouds: true, torches: 0, exposure: 1.0 },
     night:   { sky: 'night', fog: [0x16204a, 60, 520], hemi: [0x4a5ab0, 0x0a1028, 0.6], sun: [0x8aa0ff, 0.55], sunDir: [-30, 60, -40], sunSprite: null, moon: [-120, 150, -520], stars: true, clouds: false, torches: 9, exposure: 0.85 },
     morning: { sky: 'morning', fog: [0xeac39e, 40, 420], hemi: [0xffe0c0, 0x6a5a3a, 1.05], sun: [0xffe0b8, 1.6], sunDir: [60, 40, 20], sunSprite: [[500, 180, 200], 260], moon: false, stars: false, clouds: false, torches: 0, exposure: 1.0 },
   };
   const world = {
-    scene, cast, rig, cart, rope, boat, flood, storm, portc, lantern, fire, fireLight, sun, MOUNT,
+    scene, cast, rig, cart, rope, boat, flood, storm, portc, lantern, fire, fireLight, sun, MOUNT, skies, skyMat,
+    onWater(p) { let d = 1e9; for (const q of pts) { const dd = Math.hypot(q.x - p.x, q.z - p.z); if (dd < d) d = dd; } return !flood.visible && p.y < 0.5 && d < 3.9; },
     tieRope(puppet) { // taut rope from the cart shafts to the puller's shoulder
       const a = cart.localToWorld(cart.userData.tip.clone()); const b = puppet.torso.localToWorld(new THREE.Vector3(0, puppet.shoulderY, -puppet.shoulderX * 0.6));
       rope.visible = true; rope.position.copy(a).add(b).multiplyScalar(0.5); rope.scale.set(1, a.distanceTo(b), 1); rope.quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0), b.clone().sub(a).normalize());

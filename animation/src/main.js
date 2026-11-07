@@ -7,13 +7,13 @@ import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
 import { buildHall, buildWorld, buildCutaway, MOUNT } from './sets.js';
 import { buildShots } from './shots.js';
 
-const W = 720, H = 1280, FPS = 30;
+const W = 1080, H = 1920, FPS = 30; // native 1080p: no upscaling shimmer
 const WHIP = 0; // hard cuts (sub-frame whip blur produced ghosting)
 
 const renderer = new THREE.WebGLRenderer({ antialias: true, preserveDrawingBuffer: true, logarithmicDepthBuffer: true });
 renderer.setSize(W, H); renderer.setPixelRatio(1);
 renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFSoftShadowMap;
-renderer.toneMapping = THREE.NeutralToneMapping; renderer.outputColorSpace = THREE.SRGBColorSpace;
+renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.outputColorSpace = THREE.SRGBColorSpace;
 document.body.appendChild(renderer.domElement);
 const camera = new THREE.PerspectiveCamera(40, W / H, 0.2, 4000);
 const composer = new EffectComposer(renderer);
@@ -22,7 +22,7 @@ const bloom = new UnrealBloomPass(new THREE.Vector2(W / 2, H / 2), 0.3, 0.5, 1.6
 composer.addPass(new OutputPass());
 const acc = document.createElement('canvas'); acc.width = W; acc.height = H; const actx = acc.getContext('2d');
 
-let sets, segs, timeline, envTex;
+let sets, segs, timeline, envTex, skyEnv;
 
 window.setup = async () => {
   timeline = await (await fetch('build/timeline.json')).json();
@@ -31,7 +31,12 @@ window.setup = async () => {
   // Fixed build order keeps seeded randomness identical across render workers.
   sets = { hall: buildHall(), world: buildWorld(), cut: buildCutaway() };
   // Reflections only on metals; everything else is lit purely by each scene's own lights.
-  for (const s of Object.values(sets)) s.scene.traverse((o) => { for (const m of [].concat(o.material || [])) if (m.metalness > 0.3) { m.envMap = envTex; m.envMapIntensity = 0.7; m.needsUpdate = true; } });
+  // sky reflections on every lit surface (water, polished floors, tiles, metal); characters are toon-shaded and unaffected
+  const envScene = new THREE.Scene(); const envSky = new THREE.Mesh(new THREE.SphereGeometry(100, 32, 16), new THREE.MeshBasicMaterial({ side: THREE.BackSide }));
+  envScene.add(envSky); skyEnv = {};
+  for (const [k, tex] of Object.entries(sets.world.skies)) { envSky.material.map = tex; envSky.material.needsUpdate = true; skyEnv[k] = pmrem.fromScene(envScene, 0.02).texture; }
+  sets.hall.scene.environment = envTex; sets.hall.scene.environmentIntensity = 0.45;
+  sets.cut.scene.environment = envTex; sets.cut.scene.environmentIntensity = 0.5;
   const norm = (w) => w.toLowerCase();
   const T = {
     MOUNT,
@@ -108,7 +113,8 @@ function renderOnce(t, forced) {
   const { u } = poseCamera(seg, t);
   if (seg.tick) seg.tick(set, t, u); else if (seg.inherit) for (let k = seg.k - 1; k >= 0; k--) { const sg = seg.list[k]; if (sg.tick && sg.set === seg.set) { sg.tick(set, t, u); break; } }
   set.update(t, camera);
-  renderer.toneMappingExposure = seg.set === 'world' ? (sets.world.exposure || 1) * 0.92 : 0.95;
+  if (seg.set === 'world') { const L = sets.world.light; const sk = { dusk: 'sunset' }[L] || L; sets.world.scene.environment = skyEnv[sk]; sets.world.scene.environmentIntensity = { day: 0.9, sunset: 0.75, dusk: 0.8, night: 0.35, morning: 0.7 }[L] ?? 0.7; }
+  renderer.toneMappingExposure = seg.set === 'world' ? (sets.world.exposure || 1) * 1.05 : 1.08;
   renderPass.scene = set.scene;
   composer.render();
   return seg;
@@ -158,6 +164,7 @@ window.clipCheck = (f) => {
     if (!c.root.visible) continue;
     const others = solids.filter((o) => owner.get(o) !== name && !(o.parent && o.parent.isMesh && owner.get(o.parent) === name));
     const base = c.root.getWorldPosition(new THREE.Vector3()); const R = c.spec.width * c.u * 0.95 + 0.05;
+    if (set.onWater && set.onWater(base)) out.push(`${name} standing on water @(${base.toArray().map((v) => v.toFixed(1))})`);
     for (const hf of [0.3, 0.55, 0.8]) for (let k = 0; k < 8; k++) {
       const a = k / 8 * Math.PI * 2, dir = new THREE.Vector3(Math.sin(a), 0, Math.cos(a));
       const p = base.clone().add(new THREE.Vector3(0, c.spec.H * hf, 0));

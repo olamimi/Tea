@@ -106,7 +106,7 @@ export function buildShots(T) {
           show(c.duke, V(2.0, 8.0, 0.8), V(8, 8, 5), [{ t: s0 - 1, expr: 'smug', pose: 'hips', look: 'camera', headLean: -8, tilt: -4 }, { t: w('walls', 'tallest') - 0.05, brows: 'raised', squash: 1 }]);
           show(c.g1, V(2.0, 8.0, -1.2), V(8, 8, 3), [{ t: s0 - 1, pose: 'hold', expr: 'bored' }]);
           show(c.g2, V(2.0, 8.0, 2.8), V(8, 8, 3), [{ t: s0 - 1, pose: 'hold', look: head(c.duke) }]);
-          show(c.eng, V(6.1, 0, -5.1), V(6.2, 0, -1.2), [{ t: s0 - 1, expr: 'neutral', look: 'camera' }, { t: ta - 0.05, expr: 'smug', pose: 'shrug', squash: 1, tilt: 5 }, { t: tb - 0.1, expr: 'happy' }]); },
+          show(c.eng, V(5.6, 0, -5.2), V(6.2, 0, -1.2), [{ t: s0 - 1, expr: 'neutral', look: 'camera' }, { t: ta - 0.05, expr: 'smug', pose: 'shrug', squash: 1, tilt: 5 }, { t: tb - 0.1, expr: 'happy' }]); },
         cam: path([[0, V(7.0, 9.3, 4.6), V(2.0, 9.1, 0.8), 34], [0.25, V(8.5, 10.5, 6.0), V(1.5, 8.6, 0.6), 38], [1, V(30, 30, 30), V(-10, 3, -2), 50]]) },
       { at: ta - s0 - 0.05, set: 'world', light: 'day', focus: RIG,
         cam: move(V(6.4, 0.6, -0.8), V(4.2, 3.2, -7.5), V(6.2, 0.65, -1.6), V(4.2, 3.3, -7.5), 58, 56) },
@@ -176,12 +176,12 @@ export function buildShots(T) {
         cam: move(V(0, 2.5, -8.8), V(0, 2.3, -14.2), V(0, 2.45, -10.6), V(0, 2.3, -14.2), 34, 32) },
       { at: thr - s0 - 0.1, set: 'world', light: 'day', focus: V(4, 0, 0),
         init(W) { const c = W.cast; W.rig.group.position.set(0, -50, 0); W.cart.visible = true;
-          show(c.eng, V(4.0, 0, 0.4), Math.PI / 2, [{ t: thr - 1, expr: 'sad', pose: 'pull', work: 'pull' }]).walk({ t0: thr - 0.1, t1: thr + 2.6, from: V(4.0, 0, 0.4), to: V(8.4, 0, 0.4), mode: 'pull', ease: false });
+          show(c.eng, V(3.6, 0, 0.6), 2.4, [{ t: thr - 1, expr: 'sad', pose: 'pull', work: 'pull' }]).walk({ t0: thr - 0.1, t1: thr + 3.0, from: V(3.4, 0, 1.0), to: V(5.0, 0, -3.4), mode: 'pull', ease: false });
           show(c.g1, V(2.4, 0, -2.6), V(6, 0, 0.4), [{ t: thr - 1, expr: 'laugh', pose: 'point', look: V(6, 1.6, 0.4) }]);
           show(c.g2, V(2.4, 0, 2.8), V(6, 0, 0.4), [{ t: thr - 1, expr: 'laugh', pose: 'hold', look: head(c.g1) }]);
           show(c.duke, V(2.0, 8.0, 0.8), V(8, 0, 0.4), [{ t: thr - 1, expr: 'smug', pose: 'wave', look: V(6, 1, 0.4) }]); },
-        tick(W) { const p = W.cast.eng.root.position; W.cart.position.set(p.x - 2.2, 0, 0.4); W.cart.rotation.y = 0; W.tieRope(W.cast.eng); },
-        cam: move(V(12.5, 2.0, 3.6), V(3.2, 2.4, 0), V(11.4, 1.9, 2.8), V(3.8, 2.3, 0), 44, 42) },
+        tick(W) { const e = W.cast.eng; const f = e.facing; const p = e.root.position; W.cart.position.set(p.x - Math.sin(f) * 2.2, 0, p.z - Math.cos(f) * 2.2); W.cart.rotation.y = f - Math.PI / 2; W.tieRope(e); },
+        cam: move(V(9.5, 2.2, 5.5), V(3.4, 2.0, -0.6), V(9.0, 2.1, 4.6), V(3.9, 2.0, -1.4), 48, 46) },
     ];
   };
 

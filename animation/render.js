@@ -9,7 +9,7 @@ const server = http.createServer((req, res) => { const p = path.join(ROOT, decod
 (async () => {
   await new Promise((r) => server.listen(0, '127.0.0.1', r)); const port = server.address().port;
   const browser = await chromium.launch({ args: ['--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist'] });
-  const open = async () => { const p = await browser.newPage({ viewport: { width: 720, height: 1280 } }); p.on('pageerror', (e) => console.log('PAGE ERROR', e.message)); p.on('console', (m) => m.type() === 'error' && console.log('console', m.text()));
+  const open = async () => { const p = await browser.newPage({ viewport: { width: 1080, height: 1920 } }); p.on('pageerror', (e) => console.log('PAGE ERROR', e.message)); p.on('console', (m) => m.type() === 'error' && console.log('console', m.text()));
     await p.goto(`http://127.0.0.1:${port}/index.html`); await p.waitForFunction('window.ready'); const info = await p.evaluate('window.setup()'); return { p, info }; };
   const first = await open();
   const { frames, segs } = first.info;
