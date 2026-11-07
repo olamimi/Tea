@@ -1,0 +1,2613 @@
+{
+ "duration": 57.417,
+ "shots": [
+  {
+   "name": "hook",
+   "lines": [
+    {
+     "shot": "hook",
+     "text": "She hung a bronze bell over the river, and told the Duke: if this ever rings, climb.",
+     "start": 0.15,
+     "end": 4.188,
+     "words": [
+      {
+       "w": "She",
+       "start": 0.15,
+       "end": 0.324
+      },
+      {
+       "w": "hung",
+       "start": 0.324,
+       "end": 0.498
+      },
+      {
+       "w": "a",
+       "start": 0.498,
+       "end": 0.672
+      },
+      {
+       "w": "bronze",
+       "start": 0.672,
+       "end": 0.846
+      },
+      {
+       "w": "bell",
+       "start": 0.846,
+       "end": 1.02
+      },
+      {
+       "w": "over",
+       "start": 1.02,
+       "end": 1.368
+      },
+      {
+       "w": "the",
+       "start": 1.368,
+       "end": 1.543
+      },
+      {
+       "w": "river,",
+       "start": 1.543,
+       "end": 2.03
+      },
+      {
+       "w": "and",
+       "start": 2.03,
+       "end": 2.204
+      },
+      {
+       "w": "told",
+       "start": 2.204,
+       "end": 2.378
+      },
+      {
+       "w": "the",
+       "start": 2.378,
+       "end": 2.552
+      },
+      {
+       "w": "Duke:",
+       "start": 2.552,
+       "end": 2.865
+      },
+      {
+       "w": "if",
+       "start": 2.865,
+       "end": 3.04
+      },
+      {
+       "w": "this",
+       "start": 3.04,
+       "end": 3.214
+      },
+      {
+       "w": "ever",
+       "start": 3.214,
+       "end": 3.562
+      },
+      {
+       "w": "rings,",
+       "start": 3.562,
+       "end": 3.875
+      },
+      {
+       "w": "climb.",
+       "start": 3.875,
+       "end": 4.188
+      }
+     ]
+    }
+   ],
+   "start": 0.0,
+   "end": 4.288,
+   "dur": 4.288
+  },
+  {
+   "name": "laugh",
+   "lines": [
+    {
+     "shot": "laugh",
+     "text": "The whole council burst out laughing.",
+     "start": 4.368,
+     "end": 5.951,
+     "words": [
+      {
+       "w": "The",
+       "start": 4.368,
+       "end": 4.53
+      },
+      {
+       "w": "whole",
+       "start": 4.53,
+       "end": 4.853
+      },
+      {
+       "w": "council",
+       "start": 4.853,
+       "end": 5.176
+      },
+      {
+       "w": "burst",
+       "start": 5.176,
+       "end": 5.337
+      },
+      {
+       "w": "out",
+       "start": 5.337,
+       "end": 5.499
+      },
+      {
+       "w": "laughing.",
+       "start": 5.499,
+       "end": 5.951
+      }
+     ]
+    }
+   ],
+   "start": 4.288,
+   "end": 6.051,
+   "dur": 1.763
+  },
+  {
+   "name": "device",
+   "lines": [
+    {
+     "shot": "device",
+     "text": "Under the bell, a stone well. In the well, a copper float. And from the float, a chain to the hammer.",
+     "start": 6.131,
+     "end": 10.9,
+     "words": [
+      {
+       "w": "Under",
+       "start": 6.131,
+       "end": 6.462
+      },
+      {
+       "w": "the",
+       "start": 6.462,
+       "end": 6.627
+      },
+      {
+       "w": "bell,",
+       "start": 6.627,
+       "end": 6.926
+      },
+      {
+       "w": "a",
+       "start": 6.926,
+       "end": 7.091
+      },
+      {
+       "w": "stone",
+       "start": 7.091,
+       "end": 7.257
+      },
+      {
+       "w": "well.",
+       "start": 7.257,
+       "end": 7.555
+      },
+      {
+       "w": "In",
+       "start": 7.555,
+       "end": 7.721
+      },
+      {
+       "w": "the",
+       "start": 7.721,
+       "end": 7.886
+      },
+      {
+       "w": "well,",
+       "start": 7.886,
+       "end": 8.184
+      },
+      {
+       "w": "a",
+       "start": 8.184,
+       "end": 8.35
+      },
+      {
+       "w": "copper",
+       "start": 8.35,
+       "end": 8.681
+      },
+      {
+       "w": "float.",
+       "start": 8.681,
+       "end": 8.979
+      },
+      {
+       "w": "And",
+       "start": 8.979,
+       "end": 9.145
+      },
+      {
+       "w": "from",
+       "start": 9.145,
+       "end": 9.31
+      },
+      {
+       "w": "the",
+       "start": 9.31,
+       "end": 9.476
+      },
+      {
+       "w": "float,",
+       "start": 9.476,
+       "end": 9.774
+      },
+      {
+       "w": "a",
+       "start": 9.774,
+       "end": 9.94
+      },
+      {
+       "w": "chain",
+       "start": 9.94,
+       "end": 10.105
+      },
+      {
+       "w": "to",
+       "start": 10.105,
+       "end": 10.271
+      },
+      {
+       "w": "the",
+       "start": 10.271,
+       "end": 10.437
+      },
+      {
+       "w": "hammer.",
+       "start": 10.437,
+       "end": 10.9
+      }
+     ]
+    }
+   ],
+   "start": 6.051,
+   "end": 11.0,
+   "dur": 4.949
+  },
+  {
+   "name": "walls",
+   "lines": [
+    {
+     "shot": "walls",
+     "text": "The Duke had the tallest walls in the world. And she wanted him scared of a bucket.",
+     "start": 11.08,
+     "end": 14.773,
+     "words": [
+      {
+       "w": "The",
+       "start": 11.08,
+       "end": 11.244
+      },
+      {
+       "w": "Duke",
+       "start": 11.244,
+       "end": 11.407
+      },
+      {
+       "w": "had",
+       "start": 11.407,
+       "end": 11.571
+      },
+      {
+       "w": "the",
+       "start": 11.571,
+       "end": 11.734
+      },
+      {
+       "w": "tallest",
+       "start": 11.734,
+       "end": 12.061
+      },
+      {
+       "w": "walls",
+       "start": 12.061,
+       "end": 12.224
+      },
+      {
+       "w": "in",
+       "start": 12.224,
+       "end": 12.387
+      },
+      {
+       "w": "the",
+       "start": 12.387,
+       "end": 12.551
+      },
+      {
+       "w": "world.",
+       "start": 12.551,
+       "end": 12.845
+      },
+      {
+       "w": "And",
+       "start": 12.845,
+       "end": 13.008
+      },
+      {
+       "w": "she",
+       "start": 13.008,
+       "end": 13.172
+      },
+      {
+       "w": "wanted",
+       "start": 13.172,
+       "end": 13.498
+      },
+      {
+       "w": "him",
+       "start": 13.498,
+       "end": 13.662
+      },
+      {
+       "w": "scared",
+       "start": 13.662,
+       "end": 13.988
+      },
+      {
+       "w": "of",
+       "start": 13.988,
+       "end": 14.152
+      },
+      {
+       "w": "a",
+       "start": 14.152,
+       "end": 14.315
+      },
+      {
+       "w": "bucket.",
+       "start": 14.315,
+       "end": 14.773
+      }
+     ]
+    }
+   ],
+   "start": 11.0,
+   "end": 14.873,
+   "dur": 3.873
+  },
+  {
+   "name": "ring1",
+   "lines": [
+    {
+     "shot": "ring1",
+     "text": "Weeks later, the bell rang once. But the river stayed calm.",
+     "start": 14.953,
+     "end": 17.761,
+     "words": [
+      {
+       "w": "Weeks",
+       "start": 14.953,
+       "end": 15.135
+      },
+      {
+       "w": "later,",
+       "start": 15.135,
+       "end": 15.646
+      },
+      {
+       "w": "the",
+       "start": 15.646,
+       "end": 15.828
+      },
+      {
+       "w": "bell",
+       "start": 15.828,
+       "end": 16.011
+      },
+      {
+       "w": "rang",
+       "start": 16.011,
+       "end": 16.193
+      },
+      {
+       "w": "once.",
+       "start": 16.193,
+       "end": 16.521
+      },
+      {
+       "w": "But",
+       "start": 16.521,
+       "end": 16.704
+      },
+      {
+       "w": "the",
+       "start": 16.704,
+       "end": 16.886
+      },
+      {
+       "w": "river",
+       "start": 16.886,
+       "end": 17.251
+      },
+      {
+       "w": "stayed",
+       "start": 17.251,
+       "end": 17.433
+      },
+      {
+       "w": "calm.",
+       "start": 17.433,
+       "end": 17.762
+      }
+     ]
+    }
+   ],
+   "start": 14.873,
+   "end": 17.861,
+   "dur": 2.988
+  },
+  {
+   "name": "boat",
+   "lines": [
+    {
+     "shot": "boat",
+     "text": "Not even a wave rocked the Duke's boat.",
+     "start": 17.941,
+     "end": 19.723,
+     "words": [
+      {
+       "w": "Not",
+       "start": 17.941,
+       "end": 18.092
+      },
+      {
+       "w": "even",
+       "start": 18.092,
+       "end": 18.394
+      },
+      {
+       "w": "a",
+       "start": 18.394,
+       "end": 18.545
+      },
+      {
+       "w": "wave",
+       "start": 18.545,
+       "end": 18.696
+      },
+      {
+       "w": "rocked",
+       "start": 18.696,
+       "end": 18.998
+      },
+      {
+       "w": "the",
+       "start": 18.998,
+       "end": 19.149
+      },
+      {
+       "w": "Duke's",
+       "start": 19.149,
+       "end": 19.451
+      },
+      {
+       "w": "boat.",
+       "start": 19.451,
+       "end": 19.723
+      }
+     ]
+    }
+   ],
+   "start": 17.861,
+   "end": 19.823,
+   "dur": 1.962
+  },
+  {
+   "name": "feast",
+   "lines": [
+    {
+     "shot": "feast",
+     "text": "Now they laughed even harder.",
+     "start": 19.903,
+     "end": 21.059,
+     "words": [
+      {
+       "w": "Now",
+       "start": 19.903,
+       "end": 20.034
+      },
+      {
+       "w": "they",
+       "start": 20.034,
+       "end": 20.166
+      },
+      {
+       "w": "laughed",
+       "start": 20.166,
+       "end": 20.428
+      },
+      {
+       "w": "even",
+       "start": 20.428,
+       "end": 20.691
+      },
+      {
+       "w": "harder.",
+       "start": 20.691,
+       "end": 21.059
+      }
+     ]
+    }
+   ],
+   "start": 19.823,
+   "end": 21.159,
+   "dur": 1.336
+  },
+  {
+   "name": "decree",
+   "lines": [
+    {
+     "shot": "decree",
+     "text": "The Duke called it the world's loudest doorbell, and threw it out of the city.",
+     "start": 21.239,
+     "end": 24.558,
+     "words": [
+      {
+       "w": "The",
+       "start": 21.239,
+       "end": 21.4
+      },
+      {
+       "w": "Duke",
+       "start": 21.4,
+       "end": 21.561
+      },
+      {
+       "w": "called",
+       "start": 21.561,
+       "end": 21.883
+      },
+      {
+       "w": "it",
+       "start": 21.883,
+       "end": 22.044
+      },
+      {
+       "w": "the",
+       "start": 22.044,
+       "end": 22.205
+      },
+      {
+       "w": "world's",
+       "start": 22.205,
+       "end": 22.367
+      },
+      {
+       "w": "loudest",
+       "start": 22.367,
+       "end": 22.689
+      },
+      {
+       "w": "doorbell,",
+       "start": 22.689,
+       "end": 23.14
+      },
+      {
+       "w": "and",
+       "start": 23.14,
+       "end": 23.301
+      },
+      {
+       "w": "threw",
+       "start": 23.301,
+       "end": 23.462
+      },
+      {
+       "w": "it",
+       "start": 23.462,
+       "end": 23.623
+      },
+      {
+       "w": "out",
+       "start": 23.623,
+       "end": 23.784
+      },
+      {
+       "w": "of",
+       "start": 23.784,
+       "end": 23.945
+      },
+      {
+       "w": "the",
+       "start": 23.945,
+       "end": 24.106
+      },
+      {
+       "w": "city.",
+       "start": 24.106,
+       "end": 24.558
+      }
+     ]
+    }
+   ],
+   "start": 21.159,
+   "end": 24.658,
+   "dur": 3.499
+  },
+  {
+   "name": "haul",
+   "lines": [
+    {
+     "shot": "haul",
+     "text": "So she dragged it up the river, all the way to the mountains, and lived there.",
+     "start": 24.738,
+     "end": 28.055,
+     "words": [
+      {
+       "w": "So",
+       "start": 24.738,
+       "end": 24.886
+      },
+      {
+       "w": "she",
+       "start": 24.886,
+       "end": 25.034
+      },
+      {
+       "w": "dragged",
+       "start": 25.034,
+       "end": 25.33
+      },
+      {
+       "w": "it",
+       "start": 25.33,
+       "end": 25.478
+      },
+      {
+       "w": "up",
+       "start": 25.478,
+       "end": 25.626
+      },
+      {
+       "w": "the",
+       "start": 25.626,
+       "end": 25.774
+      },
+      {
+       "w": "river,",
+       "start": 25.774,
+       "end": 26.189
+      },
+      {
+       "w": "all",
+       "start": 26.189,
+       "end": 26.337
+      },
+      {
+       "w": "the",
+       "start": 26.337,
+       "end": 26.485
+      },
+      {
+       "w": "way",
+       "start": 26.485,
+       "end": 26.633
+      },
+      {
+       "w": "to",
+       "start": 26.633,
+       "end": 26.781
+      },
+      {
+       "w": "the",
+       "start": 26.781,
+       "end": 26.929
+      },
+      {
+       "w": "mountains,",
+       "start": 26.929,
+       "end": 27.344
+      },
+      {
+       "w": "and",
+       "start": 27.344,
+       "end": 27.492
+      },
+      {
+       "w": "lived",
+       "start": 27.492,
+       "end": 27.788
+      },
+      {
+       "w": "there.",
+       "start": 27.788,
+       "end": 28.055
+      }
+     ]
+    }
+   ],
+   "start": 24.658,
+   "end": 28.155,
+   "dur": 3.497
+  },
+  {
+   "name": "night",
+   "lines": [
+    {
+     "shot": "night",
+     "text": "Then one night, under a clear sky, the bell rang. And rang. And did not stop.",
+     "start": 28.235,
+     "end": 32.029,
+     "words": [
+      {
+       "w": "Then",
+       "start": 28.235,
+       "end": 28.416
+      },
+      {
+       "w": "one",
+       "start": 28.416,
+       "end": 28.596
+      },
+      {
+       "w": "night,",
+       "start": 28.596,
+       "end": 28.921
+      },
+      {
+       "w": "under",
+       "start": 28.921,
+       "end": 29.283
+      },
+      {
+       "w": "a",
+       "start": 29.283,
+       "end": 29.463
+      },
+      {
+       "w": "clear",
+       "start": 29.463,
+       "end": 29.644
+      },
+      {
+       "w": "sky,",
+       "start": 29.644,
+       "end": 29.969
+      },
+      {
+       "w": "the",
+       "start": 29.969,
+       "end": 30.15
+      },
+      {
+       "w": "bell",
+       "start": 30.15,
+       "end": 30.331
+      },
+      {
+       "w": "rang.",
+       "start": 30.331,
+       "end": 30.656
+      },
+      {
+       "w": "And",
+       "start": 30.656,
+       "end": 30.836
+      },
+      {
+       "w": "rang.",
+       "start": 30.836,
+       "end": 31.162
+      },
+      {
+       "w": "And",
+       "start": 31.162,
+       "end": 31.342
+      },
+      {
+       "w": "did",
+       "start": 31.342,
+       "end": 31.523
+      },
+      {
+       "w": "not",
+       "start": 31.523,
+       "end": 31.703
+      },
+      {
+       "w": "stop.",
+       "start": 31.703,
+       "end": 32.029
+      }
+     ]
+    }
+   ],
+   "start": 28.155,
+   "end": 32.129,
+   "dur": 3.974
+  },
+  {
+   "name": "gate",
+   "lines": [
+    {
+     "shot": "gate",
+     "text": "She ran all night to the city gates. Everyone! Get to high ground!",
+     "start": 32.209,
+     "end": 35.396,
+     "words": [
+      {
+       "w": "She",
+       "start": 32.209,
+       "end": 32.373
+      },
+      {
+       "w": "ran",
+       "start": 32.373,
+       "end": 32.537
+      },
+      {
+       "w": "all",
+       "start": 32.537,
+       "end": 32.702
+      },
+      {
+       "w": "night",
+       "start": 32.702,
+       "end": 32.866
+      },
+      {
+       "w": "to",
+       "start": 32.866,
+       "end": 33.03
+      },
+      {
+       "w": "the",
+       "start": 33.03,
+       "end": 33.195
+      },
+      {
+       "w": "city",
+       "start": 33.195,
+       "end": 33.523
+      },
+      {
+       "w": "gates.",
+       "start": 33.523,
+       "end": 33.983
+      },
+      {
+       "w": "Everyone!",
+       "start": 33.983,
+       "end": 34.608
+      },
+      {
+       "w": "Get",
+       "start": 34.608,
+       "end": 34.772
+      },
+      {
+       "w": "to",
+       "start": 34.772,
+       "end": 34.936
+      },
+      {
+       "w": "high",
+       "start": 34.936,
+       "end": 35.101
+      },
+      {
+       "w": "ground!",
+       "start": 35.101,
+       "end": 35.396
+      }
+     ]
+    }
+   ],
+   "start": 32.129,
+   "end": 35.496,
+   "dur": 3.367
+  },
+  {
+   "name": "guard",
+   "lines": [
+    {
+     "shot": "guard",
+     "text": "Hey, bell lady. Your bucket thirsty again?",
+     "start": 35.576,
+     "end": 38.013,
+     "words": [
+      {
+       "w": "Hey,",
+       "start": 35.576,
+       "end": 35.904
+      },
+      {
+       "w": "bell",
+       "start": 35.904,
+       "end": 36.085
+      },
+      {
+       "w": "lady.",
+       "start": 36.085,
+       "end": 36.595
+      },
+      {
+       "w": "Your",
+       "start": 36.595,
+       "end": 36.776
+      },
+      {
+       "w": "bucket",
+       "start": 36.776,
+       "end": 37.14
+      },
+      {
+       "w": "thirsty",
+       "start": 37.14,
+       "end": 37.504
+      },
+      {
+       "w": "again?",
+       "start": 37.504,
+       "end": 38.013
+      }
+     ]
+    },
+    {
+     "shot": "guard",
+     "text": "They laughed her all the way back up the hill.",
+     "start": 38.133,
+     "end": 39.714,
+     "words": [
+      {
+       "w": "They",
+       "start": 38.133,
+       "end": 38.267
+      },
+      {
+       "w": "laughed",
+       "start": 38.267,
+       "end": 38.535
+      },
+      {
+       "w": "her",
+       "start": 38.535,
+       "end": 38.669
+      },
+      {
+       "w": "all",
+       "start": 38.669,
+       "end": 38.803
+      },
+      {
+       "w": "the",
+       "start": 38.803,
+       "end": 38.937
+      },
+      {
+       "w": "way",
+       "start": 38.937,
+       "end": 39.071
+      },
+      {
+       "w": "back",
+       "start": 39.071,
+       "end": 39.205
+      },
+      {
+       "w": "up",
+       "start": 39.205,
+       "end": 39.339
+      },
+      {
+       "w": "the",
+       "start": 39.339,
+       "end": 39.473
+      },
+      {
+       "w": "hill.",
+       "start": 39.473,
+       "end": 39.714
+      }
+     ]
+    }
+   ],
+   "start": 35.496,
+   "end": 39.814,
+   "dur": 4.318
+  },
+  {
+   "name": "flood",
+   "lines": [
+    {
+     "shot": "flood",
+     "text": "By morning, the lower city was underwater.",
+     "start": 39.894,
+     "end": 41.823,
+     "words": [
+      {
+       "w": "By",
+       "start": 39.894,
+       "end": 40.026
+      },
+      {
+       "w": "morning,",
+       "start": 40.026,
+       "end": 40.396
+      },
+      {
+       "w": "the",
+       "start": 40.396,
+       "end": 40.528
+      },
+      {
+       "w": "lower",
+       "start": 40.528,
+       "end": 40.792
+      },
+      {
+       "w": "city",
+       "start": 40.792,
+       "end": 41.057
+      },
+      {
+       "w": "was",
+       "start": 41.057,
+       "end": 41.189
+      },
+      {
+       "w": "underwater.",
+       "start": 41.189,
+       "end": 41.823
+      }
+     ]
+    }
+   ],
+   "start": 39.814,
+   "end": 41.923,
+   "dur": 2.109
+  },
+  {
+   "name": "inside",
+   "lines": [
+    {
+     "shot": "inside",
+     "text": "Inside the well, a pipe ran to the river. A little water lifted the float a little. A flood lifted it all the way, yanked the pin, and the hammer never stopped swinging.",
+     "start": 42.003,
+     "end": 50.555,
+     "words": [
+      {
+       "w": "Inside",
+       "start": 42.003,
+       "end": 42.346
+      },
+      {
+       "w": "the",
+       "start": 42.346,
+       "end": 42.518
+      },
+      {
+       "w": "well,",
+       "start": 42.518,
+       "end": 42.827
+      },
+      {
+       "w": "a",
+       "start": 42.827,
+       "end": 42.999
+      },
+      {
+       "w": "pipe",
+       "start": 42.999,
+       "end": 43.17
+      },
+      {
+       "w": "ran",
+       "start": 43.17,
+       "end": 43.342
+      },
+      {
+       "w": "to",
+       "start": 43.342,
+       "end": 43.514
+      },
+      {
+       "w": "the",
+       "start": 43.514,
+       "end": 43.686
+      },
+      {
+       "w": "river.",
+       "start": 43.686,
+       "end": 44.166
+      },
+      {
+       "w": "A",
+       "start": 44.166,
+       "end": 44.338
+      },
+      {
+       "w": "little",
+       "start": 44.338,
+       "end": 44.682
+      },
+      {
+       "w": "water",
+       "start": 44.682,
+       "end": 45.025
+      },
+      {
+       "w": "lifted",
+       "start": 45.025,
+       "end": 45.369
+      },
+      {
+       "w": "the",
+       "start": 45.369,
+       "end": 45.54
+      },
+      {
+       "w": "float",
+       "start": 45.54,
+       "end": 45.712
+      },
+      {
+       "w": "a",
+       "start": 45.712,
+       "end": 45.884
+      },
+      {
+       "w": "little.",
+       "start": 45.884,
+       "end": 46.365
+      },
+      {
+       "w": "A",
+       "start": 46.365,
+       "end": 46.536
+      },
+      {
+       "w": "flood",
+       "start": 46.536,
+       "end": 46.708
+      },
+      {
+       "w": "lifted",
+       "start": 46.708,
+       "end": 47.052
+      },
+      {
+       "w": "it",
+       "start": 47.052,
+       "end": 47.223
+      },
+      {
+       "w": "all",
+       "start": 47.223,
+       "end": 47.395
+      },
+      {
+       "w": "the",
+       "start": 47.395,
+       "end": 47.567
+      },
+      {
+       "w": "way,",
+       "start": 47.567,
+       "end": 47.876
+      },
+      {
+       "w": "yanked",
+       "start": 47.876,
+       "end": 48.219
+      },
+      {
+       "w": "the",
+       "start": 48.219,
+       "end": 48.391
+      },
+      {
+       "w": "pin,",
+       "start": 48.391,
+       "end": 48.7
+      },
+      {
+       "w": "and",
+       "start": 48.7,
+       "end": 48.872
+      },
+      {
+       "w": "the",
+       "start": 48.872,
+       "end": 49.044
+      },
+      {
+       "w": "hammer",
+       "start": 49.044,
+       "end": 49.387
+      },
+      {
+       "w": "never",
+       "start": 49.387,
+       "end": 49.731
+      },
+      {
+       "w": "stopped",
+       "start": 49.731,
+       "end": 50.074
+      },
+      {
+       "w": "swinging.",
+       "start": 50.074,
+       "end": 50.555
+      }
+     ]
+    }
+   ],
+   "start": 41.923,
+   "end": 50.655,
+   "dur": 8.732
+  },
+  {
+   "name": "finale",
+   "lines": [
+    {
+     "shot": "finale",
+     "text": "One ring meant rain, far away. And by throwing the bell out, the Duke had moved it closer to the storm.",
+     "start": 50.735,
+     "end": 56.037,
+     "words": [
+      {
+       "w": "One",
+       "start": 50.735,
+       "end": 50.923
+      },
+      {
+       "w": "ring",
+       "start": 50.923,
+       "end": 51.111
+      },
+      {
+       "w": "meant",
+       "start": 51.111,
+       "end": 51.299
+      },
+      {
+       "w": "rain,",
+       "start": 51.299,
+       "end": 51.637
+      },
+      {
+       "w": "far",
+       "start": 51.637,
+       "end": 51.825
+      },
+      {
+       "w": "away.",
+       "start": 51.825,
+       "end": 52.352
+      },
+      {
+       "w": "And",
+       "start": 52.352,
+       "end": 52.54
+      },
+      {
+       "w": "by",
+       "start": 52.54,
+       "end": 52.728
+      },
+      {
+       "w": "throwing",
+       "start": 52.728,
+       "end": 53.104
+      },
+      {
+       "w": "the",
+       "start": 53.104,
+       "end": 53.292
+      },
+      {
+       "w": "bell",
+       "start": 53.292,
+       "end": 53.48
+      },
+      {
+       "w": "out,",
+       "start": 53.48,
+       "end": 53.818
+      },
+      {
+       "w": "the",
+       "start": 53.818,
+       "end": 54.006
+      },
+      {
+       "w": "Duke",
+       "start": 54.006,
+       "end": 54.194
+      },
+      {
+       "w": "had",
+       "start": 54.194,
+       "end": 54.382
+      },
+      {
+       "w": "moved",
+       "start": 54.382,
+       "end": 54.758
+      },
+      {
+       "w": "it",
+       "start": 54.758,
+       "end": 54.946
+      },
+      {
+       "w": "closer",
+       "start": 54.946,
+       "end": 55.322
+      },
+      {
+       "w": "to",
+       "start": 55.322,
+       "end": 55.51
+      },
+      {
+       "w": "the",
+       "start": 55.51,
+       "end": 55.698
+      },
+      {
+       "w": "storm.",
+       "start": 55.698,
+       "end": 56.037
+      }
+     ]
+    }
+   ],
+   "start": 50.655,
+   "end": 57.417,
+   "dur": 6.762
+  }
+ ],
+ "lines": [
+  {
+   "shot": "hook",
+   "text": "She hung a bronze bell over the river, and told the Duke: if this ever rings, climb.",
+   "start": 0.15,
+   "end": 4.188,
+   "words": [
+    {
+     "w": "She",
+     "start": 0.15,
+     "end": 0.324
+    },
+    {
+     "w": "hung",
+     "start": 0.324,
+     "end": 0.498
+    },
+    {
+     "w": "a",
+     "start": 0.498,
+     "end": 0.672
+    },
+    {
+     "w": "bronze",
+     "start": 0.672,
+     "end": 0.846
+    },
+    {
+     "w": "bell",
+     "start": 0.846,
+     "end": 1.02
+    },
+    {
+     "w": "over",
+     "start": 1.02,
+     "end": 1.368
+    },
+    {
+     "w": "the",
+     "start": 1.368,
+     "end": 1.543
+    },
+    {
+     "w": "river,",
+     "start": 1.543,
+     "end": 2.03
+    },
+    {
+     "w": "and",
+     "start": 2.03,
+     "end": 2.204
+    },
+    {
+     "w": "told",
+     "start": 2.204,
+     "end": 2.378
+    },
+    {
+     "w": "the",
+     "start": 2.378,
+     "end": 2.552
+    },
+    {
+     "w": "Duke:",
+     "start": 2.552,
+     "end": 2.865
+    },
+    {
+     "w": "if",
+     "start": 2.865,
+     "end": 3.04
+    },
+    {
+     "w": "this",
+     "start": 3.04,
+     "end": 3.214
+    },
+    {
+     "w": "ever",
+     "start": 3.214,
+     "end": 3.562
+    },
+    {
+     "w": "rings,",
+     "start": 3.562,
+     "end": 3.875
+    },
+    {
+     "w": "climb.",
+     "start": 3.875,
+     "end": 4.188
+    }
+   ]
+  },
+  {
+   "shot": "laugh",
+   "text": "The whole council burst out laughing.",
+   "start": 4.368,
+   "end": 5.951,
+   "words": [
+    {
+     "w": "The",
+     "start": 4.368,
+     "end": 4.53
+    },
+    {
+     "w": "whole",
+     "start": 4.53,
+     "end": 4.853
+    },
+    {
+     "w": "council",
+     "start": 4.853,
+     "end": 5.176
+    },
+    {
+     "w": "burst",
+     "start": 5.176,
+     "end": 5.337
+    },
+    {
+     "w": "out",
+     "start": 5.337,
+     "end": 5.499
+    },
+    {
+     "w": "laughing.",
+     "start": 5.499,
+     "end": 5.951
+    }
+   ]
+  },
+  {
+   "shot": "device",
+   "text": "Under the bell, a stone well. In the well, a copper float. And from the float, a chain to the hammer.",
+   "start": 6.131,
+   "end": 10.9,
+   "words": [
+    {
+     "w": "Under",
+     "start": 6.131,
+     "end": 6.462
+    },
+    {
+     "w": "the",
+     "start": 6.462,
+     "end": 6.627
+    },
+    {
+     "w": "bell,",
+     "start": 6.627,
+     "end": 6.926
+    },
+    {
+     "w": "a",
+     "start": 6.926,
+     "end": 7.091
+    },
+    {
+     "w": "stone",
+     "start": 7.091,
+     "end": 7.257
+    },
+    {
+     "w": "well.",
+     "start": 7.257,
+     "end": 7.555
+    },
+    {
+     "w": "In",
+     "start": 7.555,
+     "end": 7.721
+    },
+    {
+     "w": "the",
+     "start": 7.721,
+     "end": 7.886
+    },
+    {
+     "w": "well,",
+     "start": 7.886,
+     "end": 8.184
+    },
+    {
+     "w": "a",
+     "start": 8.184,
+     "end": 8.35
+    },
+    {
+     "w": "copper",
+     "start": 8.35,
+     "end": 8.681
+    },
+    {
+     "w": "float.",
+     "start": 8.681,
+     "end": 8.979
+    },
+    {
+     "w": "And",
+     "start": 8.979,
+     "end": 9.145
+    },
+    {
+     "w": "from",
+     "start": 9.145,
+     "end": 9.31
+    },
+    {
+     "w": "the",
+     "start": 9.31,
+     "end": 9.476
+    },
+    {
+     "w": "float,",
+     "start": 9.476,
+     "end": 9.774
+    },
+    {
+     "w": "a",
+     "start": 9.774,
+     "end": 9.94
+    },
+    {
+     "w": "chain",
+     "start": 9.94,
+     "end": 10.105
+    },
+    {
+     "w": "to",
+     "start": 10.105,
+     "end": 10.271
+    },
+    {
+     "w": "the",
+     "start": 10.271,
+     "end": 10.437
+    },
+    {
+     "w": "hammer.",
+     "start": 10.437,
+     "end": 10.9
+    }
+   ]
+  },
+  {
+   "shot": "walls",
+   "text": "The Duke had the tallest walls in the world. And she wanted him scared of a bucket.",
+   "start": 11.08,
+   "end": 14.773,
+   "words": [
+    {
+     "w": "The",
+     "start": 11.08,
+     "end": 11.244
+    },
+    {
+     "w": "Duke",
+     "start": 11.244,
+     "end": 11.407
+    },
+    {
+     "w": "had",
+     "start": 11.407,
+     "end": 11.571
+    },
+    {
+     "w": "the",
+     "start": 11.571,
+     "end": 11.734
+    },
+    {
+     "w": "tallest",
+     "start": 11.734,
+     "end": 12.061
+    },
+    {
+     "w": "walls",
+     "start": 12.061,
+     "end": 12.224
+    },
+    {
+     "w": "in",
+     "start": 12.224,
+     "end": 12.387
+    },
+    {
+     "w": "the",
+     "start": 12.387,
+     "end": 12.551
+    },
+    {
+     "w": "world.",
+     "start": 12.551,
+     "end": 12.845
+    },
+    {
+     "w": "And",
+     "start": 12.845,
+     "end": 13.008
+    },
+    {
+     "w": "she",
+     "start": 13.008,
+     "end": 13.172
+    },
+    {
+     "w": "wanted",
+     "start": 13.172,
+     "end": 13.498
+    },
+    {
+     "w": "him",
+     "start": 13.498,
+     "end": 13.662
+    },
+    {
+     "w": "scared",
+     "start": 13.662,
+     "end": 13.988
+    },
+    {
+     "w": "of",
+     "start": 13.988,
+     "end": 14.152
+    },
+    {
+     "w": "a",
+     "start": 14.152,
+     "end": 14.315
+    },
+    {
+     "w": "bucket.",
+     "start": 14.315,
+     "end": 14.773
+    }
+   ]
+  },
+  {
+   "shot": "ring1",
+   "text": "Weeks later, the bell rang once. But the river stayed calm.",
+   "start": 14.953,
+   "end": 17.761,
+   "words": [
+    {
+     "w": "Weeks",
+     "start": 14.953,
+     "end": 15.135
+    },
+    {
+     "w": "later,",
+     "start": 15.135,
+     "end": 15.646
+    },
+    {
+     "w": "the",
+     "start": 15.646,
+     "end": 15.828
+    },
+    {
+     "w": "bell",
+     "start": 15.828,
+     "end": 16.011
+    },
+    {
+     "w": "rang",
+     "start": 16.011,
+     "end": 16.193
+    },
+    {
+     "w": "once.",
+     "start": 16.193,
+     "end": 16.521
+    },
+    {
+     "w": "But",
+     "start": 16.521,
+     "end": 16.704
+    },
+    {
+     "w": "the",
+     "start": 16.704,
+     "end": 16.886
+    },
+    {
+     "w": "river",
+     "start": 16.886,
+     "end": 17.251
+    },
+    {
+     "w": "stayed",
+     "start": 17.251,
+     "end": 17.433
+    },
+    {
+     "w": "calm.",
+     "start": 17.433,
+     "end": 17.762
+    }
+   ]
+  },
+  {
+   "shot": "boat",
+   "text": "Not even a wave rocked the Duke's boat.",
+   "start": 17.941,
+   "end": 19.723,
+   "words": [
+    {
+     "w": "Not",
+     "start": 17.941,
+     "end": 18.092
+    },
+    {
+     "w": "even",
+     "start": 18.092,
+     "end": 18.394
+    },
+    {
+     "w": "a",
+     "start": 18.394,
+     "end": 18.545
+    },
+    {
+     "w": "wave",
+     "start": 18.545,
+     "end": 18.696
+    },
+    {
+     "w": "rocked",
+     "start": 18.696,
+     "end": 18.998
+    },
+    {
+     "w": "the",
+     "start": 18.998,
+     "end": 19.149
+    },
+    {
+     "w": "Duke's",
+     "start": 19.149,
+     "end": 19.451
+    },
+    {
+     "w": "boat.",
+     "start": 19.451,
+     "end": 19.723
+    }
+   ]
+  },
+  {
+   "shot": "feast",
+   "text": "Now they laughed even harder.",
+   "start": 19.903,
+   "end": 21.059,
+   "words": [
+    {
+     "w": "Now",
+     "start": 19.903,
+     "end": 20.034
+    },
+    {
+     "w": "they",
+     "start": 20.034,
+     "end": 20.166
+    },
+    {
+     "w": "laughed",
+     "start": 20.166,
+     "end": 20.428
+    },
+    {
+     "w": "even",
+     "start": 20.428,
+     "end": 20.691
+    },
+    {
+     "w": "harder.",
+     "start": 20.691,
+     "end": 21.059
+    }
+   ]
+  },
+  {
+   "shot": "decree",
+   "text": "The Duke called it the world's loudest doorbell, and threw it out of the city.",
+   "start": 21.239,
+   "end": 24.558,
+   "words": [
+    {
+     "w": "The",
+     "start": 21.239,
+     "end": 21.4
+    },
+    {
+     "w": "Duke",
+     "start": 21.4,
+     "end": 21.561
+    },
+    {
+     "w": "called",
+     "start": 21.561,
+     "end": 21.883
+    },
+    {
+     "w": "it",
+     "start": 21.883,
+     "end": 22.044
+    },
+    {
+     "w": "the",
+     "start": 22.044,
+     "end": 22.205
+    },
+    {
+     "w": "world's",
+     "start": 22.205,
+     "end": 22.367
+    },
+    {
+     "w": "loudest",
+     "start": 22.367,
+     "end": 22.689
+    },
+    {
+     "w": "doorbell,",
+     "start": 22.689,
+     "end": 23.14
+    },
+    {
+     "w": "and",
+     "start": 23.14,
+     "end": 23.301
+    },
+    {
+     "w": "threw",
+     "start": 23.301,
+     "end": 23.462
+    },
+    {
+     "w": "it",
+     "start": 23.462,
+     "end": 23.623
+    },
+    {
+     "w": "out",
+     "start": 23.623,
+     "end": 23.784
+    },
+    {
+     "w": "of",
+     "start": 23.784,
+     "end": 23.945
+    },
+    {
+     "w": "the",
+     "start": 23.945,
+     "end": 24.106
+    },
+    {
+     "w": "city.",
+     "start": 24.106,
+     "end": 24.558
+    }
+   ]
+  },
+  {
+   "shot": "haul",
+   "text": "So she dragged it up the river, all the way to the mountains, and lived there.",
+   "start": 24.738,
+   "end": 28.055,
+   "words": [
+    {
+     "w": "So",
+     "start": 24.738,
+     "end": 24.886
+    },
+    {
+     "w": "she",
+     "start": 24.886,
+     "end": 25.034
+    },
+    {
+     "w": "dragged",
+     "start": 25.034,
+     "end": 25.33
+    },
+    {
+     "w": "it",
+     "start": 25.33,
+     "end": 25.478
+    },
+    {
+     "w": "up",
+     "start": 25.478,
+     "end": 25.626
+    },
+    {
+     "w": "the",
+     "start": 25.626,
+     "end": 25.774
+    },
+    {
+     "w": "river,",
+     "start": 25.774,
+     "end": 26.189
+    },
+    {
+     "w": "all",
+     "start": 26.189,
+     "end": 26.337
+    },
+    {
+     "w": "the",
+     "start": 26.337,
+     "end": 26.485
+    },
+    {
+     "w": "way",
+     "start": 26.485,
+     "end": 26.633
+    },
+    {
+     "w": "to",
+     "start": 26.633,
+     "end": 26.781
+    },
+    {
+     "w": "the",
+     "start": 26.781,
+     "end": 26.929
+    },
+    {
+     "w": "mountains,",
+     "start": 26.929,
+     "end": 27.344
+    },
+    {
+     "w": "and",
+     "start": 27.344,
+     "end": 27.492
+    },
+    {
+     "w": "lived",
+     "start": 27.492,
+     "end": 27.788
+    },
+    {
+     "w": "there.",
+     "start": 27.788,
+     "end": 28.055
+    }
+   ]
+  },
+  {
+   "shot": "night",
+   "text": "Then one night, under a clear sky, the bell rang. And rang. And did not stop.",
+   "start": 28.235,
+   "end": 32.029,
+   "words": [
+    {
+     "w": "Then",
+     "start": 28.235,
+     "end": 28.416
+    },
+    {
+     "w": "one",
+     "start": 28.416,
+     "end": 28.596
+    },
+    {
+     "w": "night,",
+     "start": 28.596,
+     "end": 28.921
+    },
+    {
+     "w": "under",
+     "start": 28.921,
+     "end": 29.283
+    },
+    {
+     "w": "a",
+     "start": 29.283,
+     "end": 29.463
+    },
+    {
+     "w": "clear",
+     "start": 29.463,
+     "end": 29.644
+    },
+    {
+     "w": "sky,",
+     "start": 29.644,
+     "end": 29.969
+    },
+    {
+     "w": "the",
+     "start": 29.969,
+     "end": 30.15
+    },
+    {
+     "w": "bell",
+     "start": 30.15,
+     "end": 30.331
+    },
+    {
+     "w": "rang.",
+     "start": 30.331,
+     "end": 30.656
+    },
+    {
+     "w": "And",
+     "start": 30.656,
+     "end": 30.836
+    },
+    {
+     "w": "rang.",
+     "start": 30.836,
+     "end": 31.162
+    },
+    {
+     "w": "And",
+     "start": 31.162,
+     "end": 31.342
+    },
+    {
+     "w": "did",
+     "start": 31.342,
+     "end": 31.523
+    },
+    {
+     "w": "not",
+     "start": 31.523,
+     "end": 31.703
+    },
+    {
+     "w": "stop.",
+     "start": 31.703,
+     "end": 32.029
+    }
+   ]
+  },
+  {
+   "shot": "gate",
+   "text": "She ran all night to the city gates. Everyone! Get to high ground!",
+   "start": 32.209,
+   "end": 35.396,
+   "words": [
+    {
+     "w": "She",
+     "start": 32.209,
+     "end": 32.373
+    },
+    {
+     "w": "ran",
+     "start": 32.373,
+     "end": 32.537
+    },
+    {
+     "w": "all",
+     "start": 32.537,
+     "end": 32.702
+    },
+    {
+     "w": "night",
+     "start": 32.702,
+     "end": 32.866
+    },
+    {
+     "w": "to",
+     "start": 32.866,
+     "end": 33.03
+    },
+    {
+     "w": "the",
+     "start": 33.03,
+     "end": 33.195
+    },
+    {
+     "w": "city",
+     "start": 33.195,
+     "end": 33.523
+    },
+    {
+     "w": "gates.",
+     "start": 33.523,
+     "end": 33.983
+    },
+    {
+     "w": "Everyone!",
+     "start": 33.983,
+     "end": 34.608
+    },
+    {
+     "w": "Get",
+     "start": 34.608,
+     "end": 34.772
+    },
+    {
+     "w": "to",
+     "start": 34.772,
+     "end": 34.936
+    },
+    {
+     "w": "high",
+     "start": 34.936,
+     "end": 35.101
+    },
+    {
+     "w": "ground!",
+     "start": 35.101,
+     "end": 35.396
+    }
+   ]
+  },
+  {
+   "shot": "guard",
+   "text": "Hey, bell lady. Your bucket thirsty again?",
+   "start": 35.576,
+   "end": 38.013,
+   "words": [
+    {
+     "w": "Hey,",
+     "start": 35.576,
+     "end": 35.904
+    },
+    {
+     "w": "bell",
+     "start": 35.904,
+     "end": 36.085
+    },
+    {
+     "w": "lady.",
+     "start": 36.085,
+     "end": 36.595
+    },
+    {
+     "w": "Your",
+     "start": 36.595,
+     "end": 36.776
+    },
+    {
+     "w": "bucket",
+     "start": 36.776,
+     "end": 37.14
+    },
+    {
+     "w": "thirsty",
+     "start": 37.14,
+     "end": 37.504
+    },
+    {
+     "w": "again?",
+     "start": 37.504,
+     "end": 38.013
+    }
+   ]
+  },
+  {
+   "shot": "guard",
+   "text": "They laughed her all the way back up the hill.",
+   "start": 38.133,
+   "end": 39.714,
+   "words": [
+    {
+     "w": "They",
+     "start": 38.133,
+     "end": 38.267
+    },
+    {
+     "w": "laughed",
+     "start": 38.267,
+     "end": 38.535
+    },
+    {
+     "w": "her",
+     "start": 38.535,
+     "end": 38.669
+    },
+    {
+     "w": "all",
+     "start": 38.669,
+     "end": 38.803
+    },
+    {
+     "w": "the",
+     "start": 38.803,
+     "end": 38.937
+    },
+    {
+     "w": "way",
+     "start": 38.937,
+     "end": 39.071
+    },
+    {
+     "w": "back",
+     "start": 39.071,
+     "end": 39.205
+    },
+    {
+     "w": "up",
+     "start": 39.205,
+     "end": 39.339
+    },
+    {
+     "w": "the",
+     "start": 39.339,
+     "end": 39.473
+    },
+    {
+     "w": "hill.",
+     "start": 39.473,
+     "end": 39.714
+    }
+   ]
+  },
+  {
+   "shot": "flood",
+   "text": "By morning, the lower city was underwater.",
+   "start": 39.894,
+   "end": 41.823,
+   "words": [
+    {
+     "w": "By",
+     "start": 39.894,
+     "end": 40.026
+    },
+    {
+     "w": "morning,",
+     "start": 40.026,
+     "end": 40.396
+    },
+    {
+     "w": "the",
+     "start": 40.396,
+     "end": 40.528
+    },
+    {
+     "w": "lower",
+     "start": 40.528,
+     "end": 40.792
+    },
+    {
+     "w": "city",
+     "start": 40.792,
+     "end": 41.057
+    },
+    {
+     "w": "was",
+     "start": 41.057,
+     "end": 41.189
+    },
+    {
+     "w": "underwater.",
+     "start": 41.189,
+     "end": 41.823
+    }
+   ]
+  },
+  {
+   "shot": "inside",
+   "text": "Inside the well, a pipe ran to the river. A little water lifted the float a little. A flood lifted it all the way, yanked the pin, and the hammer never stopped swinging.",
+   "start": 42.003,
+   "end": 50.555,
+   "words": [
+    {
+     "w": "Inside",
+     "start": 42.003,
+     "end": 42.346
+    },
+    {
+     "w": "the",
+     "start": 42.346,
+     "end": 42.518
+    },
+    {
+     "w": "well,",
+     "start": 42.518,
+     "end": 42.827
+    },
+    {
+     "w": "a",
+     "start": 42.827,
+     "end": 42.999
+    },
+    {
+     "w": "pipe",
+     "start": 42.999,
+     "end": 43.17
+    },
+    {
+     "w": "ran",
+     "start": 43.17,
+     "end": 43.342
+    },
+    {
+     "w": "to",
+     "start": 43.342,
+     "end": 43.514
+    },
+    {
+     "w": "the",
+     "start": 43.514,
+     "end": 43.686
+    },
+    {
+     "w": "river.",
+     "start": 43.686,
+     "end": 44.166
+    },
+    {
+     "w": "A",
+     "start": 44.166,
+     "end": 44.338
+    },
+    {
+     "w": "little",
+     "start": 44.338,
+     "end": 44.682
+    },
+    {
+     "w": "water",
+     "start": 44.682,
+     "end": 45.025
+    },
+    {
+     "w": "lifted",
+     "start": 45.025,
+     "end": 45.369
+    },
+    {
+     "w": "the",
+     "start": 45.369,
+     "end": 45.54
+    },
+    {
+     "w": "float",
+     "start": 45.54,
+     "end": 45.712
+    },
+    {
+     "w": "a",
+     "start": 45.712,
+     "end": 45.884
+    },
+    {
+     "w": "little.",
+     "start": 45.884,
+     "end": 46.365
+    },
+    {
+     "w": "A",
+     "start": 46.365,
+     "end": 46.536
+    },
+    {
+     "w": "flood",
+     "start": 46.536,
+     "end": 46.708
+    },
+    {
+     "w": "lifted",
+     "start": 46.708,
+     "end": 47.052
+    },
+    {
+     "w": "it",
+     "start": 47.052,
+     "end": 47.223
+    },
+    {
+     "w": "all",
+     "start": 47.223,
+     "end": 47.395
+    },
+    {
+     "w": "the",
+     "start": 47.395,
+     "end": 47.567
+    },
+    {
+     "w": "way,",
+     "start": 47.567,
+     "end": 47.876
+    },
+    {
+     "w": "yanked",
+     "start": 47.876,
+     "end": 48.219
+    },
+    {
+     "w": "the",
+     "start": 48.219,
+     "end": 48.391
+    },
+    {
+     "w": "pin,",
+     "start": 48.391,
+     "end": 48.7
+    },
+    {
+     "w": "and",
+     "start": 48.7,
+     "end": 48.872
+    },
+    {
+     "w": "the",
+     "start": 48.872,
+     "end": 49.044
+    },
+    {
+     "w": "hammer",
+     "start": 49.044,
+     "end": 49.387
+    },
+    {
+     "w": "never",
+     "start": 49.387,
+     "end": 49.731
+    },
+    {
+     "w": "stopped",
+     "start": 49.731,
+     "end": 50.074
+    },
+    {
+     "w": "swinging.",
+     "start": 50.074,
+     "end": 50.555
+    }
+   ]
+  },
+  {
+   "shot": "finale",
+   "text": "One ring meant rain, far away. And by throwing the bell out, the Duke had moved it closer to the storm.",
+   "start": 50.735,
+   "end": 56.037,
+   "words": [
+    {
+     "w": "One",
+     "start": 50.735,
+     "end": 50.923
+    },
+    {
+     "w": "ring",
+     "start": 50.923,
+     "end": 51.111
+    },
+    {
+     "w": "meant",
+     "start": 51.111,
+     "end": 51.299
+    },
+    {
+     "w": "rain,",
+     "start": 51.299,
+     "end": 51.637
+    },
+    {
+     "w": "far",
+     "start": 51.637,
+     "end": 51.825
+    },
+    {
+     "w": "away.",
+     "start": 51.825,
+     "end": 52.352
+    },
+    {
+     "w": "And",
+     "start": 52.352,
+     "end": 52.54
+    },
+    {
+     "w": "by",
+     "start": 52.54,
+     "end": 52.728
+    },
+    {
+     "w": "throwing",
+     "start": 52.728,
+     "end": 53.104
+    },
+    {
+     "w": "the",
+     "start": 53.104,
+     "end": 53.292
+    },
+    {
+     "w": "bell",
+     "start": 53.292,
+     "end": 53.48
+    },
+    {
+     "w": "out,",
+     "start": 53.48,
+     "end": 53.818
+    },
+    {
+     "w": "the",
+     "start": 53.818,
+     "end": 54.006
+    },
+    {
+     "w": "Duke",
+     "start": 54.006,
+     "end": 54.194
+    },
+    {
+     "w": "had",
+     "start": 54.194,
+     "end": 54.382
+    },
+    {
+     "w": "moved",
+     "start": 54.382,
+     "end": 54.758
+    },
+    {
+     "w": "it",
+     "start": 54.758,
+     "end": 54.946
+    },
+    {
+     "w": "closer",
+     "start": 54.946,
+     "end": 55.322
+    },
+    {
+     "w": "to",
+     "start": 55.322,
+     "end": 55.51
+    },
+    {
+     "w": "the",
+     "start": 55.51,
+     "end": 55.698
+    },
+    {
+     "w": "storm.",
+     "start": 55.698,
+     "end": 56.037
+    }
+   ]
+  }
+ ]
+}

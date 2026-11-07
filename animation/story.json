@@ -1,0 +1,23 @@
+{
+  "title": "The Flood Bell",
+  "voice": "am_puck",
+  "speed": 1.1,
+  "lines": [
+    {"shot": "hook",     "text": "She hung a bronze bell over the river, and told the Duke: if this ever rings, climb."},
+    {"shot": "laugh",    "text": "The whole council burst out laughing."},
+    {"shot": "device",   "text": "Under the bell, a stone well. In the well, a copper float. And from the float, a chain to the hammer."},
+    {"shot": "walls",    "text": "The Duke had the tallest walls in the world. And she wanted him scared of a bucket."},
+    {"shot": "ring1",    "text": "Weeks later, the bell rang once. But the river stayed calm."},
+    {"shot": "boat",     "text": "Not even a wave rocked the Duke's boat."},
+    {"shot": "feast",    "text": "Now they laughed even harder."},
+    {"shot": "decree",   "text": "The Duke called it the world's loudest doorbell, and threw it out of the city."},
+    {"shot": "haul",     "text": "So she dragged it up the river, all the way to the mountains, and lived there."},
+    {"shot": "night",    "text": "Then one night, under a clear sky, the bell rang. And rang. And did not stop."},
+    {"shot": "gate",     "text": "She ran all night to the city gates. Everyone! Get to high ground!"},
+    {"shot": "guard",    "text": "Hey, bell lady. Your bucket thirsty again?", "voice": "am_onyx", "speed": 1.0},
+    {"shot": "guard",    "text": "They laughed her all the way back up the hill."},
+    {"shot": "flood",    "text": "By morning, the lower city was underwater."},
+    {"shot": "inside",   "text": "Inside the well, a pipe ran to the river. A little water lifted the float a little. A flood lifted it all the way, yanked the pin, and the hammer never stopped swinging."},
+    {"shot": "finale",   "text": "One ring meant rain, far away. And by throwing the bell out, the Duke had moved it closer to the storm."}
+  ]
+}

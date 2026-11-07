@@ -1,0 +1,9 @@
+<!doctype html><html><head><script type="importmap">{"imports":{"three":"../node_modules/three/build/three.module.js"}}</script></head>
+<body style="margin:0;background:#c9b48f"><canvas id="c" width="2048" height="1100"></canvas>
+<script type="module">
+import { drawCharacter } from '../src/chars.js';
+const ctx=document.getElementById('c').getContext('2d');
+const items=[['engineer','smug','point'],['engineer','panic','raise'],['engineer','sleep','idle'],['engineer','worried','pull'],['duke','bored','idle'],['duke','laugh','idle'],['duke','smug','shrug'],['guard','laugh','hold'],['guard','smug','lean'],['councilA','laugh','idle'],['councilB','happy','idle'],['engineer','sad','idle']];
+items.forEach(([s,e,p],i)=>{const c=drawCharacter(s,{expr:e,pose:p}); ctx.drawImage(c,(i%6)*340,Math.floor(i/6)*550,256,512);});
+window.done=true;
+</script></body></html>
