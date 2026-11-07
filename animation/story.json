@@ -101,8 +101,8 @@
     {
       "shot": "finale",
       "text": "One ring meant rain, far away. And by throwing the bell out, the Duke had moved it closer to the storm.",
-      "exaggeration": 0.7,
-      "cfg": 0.3
+      "exaggeration": 0.65,
+      "cfg": 0.2
     }
   ],
   "engine": "chatterbox"
