@@ -173,9 +173,9 @@ while t < END_ - 1.0:
     S.note(PIZZ, t, 0.15, sn2[k % 8] - 12, 64); 
     if k % 2 == 0: S.note(BSN, t, 0.2, 45, 70)
     t += 0.3; k += 1
-tl = word("twist", "lesson.")
-for i, p in enumerate([84, 83, 82, 81]): S.note(CEL, tl - 0.3 + i * 0.12, 0.3, p, 80)
-S.note(CLAR, tl + 0.3, 0.9, 69, 90); S.note(BSN, tl + 0.3, 0.9, 45, 90)
+t_less = word("twist", "lesson.")
+for i, p in enumerate([84, 83, 82, 81]): S.note(CEL, t_less - 0.3 + i * 0.12, 0.3, p, 80)
+S.note(CLAR, t_less + 0.3, 0.9, 69, 90); S.note(BSN, t_less + 0.3, 0.9, 45, 90)
 S.save(B / "music.mid")
 
 # ---------------- SFX stem rendered from GM sounds: gasp-stings, phone ring, door slam

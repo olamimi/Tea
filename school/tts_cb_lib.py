@@ -18,8 +18,11 @@ SR = tts.sr
 asr = WhisperModel("small.en", device="cpu", compute_type="int8")
 
 
+ALIASES = {"toby": "tobi", "kimmy": "kemi", "kemmy": "kemi", "500s": "five hundreds"}
+
+
 def norm(s):
-    return [w for w in re.sub(r"[^a-z' ]", " ", s.lower().replace("-", " ")).split() if w]
+    return [ALIASES.get(w, w) for w in re.sub(r"[^a-z0-9' ]", " ", s.lower().replace("-", " ")).split() if w]
 
 
 def trim(a, thresh=0.006):

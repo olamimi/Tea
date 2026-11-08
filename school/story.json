@@ -1,29 +1,158 @@
 {
   "title": "The New Boy",
   "lines": [
-    {"shot": "hook",    "text": "Tobi had been at his new school for exactly one week, when they called him a thief.", "exaggeration": 0.65, "cfg": 0.4},
-    {"shot": "notes",   "text": "It started with notes. The teacher told the class to borrow notes from the other arm, to complete their own.", "exaggeration": 0.5, "cfg": 0.45},
-    {"shot": "borrow",  "text": "Tobi borrowed Kemi's.", "exaggeration": 0.55, "cfg": 0.45},
-    {"shot": "search1", "text": "The next morning, Kemi came to collect it. She searched his bag. Her note was gone.", "exaggeration": 0.65, "cfg": 0.4},
-    {"shot": "mates",   "text": "But his classmates laughed.", "exaggeration": 0.6, "cfg": 0.45},
-    {"shot": "mates",   "text": "You already took it back yesterday! We all saw you!", "speaker": "classmate", "exaggeration": 0.8, "cfg": 0.4},
-    {"shot": "burst",   "text": "Later that day, Kemi burst into his class.", "exaggeration": 0.7, "cfg": 0.35},
-    {"shot": "burst",   "text": "My money is gone! Somebody stole my money!", "speaker": "kemi", "exaggeration": 0.95, "cfg": 0.3},
-    {"shot": "point",   "text": "And she pointed straight at the new boy.", "exaggeration": 0.7, "cfg": 0.35},
-    {"shot": "bag",     "text": "They searched his bag. Inside, exactly the amount she lost.", "exaggeration": 0.75, "cfg": 0.3},
-    {"shot": "calm",    "text": "Tobi stayed calm.", "exaggeration": 0.5, "cfg": 0.45},
-    {"shot": "calm",    "text": "What notes were they?", "speaker": "tobi", "exaggeration": 0.5, "cfg": 0.45},
-    {"shot": "calm",    "text": "One thousand naira. One single note.", "speaker": "kemi", "exaggeration": 0.7, "cfg": 0.4},
-    {"shot": "smile",   "text": "Tobi smiled, and pulled out two five-hundreds.", "exaggeration": 0.65, "cfg": 0.4},
-    {"shot": "changed", "text": "Then you changed it! You are still a thief!", "speaker": "kemi", "exaggeration": 1.0, "cfg": 0.3},
-    {"shot": "teachers","text": "The teachers came. They searched his pockets, and found even more money.", "exaggeration": 0.7, "cfg": 0.35},
-    {"shot": "teachers","text": "Where did a new boy get all this? You stole from home too!", "speaker": "teacher", "exaggeration": 0.85, "cfg": 0.35},
-    {"shot": "pres",    "text": "Then the school president, the biggest boy in the whole school, leaned in.", "exaggeration": 0.7, "cfg": 0.35},
-    {"shot": "pres",    "text": "Thief.", "speaker": "president", "exaggeration": 0.9, "cfg": 0.3},
-    {"shot": "office",  "text": "In the principal's office, they finally called his father.", "exaggeration": 0.6, "cfg": 0.4},
-    {"shot": "office",  "text": "Sir, how much did you give your son today?", "speaker": "principal", "exaggeration": 0.5, "cfg": 0.45},
-    {"shot": "dad",     "text": "One thousand five hundred. Two five-hundreds for lunch, and five hundred for transport.", "speaker": "dad", "exaggeration": 0.55, "cfg": 0.45},
-    {"shot": "silence", "text": "Exactly what was in his bag, and his pocket. The room went silent.", "exaggeration": 0.7, "cfg": 0.3},
-    {"shot": "twist",   "text": "A week later, the truth came out. Another girl in his class had taken Kemi's money, just to teach her a lesson.", "exaggeration": 0.75, "cfg": 0.3}
+    {
+      "shot": "hook",
+      "text": "Tobi had been at his new school for exactly one week, when they called him a thief.",
+      "exaggeration": 0.65,
+      "cfg": 0.4
+    },
+    {
+      "shot": "notes",
+      "text": "It started with notes. The teacher told the class to borrow notes from the other arm, to complete their own.",
+      "exaggeration": 0.5,
+      "cfg": 0.45
+    },
+    {
+      "shot": "borrow",
+      "text": "Tobi borrowed from Kemi.",
+      "exaggeration": 0.55,
+      "cfg": 0.45
+    },
+    {
+      "shot": "search1",
+      "text": "The next morning, Kemi came to collect it. She searched his bag. Her note was gone.",
+      "exaggeration": 0.65,
+      "cfg": 0.4
+    },
+    {
+      "shot": "mates",
+      "text": "But his classmates laughed.",
+      "exaggeration": 0.6,
+      "cfg": 0.45
+    },
+    {
+      "shot": "mates",
+      "text": "You already took it back yesterday! We all saw you!",
+      "speaker": "classmate",
+      "exaggeration": 0.8,
+      "cfg": 0.4
+    },
+    {
+      "shot": "burst",
+      "text": "Later that day, Kemi burst into his class.",
+      "exaggeration": 0.7,
+      "cfg": 0.35
+    },
+    {
+      "shot": "burst",
+      "text": "My money is gone! Somebody stole my money!",
+      "speaker": "kemi",
+      "exaggeration": 0.95,
+      "cfg": 0.3
+    },
+    {
+      "shot": "point",
+      "text": "And she pointed straight at the new boy.",
+      "exaggeration": 0.7,
+      "cfg": 0.35
+    },
+    {
+      "shot": "bag",
+      "text": "They searched his bag. Inside, exactly the amount she lost.",
+      "exaggeration": 0.75,
+      "cfg": 0.3
+    },
+    {
+      "shot": "calm",
+      "text": "Tobi stayed calm.",
+      "exaggeration": 0.5,
+      "cfg": 0.45
+    },
+    {
+      "shot": "calm",
+      "text": "What notes were they?",
+      "speaker": "tobi",
+      "exaggeration": 0.5,
+      "cfg": 0.45
+    },
+    {
+      "shot": "calm",
+      "text": "One thousand naira. One single note.",
+      "speaker": "kemi",
+      "exaggeration": 0.7,
+      "cfg": 0.4
+    },
+    {
+      "shot": "smile",
+      "text": "Tobi smiled, and pulled out two five-hundreds.",
+      "exaggeration": 0.65,
+      "cfg": 0.4
+    },
+    {
+      "shot": "changed",
+      "text": "Then you changed it! You are still a thief!",
+      "speaker": "kemi",
+      "exaggeration": 1.0,
+      "cfg": 0.3
+    },
+    {
+      "shot": "teachers",
+      "text": "The teachers came. They searched his pockets, and found even more money.",
+      "exaggeration": 0.7,
+      "cfg": 0.35
+    },
+    {
+      "shot": "teachers",
+      "text": "Where did a new boy get all this? You stole from home too!",
+      "speaker": "teacher",
+      "exaggeration": 0.85,
+      "cfg": 0.35
+    },
+    {
+      "shot": "pres",
+      "text": "Then the school president, the biggest boy in the whole school, leaned in.",
+      "exaggeration": 0.7,
+      "cfg": 0.35
+    },
+    {
+      "shot": "pres",
+      "text": "Thief.",
+      "speaker": "president",
+      "exaggeration": 0.75,
+      "cfg": 0.2
+    },
+    {
+      "shot": "office",
+      "text": "In the principal's office, they finally called his father.",
+      "exaggeration": 0.6,
+      "cfg": 0.4
+    },
+    {
+      "shot": "office",
+      "text": "Sir, how much did you give your son today?",
+      "speaker": "principal",
+      "exaggeration": 0.5,
+      "cfg": 0.45
+    },
+    {
+      "shot": "dad",
+      "text": "One thousand five hundred. Two five-hundreds for lunch, and five hundred for transport.",
+      "speaker": "dad",
+      "exaggeration": 0.55,
+      "cfg": 0.45
+    },
+    {
+      "shot": "silence",
+      "text": "Exactly what was in his bag, and his pocket. The room went silent.",
+      "exaggeration": 0.7,
+      "cfg": 0.3
+    },
+    {
+      "shot": "twist",
+      "text": "A week later, the truth came out. Another girl in his class had taken Kemi's money, just to teach her a lesson.",
+      "exaggeration": 0.75,
+      "cfg": 0.3
+    }
   ]
 }

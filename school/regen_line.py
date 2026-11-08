@@ -27,16 +27,20 @@ for i, l in enumerate(tl["lines"]):
         continue
     refs.setdefault(spk, []).append(L.speaker_embedding(voice[int(l["start"] * SR): int(l["end"] * SR)], SR))
 want = ln.get("speaker") or "narrator"
+if want != "narrator":  # compare against the character's reference clip
+    ra, rsr = sf.read(str(ROOT / "refs" / f"{want}_ref.wav")); refs[want] = [L.speaker_embedding(ra.astype(np.float32), rsr)]
 ref = np.mean(refs[want], 0); ref /= np.linalg.norm(ref)
 
 best = None
-for take in range(12):
+if os.environ.get('USE_WAV'):  # splice a prepared take (e.g. time-stretched) instead of generating
+    a, asr = sf.read(os.environ['USE_WAV']); a = a.astype(np.float32); best = (a, L.transcribe(a)); print('using', os.environ['USE_WAV'], round(len(a) / asr, 2), 's')
+for take in range(0 if best else 12):
     torch.manual_seed(5000 + 97 * take)
     a = L.generate(ln, seed=None)
     words = L.transcribe(a); sc = L.score(ln["text"], words)
     heard = L.norm(" ".join(w.word for w in words))
     sim = float(L.speaker_embedding(a) @ ref)
-    ok = sc >= 0.95 and all(r in heard for r in required) and len(a) / L.SR >= MIN_DUR and sim >= 0.9
+    ok = sc >= 0.95 and all(r in heard for r in required) and len(a) / L.SR >= MIN_DUR and sim >= float(os.environ.get('VOICE_MIN', 0.9))
     print(f"take {take}: match={sc:.2f} voice={sim:.2f} {len(a)/L.SR:.1f}s {'OK' if ok else 'retry'} | {' '.join(heard)}", flush=True)
     if ok:
         best = (a, words); break

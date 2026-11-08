@@ -28,7 +28,7 @@ export function buildShots(T) {
 
   // seated class (filled seats) for classroom wides
   const seatClass = (C, t0, extra = {}) => {
-    const s = C.seats; const who = [['boyA', s[2]], ['girlB', s[9]], ['boyB', s[11]], ['girlC', s[16]], ['boyC', s[19]], ['ada', s[23]]];
+    const s = C.seats; const who = [['boyA', s[2]], ['girlB', s[4]], ['boyB', s[12]], ['girlC', s[16]], ['boyC', s[19]], ['ada', s[23]]];
     who.forEach(([n, p], i) => show(C.cast[n], p, BOARD, [{ t: t0 - 1, expr: 'neutral', sit: 0.5, ...(extra[n] || {}) }]));
   };
 
@@ -65,7 +65,7 @@ export function buildShots(T) {
 
   // ---------------------------------------------------------------- 3. borrowing Kemi's note (other arm)
   S.borrow = (s0) => {
-    const tk = w('borrow', "Kemi's.");
+    const tk = w('borrow', 'Kemi.');
     const kp = V(-3.0, 0, 0.75), tp = V(-1.75, 0, 0.95);
     return [
       { at: 0, set: 'classB', init(C) {
@@ -73,10 +73,10 @@ export function buildShots(T) {
           show(C.cast.kemi, kp, Math.PI / 2, [{ t: s0 - 1, expr: 'smug', sit: 0.5, pose: 'idle', look: headOf({ root: { position: tp }, spec: { H: 1.9 } }) }, { t: s0 + 0.35, pose: 'hold2' }, { t: tk + 0.15, pose: 'idle', expr: 'happy' }]);
           show(C.cast.tobi, tp, -Math.PI / 2 + 0.2, [{ t: s0 - 1, expr: 'happy', lean: 14, headLean: 10, look: headOf(C.cast.kemi) }, { t: s0 + 0.6, pose: 'hold2', lean: 6 }, { t: tk + 0.2, pose: 'hold2', expr: 'happy', squash: 1 }]);
           show(C.cast.girlB, C.seats[9], BOARD, [{ t: s0 - 1, sit: 0.5, look: headOf(C.cast.tobi) }]);
-          show(C.cast.boyB, C.seats[1], BOARD, [{ t: s0 - 1, sit: 0.5, expr: 'bored' }]);
+          show(C.cast.boyB, C.seats[6], BOARD, [{ t: s0 - 1, sit: 0.5, expr: 'bored' }]);
           C.nbook.visible = true; },
         post(C, t) { const k = ease(ramp(t, s0 + 0.45, tk + 0.1)); const a = hand(C.cast.kemi, 'R'), b = hand(C.cast.tobi, 'R'); C.nbook.position.copy(a.lerp(b, k)); C.nbook.rotation.set(-0.3, 0.4, 0.2); },
-        cam: move(V(-0.9, 1.55, 3.9), V(-2.4, 1.2, 0.8), V(-1.2, 1.5, 3.3), V(-2.4, 1.2, 0.8), 40, 37) },
+        cam: move(V(-2.2, 1.6, 4.4), V(-2.35, 1.35, 0.85), V(-2.3, 1.58, 3.8), V(-2.35, 1.35, 0.85), 44, 40) },
     ];
   };
 
@@ -89,8 +89,8 @@ export function buildShots(T) {
           show(C.cast.kemi, V(0.3, 0, -0.85), V(0.3, 0, 1), [{ t: s0 - 1, expr: 'smug', pose: 'hips' }, { t: ts - 0.1, pose: 'dig', work: 'dig', expr: 'focus', lean: 18 }, { t: tg - 0.1, expr: 'shock', pose: 'raise', work: null, lean: -4, squash: 1 }, { t: tg + 0.45, expr: 'angry', pose: 'hips', look: V(1.6, 1.5, 0.15), tint: 0.3 }]);
           show(C.cast.tobi, V(1.6, 0, 0.15), V(0.3, 0, -0.85), [{ t: s0 - 1, expr: 'hopeful', look: headOf(C.cast.kemi) }, { t: ts, expr: 'worried' }, { t: tg + 0.2, expr: 'shock', pose: 'shrug', squash: 1 }]); },
         tick(C, t) { C.bag.userData.flap.rotation.x = t > ts ? -1.2 : 0; },
-        cam: move(V(2.7, 1.6, -2.6), V(0.8, 1.15, 0.0), V(2.4, 1.6, -2.2), V(0.8, 1.2, 0.0), 44, 41) },
-      { at: tg - s0 - 0.12, set: 'classA', inherit: true, cam: move(V(0.95, 1.55, -2.4), V(0.4, 1.45, -0.85), V(0.85, 1.55, -2.1), V(0.35, 1.45, -0.85), 32, 30) },
+        cam: move(V(1.0, 1.75, -3.7), V(0.95, 1.25, -0.3), V(1.0, 1.7, -3.3), V(0.95, 1.25, -0.3), 50, 48) },
+      { at: tg - s0 - 0.12, set: 'classA', inherit: true, cam: move(V(1.0, 1.6, -3.2), V(0.35, 1.55, -0.85), V(0.9, 1.6, -2.8), V(0.35, 1.55, -0.85), 36, 34) },
     ];
   };
 
@@ -106,8 +106,8 @@ export function buildShots(T) {
           show(C.cast.girlB, V(-1.4, 0, -1.6), V(0.3, 0, -0.85), [{ t: s0 + 0.1, expr: 'laugh', pose: 'point', look: headOf(K) }]);
           show(C.cast.tobi, V(1.6, 0, 0.15), V(2.6, 0, -1.7), [{ t: s0 - 1, expr: 'shock', look: headOf(C.cast.boyA) }, { t: tsaw, expr: 'hopeful' }]); },
         cam: move(V(0.6, 2.0, -4.6), V(1.0, 1.2, -0.6), V(0.8, 1.9, -4.2), V(1.0, 1.2, -0.6), 50, 48) },
-      { at: ty - s0 - 0.1, set: 'classA', cam: move(V(1.6, 1.55, -3.5), V(2.6, 1.55, -1.7), V(1.8, 1.55, -3.2), V(2.6, 1.55, -1.7), 34, 32) },
-      { at: tsaw - s0 + 0.1, set: 'classA', cam: move(V(-0.1, 1.5, -2.6), V(0.3, 1.45, -0.85), V(-0.05, 1.5, -2.3), V(0.3, 1.45, -0.85), 32, 30) },
+      { at: ty - s0 - 0.1, set: 'classA', cam: move(V(0.95, 1.7, -2.4), V(2.6, 1.6, -1.6), V(1.1, 1.7, -2.3), V(2.6, 1.6, -1.6), 40, 37) },
+      { at: tsaw - s0 + 0.1, set: 'classA', cam: move(V(-0.2, 1.6, -3.3), V(0.3, 1.55, -0.85), V(-0.1, 1.6, -2.9), V(0.3, 1.55, -0.85), 36, 34) },
     ];
   };
 
@@ -125,7 +125,7 @@ export function buildShots(T) {
             { t: tst - 0.05, pose: 'point', look: 'camera', headLean: 6 }], T.words('burst', 'My', 'money!', 2))
             .walk({ t0: tb - 0.2, t1: tb + 0.5, from: V(7.6, 0, -4.0), to: V(4.6, 0, -3.6), mode: 'run', ease: false }); },
         tick(C, t) { C.doorPivot.rotation.y = -1.7 * ease(ramp(t, tb - 0.25, tb - 0.05)); },
-        cam: move(V(2.0, 1.6, -1.4), V(5.0, 1.55, -3.9), V(2.4, 1.6, -1.8), V(4.7, 1.55, -3.7), 42, 38) },
+        cam: move(V(1.2, 1.75, -2.7), V(5.0, 1.55, -3.9), V(1.6, 1.72, -2.9), V(4.7, 1.55, -3.7), 44, 40) },
     ];
   };
 
@@ -136,11 +136,11 @@ export function buildShots(T) {
       { at: 0, set: 'classA', init(C) {
           const Tb = show(C.cast.tobi, TOBI_SEAT, BOARD, [{ t: s0 - 1, sit: 0.5, expr: 'neutral', look: V(4.6, 1.6, -3.6) }, { t: tb - 0.05, expr: 'shock', sweat: true, squash: 1 }]);
           show(C.cast.kemi, V(4.6, 0, -3.6), V(0.5, 0, 0.7), [{ t: s0 - 1, expr: 'angry', tint: 0.9, steam: true, pose: 'raise' }, { t: tp - 0.05, pose: 'point', lean: 10, squash: 1, look: headOf(Tb) }]);
-          const s = C.seats; const who = [['boyA', s[2]], ['girlB', s[9]], ['boyB', s[11]], ['girlC', s[16]], ['boyC', s[19]], ['ada', s[23]]];
+          const s = C.seats; const who = [['boyA', s[2]], ['girlB', s[4]], ['boyB', s[12]], ['girlC', s[16]], ['boyC', s[19]], ['ada', s[23]]];
           who.forEach(([n, p], i) => show(C.cast[n], p, BOARD, [{ t: s0 - 1, sit: 0.5, look: V(4.6, 1.6, -3.6) }, { t: tp + 0.15 + i * 0.07, look: headOf(Tb), expr: i % 2 ? 'shock' : 'skeptic' }])); },
         cam: move(V(3.4, 1.65, -1.2), V(4.6, 1.6, -3.6), V(3.6, 1.65, -1.6), V(4.6, 1.6, -3.6), 40, 36) },
       { at: w('point', 'straight') - s0 - 0.05, set: 'classA', speed: [tb - 0.1, tb + 0.5],
-        cam: move(V(0.6, 1.25, -2.4), V(0.5, 1.2, 0.7), V(0.55, 1.22, -1.2), V(0.5, 1.2, 0.7), 46, 34) },
+        cam: move(V(0.75, 1.35, -2.6), V(0.5, 1.25, 0.7), V(0.7, 1.32, -1.7), V(0.5, 1.25, 0.7), 46, 38) },
     ];
   };
 
@@ -159,7 +159,7 @@ export function buildShots(T) {
         tick(C, t) { C.bag.userData.flap.rotation.x = -1.2; C.notesHeld.visible = t > te - 0.12; },
         post(C) { C.notesHeld.position.copy(hand(C.cast.teacher, 'R')).add(V(0, 0.1, 0.05)); C.notesHeld.rotation.set(0, 0.2, 0); },
         cam: move(V(1.5, 0.95, -3.2), V(0.4, 1.5, -0.6), V(1.3, 0.9, -2.8), V(0.4, 1.7, -0.6), 46, 44) },
-      { at: tl - s0 - 0.1, set: 'classA', inherit: true, cam: move(V(0.45, 2.4, -1.7), V(0.35, 2.15, -0.9), V(0.45, 2.38, -1.55), V(0.35, 2.15, -0.9), 30, 28) },
+      { at: tl - s0 - 0.1, set: 'classA', inherit: true, cam: move(V(0.9, 1.95, -3.6), V(0.35, 2.0, -0.9), V(0.8, 1.95, -3.2), V(0.35, 2.0, -0.9), 38, 36) },
     ];
   };
 
@@ -169,10 +169,10 @@ export function buildShots(T) {
     return [
       { at: 0, set: 'classA', init(C) {
           show(C.cast.tobi, V(1.6, 0, 0.2), V(-1.2, 0, -1.2), [{ t: s0 - 1, expr: 'neutral', eyes: 'half', pose: 'cross', look: V(-1.2, 1.5, -1.2) }, { t: tw - 0.05, eyes: 'dot', brows: 'raised' }], T.words('calm', 'What', 'they?'));
-          show(C.cast.kemi, V(-1.2, 0, -1.2), V(1.6, 0, 0.2), [{ t: s0 - 1, expr: 'smug', pose: 'hips', look: V(1.6, 1.6, 0.2) }, { t: to - 0.05, expr: 'angry', pose: 'point', tint: 0.4, squash: 1 }], T.words('calm', 'One', 'note.'));
-          show(C.cast.teacher, V(0.3, 0, -0.9), V(1.6, 0, 0.2), [{ t: s0 - 1, expr: 'skeptic', pose: 'hold2' }]); },
+          show(C.cast.kemi, V(-1.2, 0, -1.2), V(1.6, 0, 0.2), [{ t: s0 - 1, expr: 'smug', pose: 'hips', look: V(1.6, 1.6, 0.2) }, { t: to - 0.05, expr: 'angry', pose: 'point', squash: 1 }], T.words('calm', 'One', 'note.'));
+          show(C.cast.teacher, V(2.7, 0, -0.9), V(1.6, 0, 0.2), [{ t: s0 - 1, expr: 'skeptic', pose: 'hold2' }]); },
         post(C) { C.notesHeld.visible = true; C.notesHeld.position.copy(hand(C.cast.teacher, 'R')).add(V(0, 0.08, 0.04)); },
-        cam: move(V(0.4, 1.55, 3.0), V(1.6, 1.5, 0.2), V(0.6, 1.55, 2.6), V(1.6, 1.5, 0.2), 34, 32) },
+        cam: move(V(-0.5, 1.6, -1.9), V(1.6, 1.5, 0.2), V(-0.3, 1.6, -1.6), V(1.6, 1.5, 0.2), 36, 34) },
       { at: to - s0 - 0.15, set: 'classA', inherit: true, cam: move(V(0.6, 1.5, -3.6), V(-1.2, 1.45, -1.2), V(0.4, 1.5, -3.3), V(-1.2, 1.45, -1.2), 34, 32) },
     ];
   };
@@ -216,8 +216,8 @@ export function buildShots(T) {
           show(C.cast.teacher, V(0.4, 0, -1.1), V(1.6, 0, 0.2), [{ t: s0 - 1, expr: 'skeptic', pose: 'hips', look: headOf(Tb) }, { t: tw - 0.05, expr: 'angry', pose: 'point', lean: 8, squash: 1 }, { t: tst - 0.05, pose: 'raise', headLean: -6 }], T.words('teachers', 'Where', 'too!'));
           show(C.cast.kemi, V(-1.3, 0, -1.4), V(1.6, 0, 0.2), [{ t: s0 - 1, expr: 'smug', pose: 'cross', look: headOf(Tb) }]); },
         post(C, t) { C.pocketNote.visible = t > tf - 0.1; C.pocketNote.position.copy(hand(C.cast.teacherM, 'R')).add(V(0, 0.08, 0)); },
-        cam: move(V(1.9, 1.55, -2.9), V(2.0, 1.45, -0.1), V(1.7, 1.55, -2.5), V(2.0, 1.45, -0.1), 42, 40) },
-      { at: tw - s0 - 0.1, set: 'classA', inherit: true, cam: move(V(1.2, 1.6, -2.9), V(0.4, 1.55, -1.1), V(1.05, 1.6, -2.5), V(0.4, 1.55, -1.1), 34, 32) },
+        cam: move(V(0.7, 1.75, -2.9), V(2.1, 1.5, -0.1), V(0.85, 1.75, -2.6), V(2.1, 1.5, -0.1), 46, 44) },
+      { at: tw - s0 - 0.1, set: 'classA', inherit: true, cam: move(V(1.4, 1.9, -3.8), V(0.4, 1.85, -1.1), V(1.25, 1.9, -3.4), V(0.4, 1.85, -1.1), 38, 36) },
     ];
   };
 
@@ -234,9 +234,9 @@ export function buildShots(T) {
             { t: tth - 0.08, squash: 1, mouth: 'grit', eyes: 'squint' }], T.words('pres', 'Thief.', 'Thief.'))
             .walk({ t0: s0 + 0.1, t1: tlean - 0.15, from: P0, to: P1, mode: 'walk', ease: false });
           show(C.cast.kemi, V(-1.3, 0, -1.4), V(1.6, 0, 0.2), [{ t: s0 - 1, expr: 'smug', pose: 'cross' }]); },
-        cam: move(V(-0.5, 1.8, -3.6), V(2.2, 1.3, -1.0), V(-0.2, 1.75, -3.2), V(2.2, 1.35, -1.0), 50, 48) },
+        cam: move(V(-0.6, 1.7, 2.6), V(2.4, 1.4, -1.4), V(-0.3, 1.7, 2.2), V(2.2, 1.4, -1.0), 50, 48) },
       { at: tlean - s0 - 0.05, set: 'classA', speed: [tth - 0.08, tth + 0.4],
-        cam: move(V(1.75, 0.95, 0.55), V(2.3, 2.0, -0.9), V(1.72, 0.9, 0.6), V(2.3, 2.05, -0.9), 70, 66) },
+        cam: move(V(1.45, 1.05, 0.9), V(2.4, 1.9, -0.9), V(1.4, 1.0, 1.0), V(2.4, 1.95, -0.9), 66, 62) },
     ];
   };
 
@@ -246,12 +246,12 @@ export function buildShots(T) {
     return [
       { at: 0, set: 'office', init(O) {
           show(O.cast.principal, V(0, 0, -2.55), V(0, 0, 2), [{ t: s0 - 1, expr: 'bored', pose: 'idle', look: V(0, 1.5, 0.6) }, { t: tc - 0.1, pose: 'phone', expr: 'neutral' }], T.words('office', 'Sir,', 'today?'));
-          show(O.cast.tobi, V(0.1, 0, 0.6), V(0, 0, -2.5), [{ t: s0 - 1, expr: 'sad', headTilt: -6 }]);
+          show(O.cast.tobi, V(-0.7, 0, 0.4), V(0, 0, -2.5), [{ t: s0 - 1, expr: 'sad', headTilt: -6 }]);
           show(O.cast.teacher, V(-1.3, 0, 1.0), V(0, 0, -2.5), [{ t: s0 - 1, expr: 'skeptic', pose: 'cross' }]);
-          show(O.cast.kemi, V(1.2, 0, 1.0), V(0, 0, -2.5), [{ t: s0 - 1, expr: 'smug', pose: 'hips' }]);
-          show(O.cast.president, V(2.1, 0, 1.9), V(0, 0, -2.5), [{ t: s0 - 1, expr: 'bored', pose: 'cross' }]); },
+          show(O.cast.kemi, V(1.9, 0, 0.1), V(0, 0, -2.5), [{ t: s0 - 1, expr: 'smug', pose: 'hips' }]);
+          show(O.cast.president, V(2.9, 0, 1.3), V(0, 0, -2.5), [{ t: s0 - 1, expr: 'bored', pose: 'cross' }]); },
         post(O, t) { if (t > tc - 0.05) { O.handset.position.copy(O.phone.worldToLocal(hand(O.cast.principal, 'R'))); O.handset.rotation.set(0, 0, 1.3); } },
-        cam: move(V(0.4, 2.4, 4.8), V(0, 1.2, -1.2), V(0.3, 2.3, 4.2), V(0, 1.25, -1.4), 46, 44) },
+        cam: move(V(1.9, 2.2, 4.6), V(-0.1, 1.3, -1.4), V(1.7, 2.15, 4.1), V(-0.1, 1.3, -1.6), 46, 44) },
       { at: ts - s0 - 0.15, set: 'office', inherit: true, cam: move(V(0.5, 1.75, -0.4), V(0, 1.75, -2.55), V(0.45, 1.75, -0.8), V(0, 1.75, -2.55), 36, 34) },
     ];
   };
@@ -273,12 +273,12 @@ export function buildShots(T) {
     return [
       { at: 0, set: 'office', init(O) {
           show(O.cast.principal, V(0, 0, -2.55), V(0, 0, 2), [{ t: s0 - 1, expr: 'shock', pose: 'phone' }, { t: tp, pose: 'idle', expr: 'worried', look: V(1.2, 1.5, 1.0) }]);
-          show(O.cast.tobi, V(0.1, 0, 0.6), V(0.1, 0, 4), [{ t: s0 - 1, expr: 'happy', look: 'camera', pose: 'cross' }, { t: ts, eyes: 'half', mouth: 'smirk' }]);
+          show(O.cast.tobi, V(-0.7, 0, 0.4), V(-0.4, 0, 4), [{ t: s0 - 1, expr: 'happy', look: 'camera', pose: 'cross' }, { t: ts, eyes: 'half', mouth: 'smirk' }]);
           show(O.cast.teacher, V(-1.3, 0, 1.0), V(0, 0, -2.5), [{ t: s0 - 1, expr: 'worried', sweat: true, pose: 'idle', look: headOf(O.cast.tobi) }]);
-          show(O.cast.kemi, V(1.2, 0, 1.0), V(0, 0, -2.5), [{ t: s0 - 1, expr: 'shock', sweat: true }, { t: tp, expr: 'sad', headTilt: -10, tint: 0.35, tintColor: '#f0a0a0' }]);
-          show(O.cast.president, V(2.1, 0, 1.9), V(0, 0, -2.5), [{ t: s0 - 1, expr: 'worried', pose: 'cower', lean: -6 }]); },
+          show(O.cast.kemi, V(1.9, 0, 0.1), V(0, 0, -2.5), [{ t: s0 - 1, expr: 'shock', sweat: true }, { t: tp, expr: 'sad', headTilt: -10, tint: 0.35, tintColor: '#f0a0a0' }]);
+          show(O.cast.president, V(2.9, 0, 1.3), V(0, 0, -2.5), [{ t: s0 - 1, expr: 'worried', pose: 'cower', lean: -6 }]); },
         post(O, t) { if (t < tp) { O.handset.position.copy(O.phone.worldToLocal(hand(O.cast.principal, 'R'))); O.handset.rotation.set(0, 0, 1.3); } },
-        cam: move(V(0.15, 1.5, 3.6), V(0.1, 1.45, 0.6), V(0.15, 1.5, 2.9), V(0.1, 1.45, 0.6), 36, 32) },
+        cam: move(V(-0.5, 1.5, 3.4), V(-0.7, 1.45, 0.4), V(-0.55, 1.5, 2.7), V(-0.7, 1.45, 0.4), 36, 32) },
       { at: ts - s0 - 0.25, set: 'office', inherit: true, cam: move(V(0.3, 2.6, 5.4), V(0.2, 1.2, 0.2), V(0.3, 2.7, 6.0), V(0.2, 1.2, 0.2), 50, 50) },
     ];
   };
@@ -292,7 +292,7 @@ export function buildShots(T) {
           seatClass(C, s0);
           show(C.cast.kemi, V(-3.1, 0, -1.9), BOARD, [{ t: s0 - 1, expr: 'sad', sit: 0.5, headTilt: -10 }]);
           show(C.cast.tobi, TOBI_SEAT, BOARD, [{ t: s0 - 1, expr: 'content', sit: 0.5 }]);
-          show(C.cast.ada, ADA, BOARD, [{ t: s0 - 1, expr: 'neutral', sit: 0.5 }, { t: ta + 0.2, turn: Math.PI, blend: 0.6, look: 'camera', expr: 'smug' }, { t: tl - 0.4, expr: 'evil', pose: 'hold2', squash: 1 }]); },
+          show(C.cast.ada, ADA, BOARD, [{ t: s0 - 1, expr: 'neutral', sit: 0.5 }, { t: ta + 0.2, look: 'camera', expr: 'smug' }, { t: tl - 0.4, expr: 'evil', pose: 'hold2', squash: 1 }]); },
         post(C, t) { C.note1000.visible = t > tl - 0.4; C.note1000.position.copy(hand(C.cast.ada, 'R')).add(V(0, 0.08, 0.04)); C.note1000.rotation.set(0, Math.PI, 0); },
         cam: move(V(-2.6, 1.4, -4.6), V(-3.1, 1.1, -1.6), V(-2.8, 1.5, -4.0), V(-3.1, 1.1, -1.6), 38, 36) },
       { at: ta - s0 - 0.1, set: 'classA', inherit: true, cam: path([[0, V(3.0, 1.9, 3.2), V(4.1, 1.2, 5.9), 44], [1, V(4.0, 1.25, 4.3), V(4.1, 1.15, 5.9), 32]]) },
