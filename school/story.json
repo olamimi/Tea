@@ -1,5 +1,6 @@
 {
   "title": "The New Boy",
+  "engine": "chatterbox",
   "lines": [
     {
       "shot": "hook",
@@ -9,7 +10,7 @@
     },
     {
       "shot": "notes",
-      "text": "It started with notes. The teacher told the class to borrow notes from the other arm, to complete their own.",
+      "text": "It started with notes. The teacher told the class to borrow notes from the other class, to complete their own.",
       "exaggeration": 0.5,
       "cfg": 0.45
     },
@@ -20,40 +21,59 @@
       "cfg": 0.45
     },
     {
-      "shot": "search1",
-      "text": "The next morning, she came to collect it. She searched his bag. Her note was gone.",
+      "shot": "break",
+      "text": "The next day, during break, while he was outside, she slipped into his class and took her note back from his bag.",
+      "exaggeration": 0.6,
+      "cfg": 0.4
+    },
+    {
+      "shot": "check",
+      "text": "After break, he checked his bag. Her note was gone.",
       "exaggeration": 0.65,
       "cfg": 0.4
     },
     {
       "shot": "mates",
-      "text": "But his classmates laughed.",
-      "exaggeration": 0.6,
+      "text": "His classmates told him who took it.",
+      "exaggeration": 0.55,
       "cfg": 0.45
     },
     {
       "shot": "mates",
-      "text": "You already took it back yesterday! We all saw you!",
-      "speaker": "classmate",
+      "text": "That girl from the other class came during break and took it!",
       "exaggeration": 0.8,
-      "cfg": 0.4
+      "cfg": 0.4,
+      "speaker": "classmate"
+    },
+    {
+      "shot": "confirm",
+      "text": "So he went to her class, just to be sure.",
+      "exaggeration": 0.55,
+      "cfg": 0.45
+    },
+    {
+      "shot": "confirm",
+      "text": "Yes, I took it back. It's my note.",
+      "exaggeration": 0.6,
+      "cfg": 0.45,
+      "speaker": "kemi"
     },
     {
       "shot": "burst",
-      "text": "Later that day, she burst into his class.",
+      "text": "Later that same day, she burst into his class.",
       "exaggeration": 0.7,
       "cfg": 0.35
     },
     {
       "shot": "burst",
       "text": "My money is gone! Somebody stole my money!",
-      "speaker": "kemi",
       "exaggeration": 0.95,
-      "cfg": 0.3
+      "cfg": 0.3,
+      "speaker": "kemi"
     },
     {
       "shot": "point",
-      "text": "And she pointed straight at the new boy.",
+      "text": "He was the only outsider who had been in her class that day. So everyone turned to him.",
       "exaggeration": 0.7,
       "cfg": 0.35
     },
@@ -71,30 +91,30 @@
     },
     {
       "shot": "calm",
-      "text": "What notes were they?",
-      "speaker": "tobi",
+      "text": "What bills were they?",
       "exaggeration": 0.5,
-      "cfg": 0.45
+      "cfg": 0.45,
+      "speaker": "tobi"
     },
     {
       "shot": "calm",
-      "text": "One thousand naira. One single note.",
-      "speaker": "kemi",
+      "text": "Just one bill. A twenty.",
       "exaggeration": 0.7,
-      "cfg": 0.4
+      "cfg": 0.4,
+      "speaker": "kemi"
     },
     {
       "shot": "smile",
-      "text": "He smiled, and pulled out two five-hundreds.",
+      "text": "He smiled, and pulled out two tens.",
       "exaggeration": 0.65,
       "cfg": 0.4
     },
     {
       "shot": "changed",
       "text": "Then you changed it! You are still a thief!",
-      "speaker": "kemi",
       "exaggeration": 1.0,
-      "cfg": 0.3
+      "cfg": 0.3,
+      "speaker": "kemi"
     },
     {
       "shot": "teachers",
@@ -105,9 +125,9 @@
     {
       "shot": "teachers",
       "text": "Where did a new boy get all this? You stole from home too!",
-      "speaker": "teacher",
       "exaggeration": 0.85,
-      "cfg": 0.35
+      "cfg": 0.35,
+      "speaker": "teacher"
     },
     {
       "shot": "pres",
@@ -118,9 +138,9 @@
     {
       "shot": "pres",
       "text": "Thief.",
-      "speaker": "president",
       "exaggeration": 0.75,
-      "cfg": 0.2
+      "cfg": 0.2,
+      "speaker": "president"
     },
     {
       "shot": "office",
@@ -131,16 +151,16 @@
     {
       "shot": "office",
       "text": "Sir, how much did you give your son today?",
-      "speaker": "principal",
       "exaggeration": 0.5,
-      "cfg": 0.45
+      "cfg": 0.45,
+      "speaker": "principal"
     },
     {
       "shot": "dad",
-      "text": "One thousand five hundred. Two five-hundreds for lunch, and five hundred for transport.",
-      "speaker": "dad",
+      "text": "Thirty dollars. Two tens for lunch, and ten for the bus.",
       "exaggeration": 0.55,
-      "cfg": 0.45
+      "cfg": 0.45,
+      "speaker": "dad"
     },
     {
       "shot": "silence",

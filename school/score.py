@@ -78,7 +78,7 @@ sh = lambda n: shot[n]["start"]
 END_ = END
 
 # A: playful school theme (hook -> search1): marimba melody over pizz/bassoon, woodblock
-A0, A1 = 0.0, sh("search1")
+A0, A1 = 0.0, sh("break")
 bt = 60 / 118
 chords = [(48, [52, 55, 60]), (53, [57, 60, 65]), (55, [59, 62, 67]), (48, [52, 55, 60])]  # C F G C
 mel = [(0, .5, 72), (.5, .5, 74), (1, .5, 76), (1.5, .5, 79), (2, 1, 76), (3, 1, 72), (4, .5, 77), (4.5, .5, 76), (5, .5, 74), (5.5, .5, 72), (6, 1, 74), (7, 1, 67),
@@ -104,14 +104,14 @@ for p in (36, 48): S.note(BRASS, tth, 0.6, p + 12, 115)
 S.note(TIMP, tth, 0.8, 36, 120); S.note(DRUM, tth, 1.2, 49, 100)
 
 # B: sneaky search (search1 -> burst): staccato clarinet/bassoon in A minor, celesta twinkles
-B0, B1 = sh("search1"), sh("burst")
+B0, B1 = sh("break"), sh("burst")
 t = B0; k = 0; sn = [57, 60, 64, 63, 62, 60, 59, 60]
 while t < B1:
     S.note(PIZZ, t, 0.15, sn[k % 8] - 12, 66)
     if k % 2 == 0: S.note(BSN, t, 0.18, 45 if (k // 8) % 2 == 0 else 43, 72)
     if k % 4 == 3: S.note(CLAR, t, 0.22, sn[(k + 3) % 8] + 12, 60)
     t += 0.27; k += 1
-tg = word("search1", "gone.")
+tg = word("check", "gone.")
 S.note(XYL, tg, 0.3, 84, 100); S.note(XYL, tg + 0.1, 0.3, 80, 100)
 for i, p in enumerate([72, 76, 79, 84]): S.note(XYL, sh("mates") + 0.05 + i * 0.07, 0.25, p, 90)  # comedic laugh sting
 for i, p in enumerate([55, 54, 53, 52]): S.note(BSN, sh("mates") + 0.4 + i * 0.15, 0.13 if i < 3 else 0.5, p - 12, 92)
@@ -134,7 +134,7 @@ S.note(CEL, tc, 0.4, 88, 60)
 # D: triumph (smile): bright brass + glock run
 D0 = sh("smile")
 for i, p in enumerate([72, 76, 79, 84, 88]): S.note(XYL, word("smile", "pulled") + i * 0.06, 0.3, p, 96)
-for p in (60, 64, 67): S.note(BRASS, word("smile", "five-hundreds.") - 0.05, 0.8, p, 100)
+for p in (60, 64, 67): S.note(BRASS, word("smile", "tens.") - 0.05, 0.8, p, 100)
 
 # E: rage + escalation (changed -> office): low brass, timpani, tuba stabs
 E0, E1 = sh("changed"), sh("office")

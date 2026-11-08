@@ -132,16 +132,16 @@ export const SPECS = {
   councilB: { H: 2.05, body: '#7a5534', sash: '#d9c27a', collar: '#efe6cf', legs: false, width: 0.3, hat: 'cone', hatColor: '#4f3420', belly: 1.1 },
   // --- school cast (white heads per the house style; identity via hair, uniform and build)
   tobi:      { H: 1.9, uniform: 'boy', top: '#f6f7fb', bottom: '#28356e', tie: '#8e1d2c', legs: true, legLen: 0.44, width: 0.24, hat: 'short', hairColor: '#2a1c14' },
-  kemi:      { H: 1.85, uniform: 'girl', top: '#f6f7fb', bottom: '#28356e', legs: true, legLen: 0.44, width: 0.25, hat: 'puffs', hairColor: '#24160f', blush: true },
-  ada:       { H: 1.8, uniform: 'girl', top: '#f6f7fb', bottom: '#28356e', legs: true, legLen: 0.43, width: 0.24, hat: 'bun', hairColor: '#3a2416' },
+  kemi:      { H: 1.85, uniform: 'girl', top: '#f6f7fb', bottom: '#28356e', legs: true, legLen: 0.44, width: 0.25, hat: 'puffs', hairColor: '#24160f', blush: true, bow: '#e0453a' },
+  ada:       { H: 1.8, uniform: 'girl', top: '#7a4fa8', bottom: '#28356e', legs: true, legLen: 0.43, width: 0.24, hat: 'bun', hairColor: '#3a2416', cardigan: true },
   boyA:      { H: 1.92, uniform: 'boy', top: '#f6f7fb', bottom: '#28356e', tie: '#8e1d2c', legs: true, legLen: 0.44, width: 0.27, hat: 'short', hairColor: '#1a120c' },
   boyB:      { H: 1.86, uniform: 'boy', top: '#f6f7fb', bottom: '#28356e', tie: '#8e1d2c', legs: true, legLen: 0.43, width: 0.26, hat: 'flat', hairColor: '#2a1c14' },
   girlB:     { H: 1.82, uniform: 'girl', top: '#f6f7fb', bottom: '#28356e', legs: true, legLen: 0.43, width: 0.25, hat: 'bun', hairColor: '#20140c' },
   president: { H: 2.3, uniform: 'boy', top: '#f6f7fb', bottom: '#1d2550', tie: '#8e1d2c', badge: '#e2b13c', legs: true, legLen: 0.36, width: 0.44, belly: 1.3, hat: 'short', hairColor: '#120c08' },
-  teacher:   { H: 2.05, body: '#d4572a', print: '#f2c14e', legs: false, width: 0.3, belly: 1.1, hat: 'gele', hatColor: '#7b2d8e', earrings: true },
+  teacher:   { H: 2.05, body: '#3f7f86', collar: '#f3e6d0', legs: false, width: 0.3, belly: 1.1, hat: 'bun', hairColor: '#4a2a1a', earrings: true },
   teacherM:  { H: 2.1, uniform: 'man', top: '#bcd3ea', bottom: '#3a3f4a', tie: '#2c4a7a', legs: true, legLen: 0.44, width: 0.28, hat: 'flat', hairColor: '#1a120c', glasses: true },
   principal: { H: 2.15, uniform: 'suit', top: '#3b4150', bottom: '#2c313c', tie: '#a01e2e', legs: true, legLen: 0.42, width: 0.33, belly: 1.2, hat: 'balding', hairColor: '#8a8a8a', glasses: true, mustache: true },
-  dad:       { H: 2.1, body: '#2f6fa8', print: '#d9e6f2', legs: false, width: 0.31, hat: 'fila', hatColor: '#2f6fa8', mustache: false },
+  dad:       { H: 2.1, uniform: 'man', top: '#d9893f', bottom: '#3a3f4a', legs: true, legLen: 0.42, width: 0.31, hat: 'short', hairColor: '#1a120c', mustache: true },
 };
 
 // body texture: equirect-ish around the lathe (u=0.5 is the front)
@@ -162,6 +162,7 @@ function bodyTex(spec) {
       ctx.fillStyle = 'rgba(0,0,0,0.2)'; for (const y of [70, 140, 210]) { ctx.beginPath(); ctx.arc(512, y, 6, 0, 7); ctx.fill(); } // buttons
       if (spec.uniform !== 'suit') { ctx.strokeStyle = 'rgba(0,0,0,0.3)'; ctx.lineWidth = 4; ctx.strokeRect(560, 60, 60, 54); } // pocket
     }
+    if (spec.cardigan) { ctx.fillStyle = '#f6f7fb'; ctx.beginPath(); ctx.moveTo(452, 0); ctx.lineTo(512, 120); ctx.lineTo(572, 0); ctx.fill(); ctx.fillStyle = 'rgba(255,255,255,0.6)'; for (const y of [150, 220, 290]) { ctx.beginPath(); ctx.arc(512, y, 7, 0, 7); ctx.fill(); } }
     if (spec.tie) { ctx.fillStyle = spec.tie; ctx.beginPath(); ctx.moveTo(498, 0); ctx.lineTo(526, 0); ctx.lineTo(522, 24); ctx.lineTo(534, 210); ctx.lineTo(512, 240); ctx.lineTo(490, 210); ctx.lineTo(502, 24); ctx.closePath(); ctx.fill(); ctx.strokeStyle = 'rgba(0,0,0,0.35)'; ctx.lineWidth = 3; ctx.stroke(); }
     if (spec.badge) { ctx.fillStyle = spec.badge; ctx.beginPath(); ctx.arc(420, 100, 24, 0, 7); ctx.fill(); ctx.strokeStyle = '#7a5a10'; ctx.lineWidth = 4; ctx.stroke(); }
     if (spec.uniform !== 'suit') { ctx.strokeStyle = 'rgba(0,0,0,0.35)'; ctx.lineWidth = 5; ctx.beginPath(); ctx.moveTo(470, 0); ctx.lineTo(512, 34); ctx.lineTo(554, 0); ctx.stroke(); } // collar
@@ -213,7 +214,7 @@ function mats() {
   if (MAT.ink) return MAT;
   MAT.ink = new THREE.MeshBasicMaterial({ color: 0x141414 });
   MAT.inkBack = new THREE.MeshBasicMaterial({ color: 0x141414, side: THREE.BackSide });
-  MAT.skin = toon(0xfbf9f4, { emissive: 0xfbf9f4, emissiveIntensity: 0.3 });
+  MAT.skin = toon(0xfbf9f4, { emissive: 0xfbf9f4, emissiveIntensity: 0.12 }); // scene light tints the white heads
   MAT.shoe = new THREE.MeshStandardMaterial({ color: 0x2a2320, roughness: 0.6 });
   MAT.metal = new THREE.MeshStandardMaterial({ color: 0xaab2bc, metalness: 0.8, roughness: 0.35 });
   MAT.wood = new THREE.MeshStandardMaterial({ color: 0x7a5a34, roughness: 0.8 });
@@ -222,7 +223,7 @@ function mats() {
   return MAT;
 }
 const outlined = (geo, mat, width, parent) => { // mesh + ink outline of absolute width
-  const m = new THREE.Mesh(geo, mat); m.castShadow = true; m.receiveShadow = false; // flat look: no self-shadow acne
+  const m = new THREE.Mesh(geo, mat); m.castShadow = true; m.receiveShadow = true; // window/blind light lands on characters
   const o = new THREE.Mesh(geo, inkMat(width)); m.add(o); parent?.add(m); return m;
 };
 
@@ -308,6 +309,10 @@ export class Puppet {
     // sweat drop (child of head)
     this.sweat = new THREE.Mesh(new THREE.SphereGeometry(hr * 0.12, 16, 12), M.sweat); this.sweat.scale.set(1, 1.5, 0.7);
     this.sweat.position.set(hr * 0.78, hr * 0.45, hr * 0.45); this.head.add(this.sweat); this.sweat.visible = false;
+    // soft contact shadow so characters sit on the floor
+    { const c = document.createElement('canvas'); c.width = c.height = 64; const x = c.getContext('2d'); const g = x.createRadialGradient(32, 32, 0, 32, 32, 32); g.addColorStop(0, 'rgba(40,22,12,0.55)'); g.addColorStop(1, 'rgba(40,22,12,0)'); x.fillStyle = g; x.fillRect(0, 0, 64, 64);
+      const tx = new THREE.CanvasTexture(c); this.contact = new THREE.Mesh(new THREE.PlaneGeometry(1, 1), new THREE.MeshBasicMaterial({ map: tx, transparent: true, depthWrite: false }));
+      this.contact.rotation.x = -Math.PI / 2; this.contact.position.y = 0.008; this.contact.scale.set(s.width * u * 2.6, s.width * u * 1.9, 1); this.contact.renderOrder = -1; this.contact.castShadow = false; this.root.add(this.contact); }
     // limbs: tubes rebuilt per frame
     this.limbMat = M.ink;
     this.arms = [0, 1].map(() => { const tube = new THREE.Mesh(new THREE.BufferGeometry(), M.ink); tube.castShadow = true; this.torso.add(tube);
@@ -328,7 +333,7 @@ export class Puppet {
     this.track = []; // acting keys
     this.speech = []; // words {w,start,end}
     this.path = null; this.facing = 0; this.lookAt = null; this.prevFaceKey = '';
-    this.root.traverse((o) => { if (o.isMesh) { o.castShadow = true; o.receiveShadow = false; } });
+    this.root.traverse((o) => { if (o.isMesh) o.castShadow = o !== this.contact; });
   }
 
   buildHat(s, hr) {
@@ -383,6 +388,7 @@ export class Puppet {
         break;
       }
     }
+    if (s.bow) { const bm = toon(new THREE.Color(s.bow).getHex(), { emissive: new THREE.Color(s.bow).getHex(), emissiveIntensity: 0.2 }); for (const sd of [-1, 1]) { const b = outlined(new THREE.SphereGeometry(hr * 0.13, 14, 10), bm, this.lineW * 0.7, h); b.scale.set(1.5, 0.9, 0.7); b.position.set(sd * hr * 0.58, hr * 0.62, hr * 0.32); } }
     if (s.earrings) { for (const sd of [-1, 1]) { const e = new THREE.Mesh(new THREE.SphereGeometry(hr * 0.09, 12, 8), M.gold); e.position.set(sd * hr * 0.98, -hr * 0.22, 0.02); h.add(e); } }
     if (s.braid) { // chain of beads hanging behind the right ear; animated with lag
       this.braid = [];
@@ -501,6 +507,7 @@ export class Puppet {
       headTilt -= Math.sin(phase) * 2 * D2R;
     }
     const sitH = this.held(t, 'sit', null);
+    this.contact.visible = sitH == null;
     this.lean.rotation.set(leanX, 0, leanZ);
     this.hips.position.y = (sitH ?? this.hipY) + bob;
     this.torso.scale.set(1 / Math.sqrt(sq), sq, 1 / Math.sqrt(sq));

@@ -18,7 +18,7 @@ SR = tts.sr
 asr = WhisperModel("small.en", device="cpu", compute_type="int8")
 
 
-ALIASES = {"toby": "tobi", "kimmy": "kemi", "kemmy": "kemi", "500s": "five hundreds"}
+ALIASES = {"toby": "tobi", "kimmy": "kemi", "kemmy": "kemi", "500s": "five hundreds", "20": "twenty", "10": "ten", "30": "thirty", "10s": "tens", "twenties": "twenty"}
 
 
 def norm(s):

@@ -4,11 +4,13 @@ import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
 import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
 import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
 import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
+import { BokehPass } from 'three/addons/postprocessing/BokehPass.js';
+import { ShaderPass } from 'three/addons/postprocessing/ShaderPass.js';
 import { buildClassroom, buildOffice, buildShop } from './sets.js';
 import { buildShots } from './shots.js';
 
 const W = 1080, H = 1920, FPS = 30;
-const renderer = new THREE.WebGLRenderer({ antialias: true, preserveDrawingBuffer: true, logarithmicDepthBuffer: true });
+const renderer = new THREE.WebGLRenderer({ antialias: true, preserveDrawingBuffer: true });
 renderer.setSize(W, H); renderer.setPixelRatio(1);
 renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.outputColorSpace = THREE.SRGBColorSpace;
@@ -16,8 +18,30 @@ document.body.appendChild(renderer.domElement);
 const camera = new THREE.PerspectiveCamera(40, W / H, 0.05, 200);
 const composer = new EffectComposer(renderer);
 const renderPass = new RenderPass(new THREE.Scene(), camera); composer.addPass(renderPass);
-composer.addPass(new UnrealBloomPass(new THREE.Vector2(W / 2, H / 2), 0.25, 0.5, 1.6));
+const bokeh = new BokehPass(new THREE.Scene(), camera, { focus: 3.0, aperture: 0.0035, maxblur: 0.01 }); composer.addPass(bokeh);
+composer.addPass(new UnrealBloomPass(new THREE.Vector2(W / 2, H / 2), 0.2, 0.4, 2.6));
 composer.addPass(new OutputPass());
+// Grade in display space: warm lifted shadows, saturation, warmth, light vignette (references: p5 luma ~50, corner/centre ~0.8)
+const grade = new ShaderPass({
+  uniforms: { tDiffuse: { value: null }, sat: { value: 1.3 }, warm: { value: 0.0 }, lift: { value: new THREE.Vector3(0.17, 0.115, 0.095) }, gain: { value: 1.0 }, vig: { value: 0.18 }, tint: { value: new THREE.Vector3(0, 0, 0) } },
+  vertexShader: 'varying vec2 vUv; void main(){ vUv = uv; gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0); }',
+  fragmentShader: `uniform sampler2D tDiffuse; uniform float sat, warm, gain, vig; uniform vec3 lift, tint; varying vec2 vUv;
+    void main(){ vec3 c = texture2D(tDiffuse, vUv).rgb; float l = dot(c, vec3(0.299, 0.587, 0.114));
+      c = mix(vec3(l), c, sat); c += vec3(0.05, 0.015, -0.05) * warm; c += tint;
+      c = lift + c * (vec3(1.0) - lift); c *= gain;
+      vec2 q = vUv - 0.5; c *= 1.0 - vig * smoothstep(0.25, 0.75, length(q * vec2(1.0, 0.9)));
+      gl_FragColor = vec4(clamp(c, 0.0, 1.0), 1.0); }` });
+composer.addPass(grade);
+// per-beat grade (saturation tracks the emotion: drained when accused, cool at the office, golden at vindication)
+const GRADES = {
+  default: { sat: 1.3, warm: 0.6, gain: 1.0, tint: [0, 0, 0] },
+  point: { sat: 0.85, warm: 0.0, gain: 0.97, tint: [0, 0, 0.01] }, bag: { sat: 0.85, warm: 0.0, gain: 0.97, tint: [0, 0, 0.01] },
+  changed: { sat: 1.2, warm: 0.4, gain: 0.98, tint: [0.04, -0.01, -0.01] }, teachers: { sat: 0.9, warm: 0.1, gain: 0.96, tint: [0, 0, 0] },
+  pres: { sat: 0.8, warm: -0.1, gain: 0.9, tint: [0, 0, 0.015] }, office: { sat: 1.05, warm: -0.3, gain: 0.97, tint: [0, 0.005, 0.02] },
+  dad: { sat: 1.35, warm: 1.0, gain: 1.03, tint: [0, 0, 0] }, silence: { sat: 1.3, warm: 0.9, gain: 1.02, tint: [0, 0, 0] },
+  twist: { sat: 1.25, warm: 0.4, gain: 1.0, tint: [0.012, -0.004, 0.02] },
+};
+let focusD = 3;
 const acc = document.createElement('canvas'); acc.width = W; acc.height = H; const actx = acc.getContext('2d');
 let sets, segs, timeline, SS = 1;
 
@@ -64,7 +88,7 @@ function poseCamera(seg, t) {
   const c = seg.cam(lt, u);
   camera.position.copy(c.p); camera.fov = c.fov; camera.updateProjectionMatrix();
   camera.position.x += Math.sin(t * 0.9) * 0.012; camera.position.y += Math.sin(t * 1.3 + 1) * 0.01; // gentle float
-  camera.lookAt(c.l); if (c.roll) camera.rotateZ(c.roll);
+  camera.lookAt(c.l); if (c.roll) camera.rotateZ(c.roll); focusD = camera.position.distanceTo(c.l);
   return { lt, u };
 }
 function renderOnce(t, forced, jitter) {
@@ -76,6 +100,8 @@ function renderOnce(t, forced, jitter) {
   set.update(t, camera);
   if (seg.post) seg.post(set, t, u); else for (let k = seg.k - 1; k >= 0; k--) { const sg = seg.list[k]; if (sg.post && sg.set === seg.set) { sg.post(set, t, u); break; } }
   renderer.toneMappingExposure = (set.exposure || 1) * 1.08;
+  const G = GRADES[seg.shot] || GRADES.default; grade.uniforms.sat.value = G.sat; grade.uniforms.warm.value = G.warm; grade.uniforms.gain.value = G.gain; grade.uniforms.tint.value.set(...G.tint);
+  bokeh.scene = set.scene; bokeh.uniforms.focus.value = focusD;
   renderPass.scene = set.scene; composer.render();
   return seg;
 }
