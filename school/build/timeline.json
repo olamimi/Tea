@@ -1,5 +1,5 @@
 {
- "duration": 76.965,
+ "duration": 77.394,
  "shots": [
   {
    "name": "hook",
@@ -223,132 +223,162 @@
    "lines": [
     {
      "shot": "borrow",
-     "text": "Tobi borrowed Kemi's.",
+     "text": "He borrowed one from a girl in the other class.",
      "start": 9.189,
-     "end": 10.632,
+     "end": 11.389,
      "words": [
       {
-       "w": "Tobi",
+       "w": "He",
        "start": 9.189,
-       "end": 9.489
+       "end": 9.349
       },
       {
        "w": "borrowed",
-       "start": 9.489,
-       "end": 9.849
+       "start": 9.349,
+       "end": 9.609
+      },
+      {
+       "w": "one",
+       "start": 9.609,
+       "end": 9.809
       },
       {
        "w": "from",
-       "start": 9.849,
+       "start": 9.809,
+       "end": 9.989
+      },
+      {
+       "w": "a",
+       "start": 9.989,
        "end": 10.109
       },
       {
-       "w": "Kemi.",
+       "w": "girl",
        "start": 10.109,
-       "end": 10.449
+       "end": 10.249
+      },
+      {
+       "w": "in",
+       "start": 10.249,
+       "end": 10.469
+      },
+      {
+       "w": "the",
+       "start": 10.469,
+       "end": 10.569
+      },
+      {
+       "w": "other",
+       "start": 10.569,
+       "end": 10.749
+      },
+      {
+       "w": "class.",
+       "start": 10.749,
+       "end": 11.029
       }
      ]
     }
    ],
    "start": 9.109,
-   "end": 10.732,
-   "dur": 1.623
+   "end": 11.489,
+   "dur": 2.38
   },
   {
    "name": "search1",
    "lines": [
     {
      "shot": "search1",
-     "text": "The next morning, Kemi came to collect it. She searched his bag. Her note was gone.",
-     "start": 10.812,
-     "end": 14.832,
+     "text": "The next morning, she came to collect it. She searched his bag. Her note was gone.",
+     "start": 11.569,
+     "end": 15.378,
      "words": [
       {
        "w": "The",
-       "start": 10.812,
-       "end": 10.952
+       "start": 11.569,
+       "end": 11.709
       },
       {
        "w": "next",
-       "start": 10.952,
-       "end": 11.132
+       "start": 11.709,
+       "end": 11.869
       },
       {
        "w": "morning,",
-       "start": 11.132,
-       "end": 11.492
+       "start": 11.869,
+       "end": 12.129
       },
       {
-       "w": "Kemi",
-       "start": 11.692,
-       "end": 11.852
+       "w": "she",
+       "start": 12.129,
+       "end": 12.309
       },
       {
        "w": "came",
-       "start": 11.852,
-       "end": 11.952
+       "start": 12.309,
+       "end": 12.469
       },
       {
        "w": "to",
-       "start": 11.952,
-       "end": 12.112
+       "start": 12.469,
+       "end": 12.609
       },
       {
        "w": "collect",
-       "start": 12.112,
-       "end": 12.352
+       "start": 12.609,
+       "end": 12.869
       },
       {
        "w": "it.",
-       "start": 12.352,
-       "end": 12.612
+       "start": 12.869,
+       "end": 13.109
       },
       {
        "w": "She",
-       "start": 12.852,
-       "end": 12.952
+       "start": 13.409,
+       "end": 13.509
       },
       {
        "w": "searched",
-       "start": 12.952,
-       "end": 13.152
+       "start": 13.509,
+       "end": 13.729
       },
       {
        "w": "his",
-       "start": 13.152,
-       "end": 13.352
+       "start": 13.729,
+       "end": 13.949
       },
       {
        "w": "bag.",
-       "start": 13.352,
-       "end": 13.632
+       "start": 13.949,
+       "end": 14.229
       },
       {
        "w": "Her",
-       "start": 14.012,
-       "end": 14.092
+       "start": 14.509,
+       "end": 14.589
       },
       {
        "w": "note",
-       "start": 14.092,
-       "end": 14.232
+       "start": 14.589,
+       "end": 14.749
       },
       {
        "w": "was",
-       "start": 14.232,
-       "end": 14.392
+       "start": 14.749,
+       "end": 14.929
       },
       {
        "w": "gone.",
-       "start": 14.392,
-       "end": 14.612
+       "start": 14.929,
+       "end": 15.169
       }
      ]
     }
    ],
-   "start": 10.732,
-   "end": 14.932,
-   "dur": 4.2
+   "start": 11.489,
+   "end": 15.478,
+   "dur": 3.989
   },
   {
    "name": "mates",
@@ -356,92 +386,92 @@
     {
      "shot": "mates",
      "text": "But his classmates laughed.",
-     "start": 15.012,
-     "end": 16.661,
+     "start": 15.558,
+     "end": 17.207,
      "words": [
       {
        "w": "But",
-       "start": 15.012,
-       "end": 15.312
+       "start": 15.558,
+       "end": 15.858
       },
       {
        "w": "his",
-       "start": 15.312,
-       "end": 15.532
+       "start": 15.858,
+       "end": 16.078
       },
       {
        "w": "classmates",
-       "start": 15.532,
-       "end": 15.932
+       "start": 16.078,
+       "end": 16.478
       },
       {
        "w": "laughed.",
-       "start": 15.932,
-       "end": 16.352
+       "start": 16.478,
+       "end": 16.898
       }
      ]
     },
     {
      "shot": "mates",
      "text": "You already took it back yesterday! We all saw you!",
-     "start": 16.761,
-     "end": 20.092,
+     "start": 17.307,
+     "end": 20.638,
      "words": [
       {
        "w": "You",
-       "start": 16.761,
-       "end": 16.941
+       "start": 17.307,
+       "end": 17.487
       },
       {
        "w": "already",
-       "start": 16.941,
-       "end": 17.301
+       "start": 17.487,
+       "end": 17.847
       },
       {
        "w": "took",
-       "start": 17.301,
-       "end": 17.581
+       "start": 17.847,
+       "end": 18.127
       },
       {
        "w": "it",
-       "start": 17.581,
-       "end": 17.721
+       "start": 18.127,
+       "end": 18.267
       },
       {
        "w": "back",
-       "start": 17.721,
-       "end": 17.941
+       "start": 18.267,
+       "end": 18.487
       },
       {
        "w": "yesterday!",
-       "start": 17.941,
-       "end": 18.401
+       "start": 18.487,
+       "end": 18.947
       },
       {
        "w": "We",
-       "start": 18.901,
-       "end": 19.061
+       "start": 19.447,
+       "end": 19.607
       },
       {
        "w": "all",
-       "start": 19.061,
-       "end": 19.321
+       "start": 19.607,
+       "end": 19.867
       },
       {
        "w": "saw",
-       "start": 19.321,
-       "end": 19.601
+       "start": 19.867,
+       "end": 20.147
       },
       {
        "w": "you!",
-       "start": 19.601,
-       "end": 19.921
+       "start": 20.147,
+       "end": 20.467
       }
      ]
     }
    ],
-   "start": 14.932,
-   "end": 20.192,
+   "start": 15.478,
+   "end": 20.738,
    "dur": 5.26
   },
   {
@@ -449,104 +479,104 @@
    "lines": [
     {
      "shot": "burst",
-     "text": "Later that day, Kemi burst into his class.",
-     "start": 20.272,
-     "end": 22.504,
+     "text": "Later that day, she burst into his class.",
+     "start": 20.818,
+     "end": 22.905,
      "words": [
       {
        "w": "Later",
-       "start": 20.272,
-       "end": 20.492
+       "start": 20.818,
+       "end": 20.978
       },
       {
        "w": "that",
-       "start": 20.492,
-       "end": 20.752
+       "start": 20.978,
+       "end": 21.178
       },
       {
        "w": "day,",
-       "start": 20.752,
-       "end": 21.032
+       "start": 21.178,
+       "end": 21.438
       },
       {
-       "w": "Kemi",
-       "start": 21.232,
-       "end": 21.372
+       "w": "she",
+       "start": 21.618,
+       "end": 21.758
       },
       {
        "w": "burst",
-       "start": 21.372,
-       "end": 21.552
+       "start": 21.758,
+       "end": 21.938
       },
       {
        "w": "into",
-       "start": 21.552,
-       "end": 21.752
+       "start": 21.938,
+       "end": 22.158
       },
       {
        "w": "his",
-       "start": 21.752,
-       "end": 21.912
+       "start": 22.158,
+       "end": 22.298
       },
       {
        "w": "class.",
-       "start": 21.912,
-       "end": 22.212
+       "start": 22.298,
+       "end": 22.598
       }
      ]
     },
     {
      "shot": "burst",
      "text": "My money is gone! Somebody stole my money!",
-     "start": 22.604,
-     "end": 26.174,
+     "start": 23.005,
+     "end": 26.575,
      "words": [
       {
        "w": "My",
-       "start": 22.604,
-       "end": 22.924
+       "start": 23.005,
+       "end": 23.325
       },
       {
        "w": "money",
-       "start": 22.924,
-       "end": 23.224
+       "start": 23.325,
+       "end": 23.625
       },
       {
        "w": "is",
-       "start": 23.224,
-       "end": 23.564
+       "start": 23.625,
+       "end": 23.965
       },
       {
        "w": "gone!",
-       "start": 23.564,
-       "end": 24.004
+       "start": 23.965,
+       "end": 24.405
       },
       {
        "w": "Somebody",
-       "start": 24.664,
-       "end": 24.904
+       "start": 25.065,
+       "end": 25.305
       },
       {
        "w": "stole",
-       "start": 24.904,
-       "end": 25.284
+       "start": 25.305,
+       "end": 25.685
       },
       {
        "w": "my",
-       "start": 25.284,
-       "end": 25.524
+       "start": 25.685,
+       "end": 25.925
       },
       {
        "w": "money!",
-       "start": 25.524,
-       "end": 25.864
+       "start": 25.925,
+       "end": 26.265
       }
      ]
     }
    ],
-   "start": 20.192,
-   "end": 26.274,
-   "dur": 6.082
+   "start": 20.738,
+   "end": 26.675,
+   "dur": 5.937
   },
   {
    "name": "point",
@@ -554,54 +584,54 @@
     {
      "shot": "point",
      "text": "And she pointed straight at the new boy.",
-     "start": 26.354,
-     "end": 28.281,
+     "start": 26.755,
+     "end": 28.682,
      "words": [
       {
        "w": "And",
-       "start": 26.354,
-       "end": 26.514
+       "start": 26.755,
+       "end": 26.915
       },
       {
        "w": "she",
-       "start": 26.514,
-       "end": 26.634
+       "start": 26.915,
+       "end": 27.035
       },
       {
        "w": "pointed",
-       "start": 26.634,
-       "end": 26.854
+       "start": 27.035,
+       "end": 27.255
       },
       {
        "w": "straight",
-       "start": 26.854,
-       "end": 27.254
+       "start": 27.255,
+       "end": 27.655
       },
       {
        "w": "at",
-       "start": 27.254,
-       "end": 27.514
+       "start": 27.655,
+       "end": 27.915
       },
       {
        "w": "the",
-       "start": 27.514,
-       "end": 27.594
+       "start": 27.915,
+       "end": 27.995
       },
       {
        "w": "new",
-       "start": 27.594,
-       "end": 27.754
+       "start": 27.995,
+       "end": 28.155
       },
       {
        "w": "boy.",
-       "start": 27.754,
-       "end": 27.994
+       "start": 28.155,
+       "end": 28.395
       }
      ]
     }
    ],
-   "start": 26.274,
-   "end": 28.381,
+   "start": 26.675,
+   "end": 28.782,
    "dur": 2.107
   },
   {
@@ -610,64 +640,64 @@
     {
      "shot": "bag",
      "text": "They searched his bag. Inside, exactly the amount she lost.",
-     "start": 28.461,
-     "end": 31.659,
+     "start": 28.862,
+     "end": 32.06,
      "words": [
       {
        "w": "They",
-       "start": 28.461,
-       "end": 28.641
+       "start": 28.862,
+       "end": 29.042
       },
       {
        "w": "searched",
-       "start": 28.641,
-       "end": 28.861
+       "start": 29.042,
+       "end": 29.262
       },
       {
        "w": "his",
-       "start": 28.861,
-       "end": 29.061
+       "start": 29.262,
+       "end": 29.462
       },
       {
        "w": "bag.",
-       "start": 29.061,
-       "end": 29.401
+       "start": 29.462,
+       "end": 29.802
       },
       {
        "w": "Inside,",
-       "start": 29.561,
-       "end": 30.041
+       "start": 29.962,
+       "end": 30.442
       },
       {
        "w": "exactly",
-       "start": 30.041,
-       "end": 30.481
+       "start": 30.442,
+       "end": 30.882
       },
       {
        "w": "the",
-       "start": 30.481,
-       "end": 30.721
+       "start": 30.882,
+       "end": 31.122
       },
       {
        "w": "amount",
-       "start": 30.721,
-       "end": 30.901
+       "start": 31.122,
+       "end": 31.302
       },
       {
        "w": "she",
-       "start": 30.901,
-       "end": 31.101
+       "start": 31.302,
+       "end": 31.502
       },
       {
        "w": "lost.",
-       "start": 31.101,
-       "end": 31.341
+       "start": 31.502,
+       "end": 31.742
       }
      ]
     }
    ],
-   "start": 28.381,
-   "end": 31.759,
+   "start": 28.782,
+   "end": 32.16,
    "dur": 3.378
   },
   {
@@ -675,148 +705,148 @@
    "lines": [
     {
      "shot": "calm",
-     "text": "Tobi stayed calm.",
-     "start": 31.839,
-     "end": 32.952,
+     "text": "He stayed calm.",
+     "start": 32.24,
+     "end": 33.354,
      "words": [
       {
-       "w": "Tobi",
-       "start": 31.839,
-       "end": 32.099
+       "w": "He",
+       "start": 32.24,
+       "end": 32.4
       },
       {
        "w": "stayed",
-       "start": 32.099,
-       "end": 32.399
+       "start": 32.4,
+       "end": 32.64
       },
       {
        "w": "calm.",
-       "start": 32.399,
-       "end": 32.739
+       "start": 32.64,
+       "end": 33.04
       }
      ]
     },
     {
      "shot": "calm",
      "text": "What notes were they?",
-     "start": 33.052,
-     "end": 34.13,
+     "start": 33.454,
+     "end": 34.532,
      "words": [
       {
        "w": "What",
-       "start": 33.052,
-       "end": 33.272
+       "start": 33.454,
+       "end": 33.674
       },
       {
        "w": "notes",
-       "start": 33.272,
-       "end": 33.532
+       "start": 33.674,
+       "end": 33.934
       },
       {
        "w": "were",
-       "start": 33.532,
-       "end": 33.752
+       "start": 33.934,
+       "end": 34.154
       },
       {
        "w": "they?",
-       "start": 33.752,
-       "end": 33.932
+       "start": 34.154,
+       "end": 34.334
       }
      ]
     },
     {
      "shot": "calm",
      "text": "One thousand naira. One single note.",
-     "start": 34.23,
-     "end": 37.815,
+     "start": 34.632,
+     "end": 38.217,
      "words": [
       {
        "w": "One",
-       "start": 34.23,
-       "end": 34.67
+       "start": 34.632,
+       "end": 35.072
       },
       {
        "w": "thousand",
-       "start": 34.67,
-       "end": 35.33
+       "start": 35.072,
+       "end": 35.733
       },
       {
        "w": "naira.",
-       "start": 35.33,
-       "end": 36.31
+       "start": 35.733,
+       "end": 36.712
       },
       {
        "w": "One",
-       "start": 36.61,
-       "end": 36.81
+       "start": 37.012,
+       "end": 37.212
       },
       {
        "w": "single",
-       "start": 36.81,
-       "end": 37.23
+       "start": 37.212,
+       "end": 37.632
       },
       {
        "w": "note.",
-       "start": 37.23,
-       "end": 37.61
+       "start": 37.632,
+       "end": 38.012
       }
      ]
     }
    ],
-   "start": 31.759,
-   "end": 37.915,
-   "dur": 6.156
+   "start": 32.16,
+   "end": 38.317,
+   "dur": 6.157
   },
   {
    "name": "smile",
    "lines": [
     {
      "shot": "smile",
-     "text": "Tobi smiled, and pulled out two five-hundreds.",
-     "start": 37.995,
-     "end": 41.008,
+     "text": "He smiled, and pulled out two five-hundreds.",
+     "start": 38.397,
+     "end": 41.551,
      "words": [
       {
-       "w": "Tobi",
-       "start": 37.995,
-       "end": 38.215
+       "w": "He",
+       "start": 38.397,
+       "end": 38.557
       },
       {
        "w": "smiled,",
-       "start": 38.215,
-       "end": 38.535
+       "start": 38.557,
+       "end": 38.817
       },
       {
        "w": "and",
-       "start": 38.535,
-       "end": 38.815
+       "start": 38.817,
+       "end": 39.277
       },
       {
        "w": "pulled",
-       "start": 38.815,
-       "end": 38.935
+       "start": 39.277,
+       "end": 39.457
       },
       {
        "w": "out",
-       "start": 38.935,
-       "end": 39.175
+       "start": 39.457,
+       "end": 39.697
       },
       {
        "w": "two",
-       "start": 39.175,
-       "end": 39.535
+       "start": 39.697,
+       "end": 40.277
       },
       {
        "w": "five-hundreds.",
-       "start": 39.535,
-       "end": 41.008
+       "start": 40.277,
+       "end": 40.817
       }
      ]
     }
    ],
-   "start": 37.915,
-   "end": 41.108,
-   "dur": 3.193
+   "start": 38.317,
+   "end": 41.651,
+   "dur": 3.334
   },
   {
    "name": "changed",
@@ -824,59 +854,59 @@
     {
      "shot": "changed",
      "text": "Then you changed it! You are still a thief!",
-     "start": 41.188,
-     "end": 44.757,
+     "start": 41.731,
+     "end": 45.3,
      "words": [
       {
        "w": "Then",
-       "start": 41.188,
-       "end": 41.428
+       "start": 41.731,
+       "end": 41.971
       },
       {
        "w": "you",
-       "start": 41.428,
-       "end": 41.728
+       "start": 41.971,
+       "end": 42.271
       },
       {
        "w": "changed",
-       "start": 41.728,
-       "end": 42.068
+       "start": 42.271,
+       "end": 42.611
       },
       {
        "w": "it!",
-       "start": 42.068,
-       "end": 42.388
+       "start": 42.611,
+       "end": 42.931
       },
       {
        "w": "You",
-       "start": 42.748,
-       "end": 42.908
+       "start": 43.291,
+       "end": 43.451
       },
       {
        "w": "are",
-       "start": 42.908,
-       "end": 43.168
+       "start": 43.451,
+       "end": 43.711
       },
       {
        "w": "still",
-       "start": 43.168,
-       "end": 43.528
+       "start": 43.711,
+       "end": 44.071
       },
       {
        "w": "a",
-       "start": 43.528,
-       "end": 43.828
+       "start": 44.071,
+       "end": 44.371
       },
       {
        "w": "thief!",
-       "start": 43.828,
-       "end": 44.068
+       "start": 44.371,
+       "end": 44.611
       }
      ]
     }
    ],
-   "start": 41.108,
-   "end": 44.857,
+   "start": 41.651,
+   "end": 45.4,
    "dur": 3.749
   },
   {
@@ -885,147 +915,147 @@
     {
      "shot": "teachers",
      "text": "The teachers came. They searched his pockets, and found even more money.",
-     "start": 44.937,
-     "end": 48.124,
+     "start": 45.48,
+     "end": 48.667,
      "words": [
       {
        "w": "The",
-       "start": 44.937,
-       "end": 45.077
+       "start": 45.48,
+       "end": 45.62
       },
       {
        "w": "teachers",
-       "start": 45.077,
-       "end": 45.317
+       "start": 45.62,
+       "end": 45.86
       },
       {
        "w": "came.",
-       "start": 45.317,
-       "end": 45.637
+       "start": 45.86,
+       "end": 46.18
       },
       {
        "w": "They",
-       "start": 45.997,
-       "end": 46.097
+       "start": 46.54,
+       "end": 46.64
       },
       {
        "w": "searched",
-       "start": 46.097,
-       "end": 46.317
+       "start": 46.64,
+       "end": 46.86
       },
       {
        "w": "his",
-       "start": 46.317,
-       "end": 46.517
+       "start": 46.86,
+       "end": 47.06
       },
       {
        "w": "pockets,",
-       "start": 46.517,
-       "end": 46.777
+       "start": 47.06,
+       "end": 47.32
       },
       {
        "w": "and",
-       "start": 46.777,
-       "end": 47.017
+       "start": 47.32,
+       "end": 47.56
       },
       {
        "w": "found",
-       "start": 47.017,
-       "end": 47.197
+       "start": 47.56,
+       "end": 47.74
       },
       {
        "w": "even",
-       "start": 47.197,
-       "end": 47.497
+       "start": 47.74,
+       "end": 48.04
       },
       {
        "w": "more",
-       "start": 47.497,
-       "end": 47.717
+       "start": 48.04,
+       "end": 48.26
       },
       {
        "w": "money.",
-       "start": 47.717,
-       "end": 47.917
+       "start": 48.26,
+       "end": 48.46
       }
      ]
     },
     {
      "shot": "teachers",
      "text": "Where did a new boy get all this? You stole from home too!",
-     "start": 48.224,
-     "end": 51.606,
+     "start": 48.767,
+     "end": 52.149,
      "words": [
       {
        "w": "Where",
-       "start": 48.224,
-       "end": 48.484
+       "start": 48.767,
+       "end": 49.027
       },
       {
        "w": "did",
-       "start": 48.484,
-       "end": 48.624
+       "start": 49.027,
+       "end": 49.167
       },
       {
        "w": "a",
-       "start": 48.624,
-       "end": 48.764
+       "start": 49.167,
+       "end": 49.307
       },
       {
        "w": "new",
-       "start": 48.764,
-       "end": 48.924
+       "start": 49.307,
+       "end": 49.467
       },
       {
        "w": "boy",
-       "start": 48.924,
-       "end": 49.124
+       "start": 49.467,
+       "end": 49.667
       },
       {
        "w": "get",
-       "start": 49.124,
-       "end": 49.324
+       "start": 49.667,
+       "end": 49.867
       },
       {
        "w": "all",
-       "start": 49.324,
-       "end": 49.524
+       "start": 49.867,
+       "end": 50.067
       },
       {
        "w": "this?",
-       "start": 49.524,
-       "end": 49.764
+       "start": 50.067,
+       "end": 50.307
       },
       {
        "w": "You",
-       "start": 50.124,
-       "end": 50.284
+       "start": 50.667,
+       "end": 50.827
       },
       {
        "w": "stole",
-       "start": 50.284,
-       "end": 50.544
+       "start": 50.827,
+       "end": 51.087
       },
       {
        "w": "from",
-       "start": 50.544,
-       "end": 50.764
+       "start": 51.087,
+       "end": 51.307
       },
       {
        "w": "home",
-       "start": 50.764,
-       "end": 50.944
+       "start": 51.307,
+       "end": 51.487
       },
       {
        "w": "too!",
-       "start": 50.944,
-       "end": 51.324
+       "start": 51.487,
+       "end": 51.867
       }
      ]
     }
    ],
-   "start": 44.857,
-   "end": 51.706,
+   "start": 45.4,
+   "end": 52.249,
    "dur": 6.849
   },
   {
@@ -1034,92 +1064,92 @@
     {
      "shot": "pres",
      "text": "Then the school president, the biggest boy in the whole school, leaned in.",
-     "start": 51.786,
-     "end": 55.443,
+     "start": 52.329,
+     "end": 55.986,
      "words": [
       {
        "w": "Then",
-       "start": 51.786,
-       "end": 51.986
+       "start": 52.329,
+       "end": 52.529
       },
       {
        "w": "the",
-       "start": 51.986,
-       "end": 52.106
+       "start": 52.529,
+       "end": 52.649
       },
       {
        "w": "school",
-       "start": 52.106,
-       "end": 52.266
+       "start": 52.649,
+       "end": 52.809
       },
       {
        "w": "president,",
-       "start": 52.266,
-       "end": 52.686
+       "start": 52.809,
+       "end": 53.229
       },
       {
        "w": "the",
-       "start": 53.166,
-       "end": 53.226
+       "start": 53.709,
+       "end": 53.769
       },
       {
        "w": "biggest",
-       "start": 53.226,
-       "end": 53.426
+       "start": 53.769,
+       "end": 53.969
       },
       {
        "w": "boy",
-       "start": 53.426,
-       "end": 53.726
+       "start": 53.969,
+       "end": 54.269
       },
       {
        "w": "in",
-       "start": 53.726,
-       "end": 53.886
+       "start": 54.269,
+       "end": 54.429
       },
       {
        "w": "the",
-       "start": 53.886,
-       "end": 53.986
+       "start": 54.429,
+       "end": 54.529
       },
       {
        "w": "whole",
-       "start": 53.986,
-       "end": 54.206
+       "start": 54.529,
+       "end": 54.749
       },
       {
        "w": "school,",
-       "start": 54.206,
-       "end": 54.626
+       "start": 54.749,
+       "end": 55.169
       },
       {
        "w": "leaned",
-       "start": 54.786,
-       "end": 55.006
+       "start": 55.329,
+       "end": 55.549
       },
       {
        "w": "in.",
-       "start": 55.006,
-       "end": 55.306
+       "start": 55.549,
+       "end": 55.849
       }
      ]
     },
     {
      "shot": "pres",
      "text": "Thief.",
-     "start": 55.543,
-     "end": 56.188,
+     "start": 56.086,
+     "end": 56.731,
      "words": [
       {
        "w": "Thief.",
-       "start": 55.543,
-       "end": 55.823
+       "start": 56.086,
+       "end": 56.366
       }
      ]
     }
    ],
-   "start": 51.706,
-   "end": 56.288,
+   "start": 52.249,
+   "end": 56.831,
    "dur": 4.582
   },
   {
@@ -1128,112 +1158,112 @@
     {
      "shot": "office",
      "text": "In the principal's office, they finally called his father.",
-     "start": 56.368,
-     "end": 58.873,
+     "start": 56.911,
+     "end": 59.416,
      "words": [
       {
        "w": "In",
-       "start": 56.368,
-       "end": 56.528
+       "start": 56.911,
+       "end": 57.071
       },
       {
        "w": "the",
-       "start": 56.528,
-       "end": 56.628
+       "start": 57.071,
+       "end": 57.171
       },
       {
        "w": "principal's",
-       "start": 56.628,
-       "end": 57.068
+       "start": 57.171,
+       "end": 57.611
       },
       {
        "w": "office,",
-       "start": 57.068,
-       "end": 57.268
+       "start": 57.611,
+       "end": 57.811
       },
       {
        "w": "they",
-       "start": 57.428,
-       "end": 57.508
+       "start": 57.971,
+       "end": 58.051
       },
       {
        "w": "finally",
-       "start": 57.508,
-       "end": 57.768
+       "start": 58.051,
+       "end": 58.311
       },
       {
        "w": "called",
-       "start": 57.768,
-       "end": 58.048
+       "start": 58.311,
+       "end": 58.591
       },
       {
        "w": "his",
-       "start": 58.048,
-       "end": 58.208
+       "start": 58.591,
+       "end": 58.751
       },
       {
        "w": "father.",
-       "start": 58.208,
-       "end": 58.488
+       "start": 58.751,
+       "end": 59.031
       }
      ]
     },
     {
      "shot": "office",
      "text": "Sir, how much did you give your son today?",
-     "start": 58.973,
-     "end": 61.43,
+     "start": 59.516,
+     "end": 61.973,
      "words": [
       {
        "w": "Sir,",
-       "start": 58.973,
-       "end": 59.353
+       "start": 59.516,
+       "end": 59.896
       },
       {
        "w": "how",
-       "start": 59.833,
-       "end": 59.853
+       "start": 60.376,
+       "end": 60.396
       },
       {
        "w": "much",
-       "start": 59.853,
-       "end": 60.033
+       "start": 60.396,
+       "end": 60.576
       },
       {
        "w": "did",
-       "start": 60.033,
-       "end": 60.233
+       "start": 60.576,
+       "end": 60.776
       },
       {
        "w": "you",
-       "start": 60.233,
-       "end": 60.353
+       "start": 60.776,
+       "end": 60.896
       },
       {
        "w": "give",
-       "start": 60.353,
-       "end": 60.513
+       "start": 60.896,
+       "end": 61.056
       },
       {
        "w": "your",
-       "start": 60.513,
-       "end": 60.673
+       "start": 61.056,
+       "end": 61.216
       },
       {
        "w": "son",
-       "start": 60.673,
-       "end": 60.893
+       "start": 61.216,
+       "end": 61.436
       },
       {
        "w": "today?",
-       "start": 60.893,
-       "end": 61.173
+       "start": 61.436,
+       "end": 61.716
       }
      ]
     }
    ],
-   "start": 56.288,
-   "end": 61.53,
+   "start": 56.831,
+   "end": 62.073,
    "dur": 5.242
   },
   {
@@ -1242,79 +1272,79 @@
     {
      "shot": "dad",
      "text": "One thousand five hundred. Two five-hundreds for lunch, and five hundred for transport.",
-     "start": 61.61,
-     "end": 66.692,
+     "start": 62.153,
+     "end": 67.235,
      "words": [
       {
        "w": "One",
-       "start": 61.61,
-       "end": 62.025
+       "start": 62.153,
+       "end": 62.568
       },
       {
        "w": "thousand",
-       "start": 62.025,
-       "end": 62.44
+       "start": 62.568,
+       "end": 62.983
       },
       {
        "w": "five",
-       "start": 62.44,
-       "end": 62.855
+       "start": 62.983,
+       "end": 63.398
       },
       {
        "w": "hundred.",
-       "start": 62.855,
-       "end": 63.27
+       "start": 63.398,
+       "end": 63.813
       },
       {
        "w": "Two",
-       "start": 63.27,
-       "end": 63.59
+       "start": 63.813,
+       "end": 64.133
       },
       {
        "w": "five-hundreds",
-       "start": 63.59,
-       "end": 64.31
+       "start": 64.133,
+       "end": 64.853
       },
       {
        "w": "for",
-       "start": 64.31,
-       "end": 64.45
+       "start": 64.853,
+       "end": 64.993
       },
       {
        "w": "lunch,",
-       "start": 64.45,
-       "end": 64.67
+       "start": 64.993,
+       "end": 65.213
       },
       {
        "w": "and",
-       "start": 64.67,
-       "end": 65.07
+       "start": 65.213,
+       "end": 65.613
       },
       {
        "w": "five",
-       "start": 65.07,
-       "end": 65.3
+       "start": 65.613,
+       "end": 65.843
       },
       {
        "w": "hundred",
-       "start": 65.3,
-       "end": 65.53
+       "start": 65.843,
+       "end": 66.073
       },
       {
        "w": "for",
-       "start": 65.53,
-       "end": 65.93
+       "start": 66.073,
+       "end": 66.473
       },
       {
        "w": "transport.",
-       "start": 65.93,
-       "end": 66.43
+       "start": 66.473,
+       "end": 66.973
       }
      ]
     }
    ],
-   "start": 61.53,
-   "end": 66.792,
+   "start": 62.073,
+   "end": 67.335,
    "dur": 5.262
   },
   {
@@ -1323,79 +1353,79 @@
     {
      "shot": "silence",
      "text": "Exactly what was in his bag, and his pocket. The room went silent.",
-     "start": 66.872,
-     "end": 70.577,
+     "start": 67.415,
+     "end": 71.12,
      "words": [
       {
        "w": "Exactly",
-       "start": 66.872,
-       "end": 67.252
+       "start": 67.415,
+       "end": 67.795
       },
       {
        "w": "what",
-       "start": 67.252,
-       "end": 67.532
+       "start": 67.795,
+       "end": 68.075
       },
       {
        "w": "was",
-       "start": 67.532,
-       "end": 67.632
+       "start": 68.075,
+       "end": 68.175
       },
       {
        "w": "in",
-       "start": 67.632,
-       "end": 67.772
+       "start": 68.175,
+       "end": 68.315
       },
       {
        "w": "his",
-       "start": 67.772,
-       "end": 67.892
+       "start": 68.315,
+       "end": 68.435
       },
       {
        "w": "bag,",
-       "start": 67.892,
-       "end": 68.192
+       "start": 68.435,
+       "end": 68.735
       },
       {
        "w": "and",
-       "start": 68.192,
-       "end": 68.672
+       "start": 68.735,
+       "end": 69.215
       },
       {
        "w": "his",
-       "start": 68.672,
-       "end": 68.832
+       "start": 69.215,
+       "end": 69.375
       },
       {
        "w": "pocket.",
-       "start": 68.832,
-       "end": 69.132
+       "start": 69.375,
+       "end": 69.675
       },
       {
        "w": "The",
-       "start": 69.512,
-       "end": 69.612
+       "start": 70.055,
+       "end": 70.155
       },
       {
        "w": "room",
-       "start": 69.612,
-       "end": 69.792
+       "start": 70.155,
+       "end": 70.335
       },
       {
        "w": "went",
-       "start": 69.792,
-       "end": 69.972
+       "start": 70.335,
+       "end": 70.515
       },
       {
        "w": "silent.",
-       "start": 69.972,
-       "end": 70.332
+       "start": 70.515,
+       "end": 70.875
       }
      ]
     }
    ],
-   "start": 66.792,
-   "end": 70.677,
+   "start": 67.335,
+   "end": 71.22,
    "dur": 3.885
   },
   {
@@ -1403,126 +1433,126 @@
    "lines": [
     {
      "shot": "twist",
-     "text": "A week later, the truth came out. Another girl in his class had taken Kemi's money, just to teach her a lesson.",
-     "start": 70.757,
-     "end": 75.588,
+     "text": "A week later, the truth came out. Another girl in his class had taken her money, just to teach her a lesson.",
+     "start": 71.3,
+     "end": 76.02,
      "words": [
       {
        "w": "A",
-       "start": 70.757,
-       "end": 70.897
+       "start": 71.3,
+       "end": 71.42
       },
       {
        "w": "week",
-       "start": 70.897,
-       "end": 71.037
+       "start": 71.42,
+       "end": 71.54
       },
       {
        "w": "later,",
-       "start": 71.037,
-       "end": 71.337
+       "start": 71.54,
+       "end": 71.84
       },
       {
        "w": "the",
-       "start": 71.557,
-       "end": 71.597
+       "start": 71.98,
+       "end": 72.06
       },
       {
        "w": "truth",
-       "start": 71.597,
-       "end": 71.797
+       "start": 72.06,
+       "end": 72.24
       },
       {
        "w": "came",
-       "start": 71.797,
-       "end": 71.997
+       "start": 72.24,
+       "end": 72.44
       },
       {
        "w": "out.",
-       "start": 71.997,
-       "end": 72.257
+       "start": 72.44,
+       "end": 72.72
       },
       {
        "w": "Another",
-       "start": 72.537,
-       "end": 72.777
+       "start": 73.0,
+       "end": 73.26
       },
       {
        "w": "girl",
-       "start": 72.777,
-       "end": 72.977
+       "start": 73.26,
+       "end": 73.44
       },
       {
        "w": "in",
-       "start": 72.977,
-       "end": 73.117
+       "start": 73.44,
+       "end": 73.56
       },
       {
        "w": "his",
-       "start": 73.117,
-       "end": 73.217
+       "start": 73.56,
+       "end": 73.66
       },
       {
        "w": "class",
-       "start": 73.217,
-       "end": 73.437
+       "start": 73.66,
+       "end": 73.88
       },
       {
        "w": "had",
-       "start": 73.437,
-       "end": 73.617
+       "start": 73.88,
+       "end": 74.08
       },
       {
        "w": "taken",
-       "start": 73.617,
-       "end": 73.857
-      },
-      {
-       "w": "Kemi's",
-       "start": 73.857,
-       "end": 74.217
-      },
-      {
-       "w": "money,",
-       "start": 74.217,
-       "end": 74.357
-      },
-      {
-       "w": "just",
-       "start": 74.357,
-       "end": 74.597
-      },
-      {
-       "w": "to",
-       "start": 74.597,
-       "end": 74.757
-      },
-      {
-       "w": "teach",
-       "start": 74.757,
-       "end": 74.897
+       "start": 74.08,
+       "end": 74.24
       },
       {
        "w": "her",
-       "start": 74.897,
-       "end": 75.017
+       "start": 74.24,
+       "end": 74.42
+      },
+      {
+       "w": "money,",
+       "start": 74.42,
+       "end": 74.64
+      },
+      {
+       "w": "just",
+       "start": 74.9,
+       "end": 75.08
+      },
+      {
+       "w": "to",
+       "start": 75.08,
+       "end": 75.22
+      },
+      {
+       "w": "teach",
+       "start": 75.22,
+       "end": 75.34
+      },
+      {
+       "w": "her",
+       "start": 75.34,
+       "end": 75.48
       },
       {
        "w": "a",
-       "start": 75.017,
-       "end": 75.097
+       "start": 75.48,
+       "end": 75.58
       },
       {
        "w": "lesson.",
-       "start": 75.097,
-       "end": 75.297
+       "start": 75.58,
+       "end": 75.8
       }
      ]
     }
    ],
-   "start": 70.677,
-   "end": 76.965,
-   "dur": 6.288
+   "start": 71.22,
+   "end": 77.394,
+   "dur": 6.174
   }
  ],
  "lines": [
@@ -1729,1187 +1759,1217 @@
   },
   {
    "shot": "borrow",
-   "text": "Tobi borrowed Kemi's.",
+   "text": "He borrowed one from a girl in the other class.",
    "start": 9.189,
-   "end": 10.632,
+   "end": 11.389,
    "words": [
     {
-     "w": "Tobi",
+     "w": "He",
      "start": 9.189,
-     "end": 9.489
+     "end": 9.349
     },
     {
      "w": "borrowed",
-     "start": 9.489,
-     "end": 9.849
+     "start": 9.349,
+     "end": 9.609
+    },
+    {
+     "w": "one",
+     "start": 9.609,
+     "end": 9.809
     },
     {
      "w": "from",
-     "start": 9.849,
+     "start": 9.809,
+     "end": 9.989
+    },
+    {
+     "w": "a",
+     "start": 9.989,
      "end": 10.109
     },
     {
-     "w": "Kemi.",
+     "w": "girl",
      "start": 10.109,
-     "end": 10.449
+     "end": 10.249
+    },
+    {
+     "w": "in",
+     "start": 10.249,
+     "end": 10.469
+    },
+    {
+     "w": "the",
+     "start": 10.469,
+     "end": 10.569
+    },
+    {
+     "w": "other",
+     "start": 10.569,
+     "end": 10.749
+    },
+    {
+     "w": "class.",
+     "start": 10.749,
+     "end": 11.029
     }
    ]
   },
   {
    "shot": "search1",
-   "text": "The next morning, Kemi came to collect it. She searched his bag. Her note was gone.",
-   "start": 10.812,
-   "end": 14.832,
+   "text": "The next morning, she came to collect it. She searched his bag. Her note was gone.",
+   "start": 11.569,
+   "end": 15.378,
    "words": [
     {
      "w": "The",
-     "start": 10.812,
-     "end": 10.952
+     "start": 11.569,
+     "end": 11.709
     },
     {
      "w": "next",
-     "start": 10.952,
-     "end": 11.132
+     "start": 11.709,
+     "end": 11.869
     },
     {
      "w": "morning,",
-     "start": 11.132,
-     "end": 11.492
+     "start": 11.869,
+     "end": 12.129
     },
     {
-     "w": "Kemi",
-     "start": 11.692,
-     "end": 11.852
+     "w": "she",
+     "start": 12.129,
+     "end": 12.309
     },
     {
      "w": "came",
-     "start": 11.852,
-     "end": 11.952
+     "start": 12.309,
+     "end": 12.469
     },
     {
      "w": "to",
-     "start": 11.952,
-     "end": 12.112
+     "start": 12.469,
+     "end": 12.609
     },
     {
      "w": "collect",
-     "start": 12.112,
-     "end": 12.352
+     "start": 12.609,
+     "end": 12.869
     },
     {
      "w": "it.",
-     "start": 12.352,
-     "end": 12.612
+     "start": 12.869,
+     "end": 13.109
     },
     {
      "w": "She",
-     "start": 12.852,
-     "end": 12.952
+     "start": 13.409,
+     "end": 13.509
     },
     {
      "w": "searched",
-     "start": 12.952,
-     "end": 13.152
+     "start": 13.509,
+     "end": 13.729
     },
     {
      "w": "his",
-     "start": 13.152,
-     "end": 13.352
+     "start": 13.729,
+     "end": 13.949
     },
     {
      "w": "bag.",
-     "start": 13.352,
-     "end": 13.632
+     "start": 13.949,
+     "end": 14.229
     },
     {
      "w": "Her",
-     "start": 14.012,
-     "end": 14.092
+     "start": 14.509,
+     "end": 14.589
     },
     {
      "w": "note",
-     "start": 14.092,
-     "end": 14.232
+     "start": 14.589,
+     "end": 14.749
     },
     {
      "w": "was",
-     "start": 14.232,
-     "end": 14.392
+     "start": 14.749,
+     "end": 14.929
     },
     {
      "w": "gone.",
-     "start": 14.392,
-     "end": 14.612
+     "start": 14.929,
+     "end": 15.169
     }
    ]
   },
   {
    "shot": "mates",
    "text": "But his classmates laughed.",
-   "start": 15.012,
-   "end": 16.661,
+   "start": 15.558,
+   "end": 17.207,
    "words": [
     {
      "w": "But",
-     "start": 15.012,
-     "end": 15.312
+     "start": 15.558,
+     "end": 15.858
     },
     {
      "w": "his",
-     "start": 15.312,
-     "end": 15.532
+     "start": 15.858,
+     "end": 16.078
     },
     {
      "w": "classmates",
-     "start": 15.532,
-     "end": 15.932
+     "start": 16.078,
+     "end": 16.478
     },
     {
      "w": "laughed.",
-     "start": 15.932,
-     "end": 16.352
+     "start": 16.478,
+     "end": 16.898
     }
    ]
   },
   {
    "shot": "mates",
    "text": "You already took it back yesterday! We all saw you!",
-   "start": 16.761,
-   "end": 20.092,
+   "start": 17.307,
+   "end": 20.638,
    "words": [
     {
      "w": "You",
-     "start": 16.761,
-     "end": 16.941
+     "start": 17.307,
+     "end": 17.487
     },
     {
      "w": "already",
-     "start": 16.941,
-     "end": 17.301
+     "start": 17.487,
+     "end": 17.847
     },
     {
      "w": "took",
-     "start": 17.301,
-     "end": 17.581
+     "start": 17.847,
+     "end": 18.127
     },
     {
      "w": "it",
-     "start": 17.581,
-     "end": 17.721
+     "start": 18.127,
+     "end": 18.267
     },
     {
      "w": "back",
-     "start": 17.721,
-     "end": 17.941
+     "start": 18.267,
+     "end": 18.487
     },
     {
      "w": "yesterday!",
-     "start": 17.941,
-     "end": 18.401
+     "start": 18.487,
+     "end": 18.947
     },
     {
      "w": "We",
-     "start": 18.901,
-     "end": 19.061
+     "start": 19.447,
+     "end": 19.607
     },
     {
      "w": "all",
-     "start": 19.061,
-     "end": 19.321
+     "start": 19.607,
+     "end": 19.867
     },
     {
      "w": "saw",
-     "start": 19.321,
-     "end": 19.601
+     "start": 19.867,
+     "end": 20.147
     },
     {
      "w": "you!",
-     "start": 19.601,
-     "end": 19.921
+     "start": 20.147,
+     "end": 20.467
     }
    ]
   },
   {
    "shot": "burst",
-   "text": "Later that day, Kemi burst into his class.",
-   "start": 20.272,
-   "end": 22.504,
+   "text": "Later that day, she burst into his class.",
+   "start": 20.818,
+   "end": 22.905,
    "words": [
     {
      "w": "Later",
-     "start": 20.272,
-     "end": 20.492
+     "start": 20.818,
+     "end": 20.978
     },
     {
      "w": "that",
-     "start": 20.492,
-     "end": 20.752
+     "start": 20.978,
+     "end": 21.178
     },
     {
      "w": "day,",
-     "start": 20.752,
-     "end": 21.032
+     "start": 21.178,
+     "end": 21.438
     },
     {
-     "w": "Kemi",
-     "start": 21.232,
-     "end": 21.372
+     "w": "she",
+     "start": 21.618,
+     "end": 21.758
     },
     {
      "w": "burst",
-     "start": 21.372,
-     "end": 21.552
+     "start": 21.758,
+     "end": 21.938
     },
     {
      "w": "into",
-     "start": 21.552,
-     "end": 21.752
+     "start": 21.938,
+     "end": 22.158
     },
     {
      "w": "his",
-     "start": 21.752,
-     "end": 21.912
+     "start": 22.158,
+     "end": 22.298
     },
     {
      "w": "class.",
-     "start": 21.912,
-     "end": 22.212
+     "start": 22.298,
+     "end": 22.598
     }
    ]
   },
   {
    "shot": "burst",
    "text": "My money is gone! Somebody stole my money!",
-   "start": 22.604,
-   "end": 26.174,
+   "start": 23.005,
+   "end": 26.575,
    "words": [
     {
      "w": "My",
-     "start": 22.604,
-     "end": 22.924
+     "start": 23.005,
+     "end": 23.325
     },
     {
      "w": "money",
-     "start": 22.924,
-     "end": 23.224
+     "start": 23.325,
+     "end": 23.625
     },
     {
      "w": "is",
-     "start": 23.224,
-     "end": 23.564
+     "start": 23.625,
+     "end": 23.965
     },
     {
      "w": "gone!",
-     "start": 23.564,
-     "end": 24.004
+     "start": 23.965,
+     "end": 24.405
     },
     {
      "w": "Somebody",
-     "start": 24.664,
-     "end": 24.904
+     "start": 25.065,
+     "end": 25.305
     },
     {
      "w": "stole",
-     "start": 24.904,
-     "end": 25.284
+     "start": 25.305,
+     "end": 25.685
     },
     {
      "w": "my",
-     "start": 25.284,
-     "end": 25.524
+     "start": 25.685,
+     "end": 25.925
     },
     {
      "w": "money!",
-     "start": 25.524,
-     "end": 25.864
+     "start": 25.925,
+     "end": 26.265
     }
    ]
   },
   {
    "shot": "point",
    "text": "And she pointed straight at the new boy.",
-   "start": 26.354,
-   "end": 28.281,
+   "start": 26.755,
+   "end": 28.682,
    "words": [
     {
      "w": "And",
-     "start": 26.354,
-     "end": 26.514
+     "start": 26.755,
+     "end": 26.915
     },
     {
      "w": "she",
-     "start": 26.514,
-     "end": 26.634
+     "start": 26.915,
+     "end": 27.035
     },
     {
      "w": "pointed",
-     "start": 26.634,
-     "end": 26.854
+     "start": 27.035,
+     "end": 27.255
     },
     {
      "w": "straight",
-     "start": 26.854,
-     "end": 27.254
+     "start": 27.255,
+     "end": 27.655
     },
     {
      "w": "at",
-     "start": 27.254,
-     "end": 27.514
+     "start": 27.655,
+     "end": 27.915
     },
     {
      "w": "the",
-     "start": 27.514,
-     "end": 27.594
+     "start": 27.915,
+     "end": 27.995
     },
     {
      "w": "new",
-     "start": 27.594,
-     "end": 27.754
+     "start": 27.995,
+     "end": 28.155
     },
     {
      "w": "boy.",
-     "start": 27.754,
-     "end": 27.994
+     "start": 28.155,
+     "end": 28.395
     }
    ]
   },
   {
    "shot": "bag",
    "text": "They searched his bag. Inside, exactly the amount she lost.",
-   "start": 28.461,
-   "end": 31.659,
+   "start": 28.862,
+   "end": 32.06,
    "words": [
     {
      "w": "They",
-     "start": 28.461,
-     "end": 28.641
+     "start": 28.862,
+     "end": 29.042
     },
     {
      "w": "searched",
-     "start": 28.641,
-     "end": 28.861
+     "start": 29.042,
+     "end": 29.262
     },
     {
      "w": "his",
-     "start": 28.861,
-     "end": 29.061
+     "start": 29.262,
+     "end": 29.462
     },
     {
      "w": "bag.",
-     "start": 29.061,
-     "end": 29.401
+     "start": 29.462,
+     "end": 29.802
     },
     {
      "w": "Inside,",
-     "start": 29.561,
-     "end": 30.041
+     "start": 29.962,
+     "end": 30.442
     },
     {
      "w": "exactly",
-     "start": 30.041,
-     "end": 30.481
+     "start": 30.442,
+     "end": 30.882
     },
     {
      "w": "the",
-     "start": 30.481,
-     "end": 30.721
+     "start": 30.882,
+     "end": 31.122
     },
     {
      "w": "amount",
-     "start": 30.721,
-     "end": 30.901
+     "start": 31.122,
+     "end": 31.302
     },
     {
      "w": "she",
-     "start": 30.901,
-     "end": 31.101
+     "start": 31.302,
+     "end": 31.502
     },
     {
      "w": "lost.",
-     "start": 31.101,
-     "end": 31.341
+     "start": 31.502,
+     "end": 31.742
     }
    ]
   },
   {
    "shot": "calm",
-   "text": "Tobi stayed calm.",
-   "start": 31.839,
-   "end": 32.952,
+   "text": "He stayed calm.",
+   "start": 32.24,
+   "end": 33.354,
    "words": [
     {
-     "w": "Tobi",
-     "start": 31.839,
-     "end": 32.099
+     "w": "He",
+     "start": 32.24,
+     "end": 32.4
     },
     {
      "w": "stayed",
-     "start": 32.099,
-     "end": 32.399
+     "start": 32.4,
+     "end": 32.64
     },
     {
      "w": "calm.",
-     "start": 32.399,
-     "end": 32.739
+     "start": 32.64,
+     "end": 33.04
     }
    ]
   },
   {
    "shot": "calm",
    "text": "What notes were they?",
-   "start": 33.052,
-   "end": 34.13,
+   "start": 33.454,
+   "end": 34.532,
    "words": [
     {
      "w": "What",
-     "start": 33.052,
-     "end": 33.272
+     "start": 33.454,
+     "end": 33.674
     },
     {
      "w": "notes",
-     "start": 33.272,
-     "end": 33.532
+     "start": 33.674,
+     "end": 33.934
     },
     {
      "w": "were",
-     "start": 33.532,
-     "end": 33.752
+     "start": 33.934,
+     "end": 34.154
     },
     {
      "w": "they?",
-     "start": 33.752,
-     "end": 33.932
+     "start": 34.154,
+     "end": 34.334
     }
    ]
   },
   {
    "shot": "calm",
    "text": "One thousand naira. One single note.",
-   "start": 34.23,
-   "end": 37.815,
+   "start": 34.632,
+   "end": 38.217,
    "words": [
     {
      "w": "One",
-     "start": 34.23,
-     "end": 34.67
+     "start": 34.632,
+     "end": 35.072
     },
     {
      "w": "thousand",
-     "start": 34.67,
-     "end": 35.33
+     "start": 35.072,
+     "end": 35.733
     },
     {
      "w": "naira.",
-     "start": 35.33,
-     "end": 36.31
+     "start": 35.733,
+     "end": 36.712
     },
     {
      "w": "One",
-     "start": 36.61,
-     "end": 36.81
+     "start": 37.012,
+     "end": 37.212
     },
     {
      "w": "single",
-     "start": 36.81,
-     "end": 37.23
+     "start": 37.212,
+     "end": 37.632
     },
     {
      "w": "note.",
-     "start": 37.23,
-     "end": 37.61
+     "start": 37.632,
+     "end": 38.012
     }
    ]
   },
   {
    "shot": "smile",
-   "text": "Tobi smiled, and pulled out two five-hundreds.",
-   "start": 37.995,
-   "end": 41.008,
+   "text": "He smiled, and pulled out two five-hundreds.",
+   "start": 38.397,
+   "end": 41.551,
    "words": [
     {
-     "w": "Tobi",
-     "start": 37.995,
-     "end": 38.215
+     "w": "He",
+     "start": 38.397,
+     "end": 38.557
     },
     {
      "w": "smiled,",
-     "start": 38.215,
-     "end": 38.535
+     "start": 38.557,
+     "end": 38.817
     },
     {
      "w": "and",
-     "start": 38.535,
-     "end": 38.815
+     "start": 38.817,
+     "end": 39.277
     },
     {
      "w": "pulled",
-     "start": 38.815,
-     "end": 38.935
+     "start": 39.277,
+     "end": 39.457
     },
     {
      "w": "out",
-     "start": 38.935,
-     "end": 39.175
+     "start": 39.457,
+     "end": 39.697
     },
     {
      "w": "two",
-     "start": 39.175,
-     "end": 39.535
+     "start": 39.697,
+     "end": 40.277
     },
     {
      "w": "five-hundreds.",
-     "start": 39.535,
-     "end": 41.008
+     "start": 40.277,
+     "end": 40.817
     }
    ]
   },
   {
    "shot": "changed",
    "text": "Then you changed it! You are still a thief!",
-   "start": 41.188,
-   "end": 44.757,
+   "start": 41.731,
+   "end": 45.3,
    "words": [
     {
      "w": "Then",
-     "start": 41.188,
-     "end": 41.428
+     "start": 41.731,
+     "end": 41.971
     },
     {
      "w": "you",
-     "start": 41.428,
-     "end": 41.728
+     "start": 41.971,
+     "end": 42.271
     },
     {
      "w": "changed",
-     "start": 41.728,
-     "end": 42.068
+     "start": 42.271,
+     "end": 42.611
     },
     {
      "w": "it!",
-     "start": 42.068,
-     "end": 42.388
+     "start": 42.611,
+     "end": 42.931
     },
     {
      "w": "You",
-     "start": 42.748,
-     "end": 42.908
+     "start": 43.291,
+     "end": 43.451
     },
     {
      "w": "are",
-     "start": 42.908,
-     "end": 43.168
+     "start": 43.451,
+     "end": 43.711
     },
     {
      "w": "still",
-     "start": 43.168,
-     "end": 43.528
+     "start": 43.711,
+     "end": 44.071
     },
     {
      "w": "a",
-     "start": 43.528,
-     "end": 43.828
+     "start": 44.071,
+     "end": 44.371
     },
     {
      "w": "thief!",
-     "start": 43.828,
-     "end": 44.068
+     "start": 44.371,
+     "end": 44.611
     }
    ]
   },
   {
    "shot": "teachers",
    "text": "The teachers came. They searched his pockets, and found even more money.",
-   "start": 44.937,
-   "end": 48.124,
+   "start": 45.48,
+   "end": 48.667,
    "words": [
     {
      "w": "The",
-     "start": 44.937,
-     "end": 45.077
+     "start": 45.48,
+     "end": 45.62
     },
     {
      "w": "teachers",
-     "start": 45.077,
-     "end": 45.317
+     "start": 45.62,
+     "end": 45.86
     },
     {
      "w": "came.",
-     "start": 45.317,
-     "end": 45.637
+     "start": 45.86,
+     "end": 46.18
     },
     {
      "w": "They",
-     "start": 45.997,
-     "end": 46.097
+     "start": 46.54,
+     "end": 46.64
     },
     {
      "w": "searched",
-     "start": 46.097,
-     "end": 46.317
+     "start": 46.64,
+     "end": 46.86
     },
     {
      "w": "his",
-     "start": 46.317,
-     "end": 46.517
+     "start": 46.86,
+     "end": 47.06
     },
     {
      "w": "pockets,",
-     "start": 46.517,
-     "end": 46.777
+     "start": 47.06,
+     "end": 47.32
     },
     {
      "w": "and",
-     "start": 46.777,
-     "end": 47.017
+     "start": 47.32,
+     "end": 47.56
     },
     {
      "w": "found",
-     "start": 47.017,
-     "end": 47.197
+     "start": 47.56,
+     "end": 47.74
     },
     {
      "w": "even",
-     "start": 47.197,
-     "end": 47.497
+     "start": 47.74,
+     "end": 48.04
     },
     {
      "w": "more",
-     "start": 47.497,
-     "end": 47.717
+     "start": 48.04,
+     "end": 48.26
     },
     {
      "w": "money.",
-     "start": 47.717,
-     "end": 47.917
+     "start": 48.26,
+     "end": 48.46
     }
    ]
   },
   {
    "shot": "teachers",
    "text": "Where did a new boy get all this? You stole from home too!",
-   "start": 48.224,
-   "end": 51.606,
+   "start": 48.767,
+   "end": 52.149,
    "words": [
     {
      "w": "Where",
-     "start": 48.224,
-     "end": 48.484
+     "start": 48.767,
+     "end": 49.027
     },
     {
      "w": "did",
-     "start": 48.484,
-     "end": 48.624
+     "start": 49.027,
+     "end": 49.167
     },
     {
      "w": "a",
-     "start": 48.624,
-     "end": 48.764
+     "start": 49.167,
+     "end": 49.307
     },
     {
      "w": "new",
-     "start": 48.764,
-     "end": 48.924
+     "start": 49.307,
+     "end": 49.467
     },
     {
      "w": "boy",
-     "start": 48.924,
-     "end": 49.124
+     "start": 49.467,
+     "end": 49.667
     },
     {
      "w": "get",
-     "start": 49.124,
-     "end": 49.324
+     "start": 49.667,
+     "end": 49.867
     },
     {
      "w": "all",
-     "start": 49.324,
-     "end": 49.524
+     "start": 49.867,
+     "end": 50.067
     },
     {
      "w": "this?",
-     "start": 49.524,
-     "end": 49.764
+     "start": 50.067,
+     "end": 50.307
     },
     {
      "w": "You",
-     "start": 50.124,
-     "end": 50.284
+     "start": 50.667,
+     "end": 50.827
     },
     {
      "w": "stole",
-     "start": 50.284,
-     "end": 50.544
+     "start": 50.827,
+     "end": 51.087
     },
     {
      "w": "from",
-     "start": 50.544,
-     "end": 50.764
+     "start": 51.087,
+     "end": 51.307
     },
     {
      "w": "home",
-     "start": 50.764,
-     "end": 50.944
+     "start": 51.307,
+     "end": 51.487
     },
     {
      "w": "too!",
-     "start": 50.944,
-     "end": 51.324
+     "start": 51.487,
+     "end": 51.867
     }
    ]
   },
   {
    "shot": "pres",
    "text": "Then the school president, the biggest boy in the whole school, leaned in.",
-   "start": 51.786,
-   "end": 55.443,
+   "start": 52.329,
+   "end": 55.986,
    "words": [
     {
      "w": "Then",
-     "start": 51.786,
-     "end": 51.986
+     "start": 52.329,
+     "end": 52.529
     },
     {
      "w": "the",
-     "start": 51.986,
-     "end": 52.106
+     "start": 52.529,
+     "end": 52.649
     },
     {
      "w": "school",
-     "start": 52.106,
-     "end": 52.266
+     "start": 52.649,
+     "end": 52.809
     },
     {
      "w": "president,",
-     "start": 52.266,
-     "end": 52.686
+     "start": 52.809,
+     "end": 53.229
     },
     {
      "w": "the",
-     "start": 53.166,
-     "end": 53.226
+     "start": 53.709,
+     "end": 53.769
     },
     {
      "w": "biggest",
-     "start": 53.226,
-     "end": 53.426
+     "start": 53.769,
+     "end": 53.969
     },
     {
      "w": "boy",
-     "start": 53.426,
-     "end": 53.726
+     "start": 53.969,
+     "end": 54.269
     },
     {
      "w": "in",
-     "start": 53.726,
-     "end": 53.886
+     "start": 54.269,
+     "end": 54.429
     },
     {
      "w": "the",
-     "start": 53.886,
-     "end": 53.986
+     "start": 54.429,
+     "end": 54.529
     },
     {
      "w": "whole",
-     "start": 53.986,
-     "end": 54.206
+     "start": 54.529,
+     "end": 54.749
     },
     {
      "w": "school,",
-     "start": 54.206,
-     "end": 54.626
+     "start": 54.749,
+     "end": 55.169
     },
     {
      "w": "leaned",
-     "start": 54.786,
-     "end": 55.006
+     "start": 55.329,
+     "end": 55.549
     },
     {
      "w": "in.",
-     "start": 55.006,
-     "end": 55.306
+     "start": 55.549,
+     "end": 55.849
     }
    ]
   },
   {
    "shot": "pres",
    "text": "Thief.",
-   "start": 55.543,
-   "end": 56.188,
+   "start": 56.086,
+   "end": 56.731,
    "words": [
     {
      "w": "Thief.",
-     "start": 55.543,
-     "end": 55.823
+     "start": 56.086,
+     "end": 56.366
     }
    ]
   },
   {
    "shot": "office",
    "text": "In the principal's office, they finally called his father.",
-   "start": 56.368,
-   "end": 58.873,
+   "start": 56.911,
+   "end": 59.416,
    "words": [
     {
      "w": "In",
-     "start": 56.368,
-     "end": 56.528
+     "start": 56.911,
+     "end": 57.071
     },
     {
      "w": "the",
-     "start": 56.528,
-     "end": 56.628
+     "start": 57.071,
+     "end": 57.171
     },
     {
      "w": "principal's",
-     "start": 56.628,
-     "end": 57.068
+     "start": 57.171,
+     "end": 57.611
     },
     {
      "w": "office,",
-     "start": 57.068,
-     "end": 57.268
+     "start": 57.611,
+     "end": 57.811
     },
     {
      "w": "they",
-     "start": 57.428,
-     "end": 57.508
+     "start": 57.971,
+     "end": 58.051
     },
     {
      "w": "finally",
-     "start": 57.508,
-     "end": 57.768
+     "start": 58.051,
+     "end": 58.311
     },
     {
      "w": "called",
-     "start": 57.768,
-     "end": 58.048
+     "start": 58.311,
+     "end": 58.591
     },
     {
      "w": "his",
-     "start": 58.048,
-     "end": 58.208
+     "start": 58.591,
+     "end": 58.751
     },
     {
      "w": "father.",
-     "start": 58.208,
-     "end": 58.488
+     "start": 58.751,
+     "end": 59.031
     }
    ]
   },
   {
    "shot": "office",
    "text": "Sir, how much did you give your son today?",
-   "start": 58.973,
-   "end": 61.43,
+   "start": 59.516,
+   "end": 61.973,
    "words": [
     {
      "w": "Sir,",
-     "start": 58.973,
-     "end": 59.353
+     "start": 59.516,
+     "end": 59.896
     },
     {
      "w": "how",
-     "start": 59.833,
-     "end": 59.853
+     "start": 60.376,
+     "end": 60.396
     },
     {
      "w": "much",
-     "start": 59.853,
-     "end": 60.033
+     "start": 60.396,
+     "end": 60.576
     },
     {
      "w": "did",
-     "start": 60.033,
-     "end": 60.233
+     "start": 60.576,
+     "end": 60.776
     },
     {
      "w": "you",
-     "start": 60.233,
-     "end": 60.353
+     "start": 60.776,
+     "end": 60.896
     },
     {
      "w": "give",
-     "start": 60.353,
-     "end": 60.513
+     "start": 60.896,
+     "end": 61.056
     },
     {
      "w": "your",
-     "start": 60.513,
-     "end": 60.673
+     "start": 61.056,
+     "end": 61.216
     },
     {
      "w": "son",
-     "start": 60.673,
-     "end": 60.893
+     "start": 61.216,
+     "end": 61.436
     },
     {
      "w": "today?",
-     "start": 60.893,
-     "end": 61.173
+     "start": 61.436,
+     "end": 61.716
     }
    ]
   },
   {
    "shot": "dad",
    "text": "One thousand five hundred. Two five-hundreds for lunch, and five hundred for transport.",
-   "start": 61.61,
-   "end": 66.692,
+   "start": 62.153,
+   "end": 67.235,
    "words": [
     {
      "w": "One",
-     "start": 61.61,
-     "end": 62.025
+     "start": 62.153,
+     "end": 62.568
     },
     {
      "w": "thousand",
-     "start": 62.025,
-     "end": 62.44
+     "start": 62.568,
+     "end": 62.983
     },
     {
      "w": "five",
-     "start": 62.44,
-     "end": 62.855
+     "start": 62.983,
+     "end": 63.398
     },
     {
      "w": "hundred.",
-     "start": 62.855,
-     "end": 63.27
+     "start": 63.398,
+     "end": 63.813
     },
     {
      "w": "Two",
-     "start": 63.27,
-     "end": 63.59
+     "start": 63.813,
+     "end": 64.133
     },
     {
      "w": "five-hundreds",
-     "start": 63.59,
-     "end": 64.31
+     "start": 64.133,
+     "end": 64.853
     },
     {
      "w": "for",
-     "start": 64.31,
-     "end": 64.45
+     "start": 64.853,
+     "end": 64.993
     },
     {
      "w": "lunch,",
-     "start": 64.45,
-     "end": 64.67
+     "start": 64.993,
+     "end": 65.213
     },
     {
      "w": "and",
-     "start": 64.67,
-     "end": 65.07
+     "start": 65.213,
+     "end": 65.613
     },
     {
      "w": "five",
-     "start": 65.07,
-     "end": 65.3
+     "start": 65.613,
+     "end": 65.843
     },
     {
      "w": "hundred",
-     "start": 65.3,
-     "end": 65.53
+     "start": 65.843,
+     "end": 66.073
     },
     {
      "w": "for",
-     "start": 65.53,
-     "end": 65.93
+     "start": 66.073,
+     "end": 66.473
     },
     {
      "w": "transport.",
-     "start": 65.93,
-     "end": 66.43
+     "start": 66.473,
+     "end": 66.973
     }
    ]
   },
   {
    "shot": "silence",
    "text": "Exactly what was in his bag, and his pocket. The room went silent.",
-   "start": 66.872,
-   "end": 70.577,
+   "start": 67.415,
+   "end": 71.12,
    "words": [
     {
      "w": "Exactly",
-     "start": 66.872,
-     "end": 67.252
+     "start": 67.415,
+     "end": 67.795
     },
     {
      "w": "what",
-     "start": 67.252,
-     "end": 67.532
+     "start": 67.795,
+     "end": 68.075
     },
     {
      "w": "was",
-     "start": 67.532,
-     "end": 67.632
+     "start": 68.075,
+     "end": 68.175
     },
     {
      "w": "in",
-     "start": 67.632,
-     "end": 67.772
+     "start": 68.175,
+     "end": 68.315
     },
     {
      "w": "his",
-     "start": 67.772,
-     "end": 67.892
+     "start": 68.315,
+     "end": 68.435
     },
     {
      "w": "bag,",
-     "start": 67.892,
-     "end": 68.192
+     "start": 68.435,
+     "end": 68.735
     },
     {
      "w": "and",
-     "start": 68.192,
-     "end": 68.672
+     "start": 68.735,
+     "end": 69.215
     },
     {
      "w": "his",
-     "start": 68.672,
-     "end": 68.832
+     "start": 69.215,
+     "end": 69.375
     },
     {
      "w": "pocket.",
-     "start": 68.832,
-     "end": 69.132
+     "start": 69.375,
+     "end": 69.675
     },
     {
      "w": "The",
-     "start": 69.512,
-     "end": 69.612
+     "start": 70.055,
+     "end": 70.155
     },
     {
      "w": "room",
-     "start": 69.612,
-     "end": 69.792
+     "start": 70.155,
+     "end": 70.335
     },
     {
      "w": "went",
-     "start": 69.792,
-     "end": 69.972
+     "start": 70.335,
+     "end": 70.515
     },
     {
      "w": "silent.",
-     "start": 69.972,
-     "end": 70.332
+     "start": 70.515,
+     "end": 70.875
     }
    ]
   },
   {
    "shot": "twist",
-   "text": "A week later, the truth came out. Another girl in his class had taken Kemi's money, just to teach her a lesson.",
-   "start": 70.757,
-   "end": 75.588,
+   "text": "A week later, the truth came out. Another girl in his class had taken her money, just to teach her a lesson.",
+   "start": 71.3,
+   "end": 76.02,
    "words": [
     {
      "w": "A",
-     "start": 70.757,
-     "end": 70.897
+     "start": 71.3,
+     "end": 71.42
     },
     {
      "w": "week",
-     "start": 70.897,
-     "end": 71.037
+     "start": 71.42,
+     "end": 71.54
     },
     {
      "w": "later,",
-     "start": 71.037,
-     "end": 71.337
+     "start": 71.54,
+     "end": 71.84
     },
     {
      "w": "the",
-     "start": 71.557,
-     "end": 71.597
+     "start": 71.98,
+     "end": 72.06
     },
     {
      "w": "truth",
-     "start": 71.597,
-     "end": 71.797
+     "start": 72.06,
+     "end": 72.24
     },
     {
      "w": "came",
-     "start": 71.797,
-     "end": 71.997
+     "start": 72.24,
+     "end": 72.44
     },
     {
      "w": "out.",
-     "start": 71.997,
-     "end": 72.257
+     "start": 72.44,
+     "end": 72.72
     },
     {
      "w": "Another",
-     "start": 72.537,
-     "end": 72.777
+     "start": 73.0,
+     "end": 73.26
     },
     {
      "w": "girl",
-     "start": 72.777,
-     "end": 72.977
+     "start": 73.26,
+     "end": 73.44
     },
     {
      "w": "in",
-     "start": 72.977,
-     "end": 73.117
+     "start": 73.44,
+     "end": 73.56
     },
     {
      "w": "his",
-     "start": 73.117,
-     "end": 73.217
+     "start": 73.56,
+     "end": 73.66
     },
     {
      "w": "class",
-     "start": 73.217,
-     "end": 73.437
+     "start": 73.66,
+     "end": 73.88
     },
     {
      "w": "had",
-     "start": 73.437,
-     "end": 73.617
+     "start": 73.88,
+     "end": 74.08
     },
     {
      "w": "taken",
-     "start": 73.617,
-     "end": 73.857
-    },
-    {
-     "w": "Kemi's",
-     "start": 73.857,
-     "end": 74.217
-    },
-    {
-     "w": "money,",
-     "start": 74.217,
-     "end": 74.357
-    },
-    {
-     "w": "just",
-     "start": 74.357,
-     "end": 74.597
-    },
-    {
-     "w": "to",
-     "start": 74.597,
-     "end": 74.757
-    },
-    {
-     "w": "teach",
-     "start": 74.757,
-     "end": 74.897
+     "start": 74.08,
+     "end": 74.24
     },
     {
      "w": "her",
-     "start": 74.897,
-     "end": 75.017
+     "start": 74.24,
+     "end": 74.42
+    },
+    {
+     "w": "money,",
+     "start": 74.42,
+     "end": 74.64
+    },
+    {
+     "w": "just",
+     "start": 74.9,
+     "end": 75.08
+    },
+    {
+     "w": "to",
+     "start": 75.08,
+     "end": 75.22
+    },
+    {
+     "w": "teach",
+     "start": 75.22,
+     "end": 75.34
+    },
+    {
+     "w": "her",
+     "start": 75.34,
+     "end": 75.48
     },
     {
      "w": "a",
-     "start": 75.017,
-     "end": 75.097
+     "start": 75.48,
+     "end": 75.58
     },
     {
      "w": "lesson.",
-     "start": 75.097,
-     "end": 75.297
+     "start": 75.58,
+     "end": 75.8
     }
    ]
   }
