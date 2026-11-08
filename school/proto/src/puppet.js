@@ -196,7 +196,7 @@ export function toon(color, extra = {}) { // near-flat shading: one soft shade s
   return new THREE.MeshToonMaterial({ color, gradientMap: toonGrad(), emissive: 0xffffff, emissiveIntensity: 0.0, ...extra });
 }
 // ink outline: back faces pushed out along the normal by an absolute world-space width (consistent line weight)
-function inkMat(width, { halo = 0, color = [0.169, 0.11, 0.078] } = {}) {
+function inkMat(width, { halo = 0, color = [0.024, 0.011, 0.007] } = {}) { // colors are LINEAR (OutputPass converts to sRGB)
   // brush-like ink: width varies with the screen-space normal (thin toward the light at upper-left, ~2.5x on the shadow side)
   return new THREE.ShaderMaterial({ side: THREE.BackSide, uniforms: { w: { value: width }, halo: { value: halo }, col: { value: new THREE.Vector3(...color) } },
     vertexShader: `#include <common>
@@ -243,8 +243,8 @@ function squarishHead(r, seed = 1) {
 }
 const outlined = (geo, mat, width, parent) => { // mesh + ink outline of absolute width
   const m = new THREE.Mesh(geo, mat); m.castShadow = true; m.receiveShadow = true; // light falls ON characters (window bands)
-  const o = new THREE.Mesh(geo, inkMat(width * 1.7)); m.add(o);
-  const h = new THREE.Mesh(geo, inkMat(width * 1.7, { halo: width * 0.4, color: [1.0, 0.9, 0.77] })); m.add(h); // warm rim halo
+  const o = new THREE.Mesh(geo, inkMat(width * 2.2, { color: [0.042, 0.016, 0.008] })); m.add(o); // bold, scene-warmed brush ink
+  const h = new THREE.Mesh(geo, inkMat(width * 2.2, { halo: width * 0.28, color: [1.0, 0.8, 0.6] })); m.add(h); // warm rim halo
   parent?.add(m); return m;
 };
 
@@ -280,9 +280,9 @@ export class Puppet {
     this.root = new THREE.Group(); // at the feet
     this.lean = new THREE.Group(); this.root.add(this.lean); // pivots at the feet (inverted pendulum)
     this.hips = new THREE.Group(); this.lean.add(this.hips);
-    const hr = this.hr = H * (s.headFrac ?? 0.19);  // head diameter ~0.38H (style file: 35-45%)
+    const hr = this.hr = H * (s.headFrac ?? 0.165); // head diameter ~0.33H (bible reference frames)
     const lineW = this.lineW = H * 0.011;          // outline weight ~1% of height
-    const legLen = s.legs ? H * Math.min(s.legLen ?? 0.46, 0.34) : 0;
+    const legLen = s.legs ? H * Math.min(s.legLen ?? 0.46, 0.4) : 0;
     this.hipY = legLen; this.hips.position.y = legLen;
     const headC = H - hr;                           // head centre (world, standing)
     const top = headC - hr * 0.62 - legLen;         // torso top tucks under the head (overlap)

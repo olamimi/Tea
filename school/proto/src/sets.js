@@ -97,7 +97,7 @@ export function makeNotes(values) { // a small fan of banknotes held in a hand
 }
 
 // ---------------------------------------------------------------- classroom
-export function buildClassroom({ cls = 'SS1A', wall = ['#4f8486', '#f3dfc0', '#3d6a6c'], seed = 7 } = {}) {
+export function buildClassroom({ cls = 'SS1A', wall = ['#4f8486', '#f2c9a0', '#3d6a6c'], seed = 7 } = {}) {
   _s = seed; mats();
   const scene = new THREE.Scene(); scene.background = new THREE.Color(0xf3e6c8);
   const add = (o) => { scene.add(o); return o; };
@@ -129,7 +129,7 @@ export function buildClassroom({ cls = 'SS1A', wall = ['#4f8486', '#f3dfc0', '#3
   const door = box(doorPivot, 0.08, 2.4, 1.2, new THREE.MeshStandardMaterial({ map: woodTex('#7a4a28'), roughness: 0.4 }), 0, 1.2, 0.6);
   box(doorPivot, 0.12, 0.06, 0.14, M.metal, -0.06, 1.15, 1.05, false);
   // notice board + clock (back/side walls)
-  const nb = add(new THREE.Mesh(new THREE.PlaneGeometry(2.6, 1.3), new THREE.MeshStandardMaterial({ map: canvasTex(512, 256, (ctx, w, h) => { ctx.fillStyle = '#b8864c'; ctx.fillRect(0, 0, w, h); const cols = ['#fff7c2', '#c8f0ff', '#ffd0d8', '#d8ffd0']; for (let i = 0; i < 7; i++) { ctx.save(); ctx.translate(R(40, w - 40), R(40, h - 40)); ctx.rotate(R(-0.2, 0.2)); ctx.fillStyle = cols[i % 4]; ctx.fillRect(-45, -32, 90, 64); ctx.restore(); } }), roughness: 0.8 })));
+  const nb = add(new THREE.Mesh(new THREE.PlaneGeometry(2.6, 1.3), new THREE.MeshStandardMaterial({ map: canvasTex(512, 256, (ctx, w, h) => { ctx.fillStyle = '#b8864c'; ctx.fillRect(0, 0, w, h); const cards = [['#fff7c2', 'LOST', '& FOUND'], ['#c8f0ff', 'NO', 'STEALING!'], ['#ffd0d8', 'STUDENT OF', 'THE MONTH'], ['#d8ffd0', 'NOTES DUE', 'FRIDAY']]; cards.forEach(([c, a, b], i) => { ctx.save(); ctx.translate(70 + i * 120, 80 + (i % 2) * 90); ctx.rotate((i % 2 ? 1 : -1) * 0.08); ctx.fillStyle = c; ctx.fillRect(-55, -42, 110, 84); ctx.fillStyle = '#3a2216'; ctx.font = 'bold 17px "DejaVu Sans"'; ctx.fillText(a, -46, -8); ctx.fillText(b, -46, 16); ctx.restore(); }); }), roughness: 0.8 })));
   nb.position.set(0, 2.4, D / 2 - 0.03); nb.rotation.y = Math.PI; ink(nb);
   const clock = add(new THREE.Mesh(new THREE.CircleGeometry(0.32, 32), new THREE.MeshStandardMaterial({ map: canvasTex(128, 128, (ctx) => { ctx.fillStyle = '#fff'; ctx.beginPath(); ctx.arc(64, 64, 62, 0, 7); ctx.fill(); ctx.strokeStyle = '#222'; ctx.lineWidth = 8; ctx.stroke(); ctx.lineWidth = 6; ctx.beginPath(); ctx.moveTo(64, 64); ctx.lineTo(64, 24); ctx.moveTo(64, 64); ctx.lineTo(92, 70); ctx.stroke(); }), roughness: 0.4 })));
   clock.position.set(W / 2 - 0.03, 3.5, 1); clock.rotation.y = -Math.PI / 2;
@@ -149,6 +149,9 @@ export function buildClassroom({ cls = 'SS1A', wall = ['#4f8486', '#f3dfc0', '#3
   const sun = add(new THREE.DirectionalLight(0xffdfae, 3.4)); sun.position.set(-14, 9, 3); sun.target.position.set(0, 0, 0); add(sun.target);
   sun.castShadow = true; sun.shadow.mapSize.set(2048, 2048); Object.assign(sun.shadow.camera, { left: -10, right: 10, top: 10, bottom: -10, near: 1, far: 40 }); sun.shadow.bias = -0.0008; sun.shadow.normalBias = 0.05; sun.shadow.radius = 3;
   const fill = add(new THREE.PointLight(0xffe2c0, 5, 14, 1.5)); fill.position.set(2, 3.6, 2);
+  const blinds = add(new THREE.SpotLight(0xffd8a0, 40, 30, 0.42, 0.3, 1.2)); blinds.position.set(-6.2, 2.8, 0.4);
+  blinds.map = canvasTex(256, 256, (ctx, w, h) => { ctx.fillStyle = '#000'; ctx.fillRect(0, 0, w, h); ctx.fillStyle = '#fff'; for (let y = 8; y < h; y += 34) ctx.fillRect(0, y, w, 20); });
+  blinds.castShadow = true; blinds.shadow.mapSize.set(1024, 1024); blinds.shadow.bias = -0.0008; blinds.shadow.normalBias = 0.05; add(blinds.target); blinds.target.position.set(1.6, 1.5, 0.2);
   // props
   const bag = makeBag(0x2f6a4a); add(bag); const nbook = makeNotebook(); add(nbook); const notesHeld = makeNotes([500, 500]); add(notesHeld); const note1000 = makeNotes([1000]); add(note1000); const pocketNote = makeNotes([500]); add(pocketNote);
   for (const p of [bag, nbook, notesHeld, note1000, pocketNote]) p.visible = false;

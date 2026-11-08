@@ -18,7 +18,7 @@ const camera = new THREE.PerspectiveCamera(40, W / H, 0.05, 200);
 const composer = new EffectComposer(renderer);
 const renderPass = new RenderPass(new THREE.Scene(), camera); composer.addPass(renderPass);
 const bokeh = new BokehPass(new THREE.Scene(), camera, { focus: 3.0, aperture: 0.004, maxblur: 0.012 }); composer.addPass(bokeh);
-composer.addPass(new UnrealBloomPass(new THREE.Vector2(W / 2, H / 2), 0.25, 0.5, 1.6));
+composer.addPass(new UnrealBloomPass(new THREE.Vector2(W / 2, H / 2), 0.2, 0.4, 2.6));
 composer.addPass(new OutputPass());
 const acc = document.createElement('canvas'); acc.width = W; acc.height = H; const actx = acc.getContext('2d');
 let sets, segs, timeline, SS = 1, focusD = 3;
