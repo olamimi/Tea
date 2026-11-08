@@ -197,15 +197,18 @@ export function toon(color, extra = {}) { // near-flat shading: one soft shade s
 }
 // ink outline: back faces pushed out along the normal by an absolute world-space width (consistent line weight)
 function inkMat(width, { halo = 0, color = [0.024, 0.011, 0.007] } = {}) { // colors are LINEAR (OutputPass converts to sRGB)
-  // brush-like ink: width varies with the screen-space normal (thin toward the light at upper-left, ~2.5x on the shadow side)
-  return new THREE.ShaderMaterial({ side: THREE.BackSide, uniforms: { w: { value: width }, halo: { value: halo }, col: { value: new THREE.Vector3(...color) } },
+  // Screen-space brush ink: width is in PIXELS (like the reference: ~6 px lit side -> ~19 px shadow side at 1080 wide),
+  // so close-ups don't get fat outlines. 'halo' adds a thin rim (px) outside the ink.
+  return new THREE.ShaderMaterial({ side: THREE.BackSide, uniforms: { px: { value: 14.0 }, halo: { value: halo ? 3.0 : 0.0 }, res: { value: new THREE.Vector2(1080, 1920) }, col: { value: new THREE.Vector3(...color) } },
     vertexShader: `#include <common>
 #include <logdepthbuf_pars_vertex>
-uniform float w; uniform float halo;
+uniform float px; uniform float halo; uniform vec2 res;
 void main() { vec3 n = normalize(normal); vec4 mv = modelViewMatrix * vec4(position, 1.0); vec3 nv = normalize(normalMatrix * n);
-  float facing = dot(normalize(nv.xy + 1e-5), normalize(vec2(0.62, -0.78)));
-  float k = 0.42 + 0.95 * max(0.0, facing) + 0.08 * sin(position.x * 37.0 + position.y * 23.0);
-  mv.xyz += nv * (w * k + halo); gl_Position = projectionMatrix * mv;
+  vec4 clip = projectionMatrix * mv; vec2 sd = normalize((projectionMatrix * vec4(nv, 0.0)).xy + 1e-6);
+  float facing = dot(sd, normalize(vec2(0.62, -0.78)));
+  float k = 0.42 + 0.95 * max(0.0, facing) + 0.06 * sin(position.x * 37.0 + position.y * 23.0);
+  float w = px * k + halo;
+  clip.xy += sd * w * 2.0 / res * clip.w; gl_Position = clip;
 #include <logdepthbuf_vertex>
 }`,
     fragmentShader: `#include <logdepthbuf_pars_fragment>
