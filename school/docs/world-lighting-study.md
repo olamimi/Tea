@@ -74,3 +74,23 @@ Saturation and warmth follow the story beat:
     - drained (saturation about 0.2) at the accusation
     - cooler in the principal's office
     - golden at vindication
+
+## 6. Borrowed from the references' characters (our character DESIGN stays as is)
+Only things that add to our design without changing how the characters are built or drawn:
+
+1. **Scene light tints the white heads.** Measured on near-white pixels: night rgb(203,214,223) bluish,
+   forest rgb(203,203,185) yellow-green, sunset rgb(248,238,228) warm, office ~(216,210,200). Heads are never
+   pure white; they sit at ~205-230 and take the scene's light colour. Ours are self-lit white everywhere,
+   so: cut the head's self-glow so key/fill light colours them (keep them the brightest thing on the character).
+2. **Light and shadow land ON characters.** Window-blind stripes across faces, a dark band from a door frame,
+   tree-dapple in forests. Characters receive scene shadows (not just cast them).
+3. **Soft contact shadow** under every character so they sit on the floor rather than float.
+4. **Colour casting by role (via clothing/accessories, not body design).** Culprit mustard vs auditor purple
+   (complements), police blue. For The New Boy: give the accuser, the new boy and the real thief clearly
+   different accent colours (hair clip, bag, cardigan) and seed the thief's colour early as a quiet clue.
+5. **Props carry the story and get their own close-ups.** Magnifying glass over the forged digits,
+   a giant gold coin, the pardon scroll with readable lettering. For us: the note, the bag, the two bills and
+   the single bill as big readable insert shots.
+6. **Foreground character framing.** A big face or prop in the foreground with the payoff behind it
+   (magnifying glass in front of the panicking face). Good for accusation and reveal beats.
+7. **Background extras in varied colours** (queue at the pardon stall) make places feel lived-in.
