@@ -4,7 +4,7 @@
 // layer (expression holds, visemes, nods, blinks, leans, walk/run/pull/sit/laugh cycles, sweat drops).
 import * as THREE from 'three';
 
-const INK = '#2b1c14'; // warm dark-brown ink, never black
+const INK = '#141414';
 const D2R = Math.PI / 180;
 const clamp = (x, a, b) => Math.min(b, Math.max(a, x));
 const ease = (u) => 0.5 - 0.5 * Math.cos(Math.PI * clamp(u, 0, 1));
@@ -191,37 +191,29 @@ function bodyTex(spec) {
 
 const MAT = {};
 let GRAD = null;
-function toonGrad() { if (GRAD) return GRAD; GRAD = new THREE.DataTexture(new Uint8Array([196, 188, 184, 255, 255, 255, 255, 255]), 2, 1, THREE.RGBAFormat); /* one warm cel-shadow tone */ GRAD.minFilter = GRAD.magFilter = THREE.NearestFilter; GRAD.needsUpdate = true; return GRAD; }
+function toonGrad() { if (GRAD) return GRAD; GRAD = new THREE.DataTexture(new Uint8Array([178, 178, 178, 255, 255, 255, 255, 255]), 2, 1, THREE.RGBAFormat); GRAD.minFilter = GRAD.magFilter = THREE.NearestFilter; GRAD.needsUpdate = true; return GRAD; }
 export function toon(color, extra = {}) { // near-flat shading: one soft shade step + emissive lift so whites stay white
   return new THREE.MeshToonMaterial({ color, gradientMap: toonGrad(), emissive: 0xffffff, emissiveIntensity: 0.0, ...extra });
 }
 // ink outline: back faces pushed out along the normal by an absolute world-space width (consistent line weight)
-function inkMat(width, { halo = 0, color = [0.024, 0.011, 0.007] } = {}) { // colors are LINEAR (OutputPass converts to sRGB)
-  // Screen-space brush ink: width is in PIXELS (like the reference: ~6 px lit side -> ~19 px shadow side at 1080 wide),
-  // so close-ups don't get fat outlines. 'halo' adds a thin rim (px) outside the ink.
-  return new THREE.ShaderMaterial({ side: THREE.BackSide, uniforms: { px: { value: 14.0 }, halo: { value: halo ? 3.0 : 0.0 }, res: { value: new THREE.Vector2(1080, 1920) }, col: { value: new THREE.Vector3(...color) } },
+function inkMat(width) {
+  return new THREE.ShaderMaterial({ side: THREE.BackSide, uniforms: { w: { value: width } },
     vertexShader: `#include <common>
 #include <logdepthbuf_pars_vertex>
-uniform float px; uniform float halo; uniform vec2 res;
-void main() { vec3 n = normalize(normal); vec4 mv = modelViewMatrix * vec4(position, 1.0); vec3 nv = normalize(normalMatrix * n);
-  vec4 clip = projectionMatrix * mv; vec2 sd = normalize((projectionMatrix * vec4(nv, 0.0)).xy + 1e-6);
-  float facing = dot(sd, normalize(vec2(0.62, -0.78)));
-  float k = 0.42 + 0.95 * max(0.0, facing) + 0.06 * sin(position.x * 37.0 + position.y * 23.0);
-  float w = px * k + halo;
-  clip.xy += sd * w * 2.0 / res * clip.w; gl_Position = clip;
+uniform float w;
+void main() { vec3 n = normalize(normal); vec4 mv = modelViewMatrix * vec4(position, 1.0); vec3 nv = normalize(normalMatrix * n); mv.xyz += nv * w; gl_Position = projectionMatrix * mv;
 #include <logdepthbuf_vertex>
 }`,
     fragmentShader: `#include <logdepthbuf_pars_fragment>
-uniform vec3 col;
-void main() { gl_FragColor = vec4(col, 1.0);
+void main() { gl_FragColor = vec4(0.078, 0.078, 0.078, 1.0);
 #include <logdepthbuf_fragment>
 }` });
 }
 function mats() {
   if (MAT.ink) return MAT;
-  MAT.ink = new THREE.MeshBasicMaterial({ color: 0x2b1c14 });
+  MAT.ink = new THREE.MeshBasicMaterial({ color: 0x141414 });
   MAT.inkBack = new THREE.MeshBasicMaterial({ color: 0x141414, side: THREE.BackSide });
-  MAT.skin = toon(0xf8efe2, { emissive: 0xf8efe2, emissiveIntensity: 0.22 });
+  MAT.skin = toon(0xfbf9f4, { emissive: 0xfbf9f4, emissiveIntensity: 0.3 });
   MAT.shoe = new THREE.MeshStandardMaterial({ color: 0x2a2320, roughness: 0.6 });
   MAT.metal = new THREE.MeshStandardMaterial({ color: 0xaab2bc, metalness: 0.8, roughness: 0.35 });
   MAT.wood = new THREE.MeshStandardMaterial({ color: 0x7a5a34, roughness: 0.8 });
@@ -229,26 +221,9 @@ function mats() {
   MAT.sweat = new THREE.MeshStandardMaterial({ color: 0x8fd0f2, roughness: 0.15, emissive: 0x3a7fa8, emissiveIntensity: 0.4 });
   return MAT;
 }
-function squarishHead(r, seed = 1) {
-  const g = new THREE.SphereGeometry(r, 64, 40); const p = g.attributes.position; const v = new THREE.Vector3();
-  for (let i = 0; i < p.count; i++) {
-    v.fromBufferAttribute(p, i).divideScalar(r);
-    const a = Math.atan2(v.y, Math.hypot(v.x, v.z)); const c = Math.cos(a), s = Math.sin(a); const e = 2 / 2.25;
-    const sx = Math.sign(c) * Math.pow(Math.abs(c), e), sy = Math.sign(s) * Math.pow(Math.abs(s), e); // superellipse profile
-    const horiz = Math.hypot(v.x, v.z) || 1e-6; const az = Math.atan2(v.x, v.z);
-    const m = 1 + 0.03 * Math.sin(2 * az + seed) + 0.02 * Math.sin(3 * a + seed * 1.7);
-    let y = sy * 0.98; if (y > 0.62) y = 0.62 + (y - 0.62) * 0.8; // flatter crown
-    const jaw = y < 0 ? 1 + 0.06 * (-y) : 1 - 0.03 * y;            // a touch wider at the jaw
-    const k = (sx * jaw * m) / horiz;
-    p.setXYZ(i, v.x * k * r * 1.04, y * m * r, v.z * k * r * 0.96);
-  }
-  g.computeVertexNormals(); return g;
-}
 const outlined = (geo, mat, width, parent) => { // mesh + ink outline of absolute width
-  const m = new THREE.Mesh(geo, mat); m.castShadow = true; m.receiveShadow = true; // light falls ON characters (window bands)
-  const o = new THREE.Mesh(geo, inkMat(width * 2.2, { color: [0.042, 0.016, 0.008] })); m.add(o); // bold, scene-warmed brush ink
-  const h = new THREE.Mesh(geo, inkMat(width * 2.2, { halo: width * 0.28, color: [1.0, 0.8, 0.6] })); m.add(h); // warm rim halo
-  parent?.add(m); return m;
+  const m = new THREE.Mesh(geo, mat); m.castShadow = true; m.receiveShadow = false; // flat look: no self-shadow acne
+  const o = new THREE.Mesh(geo, inkMat(width)); m.add(o); parent?.add(m); return m;
 };
 
 // ------------------------------------------------------------------ the puppet
@@ -283,9 +258,9 @@ export class Puppet {
     this.root = new THREE.Group(); // at the feet
     this.lean = new THREE.Group(); this.root.add(this.lean); // pivots at the feet (inverted pendulum)
     this.hips = new THREE.Group(); this.lean.add(this.hips);
-    const hr = this.hr = H * (s.headFrac ?? 0.165); // head diameter ~0.33H (bible reference frames)
+    const hr = this.hr = H * 0.135;               // head diameter ~0.27H
     const lineW = this.lineW = H * 0.011;          // outline weight ~1% of height
-    const legLen = s.legs ? H * Math.min(s.legLen ?? 0.46, 0.4) : 0;
+    const legLen = s.legs ? H * (s.legLen ?? 0.46) : 0;
     this.hipY = legLen; this.hips.position.y = legLen;
     const headC = H - hr;                           // head centre (world, standing)
     const top = headC - hr * 0.62 - legLen;         // torso top tucks under the head (overlap)
@@ -321,10 +296,11 @@ export class Puppet {
         .replace('#include <emissivemap_fragment>', '#include <emissivemap_fragment>\ntotalEmissiveRadiance = mix(totalEmissiveRadiance, tintColor * 0.35, tm);');
     };
     this.headMat.customProgramCacheKey = () => 'tinted-head';
-    const hg = squarishHead(hr, this.seed); // squarish oval: flatter crown, wider jaw, gentle low-frequency wobble
+    const hg = new THREE.SphereGeometry(hr, 48, 32); hg.scale(1.02, 0.97, 1); // slightly wider than tall
     this.headMesh = outlined(hg, this.headMat, lineW, this.head);
     this.faceMat = new THREE.MeshBasicMaterial({ transparent: true, alphaTest: 0.3, depthWrite: false, polygonOffset: true, polygonOffsetFactor: -2 });
-    this.faceMesh = new THREE.Mesh(squarishHead(hr * 1.004, this.seed), this.faceMat); this.head.add(this.faceMesh);
+    this.faceMesh = new THREE.Mesh(new THREE.SphereGeometry(hr * 1.004, 48, 32), this.faceMat); this.head.add(this.faceMesh);
+    this.faceMesh.scale.set(1.02, 0.97, 1);
     this.buildHat(s, hr);
     // steam puffs (anger): deterministic rising puffs at both sides of the head
     this.steam = [];
