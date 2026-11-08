@@ -83,7 +83,7 @@ function renderOnce(t, forced, jitter) {
 const JIT = [[0, 0], [0.5, 0.25], [-0.25, 0.5], [0.25, -0.5], [-0.5, -0.25]];
 function renderAA(t, seg, into, alpha = 1) {
   for (let i = 0; i < SS; i++) {
-    renderOnce(t, seg, SS > 1 ? JIT[i] : null);
+    renderOnce(t, seg, SS > 1 ? JIT[i] : null); if (window.__DBG) { const c = sets[seg.set].cast; (window.__dbg = window.__dbg || []).push([Math.round(t * 30), i, ...Object.entries(c).filter(([n, x]) => x.root.visible).map(([n, x]) => n + ':' + x.neck.rotation.y.toFixed(2))]); }
     into.globalAlpha = alpha * (i === 0 ? 1 : 1 / (i + 1)); into.drawImage(renderer.domElement, 0, 0);
   }
 }

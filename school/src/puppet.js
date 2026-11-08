@@ -430,6 +430,9 @@ export class Puppet {
   // ---- per-frame evaluation (pure function of t: deterministic across render workers)
   update(t, camera) {
     const s = this.spec, u = this.u, sd = this.seed;
+    // settle body facing/position FIRST so head-turn (look) math never uses a stale rotation
+    if (this.path && t >= this.path.t0 - 0.01) { const P = this.path; const dir = new THREE.Vector3().subVectors(P.to, P.from); this.facing = P.face ?? Math.atan2(dir.x, dir.z); }
+    this.root.rotation.y = this.facing + this.chan(t, 'turn', 0); this.root.updateMatrixWorld(true);
     // expression (held keys)
     const exprName = this.held(t, 'expr', 'neutral');
     const base = { ...EXPR[exprName] };
