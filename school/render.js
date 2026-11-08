@@ -16,7 +16,7 @@ const server = http.createServer((req, res) => { const p = path.join(ROOT, decod
   const from = +(args.from?.[0] ?? 0), to = Math.min(+(args.to?.[0] ?? frames - 1), frames - 1), step = +(args.step?.[0] ?? 1);
   const nW = +(args.workers?.[0] ?? 2);
   if (args.segs) console.log(JSON.stringify(segs));
-  const list = []; for (let f = from; f <= to; f += step) list.push(f);
+  const list = []; for (let f = from; f <= to; f += step) if (!(args.resume && fs.existsSync(path.join(OUT, `f${String(f).padStart(5, '0')}.jpg`)))) list.push(f);
   console.log(`rendering ${list.length} frames (${from}-${to} step ${step}) with ${nW} workers`);
   const pages = [first]; for (let i = 1; i < nW; i++) pages.push(await open());
   const t0 = Date.now(); let done = 0;
