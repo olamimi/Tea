@@ -3,7 +3,7 @@
   "lines": [
     {
       "shot": "hook",
-      "text": "Tobi had been at his new school for exactly one week, when they called him a thief.",
+      "text": "He had been at his new school for exactly one week, when they called him a thief.",
       "exaggeration": 0.65,
       "cfg": 0.4
     },
@@ -15,13 +15,13 @@
     },
     {
       "shot": "borrow",
-      "text": "Tobi borrowed from Kemi.",
+      "text": "He borrowed one from a girl in the other class.",
       "exaggeration": 0.55,
       "cfg": 0.45
     },
     {
       "shot": "search1",
-      "text": "The next morning, Kemi came to collect it. She searched his bag. Her note was gone.",
+      "text": "The next morning, she came to collect it. She searched his bag. Her note was gone.",
       "exaggeration": 0.65,
       "cfg": 0.4
     },
@@ -40,7 +40,7 @@
     },
     {
       "shot": "burst",
-      "text": "Later that day, Kemi burst into his class.",
+      "text": "Later that day, she burst into his class.",
       "exaggeration": 0.7,
       "cfg": 0.35
     },
@@ -65,7 +65,7 @@
     },
     {
       "shot": "calm",
-      "text": "Tobi stayed calm.",
+      "text": "He stayed calm.",
       "exaggeration": 0.5,
       "cfg": 0.45
     },
@@ -85,7 +85,7 @@
     },
     {
       "shot": "smile",
-      "text": "Tobi smiled, and pulled out two five-hundreds.",
+      "text": "He smiled, and pulled out two five-hundreds.",
       "exaggeration": 0.65,
       "cfg": 0.4
     },
@@ -150,7 +150,7 @@
     },
     {
       "shot": "twist",
-      "text": "A week later, the truth came out. Another girl in his class had taken Kemi's money, just to teach her a lesson.",
+      "text": "A week later, the truth came out. Another girl in his class had taken her money, just to teach her a lesson.",
       "exaggeration": 0.75,
       "cfg": 0.3
     }

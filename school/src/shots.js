@@ -65,7 +65,7 @@ export function buildShots(T) {
 
   // ---------------------------------------------------------------- 3. borrowing Kemi's note (other arm)
   S.borrow = (s0) => {
-    const tk = w('borrow', 'Kemi.');
+    const tk = w('borrow', 'class.');
     const kp = V(-3.0, 0, 0.75), tp = V(-1.75, 0, 0.95);
     return [
       { at: 0, set: 'classB', init(C) {

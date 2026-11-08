@@ -64,7 +64,7 @@ for i, (l, c) in enumerate(zip(lines, clips)):
     else:
         shift = t - l["start"]
         ws = [{**w, "start": round(w["start"] + shift, 3), "end": round(w["end"] + shift, 3)} for w in l["words"]]
-    new_lines.append({**l, "start": round(t, 3), "end": round(t + dur, 3), "words": ws})
+    new_lines.append({**l, "text": ln["text"] if i == idx else l["text"], "start": round(t, 3), "end": round(t + dur, 3), "words": ws})
     out.append(c); t += dur
     if i < len(gaps):
         out.append(np.zeros(int(gaps[i] * SR))); t += gaps[i]
