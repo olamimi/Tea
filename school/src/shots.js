@@ -99,9 +99,9 @@ export function buildShots(T) {
           C.nbook.visible = false; },
         tick(C, t) { C.bag.userData.flap.rotation.x = -1.2; C.nbook.visible = t > tbag - 0.35; },
         post(C) { C.nbook.position.copy(hand(C.cast.kemi, 'R')).add(V(0, 0.06, 0.05)); C.nbook.rotation.set(-0.5, 0.3, 0.2); },
-        cam: move(V(1.6, 1.7, -2.8), V(0.4, 1.2, -0.4), V(1.4, 1.65, -2.4), V(0.4, 1.2, -0.4), 44, 40) },
+        cam: move(V(1.1, 1.75, 2.4), V(0.3, 1.3, -0.85), V(0.95, 1.72, 2.0), V(0.3, 1.3, -0.85), 44, 40) },
       { at: tbag - s0 - 0.1, set: 'classA', inherit: true, post(C) { C.nbook.visible = true; C.nbook.position.copy(hand(C.cast.kemi, 'R')).add(V(0, 0.06, 0.05)); C.nbook.rotation.set(-0.5, 0.3, 0.2); },
-        cam: move(V(0.75, 1.45, -1.75), V(0.4, 1.25, -0.65), V(0.7, 1.42, -1.55), V(0.4, 1.25, -0.65), 34, 30) },
+        cam: move(V(0.95, 1.95, 0.9), V(0.3, 1.25, -0.7), V(0.9, 1.9, 0.75), V(0.3, 1.25, -0.7), 42, 38) },
     ];
   };
 
@@ -114,7 +114,7 @@ export function buildShots(T) {
           C.bag.visible = true; C.bag.position.copy(TOBI_DESK);
           show(C.cast.tobi, TOBI_SEAT, BOARD, [{ t: s0 - 1, sit: 0.5, expr: 'content' }, { t: tc - 0.05, pose: 'dig', work: 'dig', expr: 'focus', lean: 10 }, { t: tg - 0.08, pose: 'raise', work: null, expr: 'shock', sweat: true, squash: 1, lean: -4, look: 'camera' }]); },
         tick(C, t) { C.bag.userData.flap.rotation.x = t > tc ? -1.2 : 0; },
-        cam: move(V(0.6, 1.55, -1.5), V(0.5, 1.15, 0.6), V(0.58, 1.5, -1.2), V(0.5, 1.15, 0.6), 46, 40) },
+        cam: move(V(1.75, 1.55, -0.8), V(0.45, 1.2, 0.6), V(1.6, 1.52, -0.55), V(0.45, 1.2, 0.6), 46, 42) },
     ];
   };
 
@@ -128,8 +128,8 @@ export function buildShots(T) {
           const Tb = show(C.cast.tobi, TOBI_SEAT, BOARD, [{ t: s0 - 1, sit: 0.5, expr: 'worried', sweat: true, look: V(1.8, 1.6, -0.6) }, { t: tt + 0.8, expr: 'skeptic', sweat: false, look: V(6, 1.5, -4) }]);
           show(C.cast.boyA, V(1.85, 0, -0.55), V(0.5, 0, 0.7), [{ t: s0 - 1, expr: 'neutral', look: headOf(Tb) }, { t: tt - 0.05, expr: 'shock', pose: 'point', look: V(6, 1.5, -4), squash: 1 }, { t: tt + 0.9, look: headOf(Tb), pose: 'gesture', work: 'gesture' }], T.words('mates', 'That', 'it!'));
           show(C.cast.ada, C.seats[23], BOARD, [{ t: s0 - 1, sit: 0.5, expr: 'smug', look: headOf(Tb) }]); },
-        cam: move(V(-0.6, 1.6, -2.0), V(1.0, 1.3, 0.1), V(-0.4, 1.6, -1.7), V(1.0, 1.3, 0.1), 46, 44) },
-      { at: tt - s0 - 0.1, set: 'classA', inherit: true, cam: move(V(0.9, 1.65, -2.3), V(1.85, 1.6, -0.55), V(1.05, 1.65, -2.1), V(1.85, 1.6, -0.55), 38, 35) },
+        cam: move(V(-0.5, 1.75, 2.6), V(1.2, 1.3, -0.1), V(-0.3, 1.72, 2.3), V(1.2, 1.3, -0.1), 48, 46) },
+      { at: tt - s0 - 0.1, set: 'classA', inherit: true, cam: move(V(0.75, 1.7, 1.75), V(1.85, 1.55, -0.55), V(0.85, 1.7, 1.5), V(1.85, 1.55, -0.55), 38, 35) },
     ];
   };
 
@@ -144,7 +144,7 @@ export function buildShots(T) {
           show(C.cast.girlB, C.seats[9], BOARD, [{ t: s0 - 1, sit: 0.5, look: headOf(Kk) }]);
           show(C.cast.boyB, C.seats[6], BOARD, [{ t: s0 - 1, sit: 0.5, expr: 'bored' }]); },
         post(C, t) { C.nbook.visible = t > ty - 0.05; C.nbook.position.copy(hand(C.cast.kemi, 'R')).add(V(0, 0.08, 0.04)); C.nbook.rotation.set(-0.3, -0.6, 0.1); },
-        cam: move(V(-0.4, 1.6, 2.6), V(-2.4, 1.25, 0.85), V(-0.7, 1.58, 2.2), V(-2.4, 1.25, 0.85), 42, 38) },
+        cam: move(V(-2.3, 1.65, 5.0), V(-2.35, 1.25, 0.85), V(-2.3, 1.62, 4.5), V(-2.35, 1.25, 0.85), 44, 42) },
       { at: ty - s0 - 0.15, set: 'classB', inherit: true, cam: move(V(-1.5, 1.45, 2.6), V(-3.0, 1.25, 0.75), V(-1.7, 1.45, 2.2), V(-3.0, 1.25, 0.75), 36, 34) },
     ];
   };
@@ -196,7 +196,7 @@ export function buildShots(T) {
           void Tch; },
         tick(C, t) { C.bag.userData.flap.rotation.x = -1.2; C.notesHeld.visible = t > te - 0.12; },
         post(C) { C.notesHeld.position.copy(hand(C.cast.teacher, 'R')).add(V(0, 0.1, 0.05)); C.notesHeld.rotation.set(0, 0.2, 0); },
-        cam: move(V(1.5, 0.95, -3.2), V(0.4, 1.5, -0.6), V(1.3, 0.9, -2.8), V(0.4, 1.7, -0.6), 46, 44) },
+        cam: move(V(-0.6, 1.45, 1.0), V(0.4, 1.6, -0.85), V(-0.5, 1.42, 0.8), V(0.4, 1.75, -0.85), 46, 44) },
       { at: tl - s0 - 0.1, set: 'classA', inherit: true, cam: move(V(0.9, 1.95, -3.6), V(0.35, 2.0, -0.9), V(0.8, 1.95, -3.2), V(0.35, 2.0, -0.9), 38, 36) },
     ];
   };
@@ -255,7 +255,7 @@ export function buildShots(T) {
           show(C.cast.kemi, V(-1.3, 0, -1.4), V(1.6, 0, 0.2), [{ t: s0 - 1, expr: 'smug', pose: 'cross', look: headOf(Tb) }]); },
         post(C, t) { C.pocketNote.visible = t > tf - 0.1; C.pocketNote.position.copy(hand(C.cast.teacherM, 'R')).add(V(0, 0.08, 0)); },
         cam: move(V(0.7, 1.75, -2.9), V(2.1, 1.5, -0.1), V(0.85, 1.75, -2.6), V(2.1, 1.5, -0.1), 46, 44) },
-      { at: tw - s0 - 0.1, set: 'classA', inherit: true, cam: move(V(1.4, 1.9, -3.8), V(0.4, 1.85, -1.1), V(1.25, 1.9, -3.4), V(0.4, 1.85, -1.1), 38, 36) },
+      { at: tw - s0 - 0.1, set: 'classA', inherit: true, cam: move(V(0.9, 1.85, 1.7), V(0.4, 1.8, -1.1), V(0.85, 1.85, 1.45), V(0.4, 1.8, -1.1), 40, 38) },
     ];
   };
 
@@ -272,7 +272,7 @@ export function buildShots(T) {
             { t: tth - 0.08, squash: 1, mouth: 'grit', eyes: 'squint' }], T.words('pres', 'Thief.', 'Thief.'))
             .walk({ t0: s0 + 0.1, t1: tlean - 0.15, from: P0, to: P1, mode: 'walk', ease: false });
           show(C.cast.kemi, V(-1.3, 0, -1.4), V(1.6, 0, 0.2), [{ t: s0 - 1, expr: 'smug', pose: 'cross' }]); },
-        cam: move(V(-0.6, 1.7, 2.6), V(2.4, 1.4, -1.4), V(-0.3, 1.7, 2.2), V(2.2, 1.4, -1.0), 50, 48) },
+        cam: move(V(3.3, 1.75, 1.6), V(2.9, 1.45, -2.2), V(3.2, 1.75, 1.3), V(2.6, 1.5, -1.3), 50, 48) },
       { at: tlean - s0 - 0.05, set: 'classA', speed: [tth - 0.08, tth + 0.4],
         cam: move(V(1.45, 1.05, 0.9), V(2.4, 1.9, -0.9), V(1.4, 1.0, 1.0), V(2.4, 1.95, -0.9), 66, 62) },
     ];
