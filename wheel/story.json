@@ -1,0 +1,60 @@
+{
+  "title": "No Wheel",
+  "engine": "chatterbox",
+  "lines": [
+    {
+      "shot": "hook",
+      "text": "In this world, the penthouse is on the ground floor.",
+      "exaggeration": 0.6,
+      "cfg": 0.4
+    },
+    {
+      "shot": "rule",
+      "text": "Because here, nobody ever invented the wheel.",
+      "exaggeration": 0.6,
+      "cfg": 0.4
+    },
+    {
+      "shot": "porters",
+      "text": "No carts. No cars. Everything you buy arrives on someone's back.",
+      "exaggeration": 0.6,
+      "cfg": 0.4
+    },
+    {
+      "shot": "canal",
+      "text": "So every city grew along a river. Boats were the only fast lane.",
+      "exaggeration": 0.55,
+      "cfg": 0.45
+    },
+    {
+      "shot": "stairs",
+      "text": "No wheel means no pulley. No pulley, no elevator.",
+      "exaggeration": 0.6,
+      "cfg": 0.4
+    },
+    {
+      "shot": "skyline",
+      "text": "So the higher you live, the more you climb. The poor live at the top.",
+      "exaggeration": 0.7,
+      "cfg": 0.35
+    },
+    {
+      "shot": "sundial",
+      "text": "No gears, so no clocks. Here, being late is measured in shadows.",
+      "exaggeration": 0.6,
+      "cfg": 0.4
+    },
+    {
+      "shot": "twist",
+      "text": "Every year, someone invents the wheel again. And every year, the porters vote it out.",
+      "exaggeration": 0.7,
+      "cfg": 0.35
+    },
+    {
+      "shot": "loop",
+      "text": "Which is exactly why, in this world...",
+      "exaggeration": 0.6,
+      "cfg": 0.4
+    }
+  ]
+}
