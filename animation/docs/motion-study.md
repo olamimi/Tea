@@ -248,3 +248,41 @@ Studied at full resolution from both 720p references (scientist, big inmate, pai
    - thick short eyebrows
    - blush on happy faces
 6. **Hats:** sized up and outlined.
+
+---
+
+# Character motion study 3: "Why Humans Can't Pick Random Numbers" + "This Knight Found the Ultimate Loophole"
+Measured with `school/tools/acting_study.py`: camera motion is removed per frame (similarity fit), then dense optical
+flow measures what the characters themselves do.
+
+| | Numbers | Knight | Our wheel video | Our New Boy |
+|---|---|---|---|---|
+| Median share of frame where characters move | **36%** | **41%** | 21% | 16% |
+| Busiest moments (p90) | 65% | 82% | 55% | 39% |
+
+Our characters move about half as much.
+
+## What the references' characters do, frame by frame (30 fps strips)
+1. **They are always DOING something physical, not posing.**
+   - The forger writes digits with a pen, and the numbers appear as the pen moves.
+   - The elevator guy presses buttons with a long pointer, his arm sweeping in arcs.
+   - Two men carry a chest; the knight pushes a wheelbarrow toward the camera.
+   - The priest walks across the frame while talking.
+
+   Every beat has a verb.
+2. **Rhythmic whole-body bounce.** Excited characters bob on bent knees in a dance-like rhythm on the narration's
+   beat (elevator guy, f.540-599). It's not an idle sway: the knees bend, the body dips 5-10% of its height, the head lags.
+3. **Big head acting while talking.**
+   - The head tilts ±10-15° and bobs on stressed words.
+   - Squints and winks.
+   - The expression changes every 0.3-0.6 s.
+   - Smug grin to full panic in about 3 frames (goggle eyes, wavy mouth, sweat drop pops on) as the body recoils.
+4. **Arcs, anticipation, overshoot.**
+   - Arms reach in arcs and land with a small overshoot.
+   - A lean-back comes before the lunge.
+   - Big poses snap in 2-3 frames, then drift.
+5. **Characters move through the frame.** They walk in and out, walk toward the lens and lean into close-ups (the knight's
+   face fills the frame and keeps swaying), and turn their heads to the camera to share the joke.
+6. **Props are part of the motion.** Pens write, wheelbarrows roll, chests bounce when carried, a magnifying glass slides in.
+   Something new enters the frame every 1-2 s.
+7. **Held close-ups still breathe.** Even a static held face sways, bobs and blinks, and the eyebrows keep moving.
