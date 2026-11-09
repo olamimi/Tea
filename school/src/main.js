@@ -95,12 +95,17 @@ function segAt(t) { let s = segs[0]; for (const sg of segs) if (t >= sg.start) s
 // ---------------- camera system (measured from the references) ----------------
 // constant slow push-in under everything, gentle roll drift, swoops between angles in the same set,
 // whip pans (directional blur) or zoom-throughs (radial blur) between sets, rare colour-flash crossfades.
-const CAM = { push: 0.055, rollDeg: 0.7, swoop: 0.5, whip: 5 / FPS, whipAng: 0.75, zoomOut: 9 / FPS, zoomIn: 8 / FPS, flash: 6 / FPS };
+const CAM = { push: 0.03, whipRoll: 0.14, rollDeg: 0.7, swoop: 0.5, whip: 5 / FPS, whipAng: 0.75, zoomOut: 9 / FPS, zoomIn: 8 / FPS, flash: 6 / FPS };
 const easeIO = (x) => (x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2);
 export function transOf(seg) { // transition INTO this segment
   const i = segs.indexOf(seg); const prev = segs[i - 1]; if (!prev) return 'none';
   if (seg.trans) return seg.trans;
-  if (prev.set === seg.set) return 'swoop';
+  if (prev.set === seg.set) { // swoop only between nearby, similar angles; otherwise whip (never fly through people)
+    const a = prev.cam(prev.end - prev.start, 1), b = seg.cam(0, 0);
+    const da = a.l.clone().sub(a.p).normalize(), db = b.l.clone().sub(b.p).normalize();
+    if (a.p.distanceTo(b.p) < 2.2 && da.dot(db) > 0.6) return 'swoop';
+    return 'whip';
+  }
   return seg.si % 3 === 0 ? 'zoom' : 'whip';
 }
 function baseCam(seg, t) {
@@ -123,7 +128,7 @@ function poseCamera(seg, t) {
   if (tin === 'zoom' && t - seg.start < CAM.zoomIn) { const p = (t - seg.start) / CAM.zoomIn; fovK = 0.25 + 0.75 * (1 - (1 - p) * (1 - p)); radial = 0.25 * (1 - p) * (1 - p); }
   camera.position.copy(c.p); camera.fov = c.fov * fovK; camera.updateProjectionMatrix();
   camera.position.x += Math.sin(t * 0.9) * 0.012; camera.position.y += Math.sin(t * 1.3 + 1) * 0.01;
-  camera.lookAt(c.l); camera.rotateZ(c.roll + CAM.rollDeg * Math.PI / 180 * Math.sin(t * 0.45 + 1.3)); camera.rotateY(yaw);
+  camera.lookAt(c.l); camera.rotateZ(c.roll + CAM.rollDeg * Math.PI / 180 * Math.sin(t * 0.45 + 1.3) + yaw * CAM.whipRoll); camera.rotateY(yaw);
   focusD = camera.position.distanceTo(c.l);
   // motion blur from this frame's camera change (pixels moved per frame)
   const hfov = 2 * Math.atan(Math.tan(camera.fov * Math.PI / 360) * W / H);
