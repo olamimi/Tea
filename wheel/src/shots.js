@@ -19,8 +19,8 @@ const topOf = (c) => c.root.position.clone().add(V(0, c.spec.H + 0.15, 0));
 
 // close-up that frames a character's live head at a target size (fraction of frame height); the reference rubric
 // wants faces >= 30% of frame height most of the time. az = angle off the face direction, el = elevation, dy = look below the head (in head radii)
-const CU = (who, { az = 0.4, el = 0.08, frac = 0.36, fov = 32, drift = 0.1, dy = 0.8, yaw = null } = {}) => { const f = (lt, u, t, set) => {
-  const c = set.cast[who]; const hw = c.head.getWorldPosition(V(0, 0, 0)); const r = c.root.position; const h = V(r.x * 0.5 + hw.x * 0.5, hw.y, r.z * 0.5 + hw.z * 0.5); const hr = c.hr;
+const CU = (who, { az = 0.4, el = 0.08, frac = 0.36, fov = 32, drift = 0.1, dy = 0.8, yaw = null, hk = 0.5 } = {}) => { const f = (lt, u, t, set) => {
+  const c = set.cast[who]; const hw = c.head.getWorldPosition(V(0, 0, 0)); const r = c.root.position; const h = V(r.x * (1 - hk) + hw.x * hk, hw.y, r.z * (1 - hk) + hw.z * hk); const hr = c.hr;
   const d = hr / (frac * Math.tan(fov * Math.PI / 360)); const a = (yaw ?? c.facing) + az + drift * (u - 0.5);
   return { p: V(h.x + Math.sin(a) * Math.cos(el) * d, h.y + Math.sin(el) * d, h.z + Math.cos(a) * Math.cos(el) * d), l: V(h.x, h.y - dy * hr, h.z), fov };
 }; f.track = true; return f; };
@@ -70,7 +70,7 @@ export function buildShots(T) {
     const porters = [['p1', -2.6, -2], ['p2', -2.6, -4], ['p3', -2.6, -6], ['p4', -2.6, -8], ['p5', -2.6, -10], ['p6', 2.6, -3], ['p7', 2.6, -5], ['p8', 2.6, -7], ['p9', 2.6, -9], ['p10', 2.6, -11]];
     const kz = (t) => -14 + (t - s0) * 2.2;
     const tick = (St, t) => { const z = kz(t); const c = St.P.cart; c.position.set(0, 0, z + 1.7); c.rotation.y = Math.PI / 2; c.userData.wheels.forEach((wh) => (wh.rotation.z = -(z) / 0.3));
-      St.P.cSofa.position.set(0, 0.88, z + 1.7); St.P.cSofa.rotation.y = Math.PI / 2; St.P.cFridge.position.set(0.35, 1.25, z + 1.35); St.P.cPiano.position.set(-0.2, 1.23, z + 2.0); St.P.cPiano.rotation.y = Math.PI / 2; St.P.cPiano.scale.setScalar(0.55); };
+      St.P.cSofa.position.set(0, 0.88, z + 2.0); St.P.cSofa.rotation.y = Math.PI / 2; St.P.cFridge.position.set(0.35, 1.25, z + 1.75); St.P.cPiano.position.set(-0.2, 1.23, z + 2.3); St.P.cPiano.rotation.y = Math.PI / 2; St.P.cPiano.scale.setScalar(0.55); };
     const post = (St, t) => { porters.forEach(([n], i) => { const cr = St.P[['crateA', 'crateB', 'crateC', 'crateD', 'crateE'][i % 5]]; if (i >= 5) return; const top = topOf(St.cast[n]);
       const drop = ramp(t, tk - 0.1 + i * 0.05, tk + 0.35 + i * 0.05); cr.position.copy(top).add(V(0, -(top.y - 0.25) * drop * drop, 0.3 * drop)); cr.rotation.z = drop * 0.5 * (i % 2 ? 1 : -1); }); };
     const init = (St) => { ['cart', 'cSofa', 'cFridge', 'cPiano', 'crateA', 'crateB', 'crateC', 'crateD', 'crateE'].forEach((k) => (St.P[k].visible = true));
@@ -78,7 +78,7 @@ export function buildShots(T) {
       porters.forEach(([n, x, z], i) => show(St.cast[n], V(x, 0, z), x < 0 ? Math.PI / 2 : -Math.PI / 2, [{ t: s0 - 1, expr: 'focus', pose: i < 5 ? 'raise' : 'idle', sweat: true }, { t: tt - 0.1 + i * 0.04, expr: 'shock', look: V(0, 1.4, kz(tt) - 1.5), squash: 1 }, { t: tk + 0.2 + i * 0.05, expr: 'sad', pose: 'idle', headTilt: -10 }]).groove(all('cart'), 0.4)); };
     return [
       { at: 0, set: 'street', init, tick, post, cam: (lt, u, t) => { const z = kz(t); return { p: V(-2.0, 1.55, z - 0.9), l: V(0, 1.05, z + 0.5), fov: 50 }; } },
-      { at: tm - s0 - 0.1, set: 'street', tick, post, cam: CU('kid', { yaw: 0, az: -1.05, frac: 0.34, el: 0.12 }) },
+      { at: tm - s0 - 0.1, set: 'street', tick, post, cam: CU('kid', { yaw: 0, az: -1.55, frac: 0.34, el: 0.12, hk: 1 }) },
       { at: w('cart', 'trip.') - s0 - 0.1, set: 'street', tick, post, cam: move(V(-0.4, 1.7, 1.8), V(-1.0, 1.4, -8), V(-0.3, 1.7, 1.4), V(-1.0, 1.4, -7), 44, 40) },
       { at: tt - s0 - 0.1, set: 'street', tick, post, cam: CU('p9', { yaw: -Math.PI / 2, az: 0.3, frac: 0.36 }) },
       { at: w('cart', 'done') - s0 - 0.1, set: 'street', tick, post, cam: move(V(-0.4, 1.7, 1.8), V(-2.6, 1.6, -6), V(-0.2, 1.7, 1.2), V(-2.6, 1.5, -6), 44, 40) },
