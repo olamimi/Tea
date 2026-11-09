@@ -96,19 +96,15 @@ function segAt(t) { let s = segs[0]; for (const sg of segs) if (t >= sg.start) s
 // ---------------- camera system (measured from the references) ----------------
 // constant slow push-in under everything, gentle roll drift, swoops between angles in the same set,
 // whip pans (directional blur) or zoom-throughs (radial blur) between sets, rare colour-flash crossfades.
-const CAM = { push: 0.03, whipRoll: 0.14, rollDeg: 0.7, swoop: 0.5, whip: 5 / FPS, whipAng: 0.75, zoomOut: 9 / FPS, zoomIn: 8 / FPS, flash: 6 / FPS };
+const CAM = { push: 0.03, whipRoll: 0.14, rollDeg: 0.7, swoop: 0.9, whip: 5 / FPS, whipAng: 0.75, zoomOut: 9 / FPS, zoomIn: 8 / FPS, flash: 6 / FPS };
 const easeIO = (x) => (x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2);
 export function transOf(seg) { // transition INTO this segment
+  // camera grammar (user direction): one continuous move inside a scene (the camera glides between angles),
+  // zoom-through between scenes, whip + motion blur ONLY where the action motivates it (seg.trans = 'whip'),
+  // and a handful of hard cuts for comedy punches (seg.trans = 'cut').
   const i = segs.indexOf(seg); const prev = segs[i - 1]; if (!prev) return 'none';
   if (seg.trans) return seg.trans;
-  if (seg.cam.track || prev.cam.track) return 'whip'; // face-tracking close-ups: cut with a whip (live subject, never swoop)
-  if (prev.set === seg.set) { // swoop only between nearby, similar angles; otherwise whip (never fly through people)
-    const a = prev.cam(prev.end - prev.start, 1), b = seg.cam(0, 0);
-    const da = a.l.clone().sub(a.p).normalize(), db = b.l.clone().sub(b.p).normalize();
-    if (a.p.distanceTo(b.p) < 2.2 && da.dot(db) > 0.6) return 'swoop';
-    return 'whip';
-  }
-  return seg.si % 3 === 0 ? 'zoom' : 'whip';
+  return prev.set === seg.set ? 'swoop' : 'zoom';
 }
 function baseCam(seg, t) {
   const lt = Math.max(0, t - seg.start), u = Math.min(1, lt / Math.max(0.01, seg.end - seg.start));
