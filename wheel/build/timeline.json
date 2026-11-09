@@ -1,5 +1,5 @@
 {
- "duration": 36.435,
+ "duration": 86.947,
  "shots": [
   {
    "name": "hook",
@@ -73,13 +73,13 @@
    "dur": 2.819
   },
   {
-   "name": "setup",
+   "name": "street",
    "lines": [
     {
-     "shot": "setup",
-     "text": "Because nobody ever invented the wheel. Everything is carried, and carrying is the biggest job on the planet. Half the world are porters.",
+     "shot": "street",
+     "text": "Because nobody ever invented the wheel. So everything is carried.",
      "start": 2.899,
-     "end": 9.174,
+     "end": 6.091,
      "words": [
       {
        "w": "Because",
@@ -94,700 +94,1692 @@
       {
        "w": "ever",
        "start": 3.479,
-       "end": 3.779
+       "end": 3.759
       },
       {
        "w": "invented",
-       "start": 3.779,
+       "start": 3.759,
        "end": 4.119
       },
       {
        "w": "the",
        "start": 4.119,
-       "end": 4.299
+       "end": 4.319
       },
       {
        "w": "wheel.",
-       "start": 4.299,
-       "end": 4.499
+       "start": 4.319,
+       "end": 4.539
       },
       {
-       "w": "Everything",
-       "start": 4.939,
-       "end": 5.239
+       "w": "So",
+       "start": 4.799,
+       "end": 4.999
       },
       {
-       "w": "is",
-       "start": 5.239,
-       "end": 5.419
-      },
-      {
-       "w": "carried,",
-       "start": 5.419,
-       "end": 5.699
-      },
-      {
-       "w": "and",
-       "start": 5.699,
-       "end": 5.979
-      },
-      {
-       "w": "carrying",
-       "start": 5.979,
-       "end": 6.279
+       "w": "everything",
+       "start": 4.999,
+       "end": 5.299
       },
       {
        "w": "is",
-       "start": 6.279,
-       "end": 6.539
+       "start": 5.299,
+       "end": 5.539
+      },
+      {
+       "w": "carried.",
+       "start": 5.539,
+       "end": 5.779
+      }
+     ]
+    },
+    {
+     "shot": "street",
+     "text": "Your groceries. Your sofa. Your piano. Your grandpa.",
+     "start": 6.191,
+     "end": 8.618,
+     "words": [
+      {
+       "w": "Your",
+       "start": 6.191,
+       "end": 6.331
+      },
+      {
+       "w": "groceries.",
+       "start": 6.331,
+       "end": 6.651
+      },
+      {
+       "w": "Your",
+       "start": 7.031,
+       "end": 7.051
+      },
+      {
+       "w": "sofa.",
+       "start": 7.051,
+       "end": 7.271
+      },
+      {
+       "w": "Your",
+       "start": 7.551,
+       "end": 7.591
+      },
+      {
+       "w": "piano.",
+       "start": 7.591,
+       "end": 7.811
+      },
+      {
+       "w": "Your",
+       "start": 8.011,
+       "end": 8.071
+      },
+      {
+       "w": "grandpa.",
+       "start": 8.071,
+       "end": 8.451
+      }
+     ]
+    },
+    {
+     "shot": "street",
+     "text": "Carrying is the biggest job on the planet. Half the world are porters, and the other half pays them.",
+     "start": 8.718,
+     "end": 14.239,
+     "words": [
+      {
+       "w": "Carrying",
+       "start": 8.718,
+       "end": 9.198
+      },
+      {
+       "w": "is",
+       "start": 9.198,
+       "end": 9.378
       },
       {
        "w": "the",
-       "start": 6.539,
-       "end": 6.679
+       "start": 9.378,
+       "end": 9.578
       },
       {
        "w": "biggest",
-       "start": 6.679,
-       "end": 6.879
+       "start": 9.578,
+       "end": 9.778
       },
       {
        "w": "job",
-       "start": 6.879,
-       "end": 7.099
+       "start": 9.778,
+       "end": 10.098
       },
       {
        "w": "on",
-       "start": 7.099,
-       "end": 7.239
+       "start": 10.098,
+       "end": 10.378
       },
       {
        "w": "the",
-       "start": 7.239,
-       "end": 7.339
+       "start": 10.378,
+       "end": 10.498
       },
       {
        "w": "planet.",
-       "start": 7.339,
-       "end": 7.579
+       "start": 10.498,
+       "end": 10.778
       },
       {
        "w": "Half",
-       "start": 8.019,
-       "end": 8.059
+       "start": 11.198,
+       "end": 11.338
       },
       {
        "w": "the",
-       "start": 8.059,
-       "end": 8.219
+       "start": 11.338,
+       "end": 11.538
       },
       {
        "w": "world",
-       "start": 8.219,
-       "end": 8.419
+       "start": 11.538,
+       "end": 11.798
       },
       {
        "w": "are",
-       "start": 8.419,
-       "end": 8.559
+       "start": 11.798,
+       "end": 12.018
       },
       {
-       "w": "porters.",
-       "start": 8.559,
-       "end": 8.799
+       "w": "porters,",
+       "start": 12.018,
+       "end": 12.358
+      },
+      {
+       "w": "and",
+       "start": 12.658,
+       "end": 12.798
+      },
+      {
+       "w": "the",
+       "start": 12.798,
+       "end": 12.878
+      },
+      {
+       "w": "other",
+       "start": 12.878,
+       "end": 13.118
+      },
+      {
+       "w": "half",
+       "start": 13.118,
+       "end": 13.378
+      },
+      {
+       "w": "pays",
+       "start": 13.378,
+       "end": 13.678
+      },
+      {
+       "w": "them.",
+       "start": 13.678,
+       "end": 14.018
       }
      ]
     }
    ],
    "start": 2.819,
-   "end": 9.274,
-   "dur": 6.455
+   "end": 14.339,
+   "dur": 11.52
+  },
+  {
+   "name": "kid",
+   "lines": [
+    {
+     "shot": "kid",
+     "text": "And one kid was really, really tired of carrying. Every morning, the same crate. Every night, the same sore back.",
+     "start": 14.419,
+     "end": 21.899,
+     "words": [
+      {
+       "w": "And",
+       "start": 14.419,
+       "end": 14.419
+      },
+      {
+       "w": "one",
+       "start": 14.419,
+       "end": 14.939
+      },
+      {
+       "w": "kid",
+       "start": 14.939,
+       "end": 15.299
+      },
+      {
+       "w": "was",
+       "start": 15.299,
+       "end": 15.679
+      },
+      {
+       "w": "really,",
+       "start": 15.679,
+       "end": 16.339
+      },
+      {
+       "w": "really",
+       "start": 16.619,
+       "end": 16.999
+      },
+      {
+       "w": "tired",
+       "start": 16.999,
+       "end": 17.359
+      },
+      {
+       "w": "of",
+       "start": 17.359,
+       "end": 17.539
+      },
+      {
+       "w": "carrying.",
+       "start": 17.539,
+       "end": 17.919
+      },
+      {
+       "w": "Every",
+       "start": 18.339,
+       "end": 18.599
+      },
+      {
+       "w": "morning,",
+       "start": 18.599,
+       "end": 18.899
+      },
+      {
+       "w": "the",
+       "start": 19.119,
+       "end": 19.259
+      },
+      {
+       "w": "same",
+       "start": 19.259,
+       "end": 19.499
+      },
+      {
+       "w": "crate.",
+       "start": 19.499,
+       "end": 19.759
+      },
+      {
+       "w": "Every",
+       "start": 20.179,
+       "end": 20.339
+      },
+      {
+       "w": "night,",
+       "start": 20.339,
+       "end": 20.579
+      },
+      {
+       "w": "the",
+       "start": 20.799,
+       "end": 20.919
+      },
+      {
+       "w": "same",
+       "start": 20.919,
+       "end": 21.159
+      },
+      {
+       "w": "sore",
+       "start": 21.159,
+       "end": 21.399
+      },
+      {
+       "w": "back.",
+       "start": 21.399,
+       "end": 21.719
+      }
+     ]
+    }
+   ],
+   "start": 14.339,
+   "end": 21.999,
+   "dur": 7.66
   },
   {
    "name": "shed",
    "lines": [
     {
      "shot": "shed",
-     "text": "Then a kid built one.",
-     "start": 9.354,
-     "end": 10.555,
+     "text": "So he started building. He tried a square. It did not roll.",
+     "start": 22.079,
+     "end": 25.199,
      "words": [
       {
-       "w": "Then",
-       "start": 9.354,
-       "end": 9.594
+       "w": "So",
+       "start": 22.079,
+       "end": 22.319
+      },
+      {
+       "w": "he",
+       "start": 22.499,
+       "end": 22.619
+      },
+      {
+       "w": "started",
+       "start": 22.619,
+       "end": 22.839
+      },
+      {
+       "w": "building.",
+       "start": 22.839,
+       "end": 23.179
+      },
+      {
+       "w": "He",
+       "start": 23.459,
+       "end": 23.559
+      },
+      {
+       "w": "tried",
+       "start": 23.559,
+       "end": 23.759
       },
       {
        "w": "a",
-       "start": 9.594,
-       "end": 9.794
+       "start": 23.759,
+       "end": 23.859
       },
       {
-       "w": "kid",
-       "start": 9.794,
-       "end": 9.954
+       "w": "square.",
+       "start": 23.859,
+       "end": 24.099
       },
       {
-       "w": "built",
-       "start": 9.954,
-       "end": 10.194
+       "w": "It",
+       "start": 24.419,
+       "end": 24.499
       },
       {
-       "w": "one.",
-       "start": 10.194,
-       "end": 10.414
+       "w": "did",
+       "start": 24.499,
+       "end": 24.619
+      },
+      {
+       "w": "not",
+       "start": 24.619,
+       "end": 24.779
+      },
+      {
+       "w": "roll.",
+       "start": 24.779,
+       "end": 24.999
+      }
+     ]
+    },
+    {
+     "shot": "shed",
+     "text": "He tried a triangle. It rolled once, and it hurt.",
+     "start": 25.299,
+     "end": 27.631,
+     "words": [
+      {
+       "w": "He",
+       "start": 25.299,
+       "end": 25.419
+      },
+      {
+       "w": "tried",
+       "start": 25.419,
+       "end": 25.599
+      },
+      {
+       "w": "a",
+       "start": 25.599,
+       "end": 25.699
+      },
+      {
+       "w": "triangle.",
+       "start": 25.699,
+       "end": 25.999
+      },
+      {
+       "w": "It",
+       "start": 26.319,
+       "end": 26.379
+      },
+      {
+       "w": "rolled",
+       "start": 26.379,
+       "end": 26.559
+      },
+      {
+       "w": "once,",
+       "start": 26.559,
+       "end": 26.839
+      },
+      {
+       "w": "and",
+       "start": 26.839,
+       "end": 27.099
+      },
+      {
+       "w": "it",
+       "start": 27.099,
+       "end": 27.199
+      },
+      {
+       "w": "hurt.",
+       "start": 27.199,
+       "end": 27.359
+      }
+     ]
+    },
+    {
+     "shot": "shed",
+     "text": "Attempt number forty-seven... was round.",
+     "start": 27.731,
+     "end": 29.768,
+     "words": [
+      {
+       "w": "Attempt",
+       "start": 27.731,
+       "end": 28.011
+      },
+      {
+       "w": "number",
+       "start": 28.011,
+       "end": 28.271
+      },
+      {
+       "w": "forty-seven...",
+       "start": 28.271,
+       "end": 28.751
+      },
+      {
+       "w": "was",
+       "start": 28.751,
+       "end": 29.211
+      },
+      {
+       "w": "round.",
+       "start": 29.211,
+       "end": 29.471
       }
      ]
     }
    ],
-   "start": 9.274,
-   "end": 10.655,
-   "dur": 1.381
+   "start": 21.999,
+   "end": 29.868,
+   "dur": 7.869
   },
   {
    "name": "cart",
    "lines": [
     {
      "shot": "cart",
-     "text": "He put four under a box, and moved his whole house in one trip. A job that takes ten porters, done by one kid.",
-     "start": 10.735,
-     "end": 16.574,
+     "text": "He put four of them under a box, and moved his whole house in one trip.",
+     "start": 29.948,
+     "end": 33.819,
      "words": [
       {
        "w": "He",
-       "start": 10.735,
-       "end": 11.075
+       "start": 29.948,
+       "end": 30.088
       },
       {
        "w": "put",
-       "start": 11.075,
-       "end": 11.215
+       "start": 30.088,
+       "end": 30.228
       },
       {
        "w": "four",
-       "start": 11.215,
-       "end": 11.435
+       "start": 30.228,
+       "end": 30.468
+      },
+      {
+       "w": "of",
+       "start": 30.468,
+       "end": 30.608
+      },
+      {
+       "w": "them",
+       "start": 30.608,
+       "end": 30.748
       },
       {
        "w": "under",
-       "start": 11.435,
-       "end": 11.675
+       "start": 30.748,
+       "end": 31.008
       },
       {
        "w": "a",
-       "start": 11.675,
-       "end": 11.815
+       "start": 31.008,
+       "end": 31.188
       },
       {
        "w": "box,",
-       "start": 11.815,
-       "end": 12.035
+       "start": 31.188,
+       "end": 31.488
       },
       {
        "w": "and",
-       "start": 12.035,
-       "end": 12.255
+       "start": 31.488,
+       "end": 31.788
       },
       {
        "w": "moved",
-       "start": 12.255,
-       "end": 12.415
+       "start": 31.788,
+       "end": 31.988
       },
       {
        "w": "his",
-       "start": 12.415,
-       "end": 12.555
+       "start": 31.988,
+       "end": 32.188
       },
       {
        "w": "whole",
-       "start": 12.555,
-       "end": 12.815
+       "start": 32.188,
+       "end": 32.468
       },
       {
        "w": "house",
-       "start": 12.815,
-       "end": 13.035
+       "start": 32.468,
+       "end": 32.788
       },
       {
        "w": "in",
-       "start": 13.035,
-       "end": 13.275
+       "start": 32.788,
+       "end": 33.048
       },
       {
        "w": "one",
-       "start": 13.275,
-       "end": 13.475
+       "start": 33.048,
+       "end": 33.308
       },
       {
        "w": "trip.",
-       "start": 13.475,
-       "end": 13.735
-      },
+       "start": 33.308,
+       "end": 33.608
+      }
+     ]
+    },
+    {
+     "shot": "cart",
+     "text": "A job that takes ten porters, done by one kid, before breakfast.",
+     "start": 33.919,
+     "end": 37.199,
+     "words": [
       {
        "w": "A",
-       "start": 14.015,
-       "end": 14.155
+       "start": 33.919,
+       "end": 34.059
       },
       {
        "w": "job",
-       "start": 14.155,
-       "end": 14.355
+       "start": 34.059,
+       "end": 34.219
       },
       {
        "w": "that",
-       "start": 14.355,
-       "end": 14.535
+       "start": 34.219,
+       "end": 34.379
       },
       {
        "w": "takes",
-       "start": 14.535,
-       "end": 14.715
+       "start": 34.379,
+       "end": 34.559
       },
       {
        "w": "ten",
-       "start": 14.715,
-       "end": 14.935
+       "start": 34.559,
+       "end": 34.799
       },
       {
        "w": "porters,",
-       "start": 14.935,
-       "end": 15.295
+       "start": 34.799,
+       "end": 35.139
       },
       {
        "w": "done",
-       "start": 15.475,
-       "end": 15.655
+       "start": 35.139,
+       "end": 35.499
       },
       {
        "w": "by",
-       "start": 15.655,
-       "end": 15.855
+       "start": 35.499,
+       "end": 35.659
       },
       {
        "w": "one",
-       "start": 15.855,
-       "end": 16.075
+       "start": 35.659,
+       "end": 35.859
       },
       {
-       "w": "kid.",
-       "start": 16.075,
-       "end": 16.335
+       "w": "kid,",
+       "start": 35.859,
+       "end": 36.179
+      },
+      {
+       "w": "before",
+       "start": 36.179,
+       "end": 36.539
+      },
+      {
+       "w": "breakfast.",
+       "start": 36.539,
+       "end": 36.919
       }
      ]
     }
    ],
-   "start": 10.655,
-   "end": 16.674,
-   "dur": 6.019
+   "start": 29.868,
+   "end": 37.299,
+   "dur": 7.431
   },
   {
    "name": "guild",
    "lines": [
     {
      "shot": "guild",
-     "text": "If wheels caught on, half the world would lose their jobs. So by lunch, the porters' guild had a price on his head.",
-     "start": 16.754,
-     "end": 22.036,
+     "text": "The porters' guild called an emergency meeting. If wheels caught on, half the world would lose their jobs.",
+     "start": 37.379,
+     "end": 41.684,
      "words": [
       {
-       "w": "If",
-       "start": 16.754,
-       "end": 17.194
-      },
-      {
-       "w": "wheels",
-       "start": 17.194,
-       "end": 17.434
-      },
-      {
-       "w": "caught",
-       "start": 17.434,
-       "end": 17.714
-      },
-      {
-       "w": "on,",
-       "start": 17.714,
-       "end": 18.014
-      },
-      {
-       "w": "half",
-       "start": 18.214,
-       "end": 18.334
-      },
-      {
-       "w": "the",
-       "start": 18.334,
-       "end": 18.494
-      },
-      {
-       "w": "world",
-       "start": 18.494,
-       "end": 18.654
-      },
-      {
-       "w": "would",
-       "start": 18.654,
-       "end": 18.814
-      },
-      {
-       "w": "lose",
-       "start": 18.814,
-       "end": 18.974
-      },
-      {
-       "w": "their",
-       "start": 18.974,
-       "end": 19.154
-      },
-      {
-       "w": "jobs.",
-       "start": 19.154,
-       "end": 19.534
-      },
-      {
-       "w": "So",
-       "start": 19.774,
-       "end": 19.854
-      },
-      {
-       "w": "by",
-       "start": 19.854,
-       "end": 19.994
-      },
-      {
-       "w": "lunch,",
-       "start": 19.994,
-       "end": 20.254
-      },
-      {
-       "w": "the",
-       "start": 20.414,
-       "end": 20.514
+       "w": "The",
+       "start": 37.379,
+       "end": 37.539
       },
       {
        "w": "porters'",
-       "start": 20.514,
-       "end": 20.854
+       "start": 37.539,
+       "end": 37.779
       },
       {
        "w": "guild",
-       "start": 20.854,
-       "end": 20.994
+       "start": 37.779,
+       "end": 37.999
       },
       {
-       "w": "had",
-       "start": 20.994,
-       "end": 21.174
+       "w": "called",
+       "start": 37.999,
+       "end": 38.239
       },
       {
-       "w": "a",
-       "start": 21.174,
-       "end": 21.254
+       "w": "an",
+       "start": 38.239,
+       "end": 38.379
       },
       {
-       "w": "price",
-       "start": 21.254,
-       "end": 21.394
+       "w": "emergency",
+       "start": 38.379,
+       "end": 38.639
       },
       {
-       "w": "on",
-       "start": 21.394,
-       "end": 21.574
+       "w": "meeting.",
+       "start": 38.639,
+       "end": 38.999
       },
       {
-       "w": "his",
-       "start": 21.574,
-       "end": 21.694
+       "w": "If",
+       "start": 39.379,
+       "end": 39.499
       },
       {
-       "w": "head.",
-       "start": 21.694,
-       "end": 21.854
+       "w": "wheels",
+       "start": 39.499,
+       "end": 39.659
+      },
+      {
+       "w": "caught",
+       "start": 39.659,
+       "end": 39.899
+      },
+      {
+       "w": "on,",
+       "start": 39.899,
+       "end": 40.139
+      },
+      {
+       "w": "half",
+       "start": 40.259,
+       "end": 40.339
+      },
+      {
+       "w": "the",
+       "start": 40.339,
+       "end": 40.479
+      },
+      {
+       "w": "world",
+       "start": 40.479,
+       "end": 40.639
+      },
+      {
+       "w": "would",
+       "start": 40.639,
+       "end": 40.779
+      },
+      {
+       "w": "lose",
+       "start": 40.779,
+       "end": 40.899
+      },
+      {
+       "w": "their",
+       "start": 40.899,
+       "end": 41.059
+      },
+      {
+       "w": "jobs.",
+       "start": 41.059,
+       "end": 41.339
+      }
+     ]
+    },
+    {
+     "shot": "guild",
+     "text": "Pianos would roll. Grandpas would roll. Nobody would ever need to be carried again.",
+     "start": 41.784,
+     "end": 46.072,
+     "words": [
+      {
+       "w": "Pianos",
+       "start": 41.784,
+       "end": 42.184
+      },
+      {
+       "w": "would",
+       "start": 42.184,
+       "end": 42.304
+      },
+      {
+       "w": "roll.",
+       "start": 42.304,
+       "end": 42.664
+      },
+      {
+       "w": "Grandpas",
+       "start": 43.004,
+       "end": 43.384
+      },
+      {
+       "w": "would",
+       "start": 43.384,
+       "end": 43.584
+      },
+      {
+       "w": "roll.",
+       "start": 43.584,
+       "end": 43.924
+      },
+      {
+       "w": "Nobody",
+       "start": 44.224,
+       "end": 44.384
+      },
+      {
+       "w": "would",
+       "start": 44.384,
+       "end": 44.664
+      },
+      {
+       "w": "ever",
+       "start": 44.664,
+       "end": 44.944
+      },
+      {
+       "w": "need",
+       "start": 44.944,
+       "end": 45.124
+      },
+      {
+       "w": "to",
+       "start": 45.124,
+       "end": 45.224
+      },
+      {
+       "w": "be",
+       "start": 45.224,
+       "end": 45.324
+      },
+      {
+       "w": "carried",
+       "start": 45.324,
+       "end": 45.564
+      },
+      {
+       "w": "again.",
+       "start": 45.564,
+       "end": 45.864
+      }
+     ]
+    },
+    {
+     "shot": "guild",
+     "text": "The boss went red.",
+     "start": 46.172,
+     "end": 47.005,
+     "words": [
+      {
+       "w": "The",
+       "start": 46.172,
+       "end": 46.292
+      },
+      {
+       "w": "boss",
+       "start": 46.292,
+       "end": 46.452
+      },
+      {
+       "w": "went",
+       "start": 46.452,
+       "end": 46.612
+      },
+      {
+       "w": "red.",
+       "start": 46.612,
+       "end": 46.832
       }
      ]
     }
    ],
-   "start": 16.674,
-   "end": 22.136,
-   "dur": 5.462
+   "start": 37.299,
+   "end": 47.105,
+   "dur": 9.806
+  },
+  {
+   "name": "bounty",
+   "lines": [
+    {
+     "shot": "bounty",
+     "text": "So by lunch, the guild had a price on his head.",
+     "start": 47.185,
+     "end": 49.732,
+     "words": [
+      {
+       "w": "So",
+       "start": 47.185,
+       "end": 47.705
+      },
+      {
+       "w": "by",
+       "start": 47.845,
+       "end": 47.965
+      },
+      {
+       "w": "lunch,",
+       "start": 47.965,
+       "end": 48.285
+      },
+      {
+       "w": "the",
+       "start": 48.405,
+       "end": 48.525
+      },
+      {
+       "w": "guild",
+       "start": 48.525,
+       "end": 48.705
+      },
+      {
+       "w": "had",
+       "start": 48.705,
+       "end": 48.845
+      },
+      {
+       "w": "a",
+       "start": 48.845,
+       "end": 48.945
+      },
+      {
+       "w": "price",
+       "start": 48.945,
+       "end": 49.085
+      },
+      {
+       "w": "on",
+       "start": 49.085,
+       "end": 49.265
+      },
+      {
+       "w": "his",
+       "start": 49.265,
+       "end": 49.365
+      },
+      {
+       "w": "head.",
+       "start": 49.365,
+       "end": 49.545
+      }
+     ]
+    }
+   ],
+   "start": 47.105,
+   "end": 49.832,
+   "dur": 2.727
   },
   {
    "name": "chase",
    "lines": [
     {
      "shot": "chase",
-     "text": "So he did the only thing he could. He rolled.",
-     "start": 22.216,
-     "end": 24.216,
+     "text": "Porters came from every street. They were strong, they were angry, and there were a lot of them.",
+     "start": 49.912,
+     "end": 53.992,
+     "words": [
+      {
+       "w": "Porters",
+       "start": 49.912,
+       "end": 50.132
+      },
+      {
+       "w": "came",
+       "start": 50.132,
+       "end": 50.312
+      },
+      {
+       "w": "from",
+       "start": 50.312,
+       "end": 50.472
+      },
+      {
+       "w": "every",
+       "start": 50.472,
+       "end": 50.752
+      },
+      {
+       "w": "street.",
+       "start": 50.752,
+       "end": 51.052
+      },
+      {
+       "w": "They",
+       "start": 51.372,
+       "end": 51.392
+      },
+      {
+       "w": "were",
+       "start": 51.392,
+       "end": 51.512
+      },
+      {
+       "w": "strong,",
+       "start": 51.512,
+       "end": 51.832
+      },
+      {
+       "w": "they",
+       "start": 52.112,
+       "end": 52.132
+      },
+      {
+       "w": "were",
+       "start": 52.132,
+       "end": 52.232
+      },
+      {
+       "w": "angry,",
+       "start": 52.232,
+       "end": 52.552
+      },
+      {
+       "w": "and",
+       "start": 52.872,
+       "end": 52.932
+      },
+      {
+       "w": "there",
+       "start": 52.932,
+       "end": 53.032
+      },
+      {
+       "w": "were",
+       "start": 53.032,
+       "end": 53.152
+      },
+      {
+       "w": "a",
+       "start": 53.152,
+       "end": 53.252
+      },
+      {
+       "w": "lot",
+       "start": 53.252,
+       "end": 53.492
+      },
+      {
+       "w": "of",
+       "start": 53.492,
+       "end": 53.632
+      },
+      {
+       "w": "them.",
+       "start": 53.632,
+       "end": 53.792
+      }
+     ]
+    },
+    {
+     "shot": "chase",
+     "text": "So the kid did the only thing he could. He rolled.",
+     "start": 54.092,
+     "end": 56.772,
      "words": [
       {
        "w": "So",
-       "start": 22.216,
-       "end": 22.396
-      },
-      {
-       "w": "he",
-       "start": 22.396,
-       "end": 22.496
-      },
-      {
-       "w": "did",
-       "start": 22.496,
-       "end": 22.596
+       "start": 54.092,
+       "end": 54.292
       },
       {
        "w": "the",
-       "start": 22.596,
-       "end": 22.716
+       "start": 54.292,
+       "end": 54.432
+      },
+      {
+       "w": "kid",
+       "start": 54.432,
+       "end": 54.552
+      },
+      {
+       "w": "did",
+       "start": 54.552,
+       "end": 54.692
+      },
+      {
+       "w": "the",
+       "start": 54.692,
+       "end": 54.852
       },
       {
        "w": "only",
-       "start": 22.716,
-       "end": 22.816
+       "start": 54.852,
+       "end": 55.012
       },
       {
        "w": "thing",
-       "start": 22.816,
-       "end": 23.016
+       "start": 55.012,
+       "end": 55.252
       },
       {
        "w": "he",
-       "start": 23.016,
-       "end": 23.136
+       "start": 55.252,
+       "end": 55.432
       },
       {
        "w": "could.",
-       "start": 23.136,
-       "end": 23.336
+       "start": 55.432,
+       "end": 55.672
       },
       {
        "w": "He",
-       "start": 23.636,
-       "end": 23.716
+       "start": 55.972,
+       "end": 56.092
       },
       {
        "w": "rolled.",
-       "start": 23.716,
-       "end": 23.916
+       "start": 56.092,
+       "end": 56.452
       }
      ]
     }
    ],
-   "start": 22.136,
-   "end": 24.316,
-   "dur": 2.18
+   "start": 49.832,
+   "end": 56.872,
+   "dur": 7.04
+  },
+  {
+   "name": "hill",
+   "lines": [
+    {
+     "shot": "hill",
+     "text": "Straight down the steepest hill in the city, faster than anything had ever moved.",
+     "start": 56.952,
+     "end": 60.552,
+     "words": [
+      {
+       "w": "Straight",
+       "start": 56.952,
+       "end": 57.192
+      },
+      {
+       "w": "down",
+       "start": 57.192,
+       "end": 57.452
+      },
+      {
+       "w": "the",
+       "start": 57.452,
+       "end": 57.592
+      },
+      {
+       "w": "steepest",
+       "start": 57.592,
+       "end": 57.972
+      },
+      {
+       "w": "hill",
+       "start": 57.972,
+       "end": 58.112
+      },
+      {
+       "w": "in",
+       "start": 58.112,
+       "end": 58.232
+      },
+      {
+       "w": "the",
+       "start": 58.232,
+       "end": 58.352
+      },
+      {
+       "w": "city,",
+       "start": 58.352,
+       "end": 58.572
+      },
+      {
+       "w": "faster",
+       "start": 58.832,
+       "end": 59.012
+      },
+      {
+       "w": "than",
+       "start": 59.012,
+       "end": 59.192
+      },
+      {
+       "w": "anything",
+       "start": 59.192,
+       "end": 59.532
+      },
+      {
+       "w": "had",
+       "start": 59.532,
+       "end": 59.792
+      },
+      {
+       "w": "ever",
+       "start": 59.792,
+       "end": 60.032
+      },
+      {
+       "w": "moved.",
+       "start": 60.032,
+       "end": 60.352
+      }
+     ]
+    },
+    {
+     "shot": "hill",
+     "text": "Porters ran. Porters dove. One porter threw a sofa.",
+     "start": 60.652,
+     "end": 63.316,
+     "words": [
+      {
+       "w": "Porters",
+       "start": 60.652,
+       "end": 60.952
+      },
+      {
+       "w": "ran.",
+       "start": 60.952,
+       "end": 61.192
+      },
+      {
+       "w": "Porters",
+       "start": 61.472,
+       "end": 61.612
+      },
+      {
+       "w": "dove.",
+       "start": 61.612,
+       "end": 61.892
+      },
+      {
+       "w": "One",
+       "start": 62.212,
+       "end": 62.372
+      },
+      {
+       "w": "porter",
+       "start": 62.372,
+       "end": 62.592
+      },
+      {
+       "w": "threw",
+       "start": 62.592,
+       "end": 62.772
+      },
+      {
+       "w": "a",
+       "start": 62.772,
+       "end": 62.872
+      },
+      {
+       "w": "sofa.",
+       "start": 62.872,
+       "end": 63.052
+      }
+     ]
+    },
+    {
+     "shot": "hill",
+     "text": "Porters can carry a piano up a mountain, but nobody can catch a wheel going downhill.",
+     "start": 63.416,
+     "end": 67.216,
+     "words": [
+      {
+       "w": "Porters",
+       "start": 63.416,
+       "end": 63.656
+      },
+      {
+       "w": "can",
+       "start": 63.656,
+       "end": 63.876
+      },
+      {
+       "w": "carry",
+       "start": 63.876,
+       "end": 64.116
+      },
+      {
+       "w": "a",
+       "start": 64.116,
+       "end": 64.256
+      },
+      {
+       "w": "piano",
+       "start": 64.256,
+       "end": 64.536
+      },
+      {
+       "w": "up",
+       "start": 64.536,
+       "end": 64.736
+      },
+      {
+       "w": "a",
+       "start": 64.736,
+       "end": 64.836
+      },
+      {
+       "w": "mountain,",
+       "start": 64.836,
+       "end": 65.076
+      },
+      {
+       "w": "but",
+       "start": 65.256,
+       "end": 65.316
+      },
+      {
+       "w": "nobody",
+       "start": 65.316,
+       "end": 65.516
+      },
+      {
+       "w": "can",
+       "start": 65.516,
+       "end": 65.736
+      },
+      {
+       "w": "catch",
+       "start": 65.736,
+       "end": 65.936
+      },
+      {
+       "w": "a",
+       "start": 65.936,
+       "end": 66.056
+      },
+      {
+       "w": "wheel",
+       "start": 66.056,
+       "end": 66.236
+      },
+      {
+       "w": "going",
+       "start": 66.236,
+       "end": 66.516
+      },
+      {
+       "w": "downhill.",
+       "start": 66.516,
+       "end": 66.876
+      }
+     ]
+    }
+   ],
+   "start": 56.872,
+   "end": 67.316,
+   "dur": 10.444
   },
   {
    "name": "crash",
    "lines": [
     {
      "shot": "crash",
-     "text": "Straight down the hill, and through the guild boss's ground-floor penthouse window.",
-     "start": 24.396,
-     "end": 27.796,
+     "text": "At the bottom was the guild boss's ground-floor penthouse. And its very large window.",
+     "start": 67.396,
+     "end": 72.156,
      "words": [
       {
-       "w": "Straight",
-       "start": 24.396,
-       "end": 24.616
-      },
-      {
-       "w": "down",
-       "start": 24.616,
-       "end": 24.816
+       "w": "At",
+       "start": 67.396,
+       "end": 67.556
       },
       {
        "w": "the",
-       "start": 24.816,
-       "end": 24.936
+       "start": 67.556,
+       "end": 67.676
       },
       {
-       "w": "hill,",
-       "start": 24.936,
-       "end": 25.096
+       "w": "bottom",
+       "start": 67.676,
+       "end": 67.916
       },
       {
-       "w": "and",
-       "start": 25.096,
-       "end": 25.336
-      },
-      {
-       "w": "through",
-       "start": 25.336,
-       "end": 25.536
+       "w": "was",
+       "start": 67.916,
+       "end": 68.216
       },
       {
        "w": "the",
-       "start": 25.536,
-       "end": 25.716
+       "start": 68.216,
+       "end": 68.376
       },
       {
        "w": "guild",
-       "start": 25.716,
-       "end": 25.916
+       "start": 68.376,
+       "end": 68.576
       },
       {
        "w": "boss's",
-       "start": 25.916,
-       "end": 26.316
+       "start": 68.576,
+       "end": 69.056
       },
       {
        "w": "ground-floor",
-       "start": 26.316,
-       "end": 26.556
+       "start": 69.056,
+       "end": 69.356
       },
       {
-       "w": "penthouse",
-       "start": 26.796,
-       "end": 27.196
+       "w": "penthouse.",
+       "start": 69.716,
+       "end": 70.316
+      },
+      {
+       "w": "And",
+       "start": 70.316,
+       "end": 70.776
+      },
+      {
+       "w": "its",
+       "start": 70.776,
+       "end": 70.916
+      },
+      {
+       "w": "very",
+       "start": 70.916,
+       "end": 71.216
+      },
+      {
+       "w": "large",
+       "start": 71.216,
+       "end": 71.516
       },
       {
        "w": "window.",
-       "start": 27.196,
-       "end": 27.516
+       "start": 71.516,
+       "end": 71.896
       }
      ]
     }
    ],
-   "start": 24.316,
-   "end": 27.896,
-   "dur": 3.58
+   "start": 67.316,
+   "end": 72.256,
+   "dur": 4.94
   },
   {
    "name": "twist",
    "lines": [
     {
      "shot": "twist",
-     "text": "The boss looked at the wheel. And bought it. Now he owns the only wheel on Earth, and uses it as a coffee table.",
-     "start": 27.976,
-     "end": 33.245,
+     "text": "Everything went quiet.",
+     "start": 72.336,
+     "end": 73.554,
+     "words": [
+      {
+       "w": "Everything",
+       "start": 72.336,
+       "end": 72.756
+      },
+      {
+       "w": "went",
+       "start": 72.756,
+       "end": 72.996
+      },
+      {
+       "w": "quiet.",
+       "start": 72.996,
+       "end": 73.276
+      }
+     ]
+    },
+    {
+     "shot": "twist",
+     "text": "The boss stood up. He looked at the kid. He looked at the wheel.",
+     "start": 73.654,
+     "end": 76.466,
      "words": [
       {
        "w": "The",
-       "start": 27.976,
-       "end": 28.116
+       "start": 73.654,
+       "end": 73.774
       },
       {
        "w": "boss",
-       "start": 28.116,
-       "end": 28.316
+       "start": 73.774,
+       "end": 73.974
+      },
+      {
+       "w": "stood",
+       "start": 73.974,
+       "end": 74.174
+      },
+      {
+       "w": "up.",
+       "start": 74.174,
+       "end": 74.394
+      },
+      {
+       "w": "He",
+       "start": 74.674,
+       "end": 74.754
       },
       {
        "w": "looked",
-       "start": 28.316,
-       "end": 28.516
+       "start": 74.754,
+       "end": 74.914
       },
       {
        "w": "at",
-       "start": 28.516,
-       "end": 28.656
+       "start": 74.914,
+       "end": 75.034
       },
       {
        "w": "the",
-       "start": 28.656,
-       "end": 28.736
+       "start": 75.034,
+       "end": 75.154
+      },
+      {
+       "w": "kid.",
+       "start": 75.154,
+       "end": 75.334
+      },
+      {
+       "w": "He",
+       "start": 75.634,
+       "end": 75.694
+      },
+      {
+       "w": "looked",
+       "start": 75.694,
+       "end": 75.814
+      },
+      {
+       "w": "at",
+       "start": 75.814,
+       "end": 75.954
+      },
+      {
+       "w": "the",
+       "start": 75.954,
+       "end": 76.054
       },
       {
        "w": "wheel.",
-       "start": 28.736,
-       "end": 28.976
-      },
+       "start": 76.054,
+       "end": 76.254
+      }
+     ]
+    },
+    {
+     "shot": "twist",
+     "text": "And he bought it. For a bag of gold. Not to use it. To hide it.",
+     "start": 76.566,
+     "end": 80.265,
+     "words": [
       {
        "w": "And",
-       "start": 28.976,
-       "end": 29.476
-      },
-      {
-       "w": "bought",
-       "start": 29.476,
-       "end": 29.656
-      },
-      {
-       "w": "it.",
-       "start": 29.656,
-       "end": 29.896
-      },
-      {
-       "w": "Now",
-       "start": 30.016,
-       "end": 30.196
+       "start": 76.566,
+       "end": 76.666
       },
       {
        "w": "he",
-       "start": 30.196,
-       "end": 30.376
+       "start": 76.666,
+       "end": 76.806
       },
       {
-       "w": "owns",
-       "start": 30.376,
-       "end": 30.576
+       "w": "bought",
+       "start": 76.806,
+       "end": 77.006
       },
       {
-       "w": "the",
-       "start": 30.576,
-       "end": 30.776
+       "w": "it.",
+       "start": 77.006,
+       "end": 77.226
       },
       {
-       "w": "only",
-       "start": 30.776,
-       "end": 30.976
-      },
-      {
-       "w": "wheel",
-       "start": 30.976,
-       "end": 31.216
-      },
-      {
-       "w": "on",
-       "start": 31.216,
-       "end": 31.436
-      },
-      {
-       "w": "Earth,",
-       "start": 31.436,
-       "end": 31.576
-      },
-      {
-       "w": "and",
-       "start": 31.576,
-       "end": 31.796
-      },
-      {
-       "w": "uses",
-       "start": 31.796,
-       "end": 32.016
-      },
-      {
-       "w": "it",
-       "start": 32.016,
-       "end": 32.236
-      },
-      {
-       "w": "as",
-       "start": 32.236,
-       "end": 32.376
+       "w": "For",
+       "start": 77.226,
+       "end": 77.486
       },
       {
        "w": "a",
-       "start": 32.376,
-       "end": 32.496
+       "start": 77.486,
+       "end": 77.646
+      },
+      {
+       "w": "bag",
+       "start": 77.646,
+       "end": 77.766
+      },
+      {
+       "w": "of",
+       "start": 77.766,
+       "end": 77.906
+      },
+      {
+       "w": "gold.",
+       "start": 77.906,
+       "end": 78.246
+      },
+      {
+       "w": "Not",
+       "start": 78.466,
+       "end": 78.746
+      },
+      {
+       "w": "to",
+       "start": 78.746,
+       "end": 78.966
+      },
+      {
+       "w": "use",
+       "start": 78.966,
+       "end": 79.126
+      },
+      {
+       "w": "it.",
+       "start": 79.126,
+       "end": 79.346
+      },
+      {
+       "w": "To",
+       "start": 79.586,
+       "end": 79.666
+      },
+      {
+       "w": "hide",
+       "start": 79.666,
+       "end": 79.866
+      },
+      {
+       "w": "it.",
+       "start": 79.866,
+       "end": 80.106
+      }
+     ]
+    },
+    {
+     "shot": "twist",
+     "text": "Now he owns the only wheel on Earth, and uses it as a coffee table.",
+     "start": 80.365,
+     "end": 83.72,
+     "words": [
+      {
+       "w": "Now",
+       "start": 80.365,
+       "end": 80.605
+      },
+      {
+       "w": "he",
+       "start": 80.605,
+       "end": 80.785
+      },
+      {
+       "w": "owns",
+       "start": 80.785,
+       "end": 80.925
+      },
+      {
+       "w": "the",
+       "start": 80.925,
+       "end": 81.085
+      },
+      {
+       "w": "only",
+       "start": 81.085,
+       "end": 81.365
+      },
+      {
+       "w": "wheel",
+       "start": 81.365,
+       "end": 81.525
+      },
+      {
+       "w": "on",
+       "start": 81.525,
+       "end": 81.765
+      },
+      {
+       "w": "Earth,",
+       "start": 81.765,
+       "end": 81.885
+      },
+      {
+       "w": "and",
+       "start": 81.885,
+       "end": 82.345
+      },
+      {
+       "w": "uses",
+       "start": 82.345,
+       "end": 82.545
+      },
+      {
+       "w": "it",
+       "start": 82.545,
+       "end": 82.745
+      },
+      {
+       "w": "as",
+       "start": 82.745,
+       "end": 82.885
+      },
+      {
+       "w": "a",
+       "start": 82.885,
+       "end": 83.005
       },
       {
        "w": "coffee",
-       "start": 32.496,
-       "end": 32.676
+       "start": 83.005,
+       "end": 83.185
       },
       {
        "w": "table.",
-       "start": 32.676,
-       "end": 32.956
+       "start": 83.185,
+       "end": 83.505
       }
      ]
     }
    ],
-   "start": 27.896,
-   "end": 33.345,
-   "dur": 5.449
+   "start": 72.256,
+   "end": 83.82,
+   "dur": 11.564
   },
   {
    "name": "loop",
@@ -795,45 +1787,45 @@
     {
      "shot": "loop",
      "text": "Which is why, in this world,",
-     "start": 33.425,
-     "end": 35.055,
+     "start": 83.9,
+     "end": 85.567,
      "words": [
       {
        "w": "Which",
-       "start": 33.425,
-       "end": 33.565
+       "start": 83.9,
+       "end": 84.22
       },
       {
        "w": "is",
-       "start": 33.565,
-       "end": 33.705
+       "start": 84.22,
+       "end": 84.34
       },
       {
        "w": "why,",
-       "start": 33.705,
-       "end": 34.005
+       "start": 84.34,
+       "end": 84.64
       },
       {
        "w": "in",
-       "start": 34.265,
-       "end": 34.345
+       "start": 84.64,
+       "end": 84.86
       },
       {
        "w": "this",
-       "start": 34.345,
-       "end": 34.505
+       "start": 84.86,
+       "end": 85.02
       },
       {
        "w": "world,",
-       "start": 34.505,
-       "end": 34.765
+       "start": 85.02,
+       "end": 85.3
       }
      ]
     }
    ],
-   "start": 33.345,
-   "end": 36.435,
-   "dur": 3.09
+   "start": 83.82,
+   "end": 86.947,
+   "dur": 3.127
   }
  ],
  "lines": [
@@ -901,10 +1893,10 @@
    ]
   },
   {
-   "shot": "setup",
-   "text": "Because nobody ever invented the wheel. Everything is carried, and carrying is the biggest job on the planet. Half the world are porters.",
+   "shot": "street",
+   "text": "Because nobody ever invented the wheel. So everything is carried.",
    "start": 2.899,
-   "end": 9.174,
+   "end": 6.091,
    "words": [
     {
      "w": "Because",
@@ -919,683 +1911,1651 @@
     {
      "w": "ever",
      "start": 3.479,
-     "end": 3.779
+     "end": 3.759
     },
     {
      "w": "invented",
-     "start": 3.779,
+     "start": 3.759,
      "end": 4.119
     },
     {
      "w": "the",
      "start": 4.119,
-     "end": 4.299
+     "end": 4.319
     },
     {
      "w": "wheel.",
-     "start": 4.299,
-     "end": 4.499
+     "start": 4.319,
+     "end": 4.539
     },
     {
-     "w": "Everything",
-     "start": 4.939,
-     "end": 5.239
+     "w": "So",
+     "start": 4.799,
+     "end": 4.999
     },
     {
-     "w": "is",
-     "start": 5.239,
-     "end": 5.419
-    },
-    {
-     "w": "carried,",
-     "start": 5.419,
-     "end": 5.699
-    },
-    {
-     "w": "and",
-     "start": 5.699,
-     "end": 5.979
-    },
-    {
-     "w": "carrying",
-     "start": 5.979,
-     "end": 6.279
+     "w": "everything",
+     "start": 4.999,
+     "end": 5.299
     },
     {
      "w": "is",
-     "start": 6.279,
-     "end": 6.539
+     "start": 5.299,
+     "end": 5.539
+    },
+    {
+     "w": "carried.",
+     "start": 5.539,
+     "end": 5.779
+    }
+   ]
+  },
+  {
+   "shot": "street",
+   "text": "Your groceries. Your sofa. Your piano. Your grandpa.",
+   "start": 6.191,
+   "end": 8.618,
+   "words": [
+    {
+     "w": "Your",
+     "start": 6.191,
+     "end": 6.331
+    },
+    {
+     "w": "groceries.",
+     "start": 6.331,
+     "end": 6.651
+    },
+    {
+     "w": "Your",
+     "start": 7.031,
+     "end": 7.051
+    },
+    {
+     "w": "sofa.",
+     "start": 7.051,
+     "end": 7.271
+    },
+    {
+     "w": "Your",
+     "start": 7.551,
+     "end": 7.591
+    },
+    {
+     "w": "piano.",
+     "start": 7.591,
+     "end": 7.811
+    },
+    {
+     "w": "Your",
+     "start": 8.011,
+     "end": 8.071
+    },
+    {
+     "w": "grandpa.",
+     "start": 8.071,
+     "end": 8.451
+    }
+   ]
+  },
+  {
+   "shot": "street",
+   "text": "Carrying is the biggest job on the planet. Half the world are porters, and the other half pays them.",
+   "start": 8.718,
+   "end": 14.239,
+   "words": [
+    {
+     "w": "Carrying",
+     "start": 8.718,
+     "end": 9.198
+    },
+    {
+     "w": "is",
+     "start": 9.198,
+     "end": 9.378
     },
     {
      "w": "the",
-     "start": 6.539,
-     "end": 6.679
+     "start": 9.378,
+     "end": 9.578
     },
     {
      "w": "biggest",
-     "start": 6.679,
-     "end": 6.879
+     "start": 9.578,
+     "end": 9.778
     },
     {
      "w": "job",
-     "start": 6.879,
-     "end": 7.099
+     "start": 9.778,
+     "end": 10.098
     },
     {
      "w": "on",
-     "start": 7.099,
-     "end": 7.239
+     "start": 10.098,
+     "end": 10.378
     },
     {
      "w": "the",
-     "start": 7.239,
-     "end": 7.339
+     "start": 10.378,
+     "end": 10.498
     },
     {
      "w": "planet.",
-     "start": 7.339,
-     "end": 7.579
+     "start": 10.498,
+     "end": 10.778
     },
     {
      "w": "Half",
-     "start": 8.019,
-     "end": 8.059
+     "start": 11.198,
+     "end": 11.338
     },
     {
      "w": "the",
-     "start": 8.059,
-     "end": 8.219
+     "start": 11.338,
+     "end": 11.538
     },
     {
      "w": "world",
-     "start": 8.219,
-     "end": 8.419
+     "start": 11.538,
+     "end": 11.798
     },
     {
      "w": "are",
-     "start": 8.419,
-     "end": 8.559
+     "start": 11.798,
+     "end": 12.018
     },
     {
-     "w": "porters.",
-     "start": 8.559,
-     "end": 8.799
+     "w": "porters,",
+     "start": 12.018,
+     "end": 12.358
+    },
+    {
+     "w": "and",
+     "start": 12.658,
+     "end": 12.798
+    },
+    {
+     "w": "the",
+     "start": 12.798,
+     "end": 12.878
+    },
+    {
+     "w": "other",
+     "start": 12.878,
+     "end": 13.118
+    },
+    {
+     "w": "half",
+     "start": 13.118,
+     "end": 13.378
+    },
+    {
+     "w": "pays",
+     "start": 13.378,
+     "end": 13.678
+    },
+    {
+     "w": "them.",
+     "start": 13.678,
+     "end": 14.018
+    }
+   ]
+  },
+  {
+   "shot": "kid",
+   "text": "And one kid was really, really tired of carrying. Every morning, the same crate. Every night, the same sore back.",
+   "start": 14.419,
+   "end": 21.899,
+   "words": [
+    {
+     "w": "And",
+     "start": 14.419,
+     "end": 14.419
+    },
+    {
+     "w": "one",
+     "start": 14.419,
+     "end": 14.939
+    },
+    {
+     "w": "kid",
+     "start": 14.939,
+     "end": 15.299
+    },
+    {
+     "w": "was",
+     "start": 15.299,
+     "end": 15.679
+    },
+    {
+     "w": "really,",
+     "start": 15.679,
+     "end": 16.339
+    },
+    {
+     "w": "really",
+     "start": 16.619,
+     "end": 16.999
+    },
+    {
+     "w": "tired",
+     "start": 16.999,
+     "end": 17.359
+    },
+    {
+     "w": "of",
+     "start": 17.359,
+     "end": 17.539
+    },
+    {
+     "w": "carrying.",
+     "start": 17.539,
+     "end": 17.919
+    },
+    {
+     "w": "Every",
+     "start": 18.339,
+     "end": 18.599
+    },
+    {
+     "w": "morning,",
+     "start": 18.599,
+     "end": 18.899
+    },
+    {
+     "w": "the",
+     "start": 19.119,
+     "end": 19.259
+    },
+    {
+     "w": "same",
+     "start": 19.259,
+     "end": 19.499
+    },
+    {
+     "w": "crate.",
+     "start": 19.499,
+     "end": 19.759
+    },
+    {
+     "w": "Every",
+     "start": 20.179,
+     "end": 20.339
+    },
+    {
+     "w": "night,",
+     "start": 20.339,
+     "end": 20.579
+    },
+    {
+     "w": "the",
+     "start": 20.799,
+     "end": 20.919
+    },
+    {
+     "w": "same",
+     "start": 20.919,
+     "end": 21.159
+    },
+    {
+     "w": "sore",
+     "start": 21.159,
+     "end": 21.399
+    },
+    {
+     "w": "back.",
+     "start": 21.399,
+     "end": 21.719
     }
    ]
   },
   {
    "shot": "shed",
-   "text": "Then a kid built one.",
-   "start": 9.354,
-   "end": 10.555,
+   "text": "So he started building. He tried a square. It did not roll.",
+   "start": 22.079,
+   "end": 25.199,
    "words": [
     {
-     "w": "Then",
-     "start": 9.354,
-     "end": 9.594
+     "w": "So",
+     "start": 22.079,
+     "end": 22.319
+    },
+    {
+     "w": "he",
+     "start": 22.499,
+     "end": 22.619
+    },
+    {
+     "w": "started",
+     "start": 22.619,
+     "end": 22.839
+    },
+    {
+     "w": "building.",
+     "start": 22.839,
+     "end": 23.179
+    },
+    {
+     "w": "He",
+     "start": 23.459,
+     "end": 23.559
+    },
+    {
+     "w": "tried",
+     "start": 23.559,
+     "end": 23.759
     },
     {
      "w": "a",
-     "start": 9.594,
-     "end": 9.794
+     "start": 23.759,
+     "end": 23.859
     },
     {
-     "w": "kid",
-     "start": 9.794,
-     "end": 9.954
+     "w": "square.",
+     "start": 23.859,
+     "end": 24.099
     },
     {
-     "w": "built",
-     "start": 9.954,
-     "end": 10.194
+     "w": "It",
+     "start": 24.419,
+     "end": 24.499
     },
     {
-     "w": "one.",
-     "start": 10.194,
-     "end": 10.414
+     "w": "did",
+     "start": 24.499,
+     "end": 24.619
+    },
+    {
+     "w": "not",
+     "start": 24.619,
+     "end": 24.779
+    },
+    {
+     "w": "roll.",
+     "start": 24.779,
+     "end": 24.999
+    }
+   ]
+  },
+  {
+   "shot": "shed",
+   "text": "He tried a triangle. It rolled once, and it hurt.",
+   "start": 25.299,
+   "end": 27.631,
+   "words": [
+    {
+     "w": "He",
+     "start": 25.299,
+     "end": 25.419
+    },
+    {
+     "w": "tried",
+     "start": 25.419,
+     "end": 25.599
+    },
+    {
+     "w": "a",
+     "start": 25.599,
+     "end": 25.699
+    },
+    {
+     "w": "triangle.",
+     "start": 25.699,
+     "end": 25.999
+    },
+    {
+     "w": "It",
+     "start": 26.319,
+     "end": 26.379
+    },
+    {
+     "w": "rolled",
+     "start": 26.379,
+     "end": 26.559
+    },
+    {
+     "w": "once,",
+     "start": 26.559,
+     "end": 26.839
+    },
+    {
+     "w": "and",
+     "start": 26.839,
+     "end": 27.099
+    },
+    {
+     "w": "it",
+     "start": 27.099,
+     "end": 27.199
+    },
+    {
+     "w": "hurt.",
+     "start": 27.199,
+     "end": 27.359
+    }
+   ]
+  },
+  {
+   "shot": "shed",
+   "text": "Attempt number forty-seven... was round.",
+   "start": 27.731,
+   "end": 29.768,
+   "words": [
+    {
+     "w": "Attempt",
+     "start": 27.731,
+     "end": 28.011
+    },
+    {
+     "w": "number",
+     "start": 28.011,
+     "end": 28.271
+    },
+    {
+     "w": "forty-seven...",
+     "start": 28.271,
+     "end": 28.751
+    },
+    {
+     "w": "was",
+     "start": 28.751,
+     "end": 29.211
+    },
+    {
+     "w": "round.",
+     "start": 29.211,
+     "end": 29.471
     }
    ]
   },
   {
    "shot": "cart",
-   "text": "He put four under a box, and moved his whole house in one trip. A job that takes ten porters, done by one kid.",
-   "start": 10.735,
-   "end": 16.574,
+   "text": "He put four of them under a box, and moved his whole house in one trip.",
+   "start": 29.948,
+   "end": 33.819,
    "words": [
     {
      "w": "He",
-     "start": 10.735,
-     "end": 11.075
+     "start": 29.948,
+     "end": 30.088
     },
     {
      "w": "put",
-     "start": 11.075,
-     "end": 11.215
+     "start": 30.088,
+     "end": 30.228
     },
     {
      "w": "four",
-     "start": 11.215,
-     "end": 11.435
+     "start": 30.228,
+     "end": 30.468
+    },
+    {
+     "w": "of",
+     "start": 30.468,
+     "end": 30.608
+    },
+    {
+     "w": "them",
+     "start": 30.608,
+     "end": 30.748
     },
     {
      "w": "under",
-     "start": 11.435,
-     "end": 11.675
+     "start": 30.748,
+     "end": 31.008
     },
     {
      "w": "a",
-     "start": 11.675,
-     "end": 11.815
+     "start": 31.008,
+     "end": 31.188
     },
     {
      "w": "box,",
-     "start": 11.815,
-     "end": 12.035
+     "start": 31.188,
+     "end": 31.488
     },
     {
      "w": "and",
-     "start": 12.035,
-     "end": 12.255
+     "start": 31.488,
+     "end": 31.788
     },
     {
      "w": "moved",
-     "start": 12.255,
-     "end": 12.415
+     "start": 31.788,
+     "end": 31.988
     },
     {
      "w": "his",
-     "start": 12.415,
-     "end": 12.555
+     "start": 31.988,
+     "end": 32.188
     },
     {
      "w": "whole",
-     "start": 12.555,
-     "end": 12.815
+     "start": 32.188,
+     "end": 32.468
     },
     {
      "w": "house",
-     "start": 12.815,
-     "end": 13.035
+     "start": 32.468,
+     "end": 32.788
     },
     {
      "w": "in",
-     "start": 13.035,
-     "end": 13.275
+     "start": 32.788,
+     "end": 33.048
     },
     {
      "w": "one",
-     "start": 13.275,
-     "end": 13.475
+     "start": 33.048,
+     "end": 33.308
     },
     {
      "w": "trip.",
-     "start": 13.475,
-     "end": 13.735
-    },
+     "start": 33.308,
+     "end": 33.608
+    }
+   ]
+  },
+  {
+   "shot": "cart",
+   "text": "A job that takes ten porters, done by one kid, before breakfast.",
+   "start": 33.919,
+   "end": 37.199,
+   "words": [
     {
      "w": "A",
-     "start": 14.015,
-     "end": 14.155
+     "start": 33.919,
+     "end": 34.059
     },
     {
      "w": "job",
-     "start": 14.155,
-     "end": 14.355
+     "start": 34.059,
+     "end": 34.219
     },
     {
      "w": "that",
-     "start": 14.355,
-     "end": 14.535
+     "start": 34.219,
+     "end": 34.379
     },
     {
      "w": "takes",
-     "start": 14.535,
-     "end": 14.715
+     "start": 34.379,
+     "end": 34.559
     },
     {
      "w": "ten",
-     "start": 14.715,
-     "end": 14.935
+     "start": 34.559,
+     "end": 34.799
     },
     {
      "w": "porters,",
-     "start": 14.935,
-     "end": 15.295
+     "start": 34.799,
+     "end": 35.139
     },
     {
      "w": "done",
-     "start": 15.475,
-     "end": 15.655
+     "start": 35.139,
+     "end": 35.499
     },
     {
      "w": "by",
-     "start": 15.655,
-     "end": 15.855
+     "start": 35.499,
+     "end": 35.659
     },
     {
      "w": "one",
-     "start": 15.855,
-     "end": 16.075
+     "start": 35.659,
+     "end": 35.859
     },
     {
-     "w": "kid.",
-     "start": 16.075,
-     "end": 16.335
+     "w": "kid,",
+     "start": 35.859,
+     "end": 36.179
+    },
+    {
+     "w": "before",
+     "start": 36.179,
+     "end": 36.539
+    },
+    {
+     "w": "breakfast.",
+     "start": 36.539,
+     "end": 36.919
     }
    ]
   },
   {
    "shot": "guild",
-   "text": "If wheels caught on, half the world would lose their jobs. So by lunch, the porters' guild had a price on his head.",
-   "start": 16.754,
-   "end": 22.036,
+   "text": "The porters' guild called an emergency meeting. If wheels caught on, half the world would lose their jobs.",
+   "start": 37.379,
+   "end": 41.684,
    "words": [
     {
-     "w": "If",
-     "start": 16.754,
-     "end": 17.194
-    },
-    {
-     "w": "wheels",
-     "start": 17.194,
-     "end": 17.434
-    },
-    {
-     "w": "caught",
-     "start": 17.434,
-     "end": 17.714
-    },
-    {
-     "w": "on,",
-     "start": 17.714,
-     "end": 18.014
-    },
-    {
-     "w": "half",
-     "start": 18.214,
-     "end": 18.334
-    },
-    {
-     "w": "the",
-     "start": 18.334,
-     "end": 18.494
-    },
-    {
-     "w": "world",
-     "start": 18.494,
-     "end": 18.654
-    },
-    {
-     "w": "would",
-     "start": 18.654,
-     "end": 18.814
-    },
-    {
-     "w": "lose",
-     "start": 18.814,
-     "end": 18.974
-    },
-    {
-     "w": "their",
-     "start": 18.974,
-     "end": 19.154
-    },
-    {
-     "w": "jobs.",
-     "start": 19.154,
-     "end": 19.534
-    },
-    {
-     "w": "So",
-     "start": 19.774,
-     "end": 19.854
-    },
-    {
-     "w": "by",
-     "start": 19.854,
-     "end": 19.994
-    },
-    {
-     "w": "lunch,",
-     "start": 19.994,
-     "end": 20.254
-    },
-    {
-     "w": "the",
-     "start": 20.414,
-     "end": 20.514
+     "w": "The",
+     "start": 37.379,
+     "end": 37.539
     },
     {
      "w": "porters'",
-     "start": 20.514,
-     "end": 20.854
+     "start": 37.539,
+     "end": 37.779
     },
     {
      "w": "guild",
-     "start": 20.854,
-     "end": 20.994
+     "start": 37.779,
+     "end": 37.999
+    },
+    {
+     "w": "called",
+     "start": 37.999,
+     "end": 38.239
+    },
+    {
+     "w": "an",
+     "start": 38.239,
+     "end": 38.379
+    },
+    {
+     "w": "emergency",
+     "start": 38.379,
+     "end": 38.639
+    },
+    {
+     "w": "meeting.",
+     "start": 38.639,
+     "end": 38.999
+    },
+    {
+     "w": "If",
+     "start": 39.379,
+     "end": 39.499
+    },
+    {
+     "w": "wheels",
+     "start": 39.499,
+     "end": 39.659
+    },
+    {
+     "w": "caught",
+     "start": 39.659,
+     "end": 39.899
+    },
+    {
+     "w": "on,",
+     "start": 39.899,
+     "end": 40.139
+    },
+    {
+     "w": "half",
+     "start": 40.259,
+     "end": 40.339
+    },
+    {
+     "w": "the",
+     "start": 40.339,
+     "end": 40.479
+    },
+    {
+     "w": "world",
+     "start": 40.479,
+     "end": 40.639
+    },
+    {
+     "w": "would",
+     "start": 40.639,
+     "end": 40.779
+    },
+    {
+     "w": "lose",
+     "start": 40.779,
+     "end": 40.899
+    },
+    {
+     "w": "their",
+     "start": 40.899,
+     "end": 41.059
+    },
+    {
+     "w": "jobs.",
+     "start": 41.059,
+     "end": 41.339
+    }
+   ]
+  },
+  {
+   "shot": "guild",
+   "text": "Pianos would roll. Grandpas would roll. Nobody would ever need to be carried again.",
+   "start": 41.784,
+   "end": 46.072,
+   "words": [
+    {
+     "w": "Pianos",
+     "start": 41.784,
+     "end": 42.184
+    },
+    {
+     "w": "would",
+     "start": 42.184,
+     "end": 42.304
+    },
+    {
+     "w": "roll.",
+     "start": 42.304,
+     "end": 42.664
+    },
+    {
+     "w": "Grandpas",
+     "start": 43.004,
+     "end": 43.384
+    },
+    {
+     "w": "would",
+     "start": 43.384,
+     "end": 43.584
+    },
+    {
+     "w": "roll.",
+     "start": 43.584,
+     "end": 43.924
+    },
+    {
+     "w": "Nobody",
+     "start": 44.224,
+     "end": 44.384
+    },
+    {
+     "w": "would",
+     "start": 44.384,
+     "end": 44.664
+    },
+    {
+     "w": "ever",
+     "start": 44.664,
+     "end": 44.944
+    },
+    {
+     "w": "need",
+     "start": 44.944,
+     "end": 45.124
+    },
+    {
+     "w": "to",
+     "start": 45.124,
+     "end": 45.224
+    },
+    {
+     "w": "be",
+     "start": 45.224,
+     "end": 45.324
+    },
+    {
+     "w": "carried",
+     "start": 45.324,
+     "end": 45.564
+    },
+    {
+     "w": "again.",
+     "start": 45.564,
+     "end": 45.864
+    }
+   ]
+  },
+  {
+   "shot": "guild",
+   "text": "The boss went red.",
+   "start": 46.172,
+   "end": 47.005,
+   "words": [
+    {
+     "w": "The",
+     "start": 46.172,
+     "end": 46.292
+    },
+    {
+     "w": "boss",
+     "start": 46.292,
+     "end": 46.452
+    },
+    {
+     "w": "went",
+     "start": 46.452,
+     "end": 46.612
+    },
+    {
+     "w": "red.",
+     "start": 46.612,
+     "end": 46.832
+    }
+   ]
+  },
+  {
+   "shot": "bounty",
+   "text": "So by lunch, the guild had a price on his head.",
+   "start": 47.185,
+   "end": 49.732,
+   "words": [
+    {
+     "w": "So",
+     "start": 47.185,
+     "end": 47.705
+    },
+    {
+     "w": "by",
+     "start": 47.845,
+     "end": 47.965
+    },
+    {
+     "w": "lunch,",
+     "start": 47.965,
+     "end": 48.285
+    },
+    {
+     "w": "the",
+     "start": 48.405,
+     "end": 48.525
+    },
+    {
+     "w": "guild",
+     "start": 48.525,
+     "end": 48.705
     },
     {
      "w": "had",
-     "start": 20.994,
-     "end": 21.174
+     "start": 48.705,
+     "end": 48.845
     },
     {
      "w": "a",
-     "start": 21.174,
-     "end": 21.254
+     "start": 48.845,
+     "end": 48.945
     },
     {
      "w": "price",
-     "start": 21.254,
-     "end": 21.394
+     "start": 48.945,
+     "end": 49.085
     },
     {
      "w": "on",
-     "start": 21.394,
-     "end": 21.574
+     "start": 49.085,
+     "end": 49.265
     },
     {
      "w": "his",
-     "start": 21.574,
-     "end": 21.694
+     "start": 49.265,
+     "end": 49.365
     },
     {
      "w": "head.",
-     "start": 21.694,
-     "end": 21.854
+     "start": 49.365,
+     "end": 49.545
     }
    ]
   },
   {
    "shot": "chase",
-   "text": "So he did the only thing he could. He rolled.",
-   "start": 22.216,
-   "end": 24.216,
+   "text": "Porters came from every street. They were strong, they were angry, and there were a lot of them.",
+   "start": 49.912,
+   "end": 53.992,
+   "words": [
+    {
+     "w": "Porters",
+     "start": 49.912,
+     "end": 50.132
+    },
+    {
+     "w": "came",
+     "start": 50.132,
+     "end": 50.312
+    },
+    {
+     "w": "from",
+     "start": 50.312,
+     "end": 50.472
+    },
+    {
+     "w": "every",
+     "start": 50.472,
+     "end": 50.752
+    },
+    {
+     "w": "street.",
+     "start": 50.752,
+     "end": 51.052
+    },
+    {
+     "w": "They",
+     "start": 51.372,
+     "end": 51.392
+    },
+    {
+     "w": "were",
+     "start": 51.392,
+     "end": 51.512
+    },
+    {
+     "w": "strong,",
+     "start": 51.512,
+     "end": 51.832
+    },
+    {
+     "w": "they",
+     "start": 52.112,
+     "end": 52.132
+    },
+    {
+     "w": "were",
+     "start": 52.132,
+     "end": 52.232
+    },
+    {
+     "w": "angry,",
+     "start": 52.232,
+     "end": 52.552
+    },
+    {
+     "w": "and",
+     "start": 52.872,
+     "end": 52.932
+    },
+    {
+     "w": "there",
+     "start": 52.932,
+     "end": 53.032
+    },
+    {
+     "w": "were",
+     "start": 53.032,
+     "end": 53.152
+    },
+    {
+     "w": "a",
+     "start": 53.152,
+     "end": 53.252
+    },
+    {
+     "w": "lot",
+     "start": 53.252,
+     "end": 53.492
+    },
+    {
+     "w": "of",
+     "start": 53.492,
+     "end": 53.632
+    },
+    {
+     "w": "them.",
+     "start": 53.632,
+     "end": 53.792
+    }
+   ]
+  },
+  {
+   "shot": "chase",
+   "text": "So the kid did the only thing he could. He rolled.",
+   "start": 54.092,
+   "end": 56.772,
    "words": [
     {
      "w": "So",
-     "start": 22.216,
-     "end": 22.396
-    },
-    {
-     "w": "he",
-     "start": 22.396,
-     "end": 22.496
-    },
-    {
-     "w": "did",
-     "start": 22.496,
-     "end": 22.596
+     "start": 54.092,
+     "end": 54.292
     },
     {
      "w": "the",
-     "start": 22.596,
-     "end": 22.716
+     "start": 54.292,
+     "end": 54.432
+    },
+    {
+     "w": "kid",
+     "start": 54.432,
+     "end": 54.552
+    },
+    {
+     "w": "did",
+     "start": 54.552,
+     "end": 54.692
+    },
+    {
+     "w": "the",
+     "start": 54.692,
+     "end": 54.852
     },
     {
      "w": "only",
-     "start": 22.716,
-     "end": 22.816
+     "start": 54.852,
+     "end": 55.012
     },
     {
      "w": "thing",
-     "start": 22.816,
-     "end": 23.016
+     "start": 55.012,
+     "end": 55.252
     },
     {
      "w": "he",
-     "start": 23.016,
-     "end": 23.136
+     "start": 55.252,
+     "end": 55.432
     },
     {
      "w": "could.",
-     "start": 23.136,
-     "end": 23.336
+     "start": 55.432,
+     "end": 55.672
     },
     {
      "w": "He",
-     "start": 23.636,
-     "end": 23.716
+     "start": 55.972,
+     "end": 56.092
     },
     {
      "w": "rolled.",
-     "start": 23.716,
-     "end": 23.916
+     "start": 56.092,
+     "end": 56.452
+    }
+   ]
+  },
+  {
+   "shot": "hill",
+   "text": "Straight down the steepest hill in the city, faster than anything had ever moved.",
+   "start": 56.952,
+   "end": 60.552,
+   "words": [
+    {
+     "w": "Straight",
+     "start": 56.952,
+     "end": 57.192
+    },
+    {
+     "w": "down",
+     "start": 57.192,
+     "end": 57.452
+    },
+    {
+     "w": "the",
+     "start": 57.452,
+     "end": 57.592
+    },
+    {
+     "w": "steepest",
+     "start": 57.592,
+     "end": 57.972
+    },
+    {
+     "w": "hill",
+     "start": 57.972,
+     "end": 58.112
+    },
+    {
+     "w": "in",
+     "start": 58.112,
+     "end": 58.232
+    },
+    {
+     "w": "the",
+     "start": 58.232,
+     "end": 58.352
+    },
+    {
+     "w": "city,",
+     "start": 58.352,
+     "end": 58.572
+    },
+    {
+     "w": "faster",
+     "start": 58.832,
+     "end": 59.012
+    },
+    {
+     "w": "than",
+     "start": 59.012,
+     "end": 59.192
+    },
+    {
+     "w": "anything",
+     "start": 59.192,
+     "end": 59.532
+    },
+    {
+     "w": "had",
+     "start": 59.532,
+     "end": 59.792
+    },
+    {
+     "w": "ever",
+     "start": 59.792,
+     "end": 60.032
+    },
+    {
+     "w": "moved.",
+     "start": 60.032,
+     "end": 60.352
+    }
+   ]
+  },
+  {
+   "shot": "hill",
+   "text": "Porters ran. Porters dove. One porter threw a sofa.",
+   "start": 60.652,
+   "end": 63.316,
+   "words": [
+    {
+     "w": "Porters",
+     "start": 60.652,
+     "end": 60.952
+    },
+    {
+     "w": "ran.",
+     "start": 60.952,
+     "end": 61.192
+    },
+    {
+     "w": "Porters",
+     "start": 61.472,
+     "end": 61.612
+    },
+    {
+     "w": "dove.",
+     "start": 61.612,
+     "end": 61.892
+    },
+    {
+     "w": "One",
+     "start": 62.212,
+     "end": 62.372
+    },
+    {
+     "w": "porter",
+     "start": 62.372,
+     "end": 62.592
+    },
+    {
+     "w": "threw",
+     "start": 62.592,
+     "end": 62.772
+    },
+    {
+     "w": "a",
+     "start": 62.772,
+     "end": 62.872
+    },
+    {
+     "w": "sofa.",
+     "start": 62.872,
+     "end": 63.052
+    }
+   ]
+  },
+  {
+   "shot": "hill",
+   "text": "Porters can carry a piano up a mountain, but nobody can catch a wheel going downhill.",
+   "start": 63.416,
+   "end": 67.216,
+   "words": [
+    {
+     "w": "Porters",
+     "start": 63.416,
+     "end": 63.656
+    },
+    {
+     "w": "can",
+     "start": 63.656,
+     "end": 63.876
+    },
+    {
+     "w": "carry",
+     "start": 63.876,
+     "end": 64.116
+    },
+    {
+     "w": "a",
+     "start": 64.116,
+     "end": 64.256
+    },
+    {
+     "w": "piano",
+     "start": 64.256,
+     "end": 64.536
+    },
+    {
+     "w": "up",
+     "start": 64.536,
+     "end": 64.736
+    },
+    {
+     "w": "a",
+     "start": 64.736,
+     "end": 64.836
+    },
+    {
+     "w": "mountain,",
+     "start": 64.836,
+     "end": 65.076
+    },
+    {
+     "w": "but",
+     "start": 65.256,
+     "end": 65.316
+    },
+    {
+     "w": "nobody",
+     "start": 65.316,
+     "end": 65.516
+    },
+    {
+     "w": "can",
+     "start": 65.516,
+     "end": 65.736
+    },
+    {
+     "w": "catch",
+     "start": 65.736,
+     "end": 65.936
+    },
+    {
+     "w": "a",
+     "start": 65.936,
+     "end": 66.056
+    },
+    {
+     "w": "wheel",
+     "start": 66.056,
+     "end": 66.236
+    },
+    {
+     "w": "going",
+     "start": 66.236,
+     "end": 66.516
+    },
+    {
+     "w": "downhill.",
+     "start": 66.516,
+     "end": 66.876
     }
    ]
   },
   {
    "shot": "crash",
-   "text": "Straight down the hill, and through the guild boss's ground-floor penthouse window.",
-   "start": 24.396,
-   "end": 27.796,
+   "text": "At the bottom was the guild boss's ground-floor penthouse. And its very large window.",
+   "start": 67.396,
+   "end": 72.156,
    "words": [
     {
-     "w": "Straight",
-     "start": 24.396,
-     "end": 24.616
-    },
-    {
-     "w": "down",
-     "start": 24.616,
-     "end": 24.816
+     "w": "At",
+     "start": 67.396,
+     "end": 67.556
     },
     {
      "w": "the",
-     "start": 24.816,
-     "end": 24.936
+     "start": 67.556,
+     "end": 67.676
     },
     {
-     "w": "hill,",
-     "start": 24.936,
-     "end": 25.096
+     "w": "bottom",
+     "start": 67.676,
+     "end": 67.916
     },
     {
-     "w": "and",
-     "start": 25.096,
-     "end": 25.336
-    },
-    {
-     "w": "through",
-     "start": 25.336,
-     "end": 25.536
+     "w": "was",
+     "start": 67.916,
+     "end": 68.216
     },
     {
      "w": "the",
-     "start": 25.536,
-     "end": 25.716
+     "start": 68.216,
+     "end": 68.376
     },
     {
      "w": "guild",
-     "start": 25.716,
-     "end": 25.916
+     "start": 68.376,
+     "end": 68.576
     },
     {
      "w": "boss's",
-     "start": 25.916,
-     "end": 26.316
+     "start": 68.576,
+     "end": 69.056
     },
     {
      "w": "ground-floor",
-     "start": 26.316,
-     "end": 26.556
+     "start": 69.056,
+     "end": 69.356
     },
     {
-     "w": "penthouse",
-     "start": 26.796,
-     "end": 27.196
+     "w": "penthouse.",
+     "start": 69.716,
+     "end": 70.316
+    },
+    {
+     "w": "And",
+     "start": 70.316,
+     "end": 70.776
+    },
+    {
+     "w": "its",
+     "start": 70.776,
+     "end": 70.916
+    },
+    {
+     "w": "very",
+     "start": 70.916,
+     "end": 71.216
+    },
+    {
+     "w": "large",
+     "start": 71.216,
+     "end": 71.516
     },
     {
      "w": "window.",
-     "start": 27.196,
-     "end": 27.516
+     "start": 71.516,
+     "end": 71.896
     }
    ]
   },
   {
    "shot": "twist",
-   "text": "The boss looked at the wheel. And bought it. Now he owns the only wheel on Earth, and uses it as a coffee table.",
-   "start": 27.976,
-   "end": 33.245,
+   "text": "Everything went quiet.",
+   "start": 72.336,
+   "end": 73.554,
+   "words": [
+    {
+     "w": "Everything",
+     "start": 72.336,
+     "end": 72.756
+    },
+    {
+     "w": "went",
+     "start": 72.756,
+     "end": 72.996
+    },
+    {
+     "w": "quiet.",
+     "start": 72.996,
+     "end": 73.276
+    }
+   ]
+  },
+  {
+   "shot": "twist",
+   "text": "The boss stood up. He looked at the kid. He looked at the wheel.",
+   "start": 73.654,
+   "end": 76.466,
    "words": [
     {
      "w": "The",
-     "start": 27.976,
-     "end": 28.116
+     "start": 73.654,
+     "end": 73.774
     },
     {
      "w": "boss",
-     "start": 28.116,
-     "end": 28.316
+     "start": 73.774,
+     "end": 73.974
+    },
+    {
+     "w": "stood",
+     "start": 73.974,
+     "end": 74.174
+    },
+    {
+     "w": "up.",
+     "start": 74.174,
+     "end": 74.394
+    },
+    {
+     "w": "He",
+     "start": 74.674,
+     "end": 74.754
     },
     {
      "w": "looked",
-     "start": 28.316,
-     "end": 28.516
+     "start": 74.754,
+     "end": 74.914
     },
     {
      "w": "at",
-     "start": 28.516,
-     "end": 28.656
+     "start": 74.914,
+     "end": 75.034
     },
     {
      "w": "the",
-     "start": 28.656,
-     "end": 28.736
+     "start": 75.034,
+     "end": 75.154
+    },
+    {
+     "w": "kid.",
+     "start": 75.154,
+     "end": 75.334
+    },
+    {
+     "w": "He",
+     "start": 75.634,
+     "end": 75.694
+    },
+    {
+     "w": "looked",
+     "start": 75.694,
+     "end": 75.814
+    },
+    {
+     "w": "at",
+     "start": 75.814,
+     "end": 75.954
+    },
+    {
+     "w": "the",
+     "start": 75.954,
+     "end": 76.054
     },
     {
      "w": "wheel.",
-     "start": 28.736,
-     "end": 28.976
-    },
+     "start": 76.054,
+     "end": 76.254
+    }
+   ]
+  },
+  {
+   "shot": "twist",
+   "text": "And he bought it. For a bag of gold. Not to use it. To hide it.",
+   "start": 76.566,
+   "end": 80.265,
+   "words": [
     {
      "w": "And",
-     "start": 28.976,
-     "end": 29.476
-    },
-    {
-     "w": "bought",
-     "start": 29.476,
-     "end": 29.656
-    },
-    {
-     "w": "it.",
-     "start": 29.656,
-     "end": 29.896
-    },
-    {
-     "w": "Now",
-     "start": 30.016,
-     "end": 30.196
+     "start": 76.566,
+     "end": 76.666
     },
     {
      "w": "he",
-     "start": 30.196,
-     "end": 30.376
+     "start": 76.666,
+     "end": 76.806
     },
     {
-     "w": "owns",
-     "start": 30.376,
-     "end": 30.576
+     "w": "bought",
+     "start": 76.806,
+     "end": 77.006
     },
     {
-     "w": "the",
-     "start": 30.576,
-     "end": 30.776
+     "w": "it.",
+     "start": 77.006,
+     "end": 77.226
     },
     {
-     "w": "only",
-     "start": 30.776,
-     "end": 30.976
-    },
-    {
-     "w": "wheel",
-     "start": 30.976,
-     "end": 31.216
-    },
-    {
-     "w": "on",
-     "start": 31.216,
-     "end": 31.436
-    },
-    {
-     "w": "Earth,",
-     "start": 31.436,
-     "end": 31.576
-    },
-    {
-     "w": "and",
-     "start": 31.576,
-     "end": 31.796
-    },
-    {
-     "w": "uses",
-     "start": 31.796,
-     "end": 32.016
-    },
-    {
-     "w": "it",
-     "start": 32.016,
-     "end": 32.236
-    },
-    {
-     "w": "as",
-     "start": 32.236,
-     "end": 32.376
+     "w": "For",
+     "start": 77.226,
+     "end": 77.486
     },
     {
      "w": "a",
-     "start": 32.376,
-     "end": 32.496
+     "start": 77.486,
+     "end": 77.646
+    },
+    {
+     "w": "bag",
+     "start": 77.646,
+     "end": 77.766
+    },
+    {
+     "w": "of",
+     "start": 77.766,
+     "end": 77.906
+    },
+    {
+     "w": "gold.",
+     "start": 77.906,
+     "end": 78.246
+    },
+    {
+     "w": "Not",
+     "start": 78.466,
+     "end": 78.746
+    },
+    {
+     "w": "to",
+     "start": 78.746,
+     "end": 78.966
+    },
+    {
+     "w": "use",
+     "start": 78.966,
+     "end": 79.126
+    },
+    {
+     "w": "it.",
+     "start": 79.126,
+     "end": 79.346
+    },
+    {
+     "w": "To",
+     "start": 79.586,
+     "end": 79.666
+    },
+    {
+     "w": "hide",
+     "start": 79.666,
+     "end": 79.866
+    },
+    {
+     "w": "it.",
+     "start": 79.866,
+     "end": 80.106
+    }
+   ]
+  },
+  {
+   "shot": "twist",
+   "text": "Now he owns the only wheel on Earth, and uses it as a coffee table.",
+   "start": 80.365,
+   "end": 83.72,
+   "words": [
+    {
+     "w": "Now",
+     "start": 80.365,
+     "end": 80.605
+    },
+    {
+     "w": "he",
+     "start": 80.605,
+     "end": 80.785
+    },
+    {
+     "w": "owns",
+     "start": 80.785,
+     "end": 80.925
+    },
+    {
+     "w": "the",
+     "start": 80.925,
+     "end": 81.085
+    },
+    {
+     "w": "only",
+     "start": 81.085,
+     "end": 81.365
+    },
+    {
+     "w": "wheel",
+     "start": 81.365,
+     "end": 81.525
+    },
+    {
+     "w": "on",
+     "start": 81.525,
+     "end": 81.765
+    },
+    {
+     "w": "Earth,",
+     "start": 81.765,
+     "end": 81.885
+    },
+    {
+     "w": "and",
+     "start": 81.885,
+     "end": 82.345
+    },
+    {
+     "w": "uses",
+     "start": 82.345,
+     "end": 82.545
+    },
+    {
+     "w": "it",
+     "start": 82.545,
+     "end": 82.745
+    },
+    {
+     "w": "as",
+     "start": 82.745,
+     "end": 82.885
+    },
+    {
+     "w": "a",
+     "start": 82.885,
+     "end": 83.005
     },
     {
      "w": "coffee",
-     "start": 32.496,
-     "end": 32.676
+     "start": 83.005,
+     "end": 83.185
     },
     {
      "w": "table.",
-     "start": 32.676,
-     "end": 32.956
+     "start": 83.185,
+     "end": 83.505
     }
    ]
   },
   {
    "shot": "loop",
    "text": "Which is why, in this world,",
-   "start": 33.425,
-   "end": 35.055,
+   "start": 83.9,
+   "end": 85.567,
    "words": [
     {
      "w": "Which",
-     "start": 33.425,
-     "end": 33.565
+     "start": 83.9,
+     "end": 84.22
     },
     {
      "w": "is",
-     "start": 33.565,
-     "end": 33.705
+     "start": 84.22,
+     "end": 84.34
     },
     {
      "w": "why,",
-     "start": 33.705,
-     "end": 34.005
+     "start": 84.34,
+     "end": 84.64
     },
     {
      "w": "in",
-     "start": 34.265,
-     "end": 34.345
+     "start": 84.64,
+     "end": 84.86
     },
     {
      "w": "this",
-     "start": 34.345,
-     "end": 34.505
+     "start": 84.86,
+     "end": 85.02
     },
     {
      "w": "world,",
-     "start": 34.505,
-     "end": 34.765
+     "start": 85.02,
+     "end": 85.3
     }
    ]
   }

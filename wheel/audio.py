@@ -124,25 +124,34 @@ for ln in tl["lines"]:
         W.setdefault((ln["shot"], x["w"].lower()), []).append(x["start"])
 w = lambda shot, word, n=1: W[(shot, word.lower())][n - 1]
 
-# whoosh on every cut (the camera whips/zooms between segments), peaking on the cut
+# whoosh only on real camera transitions: zooms between scenes and the two whips (glides are silent)
 segs = json.loads((B / "segs.json").read_text())
 for i, sg in enumerate(segs[1:]):
-    add(whoosh(0.3), sg[2] - 0.15, 0.5, pan=0.5 * (-1) ** i)
+    if len(sg) > 4 and sg[4] in ("zoom", "whip"): add(whoosh(0.35 if sg[4] == "zoom" else 0.3), sg[2] - 0.17, 0.55 if sg[4] == "whip" else 0.4, pan=0.5 * (-1) ** i)
+    if len(sg) > 4 and sg[4] == "cut": add(boom(), sg[2], 0.35)
 add(boom(), 0.0, 0.5)                                                      # hook
-s0 = shot["shed"]["start"]; to = w("shed", "one.")
-for n in range(int(s0 * 3.2), int(to * 3.2) + 1):                          # hammer hits: ph=(t*3.2)%1 == 0.2
+for wd in ("groceries.", "sofa.", "piano.", "grandpa."): add(thud(90), w("street", wd), 0.35)   # each carried thing lands on screen
+s0 = shot["shed"]["start"]; tt_ = w("shed", "tried")
+for n in range(int(s0 * 3.2), int(tt_ * 3.2) + 1):                         # hammer hits: ph=(t*3.2)%1 == 0.2
     th = (n + 0.2) / 3.2
-    if s0 <= th < to - 0.4: add(tok(), th, 0.7, 0.2)
-add(roll(1.3, 6), to - 0.35, 0.8)                                           # the first wheel rolls at us
-c0 = shot["cart"]["start"]; add(roll(shot["cart"]["end"] - c0, 7, 140), c0, 0.35, -0.2)   # cart rolling under the narration
-tk = w("cart", "kid.")
-for i in range(5): add(thud(60 + 8 * i), tk + 0.35 + i * 0.05, 0.75, pan=-0.6 + 0.3 * i)  # crates hit the ground
-g0 = shot["guild"]["start"]; add(crowd(shot["guild"]["end"] - g0), g0, 0.45)
-add(whistle(), w("guild", "jobs."), 0.6, 0.1)
-add(boom(), w("guild", "price"), 0.55)
-tr = w("chase", "rolled."); add(roll(shot["crash"]["start"] + 1.0 - tr, 14, 220), tr, 0.7); add(rush(2.2), tr, 0.8)
+    if s0 <= th < tt_ - 0.3: add(tok(), th, 0.7, 0.2)
+add(thud(80), w("shed", "roll.") + 0.05, 0.8)                               # the square tips over flat
+add(roll(0.5, 6), w("shed", "hurt.") - 0.55, 0.6); add(thud(110), w("shed", "hurt.") - 0.05, 0.9)   # triangle rolls onto his foot
+to = w("shed", "round."); add(roll(1.5, 6), to - 0.2, 0.8)                   # the first wheel rolls at us
+c0 = shot["cart"]["start"]; add(roll(shot["cart"]["end"] - c0, 7, 140), c0, 0.35, -0.2)
+tbf = w("cart", "breakfast.")
+for i in range(5): add(thud(60 + 8 * i), tbf + 0.35 + i * 0.05, 0.75, pan=-0.6 + 0.3 * i)  # crates hit the ground
+g0 = shot["guild"]["start"]; add(crowd(shot["chase"]["start"] - g0), g0, 0.45)
+for wd in ("Pianos", "Grandpas"): add(crowd(0.8), w("guild", wd) + 0.1, 0.6)   # gasps
+add(whistle(1.0), w("guild", "red."), 0.7, 0.1)
+add(boom(), w("bounty", "price"), 0.55)
+ch0 = shot["chase"]["start"]; tr = w("chase", "rolled.")
+add(crowd(tr - ch0 + 0.5), ch0, 0.6)                                         # porters closing in
+add(roll(shot["crash"]["start"] - tr, 14, 220), tr, 0.7); add(rush(shot["crash"]["start"] - tr), tr, 0.7)
+add(thud(70), w("hill", "dove.") + 0.1, 0.8)
+add(whoosh(0.6), w("hill", "sofa.") - 0.2, 0.6); add(thud(55), w("hill", "sofa.") + 0.7, 1.0)   # thrown sofa lands short
 tw = w("crash", "window."); add(shatter(), tw, 1.0); add(thud(45), tw, 1.0); add(roll(0.5, 16, 200), tw - 0.25, 0.6)
-tb = w("twist", "bought"); add(whoosh(0.4), tb - 0.05, 0.5); add(jingle(), tb + 0.35, 0.8, 0.3)
+tg = w("twist", "gold."); add(whoosh(0.4), tg - 0.45, 0.5); add(jingle(), tg - 0.05, 0.8, 0.3)
 add(tink(), w("twist", "table."), 0.6)
 voice = load("voice.wav"); music = load("music.wav"); bells = load("bells.wav")
 for x in (music, bells):

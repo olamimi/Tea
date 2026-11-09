@@ -10,7 +10,7 @@ const server = http.createServer((req, res) => { const p = path.join(ROOT, decod
   await new Promise((r) => server.listen(0, '127.0.0.1', r)); const port = server.address().port;
   const browser = await chromium.launch({ args: ['--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist'] });
   const open = async () => { const p = await browser.newPage({ viewport: { width: 1080, height: 1920 } }); p.on('pageerror', (e) => console.log('PAGE ERROR', e.message)); p.on('console', (m) => m.type() === 'error' && console.log('console', m.text()));
-    await p.goto(`http://127.0.0.1:${port}/index.html`); await p.waitForFunction('window.ready'); const info = await p.evaluate((ss) => window.setup({ ss }), +(args.ss?.[0] ?? 1)); return { p, info }; };
+    await p.goto(`http://127.0.0.1:${port}/index.html${args.tl ? "?tl=" + args.tl[0] : ""}`); await p.waitForFunction('window.ready'); const info = await p.evaluate((ss) => window.setup({ ss }), +(args.ss?.[0] ?? 1)); return { p, info }; };
   const first = await open();
   const { frames, segs } = first.info;
   const from = +(args.from?.[0] ?? 0), to = Math.min(+(args.to?.[0] ?? frames - 1), frames - 1), step = +(args.step?.[0] ?? 1);

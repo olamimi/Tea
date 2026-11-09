@@ -131,8 +131,10 @@ export function buildLobby() {
   return finish(scene, cast, { glass, table, cup, shards, cart, gold, crashAt: null,
     reset() { cart.visible = false; gold.visible = false; shards.forEach((s) => (s.visible = false)); this.crashAt = null; table.visible = true; top.visible = true; },
     update(t) { streetTex.offset.x = t * 0.03;
-      if (this.crashAt != null) shards.forEach((s) => { const a = t - this.crashAt; s.visible = a > 0 && a < 1.6; if (!s.visible) return; const v = s.userData.v;
-        s.position.set(s.userData.p.x + v.x * a, Math.max(0.02, s.userData.p.y + v.y * a - 4.9 * a * a), s.userData.p.z + v.z * a); s.rotation.set(s.userData.r.x * a, s.userData.r.y * a, s.userData.r.z * a); }); } });
+      if (this.crashAt != null) shards.forEach((s) => { const a0 = t - this.crashAt; s.visible = a0 > 0; if (!s.visible) return; const v = s.userData.v, p = s.userData.p;
+        const land = (v.y + Math.sqrt(v.y * v.y + 19.6 * (p.y - 0.02))) / 9.8; const a = Math.min(a0, land); // shards stay where they land
+        s.position.set(p.x + v.x * a, Math.max(0.02, p.y + v.y * a - 4.9 * a * a), p.z + v.z * a);
+        if (a0 >= land) s.rotation.set(-Math.PI / 2, 0, s.userData.r.z * land); else s.rotation.set(s.userData.r.x * a, s.userData.r.y * a, s.userData.r.z * a); }); } });
 }
 
 // ------------------------------------------------------------------ 2. prehistoric hill: the wheel that wasn't
@@ -167,8 +169,8 @@ export function buildStreet() {
   box(scene, 0.12, 2.2, 0.12, std(0x3a2a1a), -3.9, 1.1, 1.25);
   const lamp = new THREE.Group(); scene.add(lamp);
   scene.add(new THREE.HemisphereLight(0xffe8c8, 0x7a5a3a, 1.05)); sunLight(scene, 0xffdcac, 3.0, V(-14, 16, 10), V(0, 0, -6), 18);
-  const P = { piano: piano(), sofa: sofa(), fridge: fridge(), crateA: crate(), crateB: crate(0xc9a060), crateC: crate(0x9a6a3a), crateD: crate(0xb8864c), crateE: crate(0xa87a4a), cart: makeCart(), cSofa: sofa(), cFridge: fridge(), cPiano: piano() }; Object.values(P).forEach((p) => { scene.add(p); p.visible = false; });
-  const cast = castOf(scene, [['p1', 'porter'], ['p2', 'porterB'], ['p3', 'porterC'], ['p4', 'porter', { hatColor: '#7a4fa8' }], ['p5', 'porterB', { top: '#c97a5a' }], ['p6', 'porterC', { top: '#7fb6c6' }], ['p7', 'porter', { top: '#e8d8b0' }], ['p8', 'porterB', { top: '#d4b04a' }], ['p9', 'porterC', { top: '#9ab06a' }], ['p10', 'porter', { top: '#c9a0d0' }], ['kid', 'kid']]);
+  const P = { piano: piano(), sofa: sofa(), fridge: fridge(), crateA: crate(), crateB: crate(0xc9a060), crateC: crate(0x9a6a3a), crateD: crate(0xb8864c), crateE: crate(0xa87a4a), cart: makeCart(), cSofa: sofa(), cFridge: fridge(), cPiano: piano(), bigCrate: crate(0x9a6a3a), groceries: crate(0xd4b04a) }; Object.values(P).forEach((p) => { scene.add(p); p.visible = false; }); P.bigCrate.scale.set(1.5, 1.6, 1.5); P.groceries.scale.set(0.7, 0.6, 0.7);
+  const cast = castOf(scene, [['p1', 'porter'], ['p2', 'porterB'], ['p3', 'porterC'], ['p4', 'porter', { hatColor: '#7a4fa8' }], ['p5', 'porterB', { top: '#c97a5a' }], ['p6', 'porterC', { top: '#7fb6c6' }], ['p7', 'porter', { top: '#e8d8b0' }], ['p8', 'porterB', { top: '#d4b04a' }], ['p9', 'porterC', { top: '#9ab06a' }], ['p10', 'porter', { top: '#c9a0d0' }], ['kid', 'kid'], ['grandpa', 'inventor', { H: 1.75, top: '#b89a7a', tie: '#7a4fa8' }]]);
   return finish(scene, cast, { P, reset() { Object.values(P).forEach((p) => (p.visible = false)); } });
 }
 
@@ -317,7 +319,7 @@ export function buildShed() {
   const bench = new THREE.Group(); bench.position.set(1.0, 0, -0.9); scene.add(bench); box(bench, 2.4, 0.12, 0.9, std(0x7a4a28, 0.6), 0, 0.95, 0); for (const x of [-1.1, 1.1]) for (const z of [-0.35, 0.35]) box(bench, 0.1, 0.95, 0.1, std(0x5a3a22, 0.6), x, 0.47, z, false);
   for (let i = 0; i < 6; i++) box(scene, R(0.1, 0.4), 0.06, R(0.1, 0.3), std(0xc9a27a, 0.7), R(-2.5, 2.5), 0.03, R(-1.5, 1.5), false); // offcuts
   const sawdust = new THREE.Mesh(new THREE.CircleGeometry(1.4, 24), std(0xe8c890, 0.9)); sawdust.rotation.x = -Math.PI / 2; sawdust.position.set(0.4, 0.005, -0.4); sawdust.userData.noCollide = true; scene.add(sawdust);
-  const failed = [['SQUARE', 0x9a8a7a], ['TRIANGLE', 0x8a7a6a]]; failed.forEach(([n, c], i) => { const g = new THREE.Mesh(i ? new THREE.CylinderGeometry(0.4, 0.4, 0.1, 3) : new THREE.BoxGeometry(0.7, 0.7, 0.1), std(c, 0.8)); g.position.set(-2.6 + i * 0.9, 0.38, -2.6); g.rotation.z = i ? Math.PI / 2 : 0; g.castShadow = true; ink(g); scene.add(g); });
+  const tries = []; const failed = [['SQUARE', 0x8a5a3a], ['TRIANGLE', 0x7a4a2a]]; failed.forEach(([n, c], i) => { const g = new THREE.Mesh(i ? new THREE.CylinderGeometry(0.4, 0.4, 0.1, 3) : new THREE.BoxGeometry(0.7, 0.7, 0.1), std(c, 0.8)); g.position.set(-2.6 + i * 0.9, 0.38, -2.6); g.rotation.z = i ? Math.PI / 2 : 0; g.castShadow = true; ink(g); scene.add(g); tries.push(g); });
   sign(scene, 'ATTEMPT #47', '#2a1a14', 1.6, 0.45, 1.2, 3.1, -2.95, 0, 60);
   const wheel = makeWheel(0.45, 0.1); scene.add(wheel);
   const hammer = new THREE.Group(); scene.add(hammer); box(hammer, 0.05, 0.42, 0.05, std(0x6a4426), 0, -0.15, 0, false); box(hammer, 0.18, 0.08, 0.08, std(0x5a5a62, 0.4, { metalness: 0.6 }), 0, 0.06, 0, false);
@@ -325,7 +327,7 @@ export function buildShed() {
   const key = new THREE.SpotLight(0xffd8a0, 60, 20, 0.6, 0.4, 1.2); key.position.set(-2.4, 4.2, -1.5); key.target.position.set(0.6, 0, 0); key.castShadow = true; key.shadow.bias = -0.001; key.shadow.normalBias = 0.05; scene.add(key, key.target);
   const fill = new THREE.PointLight(0xffc890, 6, 10, 1.5); fill.position.set(1.5, 3, 2); scene.add(fill);
   const cast = castOf(scene, [['kid', 'kid']]);
-  return finish(scene, cast, { wheel, hammer });
+  return finish(scene, cast, { wheel, hammer, square: tries[0], tri: tries[1], reset() { tries[0].position.set(-2.6, 0.38, -2.6); tries[0].rotation.set(0, 0, 0); tries[1].position.set(-1.7, 0.38, -2.6); tries[1].rotation.set(0, 0, Math.PI / 2); } });
 }
 
 // ------------------------------------------------------------------ the downhill chase street (stair city)
@@ -334,17 +336,17 @@ export const roadY = (z) => Math.min(0, z) * SLOPE;
 export function buildChase() {
   _s = 101; const scene = new THREE.Scene(); scene.fog = new THREE.Fog(0xf4c890, 60, 260);
   skyDome(scene, skyTex([[0, '#4a8ad8'], [0.38, '#9ccdf0'], [0.5, '#fde2b4'], [1, '#fde2b4']]));
-  const flat = ground(scene, std(0xc98a5a, 0.8), 600); flat.position.y = -40;
+  const flat = ground(scene, std(0xc98a5a, 0.8), 900); flat.position.y = -60;
   const road = new THREE.Mesh(new THREE.PlaneGeometry(7, 200), new THREE.MeshStandardMaterial({ map: cobble([4, 100]), roughness: 0.5 })); road.rotation.x = -Math.PI / 2 + Math.atan(SLOPE); road.position.set(0, roadY(-100) / 2 - 0.0, -100 + 100 * (1 - Math.cos(Math.atan(SLOPE))));
   road.position.set(0, -10, -50); road.rotation.x = -Math.PI / 2 - Math.atan(SLOPE) * 0; road.geometry = new THREE.PlaneGeometry(7, 200); road.position.set(0, 0, 0); road.rotation.set(0, 0, 0);
-  { const g = new THREE.PlaneGeometry(7, 210, 1, 1); g.rotateX(-Math.PI / 2); const p = g.attributes.position; for (let i = 0; i < p.count; i++) { const z = p.getZ(i) - 95; p.setZ(i, z); p.setY(i, roadY(z)); } g.computeVertexNormals(); road.geometry = g; }
+  { const g = new THREE.PlaneGeometry(7, 340, 1, 68); g.rotateX(-Math.PI / 2); const p = g.attributes.position; for (let i = 0; i < p.count; i++) { const z = p.getZ(i) - 125; p.setZ(i, z); p.setY(i, roadY(z)); } g.computeVertexNormals(); road.geometry = g; }
   road.receiveShadow = true; road.userData.noCollide = true; scene.add(road);
   const walls = ['#e8b88a', '#f2d6a0', '#d98a5a', '#f0c8a0', '#c9a27a', '#4f8486'];
-  for (let i = 0; i < 18; i++) { const z = 4 - i * 6; for (const side of [-1, 1]) { const h = R(9, 18); const b = building(scene, side * 6.4, z, 5, 5, h, walls[(i + (side > 0 ? 3 : 0)) % 6], [0x3f8a8c, 0xa8452e, 0x7a4fa8][i % 3], { ry: side > 0 ? -Math.PI / 2 : Math.PI / 2, lit: 0.25 }); b.position.y = roadY(z) - 1;
+  for (let i = -7; i < 32; i++) { const z = 4 - i * 6; for (const side of [-1, 1]) { const h = R(9, 18); const b = building(scene, side * 6.4, z, 5, 5, h, walls[(i + (side > 0 ? 3 : 0)) % 6], [0x3f8a8c, 0xa8452e, 0x7a4fa8][i % 3], { ry: side > 0 ? -Math.PI / 2 : Math.PI / 2, lit: 0.25 }); b.position.y = roadY(z) - 1;
       for (let f = 1; f < Math.floor(h / 3); f++) { box(b, 3.0, 0.16, 0.9, std(0x5a3a26, 0.5), 0, f * 3, 2.95, false); box(b, 3.0, 0.5, 0.06, std(0x3a2a1a, 0.5), 0, f * 3 + 0.33, 3.37, false); for (const x of [-1.45, 1.45]) box(b, 0.06, 0.5, 0.9, std(0x3a2a1a, 0.5), x, f * 3 + 0.33, 2.95, false); } } } // balconies with railings
-  const P = { cart: makeCart(), cSofa: sofa(), crates: crate() }; Object.values(P).forEach((p) => scene.add(p));
+  const P = { cart: makeCart(), cSofa: sofa(), crates: crate(), flySofa: sofa() }; P.flySofa.visible = false; Object.values(P).forEach((p) => scene.add(p));
   clouds(scene, 7, 40, 80, -120);
   scene.add(new THREE.HemisphereLight(0xcfe6ff, 0x7a5a3a, 1.0)); const sun = sunLight(scene, 0xffe0b0, 3.2, V(-20, 30, 10), V(0, -6, -30), 40);
-  const cast = castOf(scene, [['kid', 'kid'], ['c1', 'porter'], ['c2', 'porterB'], ['c3', 'porterC'], ['c4', 'porter', { hatColor: '#7a4fa8' }], ['c5', 'porterB', { top: '#c97a5a' }], ['c6', 'porterC', { top: '#7fb6c6' }]]);
-  return finish(scene, cast, { P });
+  const cast = castOf(scene, [['kid', 'kid'], ['c1', 'porter'], ['c2', 'porterB'], ['c3', 'porterC'], ['c4', 'porter', { hatColor: '#7a4fa8' }], ['c5', 'porterB', { top: '#c97a5a' }], ['c6', 'porterC', { top: '#7fb6c6' }], ['c7', 'porter', { top: '#e8d8b0' }], ['c8', 'porterB', { top: '#d4b04a' }], ['c9', 'porterC', { top: '#9ab06a' }], ['c10', 'porter', { top: '#c9a0d0' }], ['c11', 'porterB'], ['c12', 'porterC', { hatColor: '#3f7f86' }]]);
+  return finish(scene, cast, { P, reset() { P.flySofa.visible = false; } });
 }

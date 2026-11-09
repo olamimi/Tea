@@ -47,6 +47,7 @@ const GRADES = {
   hook: { sat: 1.25, warm: 0.9, gain: 0.92, tint: [0.01, -0.005, -0.01], vig: 0.45 }, loop: { sat: 1.25, warm: 0.9, gain: 0.92, tint: [0.01, -0.005, -0.01], vig: 0.45 },
   shed: { sat: 1.3, warm: 1.0, gain: 1.0, tint: [0, 0, 0], vig: 0.25 },
   guild: { sat: 1.0, warm: 0.2, gain: 0.94, tint: [0.03, -0.01, -0.01], vig: 0.3 },
+  bounty: { sat: 1.0, warm: 0.2, gain: 0.94, tint: [0.03, -0.01, -0.01], vig: 0.3 }, hill: { sat: 1.45, warm: 0.7, gain: 1.03, tint: [0, 0, 0], vig: 0.15 },
   chase: { sat: 1.45, warm: 0.7, gain: 1.03, tint: [0, 0, 0], vig: 0.15 }, crash: { sat: 1.4, warm: 0.7, gain: 1.03, tint: [0, 0, 0], vig: 0.15 },
   twist: { sat: 1.35, warm: 1.0, gain: 1.03, tint: [0.01, 0, -0.005], vig: 0.2 },
 };
@@ -56,7 +57,7 @@ let sets, segs, timeline, SS = 1;
 
 window.setup = async (opts = {}) => {
   SS = opts.ss || 1;
-  timeline = await (await fetch('build/timeline.json')).json();
+  timeline = await (await fetch(new URLSearchParams(location.search).get('tl') || 'build/timeline.json')).json();
   const pmrem = new THREE.PMREMGenerator(renderer); const env = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
   sets = { lobby: buildLobby(), street: buildStreet(), rally: buildRally(), shed: buildShed(), chase: buildChase() };
   for (const s of Object.values(sets)) { s.scene.environment = env; s.scene.environmentIntensity = 0.55; }
@@ -80,7 +81,7 @@ window.setup = async (opts = {}) => {
       segs.push({ ...sg, shot: sh.name, si, k, list, start, end, first: k === 0, last: k === list.length - 1 });
     });
   });
-  return { duration: timeline.duration, frames: Math.ceil(timeline.duration * FPS), segs: segs.map((s) => [s.shot, s.k, +s.start.toFixed(2), +s.end.toFixed(2)]) };
+  return { duration: timeline.duration, frames: Math.ceil(timeline.duration * FPS), segs: segs.map((s) => [s.shot, s.k, +s.start.toFixed(2), +s.end.toFixed(2), transOf(s)]) };
 };
 
 function resetSet(name) { const s = sets[name]; Object.values(s.cast).forEach((c) => { c.root.visible = false; c.reset(); }); s.reset?.(); }
@@ -115,8 +116,9 @@ function poseCamera(seg, t) {
   const c = baseCam(seg, t); const i = segs.indexOf(seg); const prev = segs[i - 1], next = segs[i + 1];
   const tin = transOf(seg), tout = next ? transOf(next) : 'none';
   // swoop: fly from the previous angle (same set) instead of cutting
-  if (tin === 'swoop' && t - seg.start < CAM.swoop) {
-    const a = baseCam(prev, seg.start); const k = easeIO((t - seg.start) / CAM.swoop);
+  const swoopD = Math.min(CAM.swoop, 0.5 * (seg.end - seg.start)); // short beats get a quicker glide so they still land
+  if (tin === 'swoop' && t - seg.start < swoopD) {
+    const a = baseCam(prev, seg.start); const k = easeIO((t - seg.start) / swoopD);
     c.p.lerpVectors(a.p, c.p, k); c.l.lerpVectors(a.l, c.l, k); c.fov = a.fov + (c.fov - a.fov) * k;
   }
   let yaw = 0, yawRate = 0, fovK = 1, radial = 0; const dir = i % 2 ? 1 : -1; const per = 1 / FPS / CAM.whip;
@@ -135,15 +137,16 @@ function poseCamera(seg, t) {
   return { lt: c.lt, u: c.u };
 }
 function runTick(seg, set, t, u) { if (seg.tick) seg.tick(set, t, u); else if (seg.inherit) for (let k = seg.k - 1; k >= 0; k--) { const sg = seg.list[k]; if (sg.tick && sg.set === seg.set) { sg.tick(set, t, u); break; } } }
+function runPost(seg, set, t, u) { if (seg.post) seg.post(set, t, u); else for (let k = seg.k - 1; k >= 0; k--) { const sg = seg.list[k]; if (sg.post && sg.set === seg.set) { sg.post(set, t, u); break; } } }
 function renderOnce(t, forced, jitter) {
   const seg = forced || segAt(t); activate(seg);
   const set = sets[seg.set];
-  if (seg.cam.track) { const lt = Math.max(0, t - seg.start), u0 = Math.min(1, lt / Math.max(0.01, seg.end - seg.start)); runTick(seg, set, t, u0); set.update(t, camera); } // place the subject first so the camera can frame its head
+  if (seg.cam.track) { const lt = Math.max(0, t - seg.start), u0 = Math.min(1, lt / Math.max(0.01, seg.end - seg.start)); runTick(seg, set, t, u0); set.update(t, camera); runPost(seg, set, t, u0); } // place the subject first so the camera can frame its head
   const { u } = poseCamera(seg, t);
   if (jitter) camera.setViewOffset(W, H, jitter[0], jitter[1], W, H); else camera.clearViewOffset();
   runTick(seg, set, t, u);
   set.update(t, camera);
-  if (seg.post) seg.post(set, t, u); else for (let k = seg.k - 1; k >= 0; k--) { const sg = seg.list[k]; if (sg.post && sg.set === seg.set) { sg.post(set, t, u); break; } }
+  runPost(seg, set, t, u);
   renderer.toneMappingExposure = (set.exposure || 1) * 1.08;
   const G = GRADES[seg.shot] || GRADES.default; grade.uniforms.sat.value = G.sat; grade.uniforms.warm.value = G.warm; grade.uniforms.gain.value = G.gain; grade.uniforms.tint.value.set(...G.tint); grade.uniforms.vig.value = G.vig ?? 0.18;
   bokeh.scene = set.scene; bokeh.uniforms.focus.value = focusD;
@@ -217,3 +220,5 @@ window.faceCheck = (f) => {
   }
   return { t: +t.toFixed(2), shot: seg.shot, k: seg.k, set: seg.set, face: +best.toFixed(3), who };
 };
+window.__pos = (f) => { const seg = segAt(f / FPS); return Object.fromEntries(Object.entries(sets[seg.set].cast).filter(([n, c]) => c.root.visible).map(([n, c]) => [n, [c.root.position.x, c.root.position.y, c.root.position.z].map((v) => +v.toFixed(2))])); };
+window.__cam = () => [camera.position.x, camera.position.y, camera.position.z].map((v) => +v.toFixed(2));

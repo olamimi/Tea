@@ -9,52 +9,148 @@
       "cfg": 0.35
     },
     {
-      "shot": "setup",
-      "text": "Because nobody ever invented the wheel. Everything is carried, and carrying is the biggest job on the planet. Half the world are porters.",
+      "shot": "street",
+      "text": "Because nobody ever invented the wheel. So everything is carried.",
       "exaggeration": 0.6,
       "cfg": 0.4
     },
     {
-      "shot": "shed",
-      "text": "Then a kid built one.",
+      "shot": "street",
+      "text": "Your groceries. Your sofa. Your piano. Your grandpa.",
+      "exaggeration": 0.7,
+      "cfg": 0.35
+    },
+    {
+      "shot": "street",
+      "text": "Carrying is the biggest job on the planet. Half the world are porters, and the other half pays them.",
+      "exaggeration": 0.6,
+      "cfg": 0.4
+    },
+    {
+      "shot": "kid",
+      "text": "And one kid was really, really tired of carrying. Every morning, the same crate. Every night, the same sore back.",
       "exaggeration": 0.75,
       "cfg": 0.35
     },
     {
+      "shot": "shed",
+      "text": "So he started building. He tried a square. It did not roll.",
+      "exaggeration": 0.65,
+      "cfg": 0.4
+    },
+    {
+      "shot": "shed",
+      "text": "He tried a triangle. It rolled once, and it hurt.",
+      "exaggeration": 0.75,
+      "cfg": 0.35
+    },
+    {
+      "shot": "shed",
+      "text": "Attempt number forty-seven... was round.",
+      "exaggeration": 0.8,
+      "cfg": 0.3
+    },
+    {
       "shot": "cart",
-      "text": "He put four under a box, and moved his whole house in one trip. A job that takes ten porters, done by one kid.",
+      "text": "He put four of them under a box, and moved his whole house in one trip.",
+      "exaggeration": 0.7,
+      "cfg": 0.35
+    },
+    {
+      "shot": "cart",
+      "text": "A job that takes ten porters, done by one kid, before breakfast.",
+      "exaggeration": 0.75,
+      "cfg": 0.35
+    },
+    {
+      "shot": "guild",
+      "text": "The porters' guild called an emergency meeting. If wheels caught on, half the world would lose their jobs.",
       "exaggeration": 0.7,
       "cfg": 0.35
     },
     {
       "shot": "guild",
-      "text": "If wheels caught on, half the world would lose their jobs. So by lunch, the porters' guild had a price on his head.",
+      "text": "Pianos would roll. Grandpas would roll. Nobody would ever need to be carried again.",
+      "exaggeration": 0.8,
+      "cfg": 0.3
+    },
+    {
+      "shot": "guild",
+      "text": "The boss went red.",
+      "exaggeration": 0.8,
+      "cfg": 0.3
+    },
+    {
+      "shot": "bounty",
+      "text": "So by lunch, the guild had a price on his head.",
       "exaggeration": 0.75,
       "cfg": 0.35
     },
     {
       "shot": "chase",
-      "text": "So he did the only thing he could. He rolled.",
+      "text": "Porters came from every street. They were strong, they were angry, and there were a lot of them.",
+      "exaggeration": 0.75,
+      "cfg": 0.35
+    },
+    {
+      "shot": "chase",
+      "text": "So the kid did the only thing he could. He rolled.",
       "exaggeration": 0.8,
       "cfg": 0.3
     },
     {
+      "shot": "hill",
+      "text": "Straight down the steepest hill in the city, faster than anything had ever moved.",
+      "exaggeration": 0.8,
+      "cfg": 0.3
+    },
+    {
+      "shot": "hill",
+      "text": "Porters ran. Porters dove. One porter threw a sofa.",
+      "exaggeration": 0.8,
+      "cfg": 0.3
+    },
+    {
+      "shot": "hill",
+      "text": "Porters can carry a piano up a mountain, but nobody can catch a wheel going downhill.",
+      "exaggeration": 0.7,
+      "cfg": 0.35
+    },
+    {
       "shot": "crash",
-      "text": "Straight down the hill, and through the guild boss's ground-floor penthouse window.",
+      "text": "At the bottom was the guild boss's ground-floor penthouse. And its very large window.",
       "exaggeration": 0.8,
       "cfg": 0.3
     },
     {
       "shot": "twist",
-      "text": "The boss looked at the wheel. And bought it. Now he owns the only wheel on Earth, and uses it as a coffee table.",
+      "text": "Everything went quiet.",
+      "exaggeration": 0.5,
+      "cfg": 0.45
+    },
+    {
+      "shot": "twist",
+      "text": "The boss stood up. He looked at the kid. He looked at the wheel.",
+      "exaggeration": 0.6,
+      "cfg": 0.4
+    },
+    {
+      "shot": "twist",
+      "text": "And he bought it. For a bag of gold. Not to use it. To hide it.",
+      "exaggeration": 0.75,
+      "cfg": 0.35
+    },
+    {
+      "shot": "twist",
+      "text": "Now he owns the only wheel on Earth, and uses it as a coffee table.",
       "exaggeration": 0.7,
       "cfg": 0.35
     },
     {
       "shot": "loop",
       "text": "Which is why, in this world,",
-      "exaggeration": 0.6,
-      "cfg": 0.4
+      "exaggeration": 0.7,
+      "cfg": 0.35
     }
   ]
 }

@@ -1,0 +1,60 @@
+{
+  "title": "The Kid Who Built a Wheel",
+  "engine": "chatterbox",
+  "lines": [
+    {
+      "shot": "hook",
+      "text": "In this world, this is the most illegal object on Earth.",
+      "exaggeration": 0.75,
+      "cfg": 0.35
+    },
+    {
+      "shot": "setup",
+      "text": "Because nobody ever invented the wheel. Everything is carried, and carrying is the biggest job on the planet. Half the world are porters.",
+      "exaggeration": 0.6,
+      "cfg": 0.4
+    },
+    {
+      "shot": "shed",
+      "text": "Then a kid built one.",
+      "exaggeration": 0.75,
+      "cfg": 0.35
+    },
+    {
+      "shot": "cart",
+      "text": "He put four under a box, and moved his whole house in one trip. A job that takes ten porters, done by one kid.",
+      "exaggeration": 0.7,
+      "cfg": 0.35
+    },
+    {
+      "shot": "guild",
+      "text": "If wheels caught on, half the world would lose their jobs. So by lunch, the porters' guild had a price on his head.",
+      "exaggeration": 0.75,
+      "cfg": 0.35
+    },
+    {
+      "shot": "chase",
+      "text": "So he did the only thing he could. He rolled.",
+      "exaggeration": 0.8,
+      "cfg": 0.3
+    },
+    {
+      "shot": "crash",
+      "text": "Straight down the hill, and through the guild boss's ground-floor penthouse window.",
+      "exaggeration": 0.8,
+      "cfg": 0.3
+    },
+    {
+      "shot": "twist",
+      "text": "The boss looked at the wheel. And bought it. Now he owns the only wheel on Earth, and uses it as a coffee table.",
+      "exaggeration": 0.7,
+      "cfg": 0.35
+    },
+    {
+      "shot": "loop",
+      "text": "Which is why, in this world,",
+      "exaggeration": 0.6,
+      "cfg": 0.4
+    }
+  ]
+}
