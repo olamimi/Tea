@@ -141,6 +141,7 @@ export const SPECS = {
   teacher:   { H: 2.05, body: '#3f7f86', collar: '#f3e6d0', legs: false, width: 0.3, belly: 1.1, hat: 'bun', hairColor: '#4a2a1a', earrings: true },
   teacherM:  { H: 2.1, uniform: 'man', top: '#bcd3ea', bottom: '#3a3f4a', tie: '#2c4a7a', legs: true, legLen: 0.44, width: 0.28, hat: 'flat', hairColor: '#1a120c', glasses: true },
   principal: { H: 2.15, uniform: 'suit', top: '#3b4150', bottom: '#2c313c', tie: '#a01e2e', legs: true, legLen: 0.42, width: 0.33, belly: 1.2, hat: 'balding', hairColor: '#8a8a8a', glasses: true, mustache: true },
+  kid:       { H: 1.6, uniform: 'man', top: '#e8743a', bottom: '#3f6f9a', legs: true, legLen: 0.4, width: 0.25, hat: 'cap', hatColor: '#3f8a8c', blush: true },
   rich:      { H: 2.15, uniform: 'suit', top: '#6a2a5a', bottom: '#3a1a34', tie: '#e2b13c', legs: true, legLen: 0.38, width: 0.36, belly: 1.3, hat: 'tophat', hatColor: '#1e1a22', mustache: true },
   porter:    { H: 2.0, uniform: 'man', top: '#c98a4a', bottom: '#5a4a3a', legs: true, legLen: 0.42, width: 0.3, hat: 'cap', hatColor: '#3f6f8a' },
   porterB:   { H: 2.05, uniform: 'man', top: '#5f8a6a', bottom: '#4a3f36', legs: true, legLen: 0.42, width: 0.32, hat: 'short', hairColor: '#2a1c14' },
@@ -424,9 +425,10 @@ export class Puppet {
   // ---- authoring API
   act(keys) { this.track = keys.slice().sort((a, b) => a.t - b.t); return this; } // [{t, expr?, eyes?, brows?, mouth?, pose?, lean?, tilt?, yaw?, pitch?, look?, sweat?, squash?}]
   say(words) { this.speech = words || []; return this; }
+  groove(words, amp = 1) { this.beats = (words || []).filter((w) => w.w.replace(/[^a-z]/gi, '').length >= 3); this.beatAmp = amp; return this; } // move on the narration's stressed words
   walk(path) { this.path = path; return this; } // {t0, t1, from:Vector3, to:Vector3, mode:'walk'|'run'|'pull'|'waddle', face?}
   place(p, facing = 0) { this.root.position.copy(p); this.facing = facing; this.path = null; return this; }
-  reset() { this.track = []; this.speech = []; this.path = null; this.lookAt = null; this.mode = 'stand'; this.props.lantern.visible = false; this.sitting = null; return this; }
+  reset() { this.beats = []; this.beatAmp = 0; this.track = []; this.speech = []; this.path = null; this.lookAt = null; this.mode = 'stand'; this.props.lantern.visible = false; this.sitting = null; return this; }
 
   // value of a numeric channel at t, eased between keys (pose changes snap with overshoot)
   chan(t, name, def) {
@@ -508,16 +510,28 @@ export class Puppet {
     let leanZ = this.chan(t, 'tilt', 0) * D2R;   // sideways
     let headTilt = this.chan(t, 'headTilt', 0) * D2R, nod = 0, bob = 0, sq = 1;
     // idle life: breathing + slow sway + head micro tilt
-    leanZ += noise1(t * 0.45, sd) * 1.6 * D2R; leanX += noise1(t * 0.38, sd + 3) * 1.0 * D2R;
-    headTilt += noise1(t * 0.7, sd + 7) * 3.5 * D2R;
-    sq *= 1 + Math.sin((t + sd) * 2.2) * 0.012;
-    // talking head nods on stressed (longer) words
-    for (const w of this.speech) { if (w.w.replace(/[^a-z]/gi, '').length >= 4 && t >= w.start && t < w.start + 0.4) nod += Math.sin((t - w.start) / 0.4 * Math.PI) * 0.09; }
+    leanZ += noise1(t * 0.55, sd) * 3.0 * D2R; leanX += noise1(t * 0.45, sd + 3) * 2.0 * D2R;
+    headTilt += noise1(t * 0.8, sd + 7) * 6.0 * D2R;
+    sq *= 1 + Math.sin((t + sd) * 2.4) * 0.02;
+    // talking: big head acting - alternate tilts per word, strong nods + a little body pump on stressed words
+    this.speech.forEach((w, j) => { const L = w.w.replace(/[^a-z]/gi, '').length; const d = Math.max(0.12, w.end - w.start);
+      if (t >= w.start - 0.05 && t < w.end + 0.25) { const k = Math.sin(Math.min(1, (t - w.start + 0.05) / (d + 0.3)) * Math.PI);
+        headTilt += (j % 2 ? 1 : -1) * 7 * D2R * k; if (L >= 4) { nod += 0.16 * k; bob -= 0.018 * u * k; leanX += 3 * D2R * k; } } });
+    // groove: non-speaking characters still move on the narration's stressed words (reference: everyone reacts on the beat)
+    if (this.beats && this.beatAmp) this.beats.forEach((w, j) => { if (t >= w.start - 0.04 && t < w.start + 0.42) { const k = Math.sin((t - w.start + 0.04) / 0.46 * Math.PI);
+      nod += 0.12 * this.beatAmp * k; headTilt += (j % 2 ? 1 : -1) * 6 * D2R * this.beatAmp * k; bob -= 0.03 * u * this.beatAmp * k; sq *= 1 + 0.03 * this.beatAmp * k; } });
+    // rhythm bounce: dance-like knee dips on a ~2.2 Hz beat (key: bounce 0..1)
+    const bnc = this.chan(t, 'bounce', 0); if (bnc > 0.001) { const ph = (t + sd * 0.1) * 2.2 * Math.PI; bob -= Math.abs(Math.sin(ph)) * 0.075 * s.H * bnc; leanZ += Math.sin(ph) * 3 * D2R * bnc; headTilt -= Math.sin(ph - 0.6) * 5 * D2R * bnc; nod += Math.abs(Math.sin(ph - 0.4)) * 0.08 * bnc; }
     if (exprName === 'laugh') { const ph = (t + sd) * 4.6 * Math.PI * 2; bob += Math.abs(Math.sin(ph / 2)) * 0.05 * u; headTilt += Math.sin(ph / 2) * 0.12 - 0.05; nod -= 0.18; leanZ += Math.sin(ph / 4) * 0.06; }
     // squash/stretch accent: {squash: t} keys -> anticipation squash then overshoot stretch
     const sqT = this.held(t, 'squash', null);
     if (sqT !== null) { const a = t - this.heldKeyTime(t, 'squash'); if (a < 0.45) sq *= a < 0.1 ? 1 - 0.07 * (a / 0.1) : 1 + 0.09 * Math.exp(-(a - 0.1) * 9) * Math.cos((a - 0.1) * 26); }
     if (this.held(t, 'shake', 0)) { leanZ += Math.sin(t * 22) * 0.02 + Math.sin(t * 31) * 0.015; }
+    const workB = this.held(t, 'work', null);
+    if (workB === 'hammer') { const ph = (t * 3.2) % 1; const hit = ph < 0.2 ? ph / 0.2 : 1 - (ph - 0.2) / 0.8; leanX += (hit * 10 - 3) * D2R; bob -= hit * 0.03 * u; nod += hit * 0.1; }
+    if (workB === 'push') { leanX += (18 + Math.sin(t * 6) * 3) * D2R; bob -= Math.abs(Math.sin(t * 6)) * 0.03 * u; }
+    if (workB === 'shake') { const ph = Math.abs(Math.sin(t * 9 + sd)); bob -= ph * 0.035 * u; leanX += ph * 4 * D2R; headTilt += Math.sin(t * 4.5 + sd) * 5 * D2R; }
+    if (workB === 'ride') { leanX += (-10 + Math.sin(t * 13) * 2) * D2R; leanZ += Math.sin(t * 7) * 4 * D2R; headTilt += Math.sin(t * 9) * 4 * D2R; }
     // locomotion body motion
     const legs = this.legs; const hipW = this.hipW;
     let feet = [[-hipW, 0, 0.02 * u, 0], [hipW, 0, 0.02 * u, 0]]; // x, lift, z, kneeFwd
@@ -530,6 +544,7 @@ export class Puppet {
       leanX += ({ walk: 3, waddle: 1, run: 14, pull: 24 }[mode]) * D2R;
       headTilt -= Math.sin(phase) * 2 * D2R;
     }
+    { const ptc = this.heldKeyTime(t, 'pose'); const pa0 = (t - ptc) / 0.3; if (pa0 >= 0 && pa0 < 1) { leanX -= Math.sin(pa0 * Math.PI) * 5 * D2R; nod -= Math.sin(pa0 * Math.PI) * 0.06; } }
     const sitH = this.held(t, 'sit', null);
     this.contact.visible = sitH == null;
     this.lean.rotation.set(leanX, 0, leanZ);
@@ -574,6 +589,12 @@ export class Puppet {
     for (let i = 0; i < 2; i++) {
       const side = i === 0 ? -1 : 1;
       const a = A[i].map((v, j) => B[i][j] + (v - B[i][j]) * k);
+      if (pa < 1) { a[1] += Math.sin(Math.min(1, pa) * Math.PI) * 0.14; a[0] += Math.sin(Math.min(1, pa) * Math.PI) * 0.06; } // hands travel in arcs
+      if (work === 'hammer' && i === 1) { const ph = (t * 3.2) % 1; const up = ph < 0.2 ? 1 - ph / 0.2 : (ph - 0.2) / 0.8; a[0] = 0.22; a[1] = -0.3 + up * 0.75; a[2] = 0.36 - up * 0.1; }
+      if (work === 'push') { a[0] = 0.04; a[1] = -0.18 + Math.sin(t * 6 + i) * 0.03; a[2] = 0.5; a[3] = 0.06; }
+      if (work === 'shake') { const ph = Math.abs(Math.sin(t * 9 + i * 1.7 + sd)); a[0] = 0.2; a[1] = 0.2 + ph * 0.3; a[2] = 0.1; a[3] = -0.1; }
+      if (work === 'ride') { a[0] = 0.32; a[1] = 0.35 + Math.sin(t * 11 + i * 2) * 0.12; a[2] = 0.05; }
+      if (work === 'jab' && i === 1) { const ph = Math.max(0, Math.sin(t * 7)); a[0] = 0.18; a[1] = -0.05 + ph * 0.08; a[2] = 0.2 + ph * 0.32; }
       if (work === 'saw' && i === 1) a[2] += Math.sin(t * 9) * 0.14;
       if (work === 'pull') { a[2] += Math.sin(phase) * 0.03; }
       if (work === 'dig') { a[1] += Math.sin(t * 9 + i * 2) * 0.06; a[2] += Math.sin(t * 7 + i) * 0.05; a[0] += Math.sin(t * 5.3 + i * 3) * 0.04; }
@@ -602,7 +623,8 @@ export class Puppet {
         foot = new THREE.Vector3(x * 1.15, Math.max(0.05, sitH - 0.55 * u), 0.36 * u + sw);
       } else {
         foot = new THREE.Vector3(x, lift + 0.03 * u, z);
-        knee = hip.clone().lerp(foot, 0.5); knee.z += 0.05 * u + kneeF; knee.x += Math.sign(x) * 0.02 * u;
+        knee = hip.clone().lerp(foot, 0.5); const dHF = hip.distanceTo(foot); const bend = Math.sqrt(Math.max(0, (this.hipY / 2) ** 2 - (dHF / 2) ** 2));
+        knee.z += 0.05 * u + kneeF + bend * 1.1; knee.x += Math.sign(x) * (0.02 * u + bend * 0.5);
       }
       if (s.legs || mode !== 'stand' || sitH != null) {
         this.tube(this.legs[i].tube, [hip, knee, foot], s.H * 0.0068); this.legs[i].tube.visible = s.legs || sitH != null;

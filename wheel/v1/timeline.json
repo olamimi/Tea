@@ -1,0 +1,1213 @@
+{
+ "duration": 31.331,
+ "shots": [
+  {
+   "name": "hook",
+   "lines": [
+    {
+     "shot": "hook",
+     "text": "In this world, the penthouse is on the ground floor.",
+     "start": 0.15,
+     "end": 2.588,
+     "words": [
+      {
+       "w": "In",
+       "start": 0.15,
+       "end": 0.31
+      },
+      {
+       "w": "this",
+       "start": 0.31,
+       "end": 0.47
+      },
+      {
+       "w": "world,",
+       "start": 0.47,
+       "end": 0.77
+      },
+      {
+       "w": "the",
+       "start": 0.97,
+       "end": 1.01
+      },
+      {
+       "w": "penthouse",
+       "start": 1.01,
+       "end": 1.45
+      },
+      {
+       "w": "is",
+       "start": 1.45,
+       "end": 1.63
+      },
+      {
+       "w": "on",
+       "start": 1.63,
+       "end": 1.75
+      },
+      {
+       "w": "the",
+       "start": 1.75,
+       "end": 1.83
+      },
+      {
+       "w": "ground",
+       "start": 1.83,
+       "end": 2.01
+      },
+      {
+       "w": "floor.",
+       "start": 2.01,
+       "end": 2.31
+      }
+     ]
+    }
+   ],
+   "start": 0.0,
+   "end": 2.688,
+   "dur": 2.688
+  },
+  {
+   "name": "rule",
+   "lines": [
+    {
+     "shot": "rule",
+     "text": "Because here, nobody ever invented the wheel.",
+     "start": 2.768,
+     "end": 5.408,
+     "words": [
+      {
+       "w": "Because",
+       "start": 2.768,
+       "end": 3.048
+      },
+      {
+       "w": "here,",
+       "start": 3.048,
+       "end": 3.428
+      },
+      {
+       "w": "nobody",
+       "start": 3.848,
+       "end": 4.088
+      },
+      {
+       "w": "ever",
+       "start": 4.088,
+       "end": 4.388
+      },
+      {
+       "w": "invented",
+       "start": 4.388,
+       "end": 4.728
+      },
+      {
+       "w": "the",
+       "start": 4.728,
+       "end": 4.928
+      },
+      {
+       "w": "wheel.",
+       "start": 4.928,
+       "end": 5.108
+      }
+     ]
+    }
+   ],
+   "start": 2.688,
+   "end": 5.508,
+   "dur": 2.82
+  },
+  {
+   "name": "porters",
+   "lines": [
+    {
+     "shot": "porters",
+     "text": "No carts. No cars. Everything you buy arrives on someone's back.",
+     "start": 5.588,
+     "end": 9.064,
+     "words": [
+      {
+       "w": "No",
+       "start": 5.588,
+       "end": 5.808
+      },
+      {
+       "w": "carts.",
+       "start": 5.808,
+       "end": 6.108
+      },
+      {
+       "w": "No",
+       "start": 6.388,
+       "end": 6.548
+      },
+      {
+       "w": "cars.",
+       "start": 6.548,
+       "end": 6.908
+      },
+      {
+       "w": "Everything",
+       "start": 7.148,
+       "end": 7.368
+      },
+      {
+       "w": "you",
+       "start": 7.368,
+       "end": 7.588
+      },
+      {
+       "w": "buy",
+       "start": 7.588,
+       "end": 7.788
+      },
+      {
+       "w": "arrives",
+       "start": 7.788,
+       "end": 8.108
+      },
+      {
+       "w": "on",
+       "start": 8.108,
+       "end": 8.348
+      },
+      {
+       "w": "someone's",
+       "start": 8.348,
+       "end": 8.748
+      },
+      {
+       "w": "back.",
+       "start": 8.748,
+       "end": 8.928
+      }
+     ]
+    }
+   ],
+   "start": 5.508,
+   "end": 9.164,
+   "dur": 3.656
+  },
+  {
+   "name": "canal",
+   "lines": [
+    {
+     "shot": "canal",
+     "text": "So every city grew along a river. Boats were the only fast lane.",
+     "start": 9.244,
+     "end": 12.6,
+     "words": [
+      {
+       "w": "So",
+       "start": 9.244,
+       "end": 9.424
+      },
+      {
+       "w": "every",
+       "start": 9.424,
+       "end": 9.684
+      },
+      {
+       "w": "city",
+       "start": 9.684,
+       "end": 9.904
+      },
+      {
+       "w": "grew",
+       "start": 9.904,
+       "end": 10.124
+      },
+      {
+       "w": "along",
+       "start": 10.124,
+       "end": 10.364
+      },
+      {
+       "w": "a",
+       "start": 10.364,
+       "end": 10.504
+      },
+      {
+       "w": "river.",
+       "start": 10.504,
+       "end": 10.724
+      },
+      {
+       "w": "Boats",
+       "start": 11.184,
+       "end": 11.324
+      },
+      {
+       "w": "were",
+       "start": 11.324,
+       "end": 11.424
+      },
+      {
+       "w": "the",
+       "start": 11.424,
+       "end": 11.524
+      },
+      {
+       "w": "only",
+       "start": 11.524,
+       "end": 11.704
+      },
+      {
+       "w": "fast",
+       "start": 11.704,
+       "end": 12.004
+      },
+      {
+       "w": "lane.",
+       "start": 12.004,
+       "end": 12.304
+      }
+     ]
+    }
+   ],
+   "start": 9.164,
+   "end": 12.7,
+   "dur": 3.536
+  },
+  {
+   "name": "stairs",
+   "lines": [
+    {
+     "shot": "stairs",
+     "text": "No wheel means no pulley. No pulley, no elevator.",
+     "start": 12.78,
+     "end": 15.898,
+     "words": [
+      {
+       "w": "No",
+       "start": 12.78,
+       "end": 13.06
+      },
+      {
+       "w": "wheel",
+       "start": 13.06,
+       "end": 13.26
+      },
+      {
+       "w": "means",
+       "start": 13.26,
+       "end": 13.54
+      },
+      {
+       "w": "no",
+       "start": 13.54,
+       "end": 13.8
+      },
+      {
+       "w": "pulley.",
+       "start": 13.8,
+       "end": 14.18
+      },
+      {
+       "w": "No",
+       "start": 14.36,
+       "end": 14.56
+      },
+      {
+       "w": "pulley,",
+       "start": 14.56,
+       "end": 14.94
+      },
+      {
+       "w": "no",
+       "start": 15.1,
+       "end": 15.18
+      },
+      {
+       "w": "elevator.",
+       "start": 15.18,
+       "end": 15.58
+      }
+     ]
+    }
+   ],
+   "start": 12.7,
+   "end": 15.998,
+   "dur": 3.298
+  },
+  {
+   "name": "skyline",
+   "lines": [
+    {
+     "shot": "skyline",
+     "text": "So the higher you live, the more you climb. The poor live at the top.",
+     "start": 16.078,
+     "end": 19.198,
+     "words": [
+      {
+       "w": "So",
+       "start": 16.078,
+       "end": 16.258
+      },
+      {
+       "w": "the",
+       "start": 16.258,
+       "end": 16.338
+      },
+      {
+       "w": "higher",
+       "start": 16.338,
+       "end": 16.518
+      },
+      {
+       "w": "you",
+       "start": 16.518,
+       "end": 16.698
+      },
+      {
+       "w": "live,",
+       "start": 16.698,
+       "end": 16.938
+      },
+      {
+       "w": "the",
+       "start": 17.178,
+       "end": 17.238
+      },
+      {
+       "w": "more",
+       "start": 17.238,
+       "end": 17.358
+      },
+      {
+       "w": "you",
+       "start": 17.358,
+       "end": 17.478
+      },
+      {
+       "w": "climb.",
+       "start": 17.478,
+       "end": 17.738
+      },
+      {
+       "w": "The",
+       "start": 18.118,
+       "end": 18.238
+      },
+      {
+       "w": "poor",
+       "start": 18.238,
+       "end": 18.398
+      },
+      {
+       "w": "live",
+       "start": 18.398,
+       "end": 18.598
+      },
+      {
+       "w": "at",
+       "start": 18.598,
+       "end": 18.718
+      },
+      {
+       "w": "the",
+       "start": 18.718,
+       "end": 18.818
+      },
+      {
+       "w": "top.",
+       "start": 18.818,
+       "end": 18.998
+      }
+     ]
+    }
+   ],
+   "start": 15.998,
+   "end": 19.298,
+   "dur": 3.3
+  },
+  {
+   "name": "sundial",
+   "lines": [
+    {
+     "shot": "sundial",
+     "text": "No gears, so no clocks. Here, being late is measured in shadows.",
+     "start": 19.378,
+     "end": 23.343,
+     "words": [
+      {
+       "w": "No",
+       "start": 19.378,
+       "end": 19.598
+      },
+      {
+       "w": "gears,",
+       "start": 19.598,
+       "end": 19.818
+      },
+      {
+       "w": "so",
+       "start": 20.058,
+       "end": 20.278
+      },
+      {
+       "w": "no",
+       "start": 20.278,
+       "end": 20.538
+      },
+      {
+       "w": "clocks.",
+       "start": 20.538,
+       "end": 20.818
+      },
+      {
+       "w": "Here,",
+       "start": 21.258,
+       "end": 21.398
+      },
+      {
+       "w": "being",
+       "start": 21.558,
+       "end": 21.718
+      },
+      {
+       "w": "late",
+       "start": 21.718,
+       "end": 21.958
+      },
+      {
+       "w": "is",
+       "start": 21.958,
+       "end": 22.178
+      },
+      {
+       "w": "measured",
+       "start": 22.178,
+       "end": 22.418
+      },
+      {
+       "w": "in",
+       "start": 22.418,
+       "end": 22.658
+      },
+      {
+       "w": "shadows.",
+       "start": 22.658,
+       "end": 22.898
+      }
+     ]
+    }
+   ],
+   "start": 19.298,
+   "end": 23.443,
+   "dur": 4.145
+  },
+  {
+   "name": "twist",
+   "lines": [
+    {
+     "shot": "twist",
+     "text": "Every year, someone invents the wheel again. And every year, the porters vote it out.",
+     "start": 23.523,
+     "end": 27.896,
+     "words": [
+      {
+       "w": "Every",
+       "start": 23.523,
+       "end": 23.843
+      },
+      {
+       "w": "year,",
+       "start": 23.843,
+       "end": 24.083
+      },
+      {
+       "w": "someone",
+       "start": 24.223,
+       "end": 24.463
+      },
+      {
+       "w": "invents",
+       "start": 24.463,
+       "end": 24.803
+      },
+      {
+       "w": "the",
+       "start": 24.803,
+       "end": 24.963
+      },
+      {
+       "w": "wheel",
+       "start": 24.963,
+       "end": 25.103
+      },
+      {
+       "w": "again.",
+       "start": 25.103,
+       "end": 25.443
+      },
+      {
+       "w": "And",
+       "start": 25.723,
+       "end": 25.903
+      },
+      {
+       "w": "every",
+       "start": 25.903,
+       "end": 26.183
+      },
+      {
+       "w": "year,",
+       "start": 26.183,
+       "end": 26.523
+      },
+      {
+       "w": "the",
+       "start": 26.743,
+       "end": 26.783
+      },
+      {
+       "w": "porters",
+       "start": 26.783,
+       "end": 27.063
+      },
+      {
+       "w": "vote",
+       "start": 27.063,
+       "end": 27.303
+      },
+      {
+       "w": "it",
+       "start": 27.303,
+       "end": 27.423
+      },
+      {
+       "w": "out.",
+       "start": 27.423,
+       "end": 27.663
+      }
+     ]
+    }
+   ],
+   "start": 23.443,
+   "end": 27.996,
+   "dur": 4.553
+  },
+  {
+   "name": "loop",
+   "lines": [
+    {
+     "shot": "loop",
+     "text": "Which is exactly why, in this world...",
+     "start": 28.076,
+     "end": 29.951,
+     "words": [
+      {
+       "w": "Which",
+       "start": 28.076,
+       "end": 28.236
+      },
+      {
+       "w": "is",
+       "start": 28.236,
+       "end": 28.356
+      },
+      {
+       "w": "exactly",
+       "start": 28.356,
+       "end": 28.656
+      },
+      {
+       "w": "why,",
+       "start": 28.656,
+       "end": 29.076
+      },
+      {
+       "w": "in",
+       "start": 29.076,
+       "end": 29.296
+      },
+      {
+       "w": "this",
+       "start": 29.296,
+       "end": 29.456
+      },
+      {
+       "w": "world...",
+       "start": 29.456,
+       "end": 29.696
+      }
+     ]
+    }
+   ],
+   "start": 27.996,
+   "end": 31.331,
+   "dur": 3.335
+  }
+ ],
+ "lines": [
+  {
+   "shot": "hook",
+   "text": "In this world, the penthouse is on the ground floor.",
+   "start": 0.15,
+   "end": 2.588,
+   "words": [
+    {
+     "w": "In",
+     "start": 0.15,
+     "end": 0.31
+    },
+    {
+     "w": "this",
+     "start": 0.31,
+     "end": 0.47
+    },
+    {
+     "w": "world,",
+     "start": 0.47,
+     "end": 0.77
+    },
+    {
+     "w": "the",
+     "start": 0.97,
+     "end": 1.01
+    },
+    {
+     "w": "penthouse",
+     "start": 1.01,
+     "end": 1.45
+    },
+    {
+     "w": "is",
+     "start": 1.45,
+     "end": 1.63
+    },
+    {
+     "w": "on",
+     "start": 1.63,
+     "end": 1.75
+    },
+    {
+     "w": "the",
+     "start": 1.75,
+     "end": 1.83
+    },
+    {
+     "w": "ground",
+     "start": 1.83,
+     "end": 2.01
+    },
+    {
+     "w": "floor.",
+     "start": 2.01,
+     "end": 2.31
+    }
+   ]
+  },
+  {
+   "shot": "rule",
+   "text": "Because here, nobody ever invented the wheel.",
+   "start": 2.768,
+   "end": 5.408,
+   "words": [
+    {
+     "w": "Because",
+     "start": 2.768,
+     "end": 3.048
+    },
+    {
+     "w": "here,",
+     "start": 3.048,
+     "end": 3.428
+    },
+    {
+     "w": "nobody",
+     "start": 3.848,
+     "end": 4.088
+    },
+    {
+     "w": "ever",
+     "start": 4.088,
+     "end": 4.388
+    },
+    {
+     "w": "invented",
+     "start": 4.388,
+     "end": 4.728
+    },
+    {
+     "w": "the",
+     "start": 4.728,
+     "end": 4.928
+    },
+    {
+     "w": "wheel.",
+     "start": 4.928,
+     "end": 5.108
+    }
+   ]
+  },
+  {
+   "shot": "porters",
+   "text": "No carts. No cars. Everything you buy arrives on someone's back.",
+   "start": 5.588,
+   "end": 9.064,
+   "words": [
+    {
+     "w": "No",
+     "start": 5.588,
+     "end": 5.808
+    },
+    {
+     "w": "carts.",
+     "start": 5.808,
+     "end": 6.108
+    },
+    {
+     "w": "No",
+     "start": 6.388,
+     "end": 6.548
+    },
+    {
+     "w": "cars.",
+     "start": 6.548,
+     "end": 6.908
+    },
+    {
+     "w": "Everything",
+     "start": 7.148,
+     "end": 7.368
+    },
+    {
+     "w": "you",
+     "start": 7.368,
+     "end": 7.588
+    },
+    {
+     "w": "buy",
+     "start": 7.588,
+     "end": 7.788
+    },
+    {
+     "w": "arrives",
+     "start": 7.788,
+     "end": 8.108
+    },
+    {
+     "w": "on",
+     "start": 8.108,
+     "end": 8.348
+    },
+    {
+     "w": "someone's",
+     "start": 8.348,
+     "end": 8.748
+    },
+    {
+     "w": "back.",
+     "start": 8.748,
+     "end": 8.928
+    }
+   ]
+  },
+  {
+   "shot": "canal",
+   "text": "So every city grew along a river. Boats were the only fast lane.",
+   "start": 9.244,
+   "end": 12.6,
+   "words": [
+    {
+     "w": "So",
+     "start": 9.244,
+     "end": 9.424
+    },
+    {
+     "w": "every",
+     "start": 9.424,
+     "end": 9.684
+    },
+    {
+     "w": "city",
+     "start": 9.684,
+     "end": 9.904
+    },
+    {
+     "w": "grew",
+     "start": 9.904,
+     "end": 10.124
+    },
+    {
+     "w": "along",
+     "start": 10.124,
+     "end": 10.364
+    },
+    {
+     "w": "a",
+     "start": 10.364,
+     "end": 10.504
+    },
+    {
+     "w": "river.",
+     "start": 10.504,
+     "end": 10.724
+    },
+    {
+     "w": "Boats",
+     "start": 11.184,
+     "end": 11.324
+    },
+    {
+     "w": "were",
+     "start": 11.324,
+     "end": 11.424
+    },
+    {
+     "w": "the",
+     "start": 11.424,
+     "end": 11.524
+    },
+    {
+     "w": "only",
+     "start": 11.524,
+     "end": 11.704
+    },
+    {
+     "w": "fast",
+     "start": 11.704,
+     "end": 12.004
+    },
+    {
+     "w": "lane.",
+     "start": 12.004,
+     "end": 12.304
+    }
+   ]
+  },
+  {
+   "shot": "stairs",
+   "text": "No wheel means no pulley. No pulley, no elevator.",
+   "start": 12.78,
+   "end": 15.898,
+   "words": [
+    {
+     "w": "No",
+     "start": 12.78,
+     "end": 13.06
+    },
+    {
+     "w": "wheel",
+     "start": 13.06,
+     "end": 13.26
+    },
+    {
+     "w": "means",
+     "start": 13.26,
+     "end": 13.54
+    },
+    {
+     "w": "no",
+     "start": 13.54,
+     "end": 13.8
+    },
+    {
+     "w": "pulley.",
+     "start": 13.8,
+     "end": 14.18
+    },
+    {
+     "w": "No",
+     "start": 14.36,
+     "end": 14.56
+    },
+    {
+     "w": "pulley,",
+     "start": 14.56,
+     "end": 14.94
+    },
+    {
+     "w": "no",
+     "start": 15.1,
+     "end": 15.18
+    },
+    {
+     "w": "elevator.",
+     "start": 15.18,
+     "end": 15.58
+    }
+   ]
+  },
+  {
+   "shot": "skyline",
+   "text": "So the higher you live, the more you climb. The poor live at the top.",
+   "start": 16.078,
+   "end": 19.198,
+   "words": [
+    {
+     "w": "So",
+     "start": 16.078,
+     "end": 16.258
+    },
+    {
+     "w": "the",
+     "start": 16.258,
+     "end": 16.338
+    },
+    {
+     "w": "higher",
+     "start": 16.338,
+     "end": 16.518
+    },
+    {
+     "w": "you",
+     "start": 16.518,
+     "end": 16.698
+    },
+    {
+     "w": "live,",
+     "start": 16.698,
+     "end": 16.938
+    },
+    {
+     "w": "the",
+     "start": 17.178,
+     "end": 17.238
+    },
+    {
+     "w": "more",
+     "start": 17.238,
+     "end": 17.358
+    },
+    {
+     "w": "you",
+     "start": 17.358,
+     "end": 17.478
+    },
+    {
+     "w": "climb.",
+     "start": 17.478,
+     "end": 17.738
+    },
+    {
+     "w": "The",
+     "start": 18.118,
+     "end": 18.238
+    },
+    {
+     "w": "poor",
+     "start": 18.238,
+     "end": 18.398
+    },
+    {
+     "w": "live",
+     "start": 18.398,
+     "end": 18.598
+    },
+    {
+     "w": "at",
+     "start": 18.598,
+     "end": 18.718
+    },
+    {
+     "w": "the",
+     "start": 18.718,
+     "end": 18.818
+    },
+    {
+     "w": "top.",
+     "start": 18.818,
+     "end": 18.998
+    }
+   ]
+  },
+  {
+   "shot": "sundial",
+   "text": "No gears, so no clocks. Here, being late is measured in shadows.",
+   "start": 19.378,
+   "end": 23.343,
+   "words": [
+    {
+     "w": "No",
+     "start": 19.378,
+     "end": 19.598
+    },
+    {
+     "w": "gears,",
+     "start": 19.598,
+     "end": 19.818
+    },
+    {
+     "w": "so",
+     "start": 20.058,
+     "end": 20.278
+    },
+    {
+     "w": "no",
+     "start": 20.278,
+     "end": 20.538
+    },
+    {
+     "w": "clocks.",
+     "start": 20.538,
+     "end": 20.818
+    },
+    {
+     "w": "Here,",
+     "start": 21.258,
+     "end": 21.398
+    },
+    {
+     "w": "being",
+     "start": 21.558,
+     "end": 21.718
+    },
+    {
+     "w": "late",
+     "start": 21.718,
+     "end": 21.958
+    },
+    {
+     "w": "is",
+     "start": 21.958,
+     "end": 22.178
+    },
+    {
+     "w": "measured",
+     "start": 22.178,
+     "end": 22.418
+    },
+    {
+     "w": "in",
+     "start": 22.418,
+     "end": 22.658
+    },
+    {
+     "w": "shadows.",
+     "start": 22.658,
+     "end": 22.898
+    }
+   ]
+  },
+  {
+   "shot": "twist",
+   "text": "Every year, someone invents the wheel again. And every year, the porters vote it out.",
+   "start": 23.523,
+   "end": 27.896,
+   "words": [
+    {
+     "w": "Every",
+     "start": 23.523,
+     "end": 23.843
+    },
+    {
+     "w": "year,",
+     "start": 23.843,
+     "end": 24.083
+    },
+    {
+     "w": "someone",
+     "start": 24.223,
+     "end": 24.463
+    },
+    {
+     "w": "invents",
+     "start": 24.463,
+     "end": 24.803
+    },
+    {
+     "w": "the",
+     "start": 24.803,
+     "end": 24.963
+    },
+    {
+     "w": "wheel",
+     "start": 24.963,
+     "end": 25.103
+    },
+    {
+     "w": "again.",
+     "start": 25.103,
+     "end": 25.443
+    },
+    {
+     "w": "And",
+     "start": 25.723,
+     "end": 25.903
+    },
+    {
+     "w": "every",
+     "start": 25.903,
+     "end": 26.183
+    },
+    {
+     "w": "year,",
+     "start": 26.183,
+     "end": 26.523
+    },
+    {
+     "w": "the",
+     "start": 26.743,
+     "end": 26.783
+    },
+    {
+     "w": "porters",
+     "start": 26.783,
+     "end": 27.063
+    },
+    {
+     "w": "vote",
+     "start": 27.063,
+     "end": 27.303
+    },
+    {
+     "w": "it",
+     "start": 27.303,
+     "end": 27.423
+    },
+    {
+     "w": "out.",
+     "start": 27.423,
+     "end": 27.663
+    }
+   ]
+  },
+  {
+   "shot": "loop",
+   "text": "Which is exactly why, in this world...",
+   "start": 28.076,
+   "end": 29.951,
+   "words": [
+    {
+     "w": "Which",
+     "start": 28.076,
+     "end": 28.236
+    },
+    {
+     "w": "is",
+     "start": 28.236,
+     "end": 28.356
+    },
+    {
+     "w": "exactly",
+     "start": 28.356,
+     "end": 28.656
+    },
+    {
+     "w": "why,",
+     "start": 28.656,
+     "end": 29.076
+    },
+    {
+     "w": "in",
+     "start": 29.076,
+     "end": 29.296
+    },
+    {
+     "w": "this",
+     "start": 29.296,
+     "end": 29.456
+    },
+    {
+     "w": "world...",
+     "start": 29.456,
+     "end": 29.696
+    }
+   ]
+  }
+ ]
+}

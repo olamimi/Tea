@@ -73,6 +73,16 @@ function building(parent, x, z, w, d, h, wall, roof, opts = {}) { // facade buil
 }
 
 // ------------------------------------------------------------------ props (no wheels anywhere)
+export function makeWheel(r = 0.55, thick = 0.12) {
+  const g = new THREE.Group(); const rim = new THREE.Mesh(new THREE.TorusGeometry(r, thick * 0.7, 10, 36), std(0x8a5a3a, 0.5)); rim.castShadow = true; ink(rim); g.add(rim);
+  for (let k = 0; k < 4; k++) { const sp = box(g, r * 1.9, 0.06, 0.06, std(0x6a4426, 0.5), 0, 0, 0, false); sp.rotation.z = k * Math.PI / 4; }
+  const hub = cyl(g, r * 0.22, r * 0.22, thick * 1.6, std(0x3a2a1a, 0.5), 0, 0, 0, 12, false); hub.rotation.x = Math.PI / 2; return g;
+}
+export function makeCart() { // a crate on four wheels (the first cart on Earth)
+  const g = new THREE.Group(); box(g, 1.6, 0.5, 1.0, std(0xb8864c, 0.7), 0, 0.62, 0); box(g, 1.7, 0.08, 1.1, std(0x8a5a3a, 0.6), 0, 0.36, 0);
+  g.userData.wheels = []; for (const [x, z] of [[-0.6, 0.6], [0.6, 0.6], [-0.6, -0.6], [0.6, -0.6]]) { const w = makeWheel(0.3, 0.08); w.position.set(x, 0.3, z); g.add(w); g.userData.wheels.push(w); }
+  return g;
+}
 export function piano() { const g = new THREE.Group(); const m = std(0x2a1a14, 0.25, { metalness: 0.1 }); box(g, 1.4, 1.0, 0.6, m, 0, 0.5, 0); box(g, 1.3, 0.08, 0.3, std(0xf4f0e6, 0.4), 0, 0.75, 0.42); for (let i = 0; i < 12; i++) box(g, 0.05, 0.05, 0.18, std(0x111111), -0.55 + i * 0.1, 0.8, 0.38, false); return g; }
 export function sofa() { const g = new THREE.Group(); const m = std(0x3f8a8c, 0.6); box(g, 1.6, 0.35, 0.7, m, 0, 0.35, 0); box(g, 1.6, 0.5, 0.2, m, 0, 0.75, -0.28); box(g, 0.2, 0.45, 0.7, m, -0.8, 0.55, 0); box(g, 0.2, 0.45, 0.7, m, 0.8, 0.55, 0); return g; }
 export function fridge() { const g = new THREE.Group(); box(g, 0.7, 1.5, 0.65, std(0xe8e4dc, 0.3), 0, 0.75, 0); box(g, 0.05, 0.4, 0.05, std(0x8a929c, 0.3, { metalness: 0.7 }), 0.25, 1.1, 0.35, false); return g; }
@@ -80,7 +90,7 @@ export function crate(c = 0xb8864c) { const g = new THREE.Group(); box(g, 0.6, 0
 function sign(parent, text, bg, w, h, x, y, z, ry = 0, font = 60) { const s = new THREE.Mesh(new THREE.PlaneGeometry(w, h), new THREE.MeshStandardMaterial({ map: signTex(text, bg, '#fff8e6', 512, Math.round(512 * h / w), font), roughness: 0.5, side: THREE.DoubleSide })); s.position.set(x, y, z); s.rotation.y = ry; ink(s); parent.add(s); return s; }
 
 function castOf(scene, list) { const c = {}; list.forEach(([k, spec, opts]) => { c[k] = new Puppet(spec, { seedOffset: Object.keys(c).length + 1, ...(opts || {}) }); scene.add(c[k].root); }); return c; }
-function finish(scene, cast, extra = {}) { const up = extra.update; return Object.assign({ scene, cast, exposure: 1.0, reset() {} }, extra, { update(t, cam) { up?.(t); Object.values(cast).forEach((c) => { if (c.root.visible) c.update(t, cam); }); } }); }
+function finish(scene, cast, extra = {}) { const up = extra.update; const o = Object.assign({ scene, cast, exposure: 1.0, reset() {} }, extra); o.update = function (t, cam) { up?.call(o, t); Object.values(cast).forEach((c) => { if (c.root.visible) c.update(t, cam); }); }; return o; }
 
 // ------------------------------------------------------------------ 1. ground-floor penthouse (gold lobby at street level)
 export function buildLobby() {
@@ -105,9 +115,24 @@ export function buildLobby() {
   scene.add(new THREE.HemisphereLight(0xffe6c4, 0x8a5636, 1.1));
   sunLight(scene, 0xffd9a8, 2.6, V(-6, 9, 8), V(0, 0, -2), 10);
   const lamp = new THREE.PointLight(0xffc880, 9, 12, 1.4); lamp.position.set(0, 4.6, -1); scene.add(lamp);
-  const cast = castOf(scene, [['rich', 'rich'], ['butler', 'worker', { glasses: false, top: '#1e1e24', bottom: '#1e1e24', tie: '#f2f2f2' }]]);
+  const cast = castOf(scene, [['rich', 'rich'], ['butler', 'worker', { glasses: false, top: '#1e1e24', bottom: '#1e1e24', tie: '#f2f2f2' }], ['kid', 'kid']]);
   const glass = new THREE.Group(); scene.add(glass); cyl(glass, 0.06, 0.04, 0.18, std(0xf0e0b0, 0.1, { transparent: true, opacity: 0.8 }), 0, 0, 0, 12, false);
-  return finish(scene, cast, { glass, update(t) { streetTex.offset.x = t * 0.03; } });
+  // the wheel as a coffee table: lying flat on short legs under a glass top, a teacup on it
+  const table = new THREE.Group(); table.position.set(0, 0, -0.4); scene.add(table);
+  const tw = makeWheel(0.62, 0.12); tw.rotation.x = -Math.PI / 2; tw.position.y = 0.42; table.add(tw);
+  for (let k = 0; k < 3; k++) { const a = k * Math.PI * 2 / 3; cyl(table, 0.04, 0.04, 0.4, std(0xe2b13c, 0.3, { metalness: 0.7 }), Math.cos(a) * 0.45, 0.2, Math.sin(a) * 0.45, 8, false); }
+  const top = new THREE.Mesh(new THREE.CylinderGeometry(0.72, 0.72, 0.03, 40), new THREE.MeshStandardMaterial({ color: 0xcfe8ff, transparent: true, opacity: 0.14, roughness: 0.05, metalness: 0.1 })); top.position.y = 0.52; table.add(top); table.userData.top = top;
+  const cup = new THREE.Group(); cup.position.set(0.2, 0.54, 0.1); table.add(cup); cyl(cup, 0.07, 0.05, 0.09, std(0xfbf6e6, 0.3), 0, 0.045, 0, 14, false); cyl(cup, 0.12, 0.12, 0.012, std(0xfbf6e6, 0.3), 0, 0.0, 0, 18, false);
+  // glass shards for the crash
+  const shards = []; const shardM = new THREE.MeshStandardMaterial({ color: 0xdff2ff, transparent: true, opacity: 0.8, roughness: 0.05, side: THREE.DoubleSide });
+  for (let i = 0; i < 40; i++) { const sh = new THREE.Mesh(new THREE.CircleGeometry(R(0.06, 0.18), 3), shardM); sh.visible = false; sh.userData.v = V(R(-3, 3), R(0.5, 3.5), R(3, 7)); sh.userData.p = V(R(-3.2, 3.2), R(1, 3.8), -4.9); sh.userData.r = V(R(-9, 9), R(-9, 9), R(-9, 9)); scene.add(sh); shards.push(sh); }
+  const cart = makeCart(); cart.visible = false; scene.add(cart);
+  const gold = new THREE.Group(); scene.add(gold); gold.visible = false; const bag = new THREE.Mesh(new THREE.SphereGeometry(0.22, 14, 10), std(0x8a6a3a, 0.8)); bag.scale.set(1, 1.15, 1); ink(bag); gold.add(bag); for (let i = 0; i < 5; i++) cyl(gold, 0.07, 0.07, 0.02, std(0xe2b13c, 0.25, { metalness: 0.8 }), R(-0.25, 0.25), 0.05 + i * 0.02, R(0.1, 0.3), 14, false);
+  return finish(scene, cast, { glass, table, cup, shards, cart, gold, crashAt: null,
+    reset() { cart.visible = false; gold.visible = false; shards.forEach((s) => (s.visible = false)); this.crashAt = null; table.visible = true; top.visible = true; },
+    update(t) { streetTex.offset.x = t * 0.03;
+      if (this.crashAt != null) shards.forEach((s) => { const a = t - this.crashAt; s.visible = a > 0 && a < 1.6; if (!s.visible) return; const v = s.userData.v;
+        s.position.set(s.userData.p.x + v.x * a, Math.max(0.02, s.userData.p.y + v.y * a - 4.9 * a * a), s.userData.p.z + v.z * a); s.rotation.set(s.userData.r.x * a, s.userData.r.y * a, s.userData.r.z * a); }); } });
 }
 
 // ------------------------------------------------------------------ 2. prehistoric hill: the wheel that wasn't
@@ -137,12 +162,14 @@ export function buildStreet() {
   const signs = ['PIANOS', 'FURNITURE', 'FRIDGES', 'BAKERY', 'PORTERS\nFOR HIRE', 'MOVING CO.'];
   for (let i = 0; i < 6; i++) { building(scene, -6.2, -2 - i * 5.6, 5, 4, R(7, 11), walls[i % 6], roofs[i % 4], { ry: Math.PI / 2, sign: signs[i], signBg: ['#b8452e', '#3f7f86', '#7a4fa8', '#d4802a'][i % 4], awning: i % 2 ? 0xd4572a : 0x3f8a8c }); building(scene, 6.2, -2 - i * 5.6, 5, 4, R(7, 12), walls[(i + 3) % 6], roofs[(i + 1) % 4], { ry: -Math.PI / 2, sign: signs[(i + 3) % 6], signBg: ['#3f7f86', '#b8452e', '#d4802a', '#7a4fa8'][i % 4] }); }
   sign(scene, 'DELIVERY:\n2 PORTERS PER\nSOFA', '#2a1a14', 1.6, 1.3, -3.9, 2.4, 1.2, Math.PI / 2 - 0.3, 44);
+  sign(scene, "PORTERS' GUILD\nCARRYING THE WORLD", '#7a2a2a', 5.2, 1.6, 0, 7.4, -26, 0, 52);
+  for (const x of [-2.7, 2.7]) box(scene, 0.14, 7.6, 0.14, std(0x3a2a1a), x, 3.8, -26.05, false);
   box(scene, 0.12, 2.2, 0.12, std(0x3a2a1a), -3.9, 1.1, 1.25);
   const lamp = new THREE.Group(); scene.add(lamp);
   scene.add(new THREE.HemisphereLight(0xffe8c8, 0x7a5a3a, 1.05)); sunLight(scene, 0xffdcac, 3.0, V(-14, 16, 10), V(0, 0, -6), 18);
-  const P = { piano: piano(), sofa: sofa(), fridge: fridge(), crateA: crate(), crateB: crate(0xc9a060), crateC: crate(0x9a6a3a) }; Object.values(P).forEach((p) => scene.add(p));
-  const cast = castOf(scene, [['p1', 'porter'], ['p2', 'porterB'], ['p3', 'porterC'], ['p4', 'porter', { hatColor: '#7a4fa8' }], ['p5', 'porterB', { top: '#c97a5a' }], ['p6', 'porterC', { top: '#7fb6c6' }], ['p7', 'porter', { top: '#e8d8b0' }], ['p8', 'porterB', { top: '#d4b04a' }]]);
-  return finish(scene, cast, { P });
+  const P = { piano: piano(), sofa: sofa(), fridge: fridge(), crateA: crate(), crateB: crate(0xc9a060), crateC: crate(0x9a6a3a), crateD: crate(0xb8864c), crateE: crate(0xa87a4a), cart: makeCart(), cSofa: sofa(), cFridge: fridge(), cPiano: piano() }; Object.values(P).forEach((p) => { scene.add(p); p.visible = false; });
+  const cast = castOf(scene, [['p1', 'porter'], ['p2', 'porterB'], ['p3', 'porterC'], ['p4', 'porter', { hatColor: '#7a4fa8' }], ['p5', 'porterB', { top: '#c97a5a' }], ['p6', 'porterC', { top: '#7fb6c6' }], ['p7', 'porter', { top: '#e8d8b0' }], ['p8', 'porterB', { top: '#d4b04a' }], ['p9', 'porterC', { top: '#9ab06a' }], ['p10', 'porter', { top: '#c9a0d0' }], ['kid', 'kid']]);
+  return finish(scene, cast, { P, reset() { Object.values(P).forEach((p) => (p.visible = false)); } });
 }
 
 // ------------------------------------------------------------------ 4. canal city
@@ -253,13 +280,19 @@ export function buildRally() {
   ground(scene, new THREE.MeshStandardMaterial({ map: cobble([40, 40]), roughness: 0.5 }), 300);
   const stage = new THREE.Group(); stage.position.set(0, 0, -4); scene.add(stage);
   box(stage, 6, 1.0, 3, std(0x8a5a3a, 0.5), 0, 0.5, 0); box(stage, 6.4, 0.12, 3.4, std(0xa8452e, 0.6), 0, 1.06, 0);
-  sign(stage, 'ANNUAL VOTE:\nTHE "WHEEL"?', '#3f7f86', 4.2, 1.5, 0, 3.6, -1.4, 0, 54);
+  const wanted = new THREE.Mesh(new THREE.PlaneGeometry(2.4, 3.2), new THREE.MeshStandardMaterial({ map: canvasTex(384, 512, (ctx, w, h) => { ctx.fillStyle = '#f2dfb0'; ctx.fillRect(0, 0, w, h); ctx.strokeStyle = '#5a3a26'; ctx.lineWidth = 14; ctx.strokeRect(10, 10, w - 20, h - 20);
+    ctx.fillStyle = '#3a2216'; ctx.font = 'bold 78px "DejaVu Serif", serif'; ctx.textAlign = 'center'; ctx.fillText('WANTED', w / 2, 100);
+    ctx.fillStyle = '#fbf9f4'; ctx.beginPath(); ctx.arc(w / 2, 240, 90, 0, 7); ctx.fill(); ctx.lineWidth = 9; ctx.stroke(); ctx.fillStyle = '#3f8a8c'; ctx.beginPath(); ctx.arc(w / 2, 225, 92, Math.PI * 1.05, Math.PI * 1.95); ctx.fill();
+    ctx.fillStyle = '#3a2216'; for (const x of [w / 2 - 32, w / 2 + 32]) { ctx.beginPath(); ctx.arc(x, 245, 10, 0, 7); ctx.fill(); } ctx.lineWidth = 7; ctx.beginPath(); ctx.arc(w / 2, 270, 26, 0.2, Math.PI - 0.2); ctx.stroke();
+    ctx.font = 'bold 30px "DejaVu Sans"'; ctx.fillText('FOR BUILDING A', w / 2, 380); ctx.fillText('"WHEEL"', w / 2, 418); ctx.fillStyle = '#b8452e'; ctx.font = 'bold 44px "DejaVu Sans"'; ctx.fillText('REWARD: 1000 GOLD', w / 2, 476); }), roughness: 0.7 }));
+  wanted.position.set(0, 3.4, -1.4); ink(wanted); stage.add(wanted);
+  sign(scene, "PORTERS' GUILD", '#7a2a2a', 6.4, 1.1, 0, 6.2, -5.6, 0, 70);
   for (const x of [-2.6, 2.6]) box(stage, 0.15, 3.4, 0.15, std(0x3a2a1a), x, 2.2, -1.4, false);
   // the wheel itself (a prop, never used)
   const wheel = new THREE.Group(); scene.add(wheel); const rim = new THREE.Mesh(new THREE.TorusGeometry(0.55, 0.08, 10, 32), std(0x8a5a3a, 0.5)); rim.castShadow = true; ink(rim); wheel.add(rim);
   for (let k = 0; k < 4; k++) { const sp = box(wheel, 1.05, 0.06, 0.06, std(0x6a4426, 0.5), 0, 0, 0, false); sp.rotation.z = k * Math.PI / 4; }
   const hub = cyl(wheel, 0.12, 0.12, 0.2, std(0x3a2a1a, 0.5), 0, 0, 0, 12, false); hub.rotation.x = Math.PI / 2;
-  const banners = []; const texts = ['NO WHEELS!', 'BACKS NOT\nWHEELS', 'PORTERS\nUNION', 'NO!', 'CARRY ON!', 'NO WHEELS!'];
+  const banners = []; const texts = ['NO WHEELS,\nNO LAYOFFS', 'SAVE OUR\nJOBS!', "PORTERS'\nGUILD", 'NO WHEELS!', 'BACKS NOT\nWHEELS', 'CATCH\nTHE KID!'];
   for (let i = 0; i < 6; i++) { const s = new THREE.Group(); scene.add(s); const pl = new THREE.Mesh(new THREE.PlaneGeometry(1.1, 0.75), new THREE.MeshStandardMaterial({ map: signTex(texts[i], ['#b8452e', '#2a1a14', '#3f7f86', '#d4802a', '#7a4fa8', '#b8452e'][i], '#fff8e6', 256, 176, texts[i].length > 6 ? 36 : 52) })); pl.position.y = 0.9; ink(pl); s.add(pl);
     const back = new THREE.Mesh(new THREE.PlaneGeometry(1.1, 0.75), std(0xc9a27a, 0.8)); back.rotation.y = Math.PI; back.position.y = 0.9; s.add(back);
     const st = cyl(s, 0.025, 0.025, 1.0, std(0x6a4426), 0, 0.3, 0, 6, false); banners.push(s); }
@@ -267,6 +300,51 @@ export function buildRally() {
   for (let i = 0; i < 6; i++) building(scene, -15 + i * 6, -14, 5.6, 4, R(8, 13), walls[i % 5], [0x3f8a8c, 0xa8452e][i % 2], {});
   clouds(scene, 6, 45, 70, -100);
   scene.add(new THREE.HemisphereLight(0xcfe6ff, 0x7a5a3a, 1.0)); sunLight(scene, 0xffe8c8, 3.2, V(-12, 18, 12), V(0, 0, -2), 16);
-  const cast = castOf(scene, [['inventor', 'inventor'], ['u1', 'porter'], ['u2', 'porterB'], ['u3', 'porterC'], ['u4', 'porter', { hatColor: '#7a4fa8' }], ['u5', 'porterB', { top: '#c97a5a' }], ['u6', 'porterC', { top: '#7fb6c6' }], ['u7', 'porter', { top: '#e8d8b0' }]]);
+  const cast = castOf(scene, [['boss', 'rich'], ['inventor', 'inventor'], ['u1', 'porter'], ['u2', 'porterB'], ['u3', 'porterC'], ['u4', 'porter', { hatColor: '#7a4fa8' }], ['u5', 'porterB', { top: '#c97a5a' }], ['u6', 'porterC', { top: '#7fb6c6' }], ['u7', 'porter', { top: '#e8d8b0' }]]);
   return finish(scene, cast, { wheel, banners });
+}
+
+// ------------------------------------------------------------------ the kid's workshop shed
+export function buildShed() {
+  _s = 91; const scene = new THREE.Scene(); scene.background = new THREE.Color(0xd8a870);
+  const plank = canvasTex(256, 256, (ctx, w, h) => { for (let i = 0; i < 4; i++) { ctx.fillStyle = ['#a8784a', '#9a6a3e', '#b0804e', '#946638'][i]; ctx.fillRect(0, i * 64, w, 62); } spots(ctx, w, h, 20, '60,30,10', 20, 60, 0.12); }, [3, 2]);
+  ground(scene, new THREE.MeshStandardMaterial({ map: plank, roughness: 0.6 }), 30);
+  const wm = new THREE.MeshStandardMaterial({ map: plank, roughness: 0.7 });
+  plane(scene, 10, 5, wm, 0, 2.5, -3); plane(scene, 10, 5, wm, -4, 2.5, 0, Math.PI / 2); plane(scene, 10, 5, wm, 4, 2.5, 0, -Math.PI / 2);
+  const win = plane(scene, 1.4, 1.1, new THREE.MeshBasicMaterial({ map: skyTex([[0, '#8cc6e8'], [1, '#fde2b4']]), toneMapped: false }), -1.6, 2.6, -2.98);
+  const ray = new THREE.Mesh(new THREE.PlaneGeometry(1.5, 5), new THREE.MeshBasicMaterial({ map: canvasTex(64, 256, (ctx, w, h) => { const g = ctx.createLinearGradient(0, 0, 0, h); g.addColorStop(0, 'rgba(255,236,190,0.55)'); g.addColorStop(1, 'rgba(255,236,190,0)'); ctx.fillStyle = g; ctx.fillRect(0, 0, w, h); }), transparent: true, blending: THREE.AdditiveBlending, depthWrite: false }));
+  ray.position.set(-1.0, 1.6, -1.6); ray.rotation.set(-0.9, 0.3, 0); ray.userData.noCollide = true; scene.add(ray);
+  const bench = new THREE.Group(); bench.position.set(1.0, 0, -0.9); scene.add(bench); box(bench, 2.4, 0.12, 0.9, std(0x7a4a28, 0.6), 0, 0.95, 0); for (const x of [-1.1, 1.1]) for (const z of [-0.35, 0.35]) box(bench, 0.1, 0.95, 0.1, std(0x5a3a22, 0.6), x, 0.47, z, false);
+  for (let i = 0; i < 6; i++) box(scene, R(0.1, 0.4), 0.06, R(0.1, 0.3), std(0xc9a27a, 0.7), R(-2.5, 2.5), 0.03, R(-1.5, 1.5), false); // offcuts
+  const sawdust = new THREE.Mesh(new THREE.CircleGeometry(1.4, 24), std(0xe8c890, 0.9)); sawdust.rotation.x = -Math.PI / 2; sawdust.position.set(0.4, 0.005, -0.4); sawdust.userData.noCollide = true; scene.add(sawdust);
+  const failed = [['SQUARE', 0x9a8a7a], ['TRIANGLE', 0x8a7a6a]]; failed.forEach(([n, c], i) => { const g = new THREE.Mesh(i ? new THREE.CylinderGeometry(0.4, 0.4, 0.1, 3) : new THREE.BoxGeometry(0.7, 0.7, 0.1), std(c, 0.8)); g.position.set(-2.6 + i * 0.9, 0.38, -2.6); g.rotation.z = i ? Math.PI / 2 : 0; g.castShadow = true; ink(g); scene.add(g); });
+  sign(scene, 'ATTEMPT #47', '#2a1a14', 1.6, 0.45, 1.2, 3.1, -2.95, 0, 60);
+  const wheel = makeWheel(0.45, 0.1); scene.add(wheel);
+  const hammer = new THREE.Group(); scene.add(hammer); box(hammer, 0.05, 0.42, 0.05, std(0x6a4426), 0, -0.15, 0, false); box(hammer, 0.18, 0.08, 0.08, std(0x5a5a62, 0.4, { metalness: 0.6 }), 0, 0.06, 0, false);
+  scene.add(new THREE.HemisphereLight(0xffe2b8, 0x6a4426, 1.0));
+  const key = new THREE.SpotLight(0xffd8a0, 60, 20, 0.6, 0.4, 1.2); key.position.set(-2.4, 4.2, -1.5); key.target.position.set(0.6, 0, 0); key.castShadow = true; key.shadow.bias = -0.001; key.shadow.normalBias = 0.05; scene.add(key, key.target);
+  const fill = new THREE.PointLight(0xffc890, 6, 10, 1.5); fill.position.set(1.5, 3, 2); scene.add(fill);
+  const cast = castOf(scene, [['kid', 'kid']]);
+  return finish(scene, cast, { wheel, hammer });
+}
+
+// ------------------------------------------------------------------ the downhill chase street (stair city)
+export const SLOPE = 0.2; // road drops 0.2 m per metre toward -z
+export const roadY = (z) => Math.min(0, z) * SLOPE;
+export function buildChase() {
+  _s = 101; const scene = new THREE.Scene(); scene.fog = new THREE.Fog(0xf4c890, 60, 260);
+  skyDome(scene, skyTex([[0, '#4a8ad8'], [0.38, '#9ccdf0'], [0.5, '#fde2b4'], [1, '#fde2b4']]));
+  const flat = ground(scene, std(0xc98a5a, 0.8), 600); flat.position.y = -40;
+  const road = new THREE.Mesh(new THREE.PlaneGeometry(7, 200), new THREE.MeshStandardMaterial({ map: cobble([4, 100]), roughness: 0.5 })); road.rotation.x = -Math.PI / 2 + Math.atan(SLOPE); road.position.set(0, roadY(-100) / 2 - 0.0, -100 + 100 * (1 - Math.cos(Math.atan(SLOPE))));
+  road.position.set(0, -10, -50); road.rotation.x = -Math.PI / 2 - Math.atan(SLOPE) * 0; road.geometry = new THREE.PlaneGeometry(7, 200); road.position.set(0, 0, 0); road.rotation.set(0, 0, 0);
+  { const g = new THREE.PlaneGeometry(7, 210, 1, 1); g.rotateX(-Math.PI / 2); const p = g.attributes.position; for (let i = 0; i < p.count; i++) { const z = p.getZ(i) - 95; p.setZ(i, z); p.setY(i, roadY(z)); } g.computeVertexNormals(); road.geometry = g; }
+  road.receiveShadow = true; road.userData.noCollide = true; scene.add(road);
+  const walls = ['#e8b88a', '#f2d6a0', '#d98a5a', '#f0c8a0', '#c9a27a', '#4f8486'];
+  for (let i = 0; i < 18; i++) { const z = 4 - i * 6; for (const side of [-1, 1]) { const h = R(9, 18); const b = building(scene, side * 6.4, z, 5, 5, h, walls[(i + (side > 0 ? 3 : 0)) % 6], [0x3f8a8c, 0xa8452e, 0x7a4fa8][i % 3], { ry: side > 0 ? -Math.PI / 2 : Math.PI / 2, lit: 0.25 }); b.position.y = roadY(z) - 1;
+      for (let f = 1; f < Math.floor(h / 3); f++) { box(b, 3.0, 0.16, 0.9, std(0x5a3a26, 0.5), 0, f * 3, 2.95, false); box(b, 3.0, 0.5, 0.06, std(0x3a2a1a, 0.5), 0, f * 3 + 0.33, 3.37, false); for (const x of [-1.45, 1.45]) box(b, 0.06, 0.5, 0.9, std(0x3a2a1a, 0.5), x, f * 3 + 0.33, 2.95, false); } } } // balconies with railings
+  const P = { cart: makeCart(), cSofa: sofa(), crates: crate() }; Object.values(P).forEach((p) => scene.add(p));
+  clouds(scene, 7, 40, 80, -120);
+  scene.add(new THREE.HemisphereLight(0xcfe6ff, 0x7a5a3a, 1.0)); const sun = sunLight(scene, 0xffe0b0, 3.2, V(-20, 30, 10), V(0, -6, -30), 40);
+  const cast = castOf(scene, [['kid', 'kid'], ['c1', 'porter'], ['c2', 'porterB'], ['c3', 'porterC'], ['c4', 'porter', { hatColor: '#7a4fa8' }], ['c5', 'porterB', { top: '#c97a5a' }], ['c6', 'porterC', { top: '#7fb6c6' }]]);
+  return finish(scene, cast, { P });
 }

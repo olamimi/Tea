@@ -6,7 +6,7 @@ import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js'
 import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
 import { BokehPass } from 'three/addons/postprocessing/BokehPass.js';
 import { ShaderPass } from 'three/addons/postprocessing/ShaderPass.js';
-import { buildLobby, buildHill, buildStreet, buildCanal, buildStairs, buildSkyline, buildPlaza, buildRally } from './sets.js';
+import { buildLobby, buildStreet, buildRally, buildShed, buildChase } from './sets.js';
 import { buildShots } from './shots.js';
 
 const W = 1080, H = 1920, FPS = 30;
@@ -43,12 +43,12 @@ const mblur = new ShaderPass({
 composer.addPass(mblur);
 // per-beat grade (saturation tracks the emotion: drained when accused, cool at the office, golden at vindication)
 const GRADES = {
-  default: { sat: 1.3, warm: 0.6, gain: 1.0, tint: [0, 0, 0] },
-  hook: { sat: 1.35, warm: 0.9, gain: 1.02, tint: [0.01, 0, -0.01] }, loop: { sat: 1.35, warm: 0.9, gain: 1.02, tint: [0.01, 0, -0.01] },
-  rule: { sat: 1.25, warm: 0.5, gain: 1.0, tint: [0, 0, 0] },
-  stairs: { sat: 1.15, warm: 0.3, gain: 0.97, tint: [0, 0, 0.01] },
-  skyline: { sat: 1.4, warm: 1.0, gain: 1.03, tint: [0.015, 0, 0.005] },
-  twist: { sat: 1.3, warm: 0.6, gain: 1.0, tint: [0, 0, 0] },
+  default: { sat: 1.3, warm: 0.6, gain: 1.0, tint: [0, 0, 0], vig: 0.18 },
+  hook: { sat: 1.25, warm: 0.9, gain: 0.92, tint: [0.01, -0.005, -0.01], vig: 0.45 }, loop: { sat: 1.25, warm: 0.9, gain: 0.92, tint: [0.01, -0.005, -0.01], vig: 0.45 },
+  shed: { sat: 1.3, warm: 1.0, gain: 1.0, tint: [0, 0, 0], vig: 0.25 },
+  guild: { sat: 1.0, warm: 0.2, gain: 0.94, tint: [0.03, -0.01, -0.01], vig: 0.3 },
+  chase: { sat: 1.45, warm: 0.7, gain: 1.03, tint: [0, 0, 0], vig: 0.15 }, crash: { sat: 1.4, warm: 0.7, gain: 1.03, tint: [0, 0, 0], vig: 0.15 },
+  twist: { sat: 1.35, warm: 1.0, gain: 1.03, tint: [0.01, 0, -0.005], vig: 0.2 },
 };
 let focusD = 3;
 const acc = document.createElement('canvas'); acc.width = W; acc.height = H; const actx = acc.getContext('2d');
@@ -58,7 +58,7 @@ window.setup = async (opts = {}) => {
   SS = opts.ss || 1;
   timeline = await (await fetch('build/timeline.json')).json();
   const pmrem = new THREE.PMREMGenerator(renderer); const env = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
-  sets = { lobby: buildLobby(), hill: buildHill(), street: buildStreet(), canal: buildCanal(), stairs: buildStairs(), skyline: buildSkyline(), plaza: buildPlaza(), rally: buildRally() };
+  sets = { lobby: buildLobby(), street: buildStreet(), rally: buildRally(), shed: buildShed(), chase: buildChase() };
   for (const s of Object.values(sets)) { s.scene.environment = env; s.scene.environmentIntensity = 0.55; }
   const norm = (w) => w.toLowerCase();
   const T = {
@@ -69,6 +69,7 @@ window.setup = async (opts = {}) => {
       const j = all.findIndex((x, k) => k >= i && norm(x.w) === norm(to)); if (i < 0 || j < 0) throw new Error(`words not found: ${shot}/${from}..${to}`); return all.slice(i, j + 1);
     },
     shot(name) { return timeline.shots.find((s) => s.name === name); },
+    shotWords(name) { return timeline.lines.filter((l) => l.shot === name).flatMap((l) => l.words); },
   };
   const S = buildShots(T);
   segs = [];
@@ -100,6 +101,7 @@ const easeIO = (x) => (x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2
 export function transOf(seg) { // transition INTO this segment
   const i = segs.indexOf(seg); const prev = segs[i - 1]; if (!prev) return 'none';
   if (seg.trans) return seg.trans;
+  if (seg.cam.track || prev.cam.track) return 'whip'; // face-tracking close-ups: cut with a whip (live subject, never swoop)
   if (prev.set === seg.set) { // swoop only between nearby, similar angles; otherwise whip (never fly through people)
     const a = prev.cam(prev.end - prev.start, 1), b = seg.cam(0, 0);
     const da = a.l.clone().sub(a.p).normalize(), db = b.l.clone().sub(b.p).normalize();
@@ -110,7 +112,7 @@ export function transOf(seg) { // transition INTO this segment
 }
 function baseCam(seg, t) {
   const lt = Math.max(0, t - seg.start), u = Math.min(1, lt / Math.max(0.01, seg.end - seg.start));
-  const c = seg.cam(lt, u);
+  const c = seg.cam(lt, u, t, sets[seg.set]);
   return { p: c.p.clone(), l: c.l.clone(), fov: c.fov * Math.exp(-CAM.push * lt), roll: c.roll || 0, lt, u };
 }
 function poseCamera(seg, t) {
@@ -136,16 +138,18 @@ function poseCamera(seg, t) {
   mblur.uniforms.radial.value = radial;
   return { lt: c.lt, u: c.u };
 }
+function runTick(seg, set, t, u) { if (seg.tick) seg.tick(set, t, u); else if (seg.inherit) for (let k = seg.k - 1; k >= 0; k--) { const sg = seg.list[k]; if (sg.tick && sg.set === seg.set) { sg.tick(set, t, u); break; } } }
 function renderOnce(t, forced, jitter) {
   const seg = forced || segAt(t); activate(seg);
   const set = sets[seg.set];
+  if (seg.cam.track) { const lt = Math.max(0, t - seg.start), u0 = Math.min(1, lt / Math.max(0.01, seg.end - seg.start)); runTick(seg, set, t, u0); set.update(t, camera); } // place the subject first so the camera can frame its head
   const { u } = poseCamera(seg, t);
   if (jitter) camera.setViewOffset(W, H, jitter[0], jitter[1], W, H); else camera.clearViewOffset();
-  if (seg.tick) seg.tick(set, t, u); else if (seg.inherit) for (let k = seg.k - 1; k >= 0; k--) { const sg = seg.list[k]; if (sg.tick && sg.set === seg.set) { sg.tick(set, t, u); break; } }
+  runTick(seg, set, t, u);
   set.update(t, camera);
   if (seg.post) seg.post(set, t, u); else for (let k = seg.k - 1; k >= 0; k--) { const sg = seg.list[k]; if (sg.post && sg.set === seg.set) { sg.post(set, t, u); break; } }
   renderer.toneMappingExposure = (set.exposure || 1) * 1.08;
-  const G = GRADES[seg.shot] || GRADES.default; grade.uniforms.sat.value = G.sat; grade.uniforms.warm.value = G.warm; grade.uniforms.gain.value = G.gain; grade.uniforms.tint.value.set(...G.tint);
+  const G = GRADES[seg.shot] || GRADES.default; grade.uniforms.sat.value = G.sat; grade.uniforms.warm.value = G.warm; grade.uniforms.gain.value = G.gain; grade.uniforms.tint.value.set(...G.tint); grade.uniforms.vig.value = G.vig ?? 0.18;
   bokeh.scene = set.scene; bokeh.uniforms.focus.value = focusD;
   renderPass.scene = set.scene; composer.render();
   return seg;
@@ -196,4 +200,24 @@ window.clipCheck = (f) => {
     }
   }
   return { f, t: +t.toFixed(2), shot: seg.shot, k: seg.k, issues: [...new Set(out)] };
+};
+
+// exact on-screen face size: the largest visible, unoccluded head (fraction of frame height) - rubric: >=30% in >=70% of frames
+window.faceCheck = (f) => {
+  const t = f / FPS; const seg = segAt(t); renderOnce(t, seg);
+  const set = sets[seg.set]; const rc = new THREE.Raycaster(); let best = 0, who = null;
+  const cp = camera.getWorldPosition(new THREE.Vector3());
+  for (const [name, c] of Object.entries(set.cast)) {
+    if (!c.root.visible) continue;
+    const hc = c.head.getWorldPosition(new THREE.Vector3()); const r = c.hr;
+    const ndc = hc.clone().project(camera); if (Math.abs(ndc.x) > 1 || Math.abs(ndc.y) > 1 || ndc.z > 1) continue;
+    const up = new THREE.Vector3(0, 1, 0).applyQuaternion(camera.quaternion);
+    const a = hc.clone().addScaledVector(up, r).project(camera), b = hc.clone().addScaledVector(up, -r).project(camera);
+    const frac = Math.abs(a.y - b.y) / 2;
+    const dir = hc.clone().sub(cp); const dist = dir.length(); rc.set(cp, dir.normalize()); rc.far = dist - r * 1.1;
+    const own = new Set(); c.root.traverse((o) => own.add(o)); rc.camera = camera;
+    const hit = rc.intersectObjects(set.scene.children, true).find((h) => h.object.visible && !own.has(h.object) && h.object.isMesh && !(h.object.material?.transparent));
+    if (!hit && frac > best) { best = frac; who = name; }
+  }
+  return { t: +t.toFixed(2), shot: seg.shot, k: seg.k, set: seg.set, face: +best.toFixed(3), who };
 };

@@ -73,55 +73,73 @@ S.cc(DRUM, 0, 7, 72)
 for ch in range(16): S.cc(ch, 0, 11, 110)
 sh = lambda n: shot[n]["start"]
 bt = 60 / 124
-# whimsical oom-pah march in F: tuba on 1/3, pizz chords on 2/4, xylophone tune; runs hook -> sundial
+# HOOK: mysterious low pad + celesta, then the march kicks in at the setup
+H0, H1 = sh("hook"), sh("setup")
+for p in (41, 48, 53): S.note(STR, H0, H1 - H0 + 0.2, p, 60)
+for i, p in enumerate([77, 80, 84, 80, 77]): S.note(CEL, H0 + 0.2 + i * 0.42, 0.4, p, 60)
+S.note(TIMP, word("hook", "illegal"), 0.6, 36, 100)
 prog_ = [(41, [57, 60, 65]), (46, [58, 62, 65]), (48, [60, 64, 67]), (41, [57, 60, 65])]
 tune = [(0, .5, 77), (.5, .5, 76), (1, .5, 74), (1.5, .5, 72), (2, 1, 69), (3, 1, 72), (4, .5, 74), (4.5, .5, 72), (5, .5, 70), (5.5, .5, 69), (6, 2, 67),
         (8, .5, 72), (8.5, .5, 74), (9, .5, 76), (9.5, .5, 77), (10, 1, 79), (11, 1, 76), (12, .5, 77), (12.5, .5, 76), (13, .5, 74), (13.5, .5, 72), (14, 2, 77)]
-A0, A1 = 0.0, sh("twist")
-t = A0; bar = 0
-while t < A1:
-    root, tri = prog_[bar % 4]
-    for b in range(4):
-        tb = t + b * bt
-        if tb >= A1: break
-        if b % 2 == 0: S.note(TUBA, tb, bt * 0.6, root - 12, 92)
-        else:
-            for p in tri: S.note(PIZZ, tb, bt * 0.4, p - 12, 60)
-        S.note(DRUM, tb, 0.05, 76 if b % 2 else 77, 30)
-    for b, d, p in tune:
-        if (bar % 4) * 4 <= b < (bar % 4 + 1) * 4:
-            tk = t + (b - (bar % 4) * 4) * bt
-            if tk < A1: S.note(XYL if bar % 8 < 4 else FLUTE, tk, d * bt * 0.9, p, 72)
-    t += 4 * bt; bar += 1
-# stings: flash on the rule, a "boing" stop of the stone, porters' strain, canal glissando, stairs climb
-for i, p in enumerate([72, 76, 79, 84]): S.note(XYL, sh("rule") + i * 0.05, 0.25, p, 100)
-S.note(TIMP, word("rule", "invented"), 0.5, 41, 120); S.note(BSN, word("rule", "invented") + 0.1, 0.5, 41, 100)
-for i in range(6): S.note(BSN, sh("porters") + 0.3 + i * 0.45, 0.4, 41 - (i % 2) * 2, 80)
-for i, p in enumerate(range(60, 84, 3)): S.note(FLUTE, sh("canal") + i * 0.06, 0.2, p, 70)
-for i in range(10): S.note(PIZZ, sh("stairs") + i * 0.28, 0.2, 48 + i, 70 + i * 3)
-# skyline spectacle: brass + choir swell, timpani roll
-K0, K1 = sh("skyline"), sh("sundial")
-S.swell(CHOIR, K0, K1, 50, 120); S.swell(STR, K0, K1, 60, 120)
-for p in (53, 57, 60, 65): S.note(CHOIR, K0, K1 - K0, p, 80); S.note(STR, K0, K1 - K0, p, 78)
-for p in (41, 48, 53): S.note(BRASS, K0 + 0.2, K1 - K0 - 0.2, p + 12, 96)
-for i in range(30): S.note(TIMP, K0 + i * 0.06, 0.08, 41, 50 + i * 2)
-S.note(TIMP, K0 + 1.9, 1.0, 41, 124); S.note(DRUM, K0 + 1.9, 1.4, 49, 110)
-# twist: rally chant drums, then the wheel rolls away (descending xylophone) -> comic tuba
-T0 = sh("twist"); tout = word("twist", "out.")
-t = T0; k = 0
-while t < tout:
-    S.note(DRUM, t, 0.05, 36, 80 if k % 2 == 0 else 60); S.note(DRUM, t + bt / 2, 0.05, 38, 60); t += bt; k += 1
-for i, p in enumerate(range(84, 60, -2)): S.note(XYL, tout + i * 0.09, 0.15, p, 90)
-S.note(TUBA, tout + 1.2, 0.3, 36, 110); S.note(TUBA, tout + 1.5, 0.6, 29, 110)
-# loop: warm return of the tune, unresolved (ends on the dominant so it flows into the start)
+def march(A0, A1, lead=XYL, vel=72):
+    t = A0; bar = 0
+    while t < A1:
+        root, tri = prog_[bar % 4]
+        for b in range(4):
+            tb = t + b * bt
+            if tb >= A1: break
+            if b % 2 == 0: S.note(TUBA, tb, bt * 0.6, root - 12, 92)
+            else:
+                for p in tri: S.note(PIZZ, tb, bt * 0.4, p - 12, 60)
+            S.note(DRUM, tb, 0.05, 76 if b % 2 else 77, 30)
+        for b, d, p in tune:
+            if (bar % 4) * 4 <= b < (bar % 4 + 1) * 4:
+                tk = t + (b - (bar % 4) * 4) * bt
+                if tk < A1: S.note(lead, tk, d * bt * 0.9, p, vel)
+        t += 4 * bt; bar += 1
+# SETUP: porters' oom-pah march (heavy)
+march(sh("setup"), sh("shed"), XYL, 70)
+# SHED: hammer taps, then a bright "discovery" chord + rising glissando as the wheel rolls
+S0 = sh("shed"); to = word("shed", "one.")
+for i in range(int((to - S0) / 0.31)): S.note(DRUM, S0 + i * 0.31, 0.05, 76, 70)
+for i, p in enumerate(range(65, 89, 2)): S.note(CEL, to - 0.3 + i * 0.04, 0.3, p, 80)
+for p in (53, 57, 60, 65, 69): S.note(CHOIR, to, 1.3, p, 85); S.note(STR, to, 1.3, p, 75)
+# CART: same march, light and fast, flute lead (the kid's joy)
+march(sh("cart"), sh("guild"), FLUTE, 78)
+S.note(BSN, word("cart", "ten"), 0.4, 41, 100); S.note(TUBA, word("cart", "kid."), 0.6, 29, 110)
+for i in range(5): S.note(DRUM, word("cart", "kid.") + 0.1 + i * 0.06, 0.05, 38, 90)
+# GUILD: angry minor drums + low brass stabs; tension string tremolo; reward sting
+G0, G1 = sh("guild"), sh("chase")
+t = G0; k = 0
+while t < G1:
+    S.note(DRUM, t, 0.05, 36, 90 if k % 2 == 0 else 70); S.note(DRUM, t + bt / 2, 0.05, 38, 70); t += bt; k += 1
+for p in (41, 44, 48): S.note(TREM, G0, G1 - G0, p, 80)
+S.swell(TREM, G0, G1, 70, 120)
+for tt in (word("guild", "jobs."), word("guild", "price"), word("guild", "head.")):
+    for p in (29, 41, 44): S.note(BRASS, tt, 0.5, p + 12, 115)
+    S.note(TIMP, tt, 0.6, 29, 120)
+# CHASE + CRASH: galloping 6/8 strings and brass, building, big crash hit on "window."
+C0, C1 = sh("chase"), sh("twist")
+t = C0; k = 0
+while t < C1:
+    S.note(STR, t, 0.12, [53, 53, 57, 60, 57, 53][k % 6], 90); S.note(BASS, t, 0.12, 29 if k % 3 == 0 else 36, 85); t += 0.16; k += 1
+S.swell(STR, C0, C1, 80, 125)
+for p in (65, 69, 72): S.note(BRASS, word("chase", "rolled."), 1.0, p, 115)
+tw = word("crash", "window.")
+S.note(TIMP, tw, 1.0, 29, 127); S.note(DRUM, tw, 1.6, 49, 127); S.note(DRUM, tw + 0.05, 1.2, 57, 120)
+for i, p in enumerate(range(96, 72, -3)): S.note(CEL, tw + i * 0.03, 0.2, p, 100)
+# TWIST: comic silence-beat, then a sly smug theme; ends unresolved into the loop
+T0 = sh("twist"); tb = word("twist", "bought"); tn = word("twist", "Now")
+S.note(BSN, T0 + 0.2, 0.3, 41, 90); S.note(BSN, T0 + 0.6, 0.3, 44, 90)
+for i, p in enumerate([72, 76, 79, 84]): S.note(XYL, tb + i * 0.05, 0.25, p, 100)
+march(tn, sh("loop"), CLAR, 70)
 L0 = sh("loop")
-for i, (b, d, p) in enumerate(tune[:8]): S.note(FLUTE, L0 + 0.2 + b * bt, d * bt * 0.9, p, 70)
-for p in (60, 64, 67): S.note(STR, L0, END - L0, p - 12, 70)
-S.note(TUBA, L0, END - L0, 36, 80)
+for p in (41, 48, 53): S.note(STR, L0, END - L0 + 0.5, p, 60)
+for i, p in enumerate([77, 80, 84]): S.note(CEL, L0 + 0.15 + i * 0.42, 0.4, p, 60)
 S.save(B / "music.mid")
-X = Score(); X.prog(0, 115, vol=100)  # woodblock-ish for the stone stop
+X = Score(); X.prog(0, 115, vol=110); X.prog(1, 47, vol=127)
 for ch in range(16): X.cc(ch, 0, 11, 120)
-X.note(0, word("rule", "invented"), 0.2, 60, 120)
+X.note(1, word("crash", "window."), 0.4, 36, 127)
 X.save(B / "bells.mid")
 for name in ("music", "bells"):
     subprocess.run(["fluidsynth", "-ni", "-q", "-g", "0.7", "-r", "48000", "-F", str(B / f"{name}.wav"), SF2, str(B / f"{name}.mid")], check=True)
