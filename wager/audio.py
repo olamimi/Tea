@@ -170,9 +170,16 @@ add(crackle(shot["god"]["start"] - w("white", "being") + 0.5), w("white", "being
 add(impact(), w("god", "left"), 0.9)
 add(impact(), w("burn", "burned."), 1.0); add(crackle(0.8), w("burn", "burned."), 0.8)
 add(crackle(shot["hell"]["dur"] + 1), shot["hell"]["start"], 0.55)
-voice = load("voice.wav"); music = load("music.wav"); bells = load("bells.wav")
+voice = load("voice.wav"); bells = load("bells.wav")
+# MUSIC (brief): "Numbers" by Temporex (instrumental, perfect intro loop), supplied by the user. Starts right after the
+# "huss", runs continuously, ducked under speech, dips at the death and under God, cuts out just before "We all burned."
+_trk, _sr = sf.read(B / "numbers.wav", always_2d=True)
+m0, m1 = shot["proof"]["start"] - 0.05, shot["burn"]["start"] - 0.06
+music = np.zeros((N, 2)); i0 = int(m0 * SR); n = min(int((m1 - m0) * SR), len(_trk), N - i0); music[i0:i0 + n] = _trk[:n]
+f_in, f_out = int(0.03 * SR), int(0.05 * SR); music[i0:i0 + f_in] *= np.linspace(0, 1, f_in)[:, None]; music[i0 + n - f_out:i0 + n] *= np.linspace(1, 0, f_out)[:, None]
 for x in (music, bells):
     x /= np.abs(x).max() + 1e-9
+bells *= 0.6
 
 # sidechain duck: music dips ~7 dB while the narrator speaks
 v = voice.mean(1)
