@@ -726,63 +726,63 @@
      "shot": "world",
      "speaker": "narr",
      "text": "Prayer apps. Church drive-throughs. Babies baptized before they could even blink.",
-     "start": 36.09,
-     "end": 40.441,
+     "start": 36.19,
+     "end": 40.01,
      "words": [
       {
        "w": "Prayer",
-       "start": 36.09,
-       "end": 36.39
+       "start": 36.19,
+       "end": 36.35
       },
       {
        "w": "apps.",
-       "start": 36.39,
-       "end": 36.69
+       "start": 36.35,
+       "end": 36.63
       },
       {
        "w": "Church",
-       "start": 37.01,
-       "end": 37.13
+       "start": 36.95,
+       "end": 37.09
       },
       {
        "w": "drive-throughs.",
-       "start": 37.13,
-       "end": 37.49
+       "start": 37.09,
+       "end": 37.41
       },
       {
        "w": "Babies",
-       "start": 38.61,
-       "end": 38.93
+       "start": 37.97,
+       "end": 38.29
       },
       {
        "w": "baptized",
-       "start": 38.93,
-       "end": 39.19
+       "start": 38.29,
+       "end": 38.65
       },
       {
        "w": "before",
-       "start": 39.19,
-       "end": 39.57
+       "start": 38.65,
+       "end": 39.03
       },
       {
        "w": "they",
-       "start": 39.57,
-       "end": 39.71
+       "start": 39.03,
+       "end": 39.17
       },
       {
        "w": "could",
-       "start": 39.71,
-       "end": 39.79
+       "start": 39.17,
+       "end": 39.29
       },
       {
        "w": "even",
-       "start": 39.79,
-       "end": 39.95
+       "start": 39.29,
+       "end": 39.51
       },
       {
        "w": "blink.",
-       "start": 39.95,
-       "end": 40.13
+       "start": 39.51,
+       "end": 39.75
       }
      ]
     }
@@ -2938,63 +2938,63 @@
    "shot": "world",
    "speaker": "narr",
    "text": "Prayer apps. Church drive-throughs. Babies baptized before they could even blink.",
-   "start": 36.09,
-   "end": 40.441,
+   "start": 36.19,
+   "end": 40.01,
    "words": [
     {
      "w": "Prayer",
-     "start": 36.09,
-     "end": 36.39
+     "start": 36.19,
+     "end": 36.35
     },
     {
      "w": "apps.",
-     "start": 36.39,
-     "end": 36.69
+     "start": 36.35,
+     "end": 36.63
     },
     {
      "w": "Church",
-     "start": 37.01,
-     "end": 37.13
+     "start": 36.95,
+     "end": 37.09
     },
     {
      "w": "drive-throughs.",
-     "start": 37.13,
-     "end": 37.49
+     "start": 37.09,
+     "end": 37.41
     },
     {
      "w": "Babies",
-     "start": 38.61,
-     "end": 38.93
+     "start": 37.97,
+     "end": 38.29
     },
     {
      "w": "baptized",
-     "start": 38.93,
-     "end": 39.19
+     "start": 38.29,
+     "end": 38.65
     },
     {
      "w": "before",
-     "start": 39.19,
-     "end": 39.57
+     "start": 38.65,
+     "end": 39.03
     },
     {
      "w": "they",
-     "start": 39.57,
-     "end": 39.71
+     "start": 39.03,
+     "end": 39.17
     },
     {
      "w": "could",
-     "start": 39.71,
-     "end": 39.79
+     "start": 39.17,
+     "end": 39.29
     },
     {
      "w": "even",
-     "start": 39.79,
-     "end": 39.95
+     "start": 39.29,
+     "end": 39.51
     },
     {
      "w": "blink.",
-     "start": 39.95,
-     "end": 40.13
+     "start": 39.51,
+     "end": 39.75
     }
    ]
   },
