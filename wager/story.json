@@ -1,0 +1,317 @@
+{
+ "title": "The Burger Wager",
+ "lines": [
+  {
+   "shot": "hook",
+   "text": "In this world, everybody believes in God.",
+   "engine": "cb",
+   "fx": "narr",
+   "exaggeration": 0.65,
+   "cfg": 0.35
+  },
+  {
+   "shot": "huss",
+   "text": "Huss... huss... huss...",
+   "engine": "cb",
+   "fx": "huss",
+   "exaggeration": 0.9,
+   "cfg": 0.35,
+   "verify": false
+  },
+  {
+   "shot": "proof",
+   "text": "Problem is, there's zero proof. Not a footprint. Not a receipt.",
+   "engine": "cb",
+   "fx": "narr",
+   "exaggeration": 0.65,
+   "cfg": 0.35
+  },
+  {
+   "shot": "proof",
+   "text": "Scientists tried. Telescopes, microscopes, one guy even licked a meteorite. Nothing.",
+   "engine": "cb",
+   "fx": "narr",
+   "exaggeration": 0.65,
+   "cfg": 0.35
+  },
+  {
+   "shot": "stalemate",
+   "text": "But nobody could prove He didn't exist either. Total stalemate. For centuries.",
+   "engine": "cb",
+   "fx": "narr",
+   "exaggeration": 0.65,
+   "cfg": 0.35
+  },
+  {
+   "shot": "wager",
+   "text": "Then the philosophers had a breakthrough. They called it...",
+   "engine": "cb",
+   "fx": "narr",
+   "exaggeration": 0.65,
+   "cfg": 0.35,
+   "pause": 0.5
+  },
+  {
+   "shot": "wager",
+   "text": "the Burger Wager.",
+   "engine": "cb",
+   "fx": "narr",
+   "exaggeration": 0.8,
+   "cfg": 0.35
+  },
+  {
+   "shot": "wager",
+   "text": "If you believe in God and you're wrong? You lose nothing.",
+   "engine": "cb",
+   "fx": "narr",
+   "exaggeration": 0.65,
+   "cfg": 0.35
+  },
+  {
+   "shot": "wager",
+   "text": "If you believe and you're right? Infinite rewards. Forever.",
+   "engine": "cb",
+   "fx": "narr",
+   "exaggeration": 0.65,
+   "cfg": 0.35
+  },
+  {
+   "shot": "wager",
+   "text": "But if you don't believe, and He's real? Infinite punishment. Forever.",
+   "engine": "cb",
+   "fx": "narr",
+   "exaggeration": 0.65,
+   "cfg": 0.35
+  },
+  {
+   "shot": "wager",
+   "text": "Infinite heaven, versus a little effort. The math was perfect.",
+   "engine": "cb",
+   "fx": "narr",
+   "exaggeration": 0.65,
+   "cfg": 0.35
+  },
+  {
+   "shot": "world",
+   "text": "And it worked. Ninety-nine point nine percent of the world didn't just believe. They went full religious.",
+   "engine": "cb",
+   "fx": "narr",
+   "exaggeration": 0.65,
+   "cfg": 0.35
+  },
+  {
+   "shot": "world",
+   "text": "Prayer apps. Church drive-thrus. Babies baptized before they could even blink.",
+   "engine": "cb",
+   "fx": "narr",
+   "exaggeration": 0.65,
+   "cfg": 0.35
+  },
+  {
+   "shot": "me",
+   "text": "And then there was me. The last non-believer on Earth.",
+   "engine": "cb",
+   "fx": "narr",
+   "exaggeration": 0.65,
+   "cfg": 0.35
+  },
+  {
+   "shot": "doubt",
+   "text": "Because the argument just didn't sit right with me.",
+   "engine": "cb",
+   "fx": "narr",
+   "exaggeration": 0.65,
+   "cfg": 0.35
+  },
+  {
+   "shot": "doubt",
+   "text": "You can't flip a belief switch because someone offered you a prize. I'm not a robot.",
+   "engine": "cb",
+   "fx": "narr",
+   "exaggeration": 0.65,
+   "cfg": 0.35
+  },
+  {
+   "shot": "doubt",
+   "text": "You can bet on a team you think will lose. Doesn't mean you believe they'll win.",
+   "engine": "cb",
+   "fx": "narr",
+   "exaggeration": 0.65,
+   "cfg": 0.35
+  },
+  {
+   "shot": "family",
+   "text": "But everyone was worried about me.",
+   "engine": "cb",
+   "fx": "narr",
+   "exaggeration": 0.65,
+   "cfg": 0.35
+  },
+  {
+   "shot": "family",
+   "text": "Sweetie, we pray for you every single night.",
+   "engine": "kokoro",
+   "fx": "mom",
+   "voice": "af_heart",
+   "speed": 0.95
+  },
+  {
+   "shot": "family",
+   "text": "Bro, they're gonna roast you. Literally.",
+   "engine": "kokoro",
+   "fx": "bro",
+   "voice": "am_puck",
+   "speed": 1.05
+  },
+  {
+   "shot": "family",
+   "text": "And honestly, I didn't wanna burn either.",
+   "engine": "cb",
+   "fx": "narr",
+   "exaggeration": 0.65,
+   "cfg": 0.35
+  },
+  {
+   "shot": "research",
+   "text": "So I did the research. Every counterargument. Every loophole.",
+   "engine": "cb",
+   "fx": "narr",
+   "exaggeration": 0.65,
+   "cfg": 0.35
+  },
+  {
+   "shot": "research",
+   "text": "I couldn't beat the odds. Infinity always wins.",
+   "engine": "cb",
+   "fx": "narr",
+   "exaggeration": 0.65,
+   "cfg": 0.35
+  },
+  {
+   "shot": "convert",
+   "text": "So I gave in. I believed.",
+   "engine": "cb",
+   "fx": "narr",
+   "exaggeration": 0.65,
+   "cfg": 0.35
+  },
+  {
+   "shot": "convert",
+   "text": "And you know what? It wasn't so bad.",
+   "engine": "cb",
+   "fx": "narr",
+   "exaggeration": 0.65,
+   "cfg": 0.35
+  },
+  {
+   "shot": "convert",
+   "text": "My life had purpose. I was happy. I had a church family that brought me casseroles.",
+   "engine": "cb",
+   "fx": "narr",
+   "exaggeration": 0.65,
+   "cfg": 0.35
+  },
+  {
+   "shot": "death",
+   "text": "Sixty years passed. And then, I died.",
+   "engine": "cb",
+   "fx": "narr",
+   "exaggeration": 0.65,
+   "cfg": 0.35,
+   "pause": 0.7
+  },
+  {
+   "shot": "white",
+   "text": "I opened my eyes in a white room.",
+   "engine": "cb",
+   "fx": "narr",
+   "exaggeration": 0.65,
+   "cfg": 0.35
+  },
+  {
+   "shot": "white",
+   "text": "I was right! He's real! The wager paid off!",
+   "engine": "cb",
+   "fx": "narr",
+   "exaggeration": 0.85,
+   "cfg": 0.35
+  },
+  {
+   "shot": "white",
+   "text": "Then I saw everyone else. Being thrown into the fire.",
+   "engine": "cb",
+   "fx": "narr",
+   "exaggeration": 0.65,
+   "cfg": 0.35
+  },
+  {
+   "shot": "white",
+   "text": "My pastor. My mom. The guy who invented the wager.",
+   "engine": "cb",
+   "fx": "narr",
+   "exaggeration": 0.65,
+   "cfg": 0.35,
+   "pause": 0.4
+  },
+  {
+   "shot": "god",
+   "text": "I left no evidence. On purpose.",
+   "engine": "kokoro",
+   "fx": "god",
+   "voice": "bm_george",
+   "speed": 0.82,
+   "pause": 0.4
+  },
+  {
+   "shot": "god",
+   "text": "I don't reward belief. I reward warranted belief.",
+   "engine": "kokoro",
+   "fx": "god",
+   "voice": "bm_george",
+   "speed": 0.82,
+   "pause": 0.4
+  },
+  {
+   "shot": "god",
+   "text": "You had no reason to believe in me. So you shouldn't have.",
+   "engine": "kokoro",
+   "fx": "god",
+   "voice": "bm_george",
+   "speed": 0.82,
+   "pause": 0.5
+  },
+  {
+   "shot": "infinite",
+   "text": "Turns out, it was never a two-option bet.",
+   "engine": "cb",
+   "fx": "narr",
+   "exaggeration": 0.65,
+   "cfg": 0.35
+  },
+  {
+   "shot": "infinite",
+   "text": "There were infinite possible gods, wanting infinite possible things. We only thought of one.",
+   "engine": "cb",
+   "fx": "narr",
+   "exaggeration": 0.65,
+   "cfg": 0.35,
+   "pause": 0.6
+  },
+  {
+   "shot": "burn",
+   "text": "We all burned.",
+   "engine": "cb",
+   "fx": "narr",
+   "exaggeration": 0.5,
+   "cfg": 0.35
+  },
+  {
+   "shot": "hell",
+   "text": "And the worst part? I was right the first time.",
+   "engine": "cb",
+   "fx": "narr",
+   "exaggeration": 0.5,
+   "cfg": 0.35
+  }
+ ]
+}

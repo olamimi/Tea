@@ -1,0 +1,4377 @@
+{
+ "duration": 110.801,
+ "shots": [
+  {
+   "name": "hook",
+   "lines": [
+    {
+     "shot": "hook",
+     "speaker": "narr",
+     "text": "In this world, everybody believes in God.",
+     "start": 0.15,
+     "end": 2.058,
+     "words": [
+      {
+       "w": "In",
+       "start": 0.15,
+       "end": 0.29
+      },
+      {
+       "w": "this",
+       "start": 0.29,
+       "end": 0.43
+      },
+      {
+       "w": "world,",
+       "start": 0.43,
+       "end": 0.73
+      },
+      {
+       "w": "everybody",
+       "start": 0.89,
+       "end": 1.15
+      },
+      {
+       "w": "believes",
+       "start": 1.15,
+       "end": 1.49
+      },
+      {
+       "w": "in",
+       "start": 1.49,
+       "end": 1.69
+      },
+      {
+       "w": "God.",
+       "start": 1.69,
+       "end": 1.87
+      }
+     ]
+    }
+   ],
+   "start": 0.0,
+   "end": 2.178,
+   "dur": 2.178
+  },
+  {
+   "name": "huss",
+   "lines": [
+    {
+     "shot": "huss",
+     "speaker": "huss",
+     "text": "Huss... huss... huss...",
+     "start": 2.258,
+     "end": 3.175,
+     "words": [
+      {
+       "w": "Huss...",
+       "start": 2.258,
+       "end": 2.564
+      },
+      {
+       "w": "huss...",
+       "start": 2.564,
+       "end": 2.869
+      },
+      {
+       "w": "huss...",
+       "start": 2.869,
+       "end": 3.175
+      }
+     ]
+    }
+   ],
+   "start": 2.178,
+   "end": 3.295,
+   "dur": 1.117
+  },
+  {
+   "name": "proof",
+   "lines": [
+    {
+     "shot": "proof",
+     "speaker": "narr",
+     "text": "Problem is, there's zero proof. Not a footprint. Not a receipt.",
+     "start": 3.375,
+     "end": 6.84,
+     "words": [
+      {
+       "w": "Problem",
+       "start": 3.375,
+       "end": 3.595
+      },
+      {
+       "w": "is,",
+       "start": 3.595,
+       "end": 3.955
+      },
+      {
+       "w": "there's",
+       "start": 4.175,
+       "end": 4.375
+      },
+      {
+       "w": "zero",
+       "start": 4.375,
+       "end": 4.595
+      },
+      {
+       "w": "proof.",
+       "start": 4.595,
+       "end": 4.895
+      },
+      {
+       "w": "Not",
+       "start": 5.255,
+       "end": 5.315
+      },
+      {
+       "w": "a",
+       "start": 5.315,
+       "end": 5.435
+      },
+      {
+       "w": "footprint.",
+       "start": 5.435,
+       "end": 5.695
+      },
+      {
+       "w": "Not",
+       "start": 6.135,
+       "end": 6.235
+      },
+      {
+       "w": "a",
+       "start": 6.235,
+       "end": 6.335
+      },
+      {
+       "w": "receipt.",
+       "start": 6.335,
+       "end": 6.575
+      }
+     ]
+    },
+    {
+     "shot": "proof",
+     "speaker": "narr",
+     "text": "Scientists tried. Telescopes, microscopes, one guy even licked a meteorite. Nothing.",
+     "start": 6.94,
+     "end": 10.698,
+     "words": [
+      {
+       "w": "Scientists",
+       "start": 6.94,
+       "end": 7.26
+      },
+      {
+       "w": "tried.",
+       "start": 7.26,
+       "end": 7.54
+      },
+      {
+       "w": "Telescopes,",
+       "start": 7.94,
+       "end": 8.24
+      },
+      {
+       "w": "microscopes,",
+       "start": 8.34,
+       "end": 8.78
+      },
+      {
+       "w": "one",
+       "start": 8.88,
+       "end": 8.96
+      },
+      {
+       "w": "guy",
+       "start": 8.96,
+       "end": 9.14
+      },
+      {
+       "w": "even",
+       "start": 9.14,
+       "end": 9.32
+      },
+      {
+       "w": "licked",
+       "start": 9.32,
+       "end": 9.5
+      },
+      {
+       "w": "a",
+       "start": 9.5,
+       "end": 9.6
+      },
+      {
+       "w": "meteorite.",
+       "start": 9.6,
+       "end": 10.02
+      },
+      {
+       "w": "Nothing.",
+       "start": 10.24,
+       "end": 10.36
+      }
+     ]
+    }
+   ],
+   "start": 3.295,
+   "end": 10.818,
+   "dur": 7.523
+  },
+  {
+   "name": "stalemate",
+   "lines": [
+    {
+     "shot": "stalemate",
+     "speaker": "narr",
+     "text": "But nobody could prove He didn't exist either. Total stalemate. For centuries.",
+     "start": 10.898,
+     "end": 15.017,
+     "words": [
+      {
+       "w": "But",
+       "start": 10.898,
+       "end": 11.058
+      },
+      {
+       "w": "nobody",
+       "start": 11.058,
+       "end": 11.338
+      },
+      {
+       "w": "could",
+       "start": 11.338,
+       "end": 11.578
+      },
+      {
+       "w": "prove",
+       "start": 11.578,
+       "end": 11.758
+      },
+      {
+       "w": "He",
+       "start": 11.758,
+       "end": 11.978
+      },
+      {
+       "w": "didn't",
+       "start": 11.978,
+       "end": 12.278
+      },
+      {
+       "w": "exist",
+       "start": 12.278,
+       "end": 12.498
+      },
+      {
+       "w": "either.",
+       "start": 12.498,
+       "end": 12.838
+      },
+      {
+       "w": "Total",
+       "start": 13.298,
+       "end": 13.298
+      },
+      {
+       "w": "stalemate.",
+       "start": 13.298,
+       "end": 13.838
+      },
+      {
+       "w": "For",
+       "start": 14.058,
+       "end": 14.198
+      },
+      {
+       "w": "centuries.",
+       "start": 14.198,
+       "end": 14.558
+      }
+     ]
+    }
+   ],
+   "start": 10.818,
+   "end": 15.137,
+   "dur": 4.319
+  },
+  {
+   "name": "wager",
+   "lines": [
+    {
+     "shot": "wager",
+     "speaker": "narr",
+     "text": "Then the philosophers had a breakthrough. They called it...",
+     "start": 15.217,
+     "end": 17.692,
+     "words": [
+      {
+       "w": "Then",
+       "start": 15.217,
+       "end": 15.477
+      },
+      {
+       "w": "the",
+       "start": 15.477,
+       "end": 15.657
+      },
+      {
+       "w": "philosophers",
+       "start": 15.657,
+       "end": 15.957
+      },
+      {
+       "w": "had",
+       "start": 15.957,
+       "end": 16.277
+      },
+      {
+       "w": "a",
+       "start": 16.277,
+       "end": 16.377
+      },
+      {
+       "w": "breakthrough.",
+       "start": 16.377,
+       "end": 16.657
+      },
+      {
+       "w": "They",
+       "start": 17.017,
+       "end": 17.137
+      },
+      {
+       "w": "called",
+       "start": 17.137,
+       "end": 17.377
+      },
+      {
+       "w": "it...",
+       "start": 17.377,
+       "end": 17.577
+      }
+     ]
+    },
+    {
+     "shot": "wager",
+     "speaker": "narr",
+     "text": "the Burger Wager.",
+     "start": 18.192,
+     "end": 19.256,
+     "words": [
+      {
+       "w": "the",
+       "start": 18.192,
+       "end": 18.372
+      },
+      {
+       "w": "Burger",
+       "start": 18.372,
+       "end": 18.732
+      },
+      {
+       "w": "Wager.",
+       "start": 18.732,
+       "end": 19.092
+      }
+     ]
+    },
+    {
+     "shot": "wager",
+     "speaker": "narr",
+     "text": "If you believe in God and you're wrong? You lose nothing.",
+     "start": 19.356,
+     "end": 21.701,
+     "words": [
+      {
+       "w": "If",
+       "start": 19.356,
+       "end": 19.516
+      },
+      {
+       "w": "you",
+       "start": 19.516,
+       "end": 19.616
+      },
+      {
+       "w": "believe",
+       "start": 19.616,
+       "end": 19.776
+      },
+      {
+       "w": "in",
+       "start": 19.776,
+       "end": 19.936
+      },
+      {
+       "w": "God",
+       "start": 19.936,
+       "end": 20.136
+      },
+      {
+       "w": "and",
+       "start": 20.136,
+       "end": 20.296
+      },
+      {
+       "w": "you're",
+       "start": 20.296,
+       "end": 20.416
+      },
+      {
+       "w": "wrong?",
+       "start": 20.416,
+       "end": 20.636
+      },
+      {
+       "w": "You",
+       "start": 20.916,
+       "end": 20.956
+      },
+      {
+       "w": "lose",
+       "start": 20.956,
+       "end": 21.116
+      },
+      {
+       "w": "nothing.",
+       "start": 21.116,
+       "end": 21.416
+      }
+     ]
+    },
+    {
+     "shot": "wager",
+     "speaker": "narr",
+     "text": "If you believe and you're right? Infinite rewards. Forever.",
+     "start": 21.801,
+     "end": 25.01,
+     "words": [
+      {
+       "w": "If",
+       "start": 21.801,
+       "end": 21.961
+      },
+      {
+       "w": "you",
+       "start": 21.961,
+       "end": 22.081
+      },
+      {
+       "w": "believe",
+       "start": 22.081,
+       "end": 22.341
+      },
+      {
+       "w": "and",
+       "start": 22.341,
+       "end": 22.621
+      },
+      {
+       "w": "you're",
+       "start": 22.621,
+       "end": 22.821
+      },
+      {
+       "w": "right?",
+       "start": 22.821,
+       "end": 23.101
+      },
+      {
+       "w": "Infinite",
+       "start": 23.681,
+       "end": 23.721
+      },
+      {
+       "w": "rewards.",
+       "start": 23.721,
+       "end": 24.221
+      },
+      {
+       "w": "Forever.",
+       "start": 24.221,
+       "end": 24.641
+      }
+     ]
+    },
+    {
+     "shot": "wager",
+     "speaker": "narr",
+     "text": "But if you don't believe, and He's real? Infinite punishment. Forever.",
+     "start": 25.11,
+     "end": 28.49,
+     "words": [
+      {
+       "w": "But",
+       "start": 25.11,
+       "end": 25.23
+      },
+      {
+       "w": "if",
+       "start": 25.23,
+       "end": 25.31
+      },
+      {
+       "w": "you",
+       "start": 25.31,
+       "end": 25.39
+      },
+      {
+       "w": "don't",
+       "start": 25.39,
+       "end": 25.61
+      },
+      {
+       "w": "believe,",
+       "start": 25.61,
+       "end": 25.77
+      },
+      {
+       "w": "and",
+       "start": 26.13,
+       "end": 26.29
+      },
+      {
+       "w": "He's",
+       "start": 26.29,
+       "end": 26.57
+      },
+      {
+       "w": "real?",
+       "start": 26.57,
+       "end": 26.79
+      },
+      {
+       "w": "Infinite",
+       "start": 27.29,
+       "end": 27.29
+      },
+      {
+       "w": "punishment.",
+       "start": 27.29,
+       "end": 27.71
+      },
+      {
+       "w": "Forever.",
+       "start": 28.01,
+       "end": 28.19
+      }
+     ]
+    },
+    {
+     "shot": "wager",
+     "speaker": "narr",
+     "text": "Infinite heaven, versus a little effort. The math was perfect.",
+     "start": 28.59,
+     "end": 31.818,
+     "words": [
+      {
+       "w": "Infinite",
+       "start": 28.59,
+       "end": 28.89
+      },
+      {
+       "w": "heaven,",
+       "start": 28.89,
+       "end": 29.19
+      },
+      {
+       "w": "versus",
+       "start": 29.19,
+       "end": 29.49
+      },
+      {
+       "w": "a",
+       "start": 29.49,
+       "end": 29.71
+      },
+      {
+       "w": "little",
+       "start": 29.71,
+       "end": 29.81
+      },
+      {
+       "w": "effort.",
+       "start": 29.81,
+       "end": 30.17
+      },
+      {
+       "w": "The",
+       "start": 30.45,
+       "end": 30.57
+      },
+      {
+       "w": "math",
+       "start": 30.57,
+       "end": 30.83
+      },
+      {
+       "w": "was",
+       "start": 30.83,
+       "end": 31.11
+      },
+      {
+       "w": "perfect.",
+       "start": 31.11,
+       "end": 31.47
+      }
+     ]
+    }
+   ],
+   "start": 15.137,
+   "end": 31.938,
+   "dur": 16.801
+  },
+  {
+   "name": "world",
+   "lines": [
+    {
+     "shot": "world",
+     "speaker": "narr",
+     "text": "And it worked. Ninety-nine point nine percent of the world didn't just believe. They went full religious.",
+     "start": 32.018,
+     "end": 35.99,
+     "words": [
+      {
+       "w": "And",
+       "start": 32.018,
+       "end": 32.118
+      },
+      {
+       "w": "it",
+       "start": 32.118,
+       "end": 32.218
+      },
+      {
+       "w": "worked.",
+       "start": 32.218,
+       "end": 32.478
+      },
+      {
+       "w": "Ninety-nine",
+       "start": 32.478,
+       "end": 32.783
+      },
+      {
+       "w": "point",
+       "start": 32.783,
+       "end": 33.088
+      },
+      {
+       "w": "nine",
+       "start": 33.088,
+       "end": 33.393
+      },
+      {
+       "w": "percent",
+       "start": 33.393,
+       "end": 33.698
+      },
+      {
+       "w": "of",
+       "start": 33.698,
+       "end": 33.818
+      },
+      {
+       "w": "the",
+       "start": 33.818,
+       "end": 33.898
+      },
+      {
+       "w": "world",
+       "start": 33.898,
+       "end": 34.058
+      },
+      {
+       "w": "didn't",
+       "start": 34.058,
+       "end": 34.318
+      },
+      {
+       "w": "just",
+       "start": 34.318,
+       "end": 34.438
+      },
+      {
+       "w": "believe.",
+       "start": 34.438,
+       "end": 34.698
+      },
+      {
+       "w": "They",
+       "start": 34.958,
+       "end": 35.078
+      },
+      {
+       "w": "went",
+       "start": 35.078,
+       "end": 35.198
+      },
+      {
+       "w": "full",
+       "start": 35.198,
+       "end": 35.378
+      },
+      {
+       "w": "religious.",
+       "start": 35.378,
+       "end": 35.638
+      }
+     ]
+    },
+    {
+     "shot": "world",
+     "speaker": "narr",
+     "text": "Prayer apps. Church drive-thrus. Babies baptized before they could even blink.",
+     "start": 36.09,
+     "end": 40.441,
+     "words": [
+      {
+       "w": "Prayer",
+       "start": 36.09,
+       "end": 36.39
+      },
+      {
+       "w": "apps.",
+       "start": 36.39,
+       "end": 36.69
+      },
+      {
+       "w": "Church",
+       "start": 37.01,
+       "end": 37.13
+      },
+      {
+       "w": "drive-thrus.",
+       "start": 37.13,
+       "end": 37.49
+      },
+      {
+       "w": "Babies",
+       "start": 38.61,
+       "end": 38.93
+      },
+      {
+       "w": "baptized",
+       "start": 38.93,
+       "end": 39.19
+      },
+      {
+       "w": "before",
+       "start": 39.19,
+       "end": 39.57
+      },
+      {
+       "w": "they",
+       "start": 39.57,
+       "end": 39.71
+      },
+      {
+       "w": "could",
+       "start": 39.71,
+       "end": 39.79
+      },
+      {
+       "w": "even",
+       "start": 39.79,
+       "end": 39.95
+      },
+      {
+       "w": "blink.",
+       "start": 39.95,
+       "end": 40.13
+      }
+     ]
+    }
+   ],
+   "start": 31.938,
+   "end": 40.561,
+   "dur": 8.623
+  },
+  {
+   "name": "me",
+   "lines": [
+    {
+     "shot": "me",
+     "speaker": "narr",
+     "text": "And then there was me. The last non-believer on Earth.",
+     "start": 40.641,
+     "end": 43.314,
+     "words": [
+      {
+       "w": "And",
+       "start": 40.641,
+       "end": 40.781
+      },
+      {
+       "w": "then",
+       "start": 40.781,
+       "end": 40.981
+      },
+      {
+       "w": "there",
+       "start": 41.201,
+       "end": 41.281
+      },
+      {
+       "w": "was",
+       "start": 41.281,
+       "end": 41.421
+      },
+      {
+       "w": "me.",
+       "start": 41.421,
+       "end": 41.621
+      },
+      {
+       "w": "The",
+       "start": 41.901,
+       "end": 41.981
+      },
+      {
+       "w": "last",
+       "start": 41.981,
+       "end": 42.201
+      },
+      {
+       "w": "non-believer",
+       "start": 42.201,
+       "end": 42.481
+      },
+      {
+       "w": "on",
+       "start": 42.781,
+       "end": 43.001
+      },
+      {
+       "w": "Earth.",
+       "start": 43.001,
+       "end": 43.141
+      }
+     ]
+    }
+   ],
+   "start": 40.561,
+   "end": 43.434,
+   "dur": 2.873
+  },
+  {
+   "name": "doubt",
+   "lines": [
+    {
+     "shot": "doubt",
+     "speaker": "narr",
+     "text": "Because the argument just didn't sit right with me.",
+     "start": 43.514,
+     "end": 45.525,
+     "words": [
+      {
+       "w": "Because",
+       "start": 43.514,
+       "end": 43.734
+      },
+      {
+       "w": "the",
+       "start": 43.734,
+       "end": 43.894
+      },
+      {
+       "w": "argument",
+       "start": 43.894,
+       "end": 44.234
+      },
+      {
+       "w": "just",
+       "start": 44.234,
+       "end": 44.494
+      },
+      {
+       "w": "didn't",
+       "start": 44.494,
+       "end": 44.794
+      },
+      {
+       "w": "sit",
+       "start": 44.794,
+       "end": 44.894
+      },
+      {
+       "w": "right",
+       "start": 44.894,
+       "end": 45.074
+      },
+      {
+       "w": "with",
+       "start": 45.074,
+       "end": 45.194
+      },
+      {
+       "w": "me.",
+       "start": 45.194,
+       "end": 45.354
+      }
+     ]
+    },
+    {
+     "shot": "doubt",
+     "speaker": "narr",
+     "text": "You can't flip a belief switch because someone offered you a prize. I'm not a robot.",
+     "start": 45.625,
+     "end": 48.988,
+     "words": [
+      {
+       "w": "You",
+       "start": 45.625,
+       "end": 45.745
+      },
+      {
+       "w": "can't",
+       "start": 45.745,
+       "end": 45.985
+      },
+      {
+       "w": "flip",
+       "start": 45.985,
+       "end": 46.105
+      },
+      {
+       "w": "a",
+       "start": 46.105,
+       "end": 46.225
+      },
+      {
+       "w": "belief",
+       "start": 46.225,
+       "end": 46.425
+      },
+      {
+       "w": "switch",
+       "start": 46.425,
+       "end": 46.705
+      },
+      {
+       "w": "because",
+       "start": 46.705,
+       "end": 47.025
+      },
+      {
+       "w": "someone",
+       "start": 47.025,
+       "end": 47.265
+      },
+      {
+       "w": "offered",
+       "start": 47.265,
+       "end": 47.485
+      },
+      {
+       "w": "you",
+       "start": 47.485,
+       "end": 47.645
+      },
+      {
+       "w": "a",
+       "start": 47.645,
+       "end": 47.705
+      },
+      {
+       "w": "prize.",
+       "start": 47.705,
+       "end": 47.965
+      },
+      {
+       "w": "I'm",
+       "start": 48.225,
+       "end": 48.345
+      },
+      {
+       "w": "not",
+       "start": 48.345,
+       "end": 48.465
+      },
+      {
+       "w": "a",
+       "start": 48.465,
+       "end": 48.545
+      },
+      {
+       "w": "robot.",
+       "start": 48.545,
+       "end": 48.765
+      }
+     ]
+    },
+    {
+     "shot": "doubt",
+     "speaker": "narr",
+     "text": "You can bet on a team you think will lose. Doesn't mean you believe they'll win.",
+     "start": 49.088,
+     "end": 52.135,
+     "words": [
+      {
+       "w": "You",
+       "start": 49.088,
+       "end": 49.208
+      },
+      {
+       "w": "can",
+       "start": 49.208,
+       "end": 49.328
+      },
+      {
+       "w": "bet",
+       "start": 49.328,
+       "end": 49.488
+      },
+      {
+       "w": "on",
+       "start": 49.488,
+       "end": 49.628
+      },
+      {
+       "w": "a",
+       "start": 49.628,
+       "end": 49.728
+      },
+      {
+       "w": "team",
+       "start": 49.728,
+       "end": 49.868
+      },
+      {
+       "w": "you",
+       "start": 49.868,
+       "end": 49.988
+      },
+      {
+       "w": "think",
+       "start": 49.988,
+       "end": 50.108
+      },
+      {
+       "w": "will",
+       "start": 50.108,
+       "end": 50.268
+      },
+      {
+       "w": "lose.",
+       "start": 50.268,
+       "end": 50.528
+      },
+      {
+       "w": "Doesn't",
+       "start": 50.848,
+       "end": 51.108
+      },
+      {
+       "w": "mean",
+       "start": 51.108,
+       "end": 51.188
+      },
+      {
+       "w": "you",
+       "start": 51.188,
+       "end": 51.308
+      },
+      {
+       "w": "believe",
+       "start": 51.308,
+       "end": 51.508
+      },
+      {
+       "w": "they'll",
+       "start": 51.508,
+       "end": 51.728
+      },
+      {
+       "w": "win.",
+       "start": 51.728,
+       "end": 51.908
+      }
+     ]
+    }
+   ],
+   "start": 43.434,
+   "end": 52.255,
+   "dur": 8.821
+  },
+  {
+   "name": "family",
+   "lines": [
+    {
+     "shot": "family",
+     "speaker": "narr",
+     "text": "But everyone was worried about me.",
+     "start": 52.335,
+     "end": 53.772,
+     "words": [
+      {
+       "w": "But",
+       "start": 52.335,
+       "end": 52.475
+      },
+      {
+       "w": "everyone",
+       "start": 52.475,
+       "end": 52.795
+      },
+      {
+       "w": "was",
+       "start": 52.795,
+       "end": 53.015
+      },
+      {
+       "w": "worried",
+       "start": 53.015,
+       "end": 53.195
+      },
+      {
+       "w": "about",
+       "start": 53.195,
+       "end": 53.415
+      },
+      {
+       "w": "me.",
+       "start": 53.415,
+       "end": 53.595
+      }
+     ]
+    },
+    {
+     "shot": "family",
+     "speaker": "mom",
+     "text": "Sweetie, we pray for you every single night.",
+     "start": 53.872,
+     "end": 56.154,
+     "words": [
+      {
+       "w": "Sweetie,",
+       "start": 53.872,
+       "end": 54.312
+      },
+      {
+       "w": "we",
+       "start": 54.472,
+       "end": 54.592
+      },
+      {
+       "w": "pray",
+       "start": 54.592,
+       "end": 54.772
+      },
+      {
+       "w": "for",
+       "start": 54.772,
+       "end": 54.952
+      },
+      {
+       "w": "you",
+       "start": 54.952,
+       "end": 55.072
+      },
+      {
+       "w": "every",
+       "start": 55.072,
+       "end": 55.332
+      },
+      {
+       "w": "single",
+       "start": 55.332,
+       "end": 55.632
+      },
+      {
+       "w": "night.",
+       "start": 55.632,
+       "end": 55.912
+      }
+     ]
+    },
+    {
+     "shot": "family",
+     "speaker": "bro",
+     "text": "Bro, they're gonna roast you. Literally.",
+     "start": 56.254,
+     "end": 58.024,
+     "words": [
+      {
+       "w": "Bro,",
+       "start": 56.254,
+       "end": 56.414
+      },
+      {
+       "w": "they're",
+       "start": 56.414,
+       "end": 56.654
+      },
+      {
+       "w": "gonna",
+       "start": 56.654,
+       "end": 56.774
+      },
+      {
+       "w": "roast",
+       "start": 56.774,
+       "end": 57.054
+      },
+      {
+       "w": "you.",
+       "start": 57.054,
+       "end": 57.274
+      },
+      {
+       "w": "Literally.",
+       "start": 57.474,
+       "end": 57.634
+      }
+     ]
+    },
+    {
+     "shot": "family",
+     "speaker": "narr",
+     "text": "And honestly, I didn't wanna burn either.",
+     "start": 58.124,
+     "end": 59.671,
+     "words": [
+      {
+       "w": "And",
+       "start": 58.124,
+       "end": 58.264
+      },
+      {
+       "w": "honestly,",
+       "start": 58.264,
+       "end": 58.604
+      },
+      {
+       "w": "I",
+       "start": 58.744,
+       "end": 58.824
+      },
+      {
+       "w": "didn't",
+       "start": 58.824,
+       "end": 58.984
+      },
+      {
+       "w": "wanna",
+       "start": 58.984,
+       "end": 59.144
+      },
+      {
+       "w": "burn",
+       "start": 59.144,
+       "end": 59.264
+      },
+      {
+       "w": "either.",
+       "start": 59.264,
+       "end": 59.484
+      }
+     ]
+    }
+   ],
+   "start": 52.255,
+   "end": 59.791,
+   "dur": 7.536
+  },
+  {
+   "name": "research",
+   "lines": [
+    {
+     "shot": "research",
+     "speaker": "narr",
+     "text": "So I did the research. Every counterargument. Every loophole.",
+     "start": 59.871,
+     "end": 62.823,
+     "words": [
+      {
+       "w": "So",
+       "start": 59.871,
+       "end": 60.031
+      },
+      {
+       "w": "I",
+       "start": 60.031,
+       "end": 60.231
+      },
+      {
+       "w": "did",
+       "start": 60.231,
+       "end": 60.351
+      },
+      {
+       "w": "the",
+       "start": 60.351,
+       "end": 60.451
+      },
+      {
+       "w": "research.",
+       "start": 60.451,
+       "end": 60.791
+      },
+      {
+       "w": "Every",
+       "start": 61.131,
+       "end": 61.291
+      },
+      {
+       "w": "counterargument.",
+       "start": 61.291,
+       "end": 62.151
+      },
+      {
+       "w": "Every",
+       "start": 62.151,
+       "end": 62.311
+      },
+      {
+       "w": "loophole.",
+       "start": 62.311,
+       "end": 62.571
+      }
+     ]
+    },
+    {
+     "shot": "research",
+     "speaker": "narr",
+     "text": "I couldn't beat the odds. Infinity always wins.",
+     "start": 62.923,
+     "end": 65.233,
+     "words": [
+      {
+       "w": "I",
+       "start": 62.923,
+       "end": 63.063
+      },
+      {
+       "w": "couldn't",
+       "start": 63.063,
+       "end": 63.283
+      },
+      {
+       "w": "beat",
+       "start": 63.283,
+       "end": 63.383
+      },
+      {
+       "w": "the",
+       "start": 63.383,
+       "end": 63.523
+      },
+      {
+       "w": "odds.",
+       "start": 63.523,
+       "end": 63.743
+      },
+      {
+       "w": "Infinity",
+       "start": 64.023,
+       "end": 64.263
+      },
+      {
+       "w": "always",
+       "start": 64.263,
+       "end": 64.703
+      },
+      {
+       "w": "wins.",
+       "start": 64.703,
+       "end": 64.983
+      }
+     ]
+    }
+   ],
+   "start": 59.791,
+   "end": 65.353,
+   "dur": 5.562
+  },
+  {
+   "name": "convert",
+   "lines": [
+    {
+     "shot": "convert",
+     "speaker": "narr",
+     "text": "So I gave in. I believed.",
+     "start": 65.433,
+     "end": 67.245,
+     "words": [
+      {
+       "w": "So",
+       "start": 65.433,
+       "end": 65.593
+      },
+      {
+       "w": "I",
+       "start": 65.593,
+       "end": 65.813
+      },
+      {
+       "w": "gave",
+       "start": 65.813,
+       "end": 65.973
+      },
+      {
+       "w": "in.",
+       "start": 65.973,
+       "end": 66.213
+      },
+      {
+       "w": "I",
+       "start": 66.633,
+       "end": 66.633
+      },
+      {
+       "w": "believed.",
+       "start": 66.633,
+       "end": 66.933
+      }
+     ]
+    },
+    {
+     "shot": "convert",
+     "speaker": "narr",
+     "text": "And you know what? It wasn't so bad.",
+     "start": 67.345,
+     "end": 69.063,
+     "words": [
+      {
+       "w": "And",
+       "start": 67.345,
+       "end": 67.605
+      },
+      {
+       "w": "you",
+       "start": 67.605,
+       "end": 67.685
+      },
+      {
+       "w": "know",
+       "start": 67.685,
+       "end": 67.805
+      },
+      {
+       "w": "what?",
+       "start": 67.805,
+       "end": 67.985
+      },
+      {
+       "w": "It",
+       "start": 68.165,
+       "end": 68.285
+      },
+      {
+       "w": "wasn't",
+       "start": 68.285,
+       "end": 68.545
+      },
+      {
+       "w": "so",
+       "start": 68.545,
+       "end": 68.645
+      },
+      {
+       "w": "bad.",
+       "start": 68.645,
+       "end": 68.845
+      }
+     ]
+    },
+    {
+     "shot": "convert",
+     "speaker": "narr",
+     "text": "My life had purpose. I was happy. I had a church family that brought me casseroles.",
+     "start": 69.163,
+     "end": 72.664,
+     "words": [
+      {
+       "w": "My",
+       "start": 69.163,
+       "end": 69.303
+      },
+      {
+       "w": "life",
+       "start": 69.303,
+       "end": 69.423
+      },
+      {
+       "w": "had",
+       "start": 69.423,
+       "end": 69.563
+      },
+      {
+       "w": "purpose.",
+       "start": 69.563,
+       "end": 69.843
+      },
+      {
+       "w": "I",
+       "start": 70.223,
+       "end": 70.323
+      },
+      {
+       "w": "was",
+       "start": 70.323,
+       "end": 70.423
+      },
+      {
+       "w": "happy.",
+       "start": 70.423,
+       "end": 70.683
+      },
+      {
+       "w": "I",
+       "start": 70.923,
+       "end": 70.983
+      },
+      {
+       "w": "had",
+       "start": 70.983,
+       "end": 71.123
+      },
+      {
+       "w": "a",
+       "start": 71.123,
+       "end": 71.203
+      },
+      {
+       "w": "church",
+       "start": 71.203,
+       "end": 71.343
+      },
+      {
+       "w": "family",
+       "start": 71.343,
+       "end": 71.603
+      },
+      {
+       "w": "that",
+       "start": 71.603,
+       "end": 71.783
+      },
+      {
+       "w": "brought",
+       "start": 71.783,
+       "end": 71.863
+      },
+      {
+       "w": "me",
+       "start": 71.863,
+       "end": 72.023
+      },
+      {
+       "w": "casseroles.",
+       "start": 72.023,
+       "end": 72.443
+      }
+     ]
+    }
+   ],
+   "start": 65.353,
+   "end": 72.784,
+   "dur": 7.431
+  },
+  {
+   "name": "death",
+   "lines": [
+    {
+     "shot": "death",
+     "speaker": "narr",
+     "text": "Sixty years passed. And then, I died.",
+     "start": 72.864,
+     "end": 75.268,
+     "words": [
+      {
+       "w": "Sixty",
+       "start": 72.864,
+       "end": 73.224
+      },
+      {
+       "w": "years",
+       "start": 73.224,
+       "end": 73.404
+      },
+      {
+       "w": "passed.",
+       "start": 73.404,
+       "end": 73.744
+      },
+      {
+       "w": "And",
+       "start": 74.084,
+       "end": 74.204
+      },
+      {
+       "w": "then,",
+       "start": 74.204,
+       "end": 74.444
+      },
+      {
+       "w": "I",
+       "start": 74.444,
+       "end": 74.804
+      },
+      {
+       "w": "died.",
+       "start": 74.804,
+       "end": 75.004
+      }
+     ]
+    }
+   ],
+   "start": 72.784,
+   "end": 75.888,
+   "dur": 3.104
+  },
+  {
+   "name": "white",
+   "lines": [
+    {
+     "shot": "white",
+     "speaker": "narr",
+     "text": "I opened my eyes in a white room.",
+     "start": 75.968,
+     "end": 77.561,
+     "words": [
+      {
+       "w": "I",
+       "start": 75.968,
+       "end": 76.088
+      },
+      {
+       "w": "opened",
+       "start": 76.088,
+       "end": 76.248
+      },
+      {
+       "w": "my",
+       "start": 76.248,
+       "end": 76.428
+      },
+      {
+       "w": "eyes",
+       "start": 76.428,
+       "end": 76.668
+      },
+      {
+       "w": "in",
+       "start": 76.668,
+       "end": 76.848
+      },
+      {
+       "w": "a",
+       "start": 76.848,
+       "end": 76.928
+      },
+      {
+       "w": "white",
+       "start": 76.928,
+       "end": 77.108
+      },
+      {
+       "w": "room.",
+       "start": 77.108,
+       "end": 77.368
+      }
+     ]
+    },
+    {
+     "shot": "white",
+     "speaker": "narr",
+     "text": "I was right! He's real! The wager paid off!",
+     "start": 77.661,
+     "end": 80.434,
+     "words": [
+      {
+       "w": "I",
+       "start": 77.661,
+       "end": 77.801
+      },
+      {
+       "w": "was",
+       "start": 77.801,
+       "end": 77.921
+      },
+      {
+       "w": "right!",
+       "start": 77.921,
+       "end": 78.241
+      },
+      {
+       "w": "He's",
+       "start": 78.541,
+       "end": 78.721
+      },
+      {
+       "w": "real!",
+       "start": 78.721,
+       "end": 78.961
+      },
+      {
+       "w": "The",
+       "start": 79.381,
+       "end": 79.421
+      },
+      {
+       "w": "wager",
+       "start": 79.421,
+       "end": 79.681
+      },
+      {
+       "w": "paid",
+       "start": 79.681,
+       "end": 79.881
+      },
+      {
+       "w": "off!",
+       "start": 79.881,
+       "end": 80.181
+      }
+     ]
+    },
+    {
+     "shot": "white",
+     "speaker": "narr",
+     "text": "Then I saw everyone else. Being thrown into the fire.",
+     "start": 80.534,
+     "end": 83.35,
+     "words": [
+      {
+       "w": "Then",
+       "start": 80.534,
+       "end": 80.714
+      },
+      {
+       "w": "I",
+       "start": 80.714,
+       "end": 80.874
+      },
+      {
+       "w": "saw",
+       "start": 80.874,
+       "end": 81.014
+      },
+      {
+       "w": "everyone",
+       "start": 81.014,
+       "end": 81.294
+      },
+      {
+       "w": "else.",
+       "start": 81.294,
+       "end": 81.554
+      },
+      {
+       "w": "Being",
+       "start": 81.954,
+       "end": 82.174
+      },
+      {
+       "w": "thrown",
+       "start": 82.174,
+       "end": 82.454
+      },
+      {
+       "w": "into",
+       "start": 82.454,
+       "end": 82.714
+      },
+      {
+       "w": "the",
+       "start": 82.714,
+       "end": 82.834
+      },
+      {
+       "w": "fire.",
+       "start": 82.834,
+       "end": 83.094
+      }
+     ]
+    },
+    {
+     "shot": "white",
+     "speaker": "narr",
+     "text": "My pastor. My mom. The guy who invented the wager.",
+     "start": 83.45,
+     "end": 86.171,
+     "words": [
+      {
+       "w": "My",
+       "start": 83.45,
+       "end": 83.59
+      },
+      {
+       "w": "pastor.",
+       "start": 83.59,
+       "end": 83.93
+      },
+      {
+       "w": "My",
+       "start": 84.23,
+       "end": 84.33
+      },
+      {
+       "w": "mom.",
+       "start": 84.33,
+       "end": 84.55
+      },
+      {
+       "w": "The",
+       "start": 84.95,
+       "end": 84.97
+      },
+      {
+       "w": "guy",
+       "start": 84.97,
+       "end": 85.11
+      },
+      {
+       "w": "who",
+       "start": 85.11,
+       "end": 85.25
+      },
+      {
+       "w": "invented",
+       "start": 85.25,
+       "end": 85.47
+      },
+      {
+       "w": "the",
+       "start": 85.47,
+       "end": 85.67
+      },
+      {
+       "w": "wager.",
+       "start": 85.67,
+       "end": 85.91
+      }
+     ]
+    }
+   ],
+   "start": 75.888,
+   "end": 86.491,
+   "dur": 10.603
+  },
+  {
+   "name": "god",
+   "lines": [
+    {
+     "shot": "god",
+     "speaker": "god",
+     "text": "I left no evidence. On purpose.",
+     "start": 86.571,
+     "end": 89.667,
+     "words": [
+      {
+       "w": "I",
+       "start": 86.571,
+       "end": 86.771
+      },
+      {
+       "w": "left",
+       "start": 86.771,
+       "end": 87.031
+      },
+      {
+       "w": "no",
+       "start": 87.031,
+       "end": 87.431
+      },
+      {
+       "w": "evidence.",
+       "start": 87.431,
+       "end": 87.931
+      },
+      {
+       "w": "On",
+       "start": 87.931,
+       "end": 88.671
+      },
+      {
+       "w": "purpose.",
+       "start": 88.671,
+       "end": 88.991
+      }
+     ]
+    },
+    {
+     "shot": "god",
+     "speaker": "god",
+     "text": "I don't reward belief. I reward warranted belief.",
+     "start": 90.067,
+     "end": 94.196,
+     "words": [
+      {
+       "w": "I",
+       "start": 90.067,
+       "end": 90.227
+      },
+      {
+       "w": "don't",
+       "start": 90.227,
+       "end": 90.927
+      },
+      {
+       "w": "reward",
+       "start": 90.927,
+       "end": 90.927
+      },
+      {
+       "w": "belief.",
+       "start": 90.927,
+       "end": 92.107
+      },
+      {
+       "w": "I",
+       "start": 92.107,
+       "end": 92.127
+      },
+      {
+       "w": "reward",
+       "start": 92.127,
+       "end": 92.587
+      },
+      {
+       "w": "warranted",
+       "start": 92.587,
+       "end": 93.207
+      },
+      {
+       "w": "belief.",
+       "start": 93.207,
+       "end": 94.196
+      }
+     ]
+    },
+    {
+     "shot": "god",
+     "speaker": "god",
+     "text": "You had no reason to believe in me. So you shouldn't have.",
+     "start": 94.596,
+     "end": 98.853,
+     "words": [
+      {
+       "w": "You",
+       "start": 94.596,
+       "end": 94.776
+      },
+      {
+       "w": "had",
+       "start": 94.776,
+       "end": 94.956
+      },
+      {
+       "w": "no",
+       "start": 94.956,
+       "end": 95.276
+      },
+      {
+       "w": "reason",
+       "start": 95.276,
+       "end": 95.636
+      },
+      {
+       "w": "to",
+       "start": 95.636,
+       "end": 96.036
+      },
+      {
+       "w": "believe",
+       "start": 96.036,
+       "end": 96.396
+      },
+      {
+       "w": "in",
+       "start": 96.396,
+       "end": 96.616
+      },
+      {
+       "w": "me.",
+       "start": 96.616,
+       "end": 96.996
+      },
+      {
+       "w": "So",
+       "start": 97.336,
+       "end": 97.556
+      },
+      {
+       "w": "you",
+       "start": 97.556,
+       "end": 97.796
+      },
+      {
+       "w": "shouldn't",
+       "start": 97.796,
+       "end": 98.176
+      },
+      {
+       "w": "have.",
+       "start": 98.176,
+       "end": 98.436
+      }
+     ]
+    }
+   ],
+   "start": 86.491,
+   "end": 99.273,
+   "dur": 12.782
+  },
+  {
+   "name": "infinite",
+   "lines": [
+    {
+     "shot": "infinite",
+     "speaker": "narr",
+     "text": "Turns out, it was never a two-option bet.",
+     "start": 99.353,
+     "end": 101.228,
+     "words": [
+      {
+       "w": "Turns",
+       "start": 99.353,
+       "end": 99.513
+      },
+      {
+       "w": "out,",
+       "start": 99.513,
+       "end": 99.753
+      },
+      {
+       "w": "it",
+       "start": 99.853,
+       "end": 99.913
+      },
+      {
+       "w": "was",
+       "start": 99.913,
+       "end": 100.033
+      },
+      {
+       "w": "never",
+       "start": 100.033,
+       "end": 100.273
+      },
+      {
+       "w": "a",
+       "start": 100.273,
+       "end": 100.473
+      },
+      {
+       "w": "two-option",
+       "start": 100.473,
+       "end": 100.593
+      },
+      {
+       "w": "bet.",
+       "start": 100.813,
+       "end": 101.013
+      }
+     ]
+    },
+    {
+     "shot": "infinite",
+     "speaker": "narr",
+     "text": "There were infinite possible gods, wanting infinite possible things. We only thought of one.",
+     "start": 101.328,
+     "end": 105.217,
+     "words": [
+      {
+       "w": "There",
+       "start": 101.328,
+       "end": 101.328
+      },
+      {
+       "w": "were",
+       "start": 101.328,
+       "end": 101.548
+      },
+      {
+       "w": "infinite",
+       "start": 101.548,
+       "end": 101.928
+      },
+      {
+       "w": "possible",
+       "start": 101.928,
+       "end": 102.288
+      },
+      {
+       "w": "gods,",
+       "start": 102.288,
+       "end": 102.548
+      },
+      {
+       "w": "wanting",
+       "start": 102.548,
+       "end": 102.848
+      },
+      {
+       "w": "infinite",
+       "start": 102.848,
+       "end": 103.208
+      },
+      {
+       "w": "possible",
+       "start": 103.208,
+       "end": 103.548
+      },
+      {
+       "w": "things.",
+       "start": 103.548,
+       "end": 103.908
+      },
+      {
+       "w": "We",
+       "start": 104.188,
+       "end": 104.288
+      },
+      {
+       "w": "only",
+       "start": 104.288,
+       "end": 104.488
+      },
+      {
+       "w": "thought",
+       "start": 104.488,
+       "end": 104.668
+      },
+      {
+       "w": "of",
+       "start": 104.668,
+       "end": 104.808
+      },
+      {
+       "w": "one.",
+       "start": 104.808,
+       "end": 105.008
+      }
+     ]
+    }
+   ],
+   "start": 99.273,
+   "end": 105.737,
+   "dur": 6.464
+  },
+  {
+   "name": "burn",
+   "lines": [
+    {
+     "shot": "burn",
+     "speaker": "narr",
+     "text": "We all burned.",
+     "start": 105.817,
+     "end": 106.621,
+     "words": [
+      {
+       "w": "We",
+       "start": 105.817,
+       "end": 105.977
+      },
+      {
+       "w": "all",
+       "start": 105.977,
+       "end": 106.117
+      },
+      {
+       "w": "burned.",
+       "start": 106.117,
+       "end": 106.357
+      }
+     ]
+    }
+   ],
+   "start": 105.737,
+   "end": 106.741,
+   "dur": 1.004
+  },
+  {
+   "name": "hell",
+   "lines": [
+    {
+     "shot": "hell",
+     "speaker": "narr",
+     "text": "And the worst part? I was right the first time.",
+     "start": 106.821,
+     "end": 108.801,
+     "words": [
+      {
+       "w": "And",
+       "start": 106.821,
+       "end": 106.981
+      },
+      {
+       "w": "the",
+       "start": 106.981,
+       "end": 107.081
+      },
+      {
+       "w": "worst",
+       "start": 107.081,
+       "end": 107.181
+      },
+      {
+       "w": "part?",
+       "start": 107.181,
+       "end": 107.481
+      },
+      {
+       "w": "I",
+       "start": 107.741,
+       "end": 107.841
+      },
+      {
+       "w": "was",
+       "start": 107.841,
+       "end": 107.961
+      },
+      {
+       "w": "right",
+       "start": 107.961,
+       "end": 108.121
+      },
+      {
+       "w": "the",
+       "start": 108.121,
+       "end": 108.241
+      },
+      {
+       "w": "first",
+       "start": 108.241,
+       "end": 108.401
+      },
+      {
+       "w": "time.",
+       "start": 108.401,
+       "end": 108.601
+      }
+     ]
+    }
+   ],
+   "start": 106.741,
+   "end": 110.801,
+   "dur": 4.06
+  }
+ ],
+ "lines": [
+  {
+   "shot": "hook",
+   "speaker": "narr",
+   "text": "In this world, everybody believes in God.",
+   "start": 0.15,
+   "end": 2.058,
+   "words": [
+    {
+     "w": "In",
+     "start": 0.15,
+     "end": 0.29
+    },
+    {
+     "w": "this",
+     "start": 0.29,
+     "end": 0.43
+    },
+    {
+     "w": "world,",
+     "start": 0.43,
+     "end": 0.73
+    },
+    {
+     "w": "everybody",
+     "start": 0.89,
+     "end": 1.15
+    },
+    {
+     "w": "believes",
+     "start": 1.15,
+     "end": 1.49
+    },
+    {
+     "w": "in",
+     "start": 1.49,
+     "end": 1.69
+    },
+    {
+     "w": "God.",
+     "start": 1.69,
+     "end": 1.87
+    }
+   ]
+  },
+  {
+   "shot": "huss",
+   "speaker": "huss",
+   "text": "Huss... huss... huss...",
+   "start": 2.258,
+   "end": 3.175,
+   "words": [
+    {
+     "w": "Huss...",
+     "start": 2.258,
+     "end": 2.564
+    },
+    {
+     "w": "huss...",
+     "start": 2.564,
+     "end": 2.869
+    },
+    {
+     "w": "huss...",
+     "start": 2.869,
+     "end": 3.175
+    }
+   ]
+  },
+  {
+   "shot": "proof",
+   "speaker": "narr",
+   "text": "Problem is, there's zero proof. Not a footprint. Not a receipt.",
+   "start": 3.375,
+   "end": 6.84,
+   "words": [
+    {
+     "w": "Problem",
+     "start": 3.375,
+     "end": 3.595
+    },
+    {
+     "w": "is,",
+     "start": 3.595,
+     "end": 3.955
+    },
+    {
+     "w": "there's",
+     "start": 4.175,
+     "end": 4.375
+    },
+    {
+     "w": "zero",
+     "start": 4.375,
+     "end": 4.595
+    },
+    {
+     "w": "proof.",
+     "start": 4.595,
+     "end": 4.895
+    },
+    {
+     "w": "Not",
+     "start": 5.255,
+     "end": 5.315
+    },
+    {
+     "w": "a",
+     "start": 5.315,
+     "end": 5.435
+    },
+    {
+     "w": "footprint.",
+     "start": 5.435,
+     "end": 5.695
+    },
+    {
+     "w": "Not",
+     "start": 6.135,
+     "end": 6.235
+    },
+    {
+     "w": "a",
+     "start": 6.235,
+     "end": 6.335
+    },
+    {
+     "w": "receipt.",
+     "start": 6.335,
+     "end": 6.575
+    }
+   ]
+  },
+  {
+   "shot": "proof",
+   "speaker": "narr",
+   "text": "Scientists tried. Telescopes, microscopes, one guy even licked a meteorite. Nothing.",
+   "start": 6.94,
+   "end": 10.698,
+   "words": [
+    {
+     "w": "Scientists",
+     "start": 6.94,
+     "end": 7.26
+    },
+    {
+     "w": "tried.",
+     "start": 7.26,
+     "end": 7.54
+    },
+    {
+     "w": "Telescopes,",
+     "start": 7.94,
+     "end": 8.24
+    },
+    {
+     "w": "microscopes,",
+     "start": 8.34,
+     "end": 8.78
+    },
+    {
+     "w": "one",
+     "start": 8.88,
+     "end": 8.96
+    },
+    {
+     "w": "guy",
+     "start": 8.96,
+     "end": 9.14
+    },
+    {
+     "w": "even",
+     "start": 9.14,
+     "end": 9.32
+    },
+    {
+     "w": "licked",
+     "start": 9.32,
+     "end": 9.5
+    },
+    {
+     "w": "a",
+     "start": 9.5,
+     "end": 9.6
+    },
+    {
+     "w": "meteorite.",
+     "start": 9.6,
+     "end": 10.02
+    },
+    {
+     "w": "Nothing.",
+     "start": 10.24,
+     "end": 10.36
+    }
+   ]
+  },
+  {
+   "shot": "stalemate",
+   "speaker": "narr",
+   "text": "But nobody could prove He didn't exist either. Total stalemate. For centuries.",
+   "start": 10.898,
+   "end": 15.017,
+   "words": [
+    {
+     "w": "But",
+     "start": 10.898,
+     "end": 11.058
+    },
+    {
+     "w": "nobody",
+     "start": 11.058,
+     "end": 11.338
+    },
+    {
+     "w": "could",
+     "start": 11.338,
+     "end": 11.578
+    },
+    {
+     "w": "prove",
+     "start": 11.578,
+     "end": 11.758
+    },
+    {
+     "w": "He",
+     "start": 11.758,
+     "end": 11.978
+    },
+    {
+     "w": "didn't",
+     "start": 11.978,
+     "end": 12.278
+    },
+    {
+     "w": "exist",
+     "start": 12.278,
+     "end": 12.498
+    },
+    {
+     "w": "either.",
+     "start": 12.498,
+     "end": 12.838
+    },
+    {
+     "w": "Total",
+     "start": 13.298,
+     "end": 13.298
+    },
+    {
+     "w": "stalemate.",
+     "start": 13.298,
+     "end": 13.838
+    },
+    {
+     "w": "For",
+     "start": 14.058,
+     "end": 14.198
+    },
+    {
+     "w": "centuries.",
+     "start": 14.198,
+     "end": 14.558
+    }
+   ]
+  },
+  {
+   "shot": "wager",
+   "speaker": "narr",
+   "text": "Then the philosophers had a breakthrough. They called it...",
+   "start": 15.217,
+   "end": 17.692,
+   "words": [
+    {
+     "w": "Then",
+     "start": 15.217,
+     "end": 15.477
+    },
+    {
+     "w": "the",
+     "start": 15.477,
+     "end": 15.657
+    },
+    {
+     "w": "philosophers",
+     "start": 15.657,
+     "end": 15.957
+    },
+    {
+     "w": "had",
+     "start": 15.957,
+     "end": 16.277
+    },
+    {
+     "w": "a",
+     "start": 16.277,
+     "end": 16.377
+    },
+    {
+     "w": "breakthrough.",
+     "start": 16.377,
+     "end": 16.657
+    },
+    {
+     "w": "They",
+     "start": 17.017,
+     "end": 17.137
+    },
+    {
+     "w": "called",
+     "start": 17.137,
+     "end": 17.377
+    },
+    {
+     "w": "it...",
+     "start": 17.377,
+     "end": 17.577
+    }
+   ]
+  },
+  {
+   "shot": "wager",
+   "speaker": "narr",
+   "text": "the Burger Wager.",
+   "start": 18.192,
+   "end": 19.256,
+   "words": [
+    {
+     "w": "the",
+     "start": 18.192,
+     "end": 18.372
+    },
+    {
+     "w": "Burger",
+     "start": 18.372,
+     "end": 18.732
+    },
+    {
+     "w": "Wager.",
+     "start": 18.732,
+     "end": 19.092
+    }
+   ]
+  },
+  {
+   "shot": "wager",
+   "speaker": "narr",
+   "text": "If you believe in God and you're wrong? You lose nothing.",
+   "start": 19.356,
+   "end": 21.701,
+   "words": [
+    {
+     "w": "If",
+     "start": 19.356,
+     "end": 19.516
+    },
+    {
+     "w": "you",
+     "start": 19.516,
+     "end": 19.616
+    },
+    {
+     "w": "believe",
+     "start": 19.616,
+     "end": 19.776
+    },
+    {
+     "w": "in",
+     "start": 19.776,
+     "end": 19.936
+    },
+    {
+     "w": "God",
+     "start": 19.936,
+     "end": 20.136
+    },
+    {
+     "w": "and",
+     "start": 20.136,
+     "end": 20.296
+    },
+    {
+     "w": "you're",
+     "start": 20.296,
+     "end": 20.416
+    },
+    {
+     "w": "wrong?",
+     "start": 20.416,
+     "end": 20.636
+    },
+    {
+     "w": "You",
+     "start": 20.916,
+     "end": 20.956
+    },
+    {
+     "w": "lose",
+     "start": 20.956,
+     "end": 21.116
+    },
+    {
+     "w": "nothing.",
+     "start": 21.116,
+     "end": 21.416
+    }
+   ]
+  },
+  {
+   "shot": "wager",
+   "speaker": "narr",
+   "text": "If you believe and you're right? Infinite rewards. Forever.",
+   "start": 21.801,
+   "end": 25.01,
+   "words": [
+    {
+     "w": "If",
+     "start": 21.801,
+     "end": 21.961
+    },
+    {
+     "w": "you",
+     "start": 21.961,
+     "end": 22.081
+    },
+    {
+     "w": "believe",
+     "start": 22.081,
+     "end": 22.341
+    },
+    {
+     "w": "and",
+     "start": 22.341,
+     "end": 22.621
+    },
+    {
+     "w": "you're",
+     "start": 22.621,
+     "end": 22.821
+    },
+    {
+     "w": "right?",
+     "start": 22.821,
+     "end": 23.101
+    },
+    {
+     "w": "Infinite",
+     "start": 23.681,
+     "end": 23.721
+    },
+    {
+     "w": "rewards.",
+     "start": 23.721,
+     "end": 24.221
+    },
+    {
+     "w": "Forever.",
+     "start": 24.221,
+     "end": 24.641
+    }
+   ]
+  },
+  {
+   "shot": "wager",
+   "speaker": "narr",
+   "text": "But if you don't believe, and He's real? Infinite punishment. Forever.",
+   "start": 25.11,
+   "end": 28.49,
+   "words": [
+    {
+     "w": "But",
+     "start": 25.11,
+     "end": 25.23
+    },
+    {
+     "w": "if",
+     "start": 25.23,
+     "end": 25.31
+    },
+    {
+     "w": "you",
+     "start": 25.31,
+     "end": 25.39
+    },
+    {
+     "w": "don't",
+     "start": 25.39,
+     "end": 25.61
+    },
+    {
+     "w": "believe,",
+     "start": 25.61,
+     "end": 25.77
+    },
+    {
+     "w": "and",
+     "start": 26.13,
+     "end": 26.29
+    },
+    {
+     "w": "He's",
+     "start": 26.29,
+     "end": 26.57
+    },
+    {
+     "w": "real?",
+     "start": 26.57,
+     "end": 26.79
+    },
+    {
+     "w": "Infinite",
+     "start": 27.29,
+     "end": 27.29
+    },
+    {
+     "w": "punishment.",
+     "start": 27.29,
+     "end": 27.71
+    },
+    {
+     "w": "Forever.",
+     "start": 28.01,
+     "end": 28.19
+    }
+   ]
+  },
+  {
+   "shot": "wager",
+   "speaker": "narr",
+   "text": "Infinite heaven, versus a little effort. The math was perfect.",
+   "start": 28.59,
+   "end": 31.818,
+   "words": [
+    {
+     "w": "Infinite",
+     "start": 28.59,
+     "end": 28.89
+    },
+    {
+     "w": "heaven,",
+     "start": 28.89,
+     "end": 29.19
+    },
+    {
+     "w": "versus",
+     "start": 29.19,
+     "end": 29.49
+    },
+    {
+     "w": "a",
+     "start": 29.49,
+     "end": 29.71
+    },
+    {
+     "w": "little",
+     "start": 29.71,
+     "end": 29.81
+    },
+    {
+     "w": "effort.",
+     "start": 29.81,
+     "end": 30.17
+    },
+    {
+     "w": "The",
+     "start": 30.45,
+     "end": 30.57
+    },
+    {
+     "w": "math",
+     "start": 30.57,
+     "end": 30.83
+    },
+    {
+     "w": "was",
+     "start": 30.83,
+     "end": 31.11
+    },
+    {
+     "w": "perfect.",
+     "start": 31.11,
+     "end": 31.47
+    }
+   ]
+  },
+  {
+   "shot": "world",
+   "speaker": "narr",
+   "text": "And it worked. Ninety-nine point nine percent of the world didn't just believe. They went full religious.",
+   "start": 32.018,
+   "end": 35.99,
+   "words": [
+    {
+     "w": "And",
+     "start": 32.018,
+     "end": 32.118
+    },
+    {
+     "w": "it",
+     "start": 32.118,
+     "end": 32.218
+    },
+    {
+     "w": "worked.",
+     "start": 32.218,
+     "end": 32.478
+    },
+    {
+     "w": "Ninety-nine",
+     "start": 32.478,
+     "end": 32.783
+    },
+    {
+     "w": "point",
+     "start": 32.783,
+     "end": 33.088
+    },
+    {
+     "w": "nine",
+     "start": 33.088,
+     "end": 33.393
+    },
+    {
+     "w": "percent",
+     "start": 33.393,
+     "end": 33.698
+    },
+    {
+     "w": "of",
+     "start": 33.698,
+     "end": 33.818
+    },
+    {
+     "w": "the",
+     "start": 33.818,
+     "end": 33.898
+    },
+    {
+     "w": "world",
+     "start": 33.898,
+     "end": 34.058
+    },
+    {
+     "w": "didn't",
+     "start": 34.058,
+     "end": 34.318
+    },
+    {
+     "w": "just",
+     "start": 34.318,
+     "end": 34.438
+    },
+    {
+     "w": "believe.",
+     "start": 34.438,
+     "end": 34.698
+    },
+    {
+     "w": "They",
+     "start": 34.958,
+     "end": 35.078
+    },
+    {
+     "w": "went",
+     "start": 35.078,
+     "end": 35.198
+    },
+    {
+     "w": "full",
+     "start": 35.198,
+     "end": 35.378
+    },
+    {
+     "w": "religious.",
+     "start": 35.378,
+     "end": 35.638
+    }
+   ]
+  },
+  {
+   "shot": "world",
+   "speaker": "narr",
+   "text": "Prayer apps. Church drive-thrus. Babies baptized before they could even blink.",
+   "start": 36.09,
+   "end": 40.441,
+   "words": [
+    {
+     "w": "Prayer",
+     "start": 36.09,
+     "end": 36.39
+    },
+    {
+     "w": "apps.",
+     "start": 36.39,
+     "end": 36.69
+    },
+    {
+     "w": "Church",
+     "start": 37.01,
+     "end": 37.13
+    },
+    {
+     "w": "drive-thrus.",
+     "start": 37.13,
+     "end": 37.49
+    },
+    {
+     "w": "Babies",
+     "start": 38.61,
+     "end": 38.93
+    },
+    {
+     "w": "baptized",
+     "start": 38.93,
+     "end": 39.19
+    },
+    {
+     "w": "before",
+     "start": 39.19,
+     "end": 39.57
+    },
+    {
+     "w": "they",
+     "start": 39.57,
+     "end": 39.71
+    },
+    {
+     "w": "could",
+     "start": 39.71,
+     "end": 39.79
+    },
+    {
+     "w": "even",
+     "start": 39.79,
+     "end": 39.95
+    },
+    {
+     "w": "blink.",
+     "start": 39.95,
+     "end": 40.13
+    }
+   ]
+  },
+  {
+   "shot": "me",
+   "speaker": "narr",
+   "text": "And then there was me. The last non-believer on Earth.",
+   "start": 40.641,
+   "end": 43.314,
+   "words": [
+    {
+     "w": "And",
+     "start": 40.641,
+     "end": 40.781
+    },
+    {
+     "w": "then",
+     "start": 40.781,
+     "end": 40.981
+    },
+    {
+     "w": "there",
+     "start": 41.201,
+     "end": 41.281
+    },
+    {
+     "w": "was",
+     "start": 41.281,
+     "end": 41.421
+    },
+    {
+     "w": "me.",
+     "start": 41.421,
+     "end": 41.621
+    },
+    {
+     "w": "The",
+     "start": 41.901,
+     "end": 41.981
+    },
+    {
+     "w": "last",
+     "start": 41.981,
+     "end": 42.201
+    },
+    {
+     "w": "non-believer",
+     "start": 42.201,
+     "end": 42.481
+    },
+    {
+     "w": "on",
+     "start": 42.781,
+     "end": 43.001
+    },
+    {
+     "w": "Earth.",
+     "start": 43.001,
+     "end": 43.141
+    }
+   ]
+  },
+  {
+   "shot": "doubt",
+   "speaker": "narr",
+   "text": "Because the argument just didn't sit right with me.",
+   "start": 43.514,
+   "end": 45.525,
+   "words": [
+    {
+     "w": "Because",
+     "start": 43.514,
+     "end": 43.734
+    },
+    {
+     "w": "the",
+     "start": 43.734,
+     "end": 43.894
+    },
+    {
+     "w": "argument",
+     "start": 43.894,
+     "end": 44.234
+    },
+    {
+     "w": "just",
+     "start": 44.234,
+     "end": 44.494
+    },
+    {
+     "w": "didn't",
+     "start": 44.494,
+     "end": 44.794
+    },
+    {
+     "w": "sit",
+     "start": 44.794,
+     "end": 44.894
+    },
+    {
+     "w": "right",
+     "start": 44.894,
+     "end": 45.074
+    },
+    {
+     "w": "with",
+     "start": 45.074,
+     "end": 45.194
+    },
+    {
+     "w": "me.",
+     "start": 45.194,
+     "end": 45.354
+    }
+   ]
+  },
+  {
+   "shot": "doubt",
+   "speaker": "narr",
+   "text": "You can't flip a belief switch because someone offered you a prize. I'm not a robot.",
+   "start": 45.625,
+   "end": 48.988,
+   "words": [
+    {
+     "w": "You",
+     "start": 45.625,
+     "end": 45.745
+    },
+    {
+     "w": "can't",
+     "start": 45.745,
+     "end": 45.985
+    },
+    {
+     "w": "flip",
+     "start": 45.985,
+     "end": 46.105
+    },
+    {
+     "w": "a",
+     "start": 46.105,
+     "end": 46.225
+    },
+    {
+     "w": "belief",
+     "start": 46.225,
+     "end": 46.425
+    },
+    {
+     "w": "switch",
+     "start": 46.425,
+     "end": 46.705
+    },
+    {
+     "w": "because",
+     "start": 46.705,
+     "end": 47.025
+    },
+    {
+     "w": "someone",
+     "start": 47.025,
+     "end": 47.265
+    },
+    {
+     "w": "offered",
+     "start": 47.265,
+     "end": 47.485
+    },
+    {
+     "w": "you",
+     "start": 47.485,
+     "end": 47.645
+    },
+    {
+     "w": "a",
+     "start": 47.645,
+     "end": 47.705
+    },
+    {
+     "w": "prize.",
+     "start": 47.705,
+     "end": 47.965
+    },
+    {
+     "w": "I'm",
+     "start": 48.225,
+     "end": 48.345
+    },
+    {
+     "w": "not",
+     "start": 48.345,
+     "end": 48.465
+    },
+    {
+     "w": "a",
+     "start": 48.465,
+     "end": 48.545
+    },
+    {
+     "w": "robot.",
+     "start": 48.545,
+     "end": 48.765
+    }
+   ]
+  },
+  {
+   "shot": "doubt",
+   "speaker": "narr",
+   "text": "You can bet on a team you think will lose. Doesn't mean you believe they'll win.",
+   "start": 49.088,
+   "end": 52.135,
+   "words": [
+    {
+     "w": "You",
+     "start": 49.088,
+     "end": 49.208
+    },
+    {
+     "w": "can",
+     "start": 49.208,
+     "end": 49.328
+    },
+    {
+     "w": "bet",
+     "start": 49.328,
+     "end": 49.488
+    },
+    {
+     "w": "on",
+     "start": 49.488,
+     "end": 49.628
+    },
+    {
+     "w": "a",
+     "start": 49.628,
+     "end": 49.728
+    },
+    {
+     "w": "team",
+     "start": 49.728,
+     "end": 49.868
+    },
+    {
+     "w": "you",
+     "start": 49.868,
+     "end": 49.988
+    },
+    {
+     "w": "think",
+     "start": 49.988,
+     "end": 50.108
+    },
+    {
+     "w": "will",
+     "start": 50.108,
+     "end": 50.268
+    },
+    {
+     "w": "lose.",
+     "start": 50.268,
+     "end": 50.528
+    },
+    {
+     "w": "Doesn't",
+     "start": 50.848,
+     "end": 51.108
+    },
+    {
+     "w": "mean",
+     "start": 51.108,
+     "end": 51.188
+    },
+    {
+     "w": "you",
+     "start": 51.188,
+     "end": 51.308
+    },
+    {
+     "w": "believe",
+     "start": 51.308,
+     "end": 51.508
+    },
+    {
+     "w": "they'll",
+     "start": 51.508,
+     "end": 51.728
+    },
+    {
+     "w": "win.",
+     "start": 51.728,
+     "end": 51.908
+    }
+   ]
+  },
+  {
+   "shot": "family",
+   "speaker": "narr",
+   "text": "But everyone was worried about me.",
+   "start": 52.335,
+   "end": 53.772,
+   "words": [
+    {
+     "w": "But",
+     "start": 52.335,
+     "end": 52.475
+    },
+    {
+     "w": "everyone",
+     "start": 52.475,
+     "end": 52.795
+    },
+    {
+     "w": "was",
+     "start": 52.795,
+     "end": 53.015
+    },
+    {
+     "w": "worried",
+     "start": 53.015,
+     "end": 53.195
+    },
+    {
+     "w": "about",
+     "start": 53.195,
+     "end": 53.415
+    },
+    {
+     "w": "me.",
+     "start": 53.415,
+     "end": 53.595
+    }
+   ]
+  },
+  {
+   "shot": "family",
+   "speaker": "mom",
+   "text": "Sweetie, we pray for you every single night.",
+   "start": 53.872,
+   "end": 56.154,
+   "words": [
+    {
+     "w": "Sweetie,",
+     "start": 53.872,
+     "end": 54.312
+    },
+    {
+     "w": "we",
+     "start": 54.472,
+     "end": 54.592
+    },
+    {
+     "w": "pray",
+     "start": 54.592,
+     "end": 54.772
+    },
+    {
+     "w": "for",
+     "start": 54.772,
+     "end": 54.952
+    },
+    {
+     "w": "you",
+     "start": 54.952,
+     "end": 55.072
+    },
+    {
+     "w": "every",
+     "start": 55.072,
+     "end": 55.332
+    },
+    {
+     "w": "single",
+     "start": 55.332,
+     "end": 55.632
+    },
+    {
+     "w": "night.",
+     "start": 55.632,
+     "end": 55.912
+    }
+   ]
+  },
+  {
+   "shot": "family",
+   "speaker": "bro",
+   "text": "Bro, they're gonna roast you. Literally.",
+   "start": 56.254,
+   "end": 58.024,
+   "words": [
+    {
+     "w": "Bro,",
+     "start": 56.254,
+     "end": 56.414
+    },
+    {
+     "w": "they're",
+     "start": 56.414,
+     "end": 56.654
+    },
+    {
+     "w": "gonna",
+     "start": 56.654,
+     "end": 56.774
+    },
+    {
+     "w": "roast",
+     "start": 56.774,
+     "end": 57.054
+    },
+    {
+     "w": "you.",
+     "start": 57.054,
+     "end": 57.274
+    },
+    {
+     "w": "Literally.",
+     "start": 57.474,
+     "end": 57.634
+    }
+   ]
+  },
+  {
+   "shot": "family",
+   "speaker": "narr",
+   "text": "And honestly, I didn't wanna burn either.",
+   "start": 58.124,
+   "end": 59.671,
+   "words": [
+    {
+     "w": "And",
+     "start": 58.124,
+     "end": 58.264
+    },
+    {
+     "w": "honestly,",
+     "start": 58.264,
+     "end": 58.604
+    },
+    {
+     "w": "I",
+     "start": 58.744,
+     "end": 58.824
+    },
+    {
+     "w": "didn't",
+     "start": 58.824,
+     "end": 58.984
+    },
+    {
+     "w": "wanna",
+     "start": 58.984,
+     "end": 59.144
+    },
+    {
+     "w": "burn",
+     "start": 59.144,
+     "end": 59.264
+    },
+    {
+     "w": "either.",
+     "start": 59.264,
+     "end": 59.484
+    }
+   ]
+  },
+  {
+   "shot": "research",
+   "speaker": "narr",
+   "text": "So I did the research. Every counterargument. Every loophole.",
+   "start": 59.871,
+   "end": 62.823,
+   "words": [
+    {
+     "w": "So",
+     "start": 59.871,
+     "end": 60.031
+    },
+    {
+     "w": "I",
+     "start": 60.031,
+     "end": 60.231
+    },
+    {
+     "w": "did",
+     "start": 60.231,
+     "end": 60.351
+    },
+    {
+     "w": "the",
+     "start": 60.351,
+     "end": 60.451
+    },
+    {
+     "w": "research.",
+     "start": 60.451,
+     "end": 60.791
+    },
+    {
+     "w": "Every",
+     "start": 61.131,
+     "end": 61.291
+    },
+    {
+     "w": "counterargument.",
+     "start": 61.291,
+     "end": 62.151
+    },
+    {
+     "w": "Every",
+     "start": 62.151,
+     "end": 62.311
+    },
+    {
+     "w": "loophole.",
+     "start": 62.311,
+     "end": 62.571
+    }
+   ]
+  },
+  {
+   "shot": "research",
+   "speaker": "narr",
+   "text": "I couldn't beat the odds. Infinity always wins.",
+   "start": 62.923,
+   "end": 65.233,
+   "words": [
+    {
+     "w": "I",
+     "start": 62.923,
+     "end": 63.063
+    },
+    {
+     "w": "couldn't",
+     "start": 63.063,
+     "end": 63.283
+    },
+    {
+     "w": "beat",
+     "start": 63.283,
+     "end": 63.383
+    },
+    {
+     "w": "the",
+     "start": 63.383,
+     "end": 63.523
+    },
+    {
+     "w": "odds.",
+     "start": 63.523,
+     "end": 63.743
+    },
+    {
+     "w": "Infinity",
+     "start": 64.023,
+     "end": 64.263
+    },
+    {
+     "w": "always",
+     "start": 64.263,
+     "end": 64.703
+    },
+    {
+     "w": "wins.",
+     "start": 64.703,
+     "end": 64.983
+    }
+   ]
+  },
+  {
+   "shot": "convert",
+   "speaker": "narr",
+   "text": "So I gave in. I believed.",
+   "start": 65.433,
+   "end": 67.245,
+   "words": [
+    {
+     "w": "So",
+     "start": 65.433,
+     "end": 65.593
+    },
+    {
+     "w": "I",
+     "start": 65.593,
+     "end": 65.813
+    },
+    {
+     "w": "gave",
+     "start": 65.813,
+     "end": 65.973
+    },
+    {
+     "w": "in.",
+     "start": 65.973,
+     "end": 66.213
+    },
+    {
+     "w": "I",
+     "start": 66.633,
+     "end": 66.633
+    },
+    {
+     "w": "believed.",
+     "start": 66.633,
+     "end": 66.933
+    }
+   ]
+  },
+  {
+   "shot": "convert",
+   "speaker": "narr",
+   "text": "And you know what? It wasn't so bad.",
+   "start": 67.345,
+   "end": 69.063,
+   "words": [
+    {
+     "w": "And",
+     "start": 67.345,
+     "end": 67.605
+    },
+    {
+     "w": "you",
+     "start": 67.605,
+     "end": 67.685
+    },
+    {
+     "w": "know",
+     "start": 67.685,
+     "end": 67.805
+    },
+    {
+     "w": "what?",
+     "start": 67.805,
+     "end": 67.985
+    },
+    {
+     "w": "It",
+     "start": 68.165,
+     "end": 68.285
+    },
+    {
+     "w": "wasn't",
+     "start": 68.285,
+     "end": 68.545
+    },
+    {
+     "w": "so",
+     "start": 68.545,
+     "end": 68.645
+    },
+    {
+     "w": "bad.",
+     "start": 68.645,
+     "end": 68.845
+    }
+   ]
+  },
+  {
+   "shot": "convert",
+   "speaker": "narr",
+   "text": "My life had purpose. I was happy. I had a church family that brought me casseroles.",
+   "start": 69.163,
+   "end": 72.664,
+   "words": [
+    {
+     "w": "My",
+     "start": 69.163,
+     "end": 69.303
+    },
+    {
+     "w": "life",
+     "start": 69.303,
+     "end": 69.423
+    },
+    {
+     "w": "had",
+     "start": 69.423,
+     "end": 69.563
+    },
+    {
+     "w": "purpose.",
+     "start": 69.563,
+     "end": 69.843
+    },
+    {
+     "w": "I",
+     "start": 70.223,
+     "end": 70.323
+    },
+    {
+     "w": "was",
+     "start": 70.323,
+     "end": 70.423
+    },
+    {
+     "w": "happy.",
+     "start": 70.423,
+     "end": 70.683
+    },
+    {
+     "w": "I",
+     "start": 70.923,
+     "end": 70.983
+    },
+    {
+     "w": "had",
+     "start": 70.983,
+     "end": 71.123
+    },
+    {
+     "w": "a",
+     "start": 71.123,
+     "end": 71.203
+    },
+    {
+     "w": "church",
+     "start": 71.203,
+     "end": 71.343
+    },
+    {
+     "w": "family",
+     "start": 71.343,
+     "end": 71.603
+    },
+    {
+     "w": "that",
+     "start": 71.603,
+     "end": 71.783
+    },
+    {
+     "w": "brought",
+     "start": 71.783,
+     "end": 71.863
+    },
+    {
+     "w": "me",
+     "start": 71.863,
+     "end": 72.023
+    },
+    {
+     "w": "casseroles.",
+     "start": 72.023,
+     "end": 72.443
+    }
+   ]
+  },
+  {
+   "shot": "death",
+   "speaker": "narr",
+   "text": "Sixty years passed. And then, I died.",
+   "start": 72.864,
+   "end": 75.268,
+   "words": [
+    {
+     "w": "Sixty",
+     "start": 72.864,
+     "end": 73.224
+    },
+    {
+     "w": "years",
+     "start": 73.224,
+     "end": 73.404
+    },
+    {
+     "w": "passed.",
+     "start": 73.404,
+     "end": 73.744
+    },
+    {
+     "w": "And",
+     "start": 74.084,
+     "end": 74.204
+    },
+    {
+     "w": "then,",
+     "start": 74.204,
+     "end": 74.444
+    },
+    {
+     "w": "I",
+     "start": 74.444,
+     "end": 74.804
+    },
+    {
+     "w": "died.",
+     "start": 74.804,
+     "end": 75.004
+    }
+   ]
+  },
+  {
+   "shot": "white",
+   "speaker": "narr",
+   "text": "I opened my eyes in a white room.",
+   "start": 75.968,
+   "end": 77.561,
+   "words": [
+    {
+     "w": "I",
+     "start": 75.968,
+     "end": 76.088
+    },
+    {
+     "w": "opened",
+     "start": 76.088,
+     "end": 76.248
+    },
+    {
+     "w": "my",
+     "start": 76.248,
+     "end": 76.428
+    },
+    {
+     "w": "eyes",
+     "start": 76.428,
+     "end": 76.668
+    },
+    {
+     "w": "in",
+     "start": 76.668,
+     "end": 76.848
+    },
+    {
+     "w": "a",
+     "start": 76.848,
+     "end": 76.928
+    },
+    {
+     "w": "white",
+     "start": 76.928,
+     "end": 77.108
+    },
+    {
+     "w": "room.",
+     "start": 77.108,
+     "end": 77.368
+    }
+   ]
+  },
+  {
+   "shot": "white",
+   "speaker": "narr",
+   "text": "I was right! He's real! The wager paid off!",
+   "start": 77.661,
+   "end": 80.434,
+   "words": [
+    {
+     "w": "I",
+     "start": 77.661,
+     "end": 77.801
+    },
+    {
+     "w": "was",
+     "start": 77.801,
+     "end": 77.921
+    },
+    {
+     "w": "right!",
+     "start": 77.921,
+     "end": 78.241
+    },
+    {
+     "w": "He's",
+     "start": 78.541,
+     "end": 78.721
+    },
+    {
+     "w": "real!",
+     "start": 78.721,
+     "end": 78.961
+    },
+    {
+     "w": "The",
+     "start": 79.381,
+     "end": 79.421
+    },
+    {
+     "w": "wager",
+     "start": 79.421,
+     "end": 79.681
+    },
+    {
+     "w": "paid",
+     "start": 79.681,
+     "end": 79.881
+    },
+    {
+     "w": "off!",
+     "start": 79.881,
+     "end": 80.181
+    }
+   ]
+  },
+  {
+   "shot": "white",
+   "speaker": "narr",
+   "text": "Then I saw everyone else. Being thrown into the fire.",
+   "start": 80.534,
+   "end": 83.35,
+   "words": [
+    {
+     "w": "Then",
+     "start": 80.534,
+     "end": 80.714
+    },
+    {
+     "w": "I",
+     "start": 80.714,
+     "end": 80.874
+    },
+    {
+     "w": "saw",
+     "start": 80.874,
+     "end": 81.014
+    },
+    {
+     "w": "everyone",
+     "start": 81.014,
+     "end": 81.294
+    },
+    {
+     "w": "else.",
+     "start": 81.294,
+     "end": 81.554
+    },
+    {
+     "w": "Being",
+     "start": 81.954,
+     "end": 82.174
+    },
+    {
+     "w": "thrown",
+     "start": 82.174,
+     "end": 82.454
+    },
+    {
+     "w": "into",
+     "start": 82.454,
+     "end": 82.714
+    },
+    {
+     "w": "the",
+     "start": 82.714,
+     "end": 82.834
+    },
+    {
+     "w": "fire.",
+     "start": 82.834,
+     "end": 83.094
+    }
+   ]
+  },
+  {
+   "shot": "white",
+   "speaker": "narr",
+   "text": "My pastor. My mom. The guy who invented the wager.",
+   "start": 83.45,
+   "end": 86.171,
+   "words": [
+    {
+     "w": "My",
+     "start": 83.45,
+     "end": 83.59
+    },
+    {
+     "w": "pastor.",
+     "start": 83.59,
+     "end": 83.93
+    },
+    {
+     "w": "My",
+     "start": 84.23,
+     "end": 84.33
+    },
+    {
+     "w": "mom.",
+     "start": 84.33,
+     "end": 84.55
+    },
+    {
+     "w": "The",
+     "start": 84.95,
+     "end": 84.97
+    },
+    {
+     "w": "guy",
+     "start": 84.97,
+     "end": 85.11
+    },
+    {
+     "w": "who",
+     "start": 85.11,
+     "end": 85.25
+    },
+    {
+     "w": "invented",
+     "start": 85.25,
+     "end": 85.47
+    },
+    {
+     "w": "the",
+     "start": 85.47,
+     "end": 85.67
+    },
+    {
+     "w": "wager.",
+     "start": 85.67,
+     "end": 85.91
+    }
+   ]
+  },
+  {
+   "shot": "god",
+   "speaker": "god",
+   "text": "I left no evidence. On purpose.",
+   "start": 86.571,
+   "end": 89.667,
+   "words": [
+    {
+     "w": "I",
+     "start": 86.571,
+     "end": 86.771
+    },
+    {
+     "w": "left",
+     "start": 86.771,
+     "end": 87.031
+    },
+    {
+     "w": "no",
+     "start": 87.031,
+     "end": 87.431
+    },
+    {
+     "w": "evidence.",
+     "start": 87.431,
+     "end": 87.931
+    },
+    {
+     "w": "On",
+     "start": 87.931,
+     "end": 88.671
+    },
+    {
+     "w": "purpose.",
+     "start": 88.671,
+     "end": 88.991
+    }
+   ]
+  },
+  {
+   "shot": "god",
+   "speaker": "god",
+   "text": "I don't reward belief. I reward warranted belief.",
+   "start": 90.067,
+   "end": 94.196,
+   "words": [
+    {
+     "w": "I",
+     "start": 90.067,
+     "end": 90.227
+    },
+    {
+     "w": "don't",
+     "start": 90.227,
+     "end": 90.927
+    },
+    {
+     "w": "reward",
+     "start": 90.927,
+     "end": 90.927
+    },
+    {
+     "w": "belief.",
+     "start": 90.927,
+     "end": 92.107
+    },
+    {
+     "w": "I",
+     "start": 92.107,
+     "end": 92.127
+    },
+    {
+     "w": "reward",
+     "start": 92.127,
+     "end": 92.587
+    },
+    {
+     "w": "warranted",
+     "start": 92.587,
+     "end": 93.207
+    },
+    {
+     "w": "belief.",
+     "start": 93.207,
+     "end": 94.196
+    }
+   ]
+  },
+  {
+   "shot": "god",
+   "speaker": "god",
+   "text": "You had no reason to believe in me. So you shouldn't have.",
+   "start": 94.596,
+   "end": 98.853,
+   "words": [
+    {
+     "w": "You",
+     "start": 94.596,
+     "end": 94.776
+    },
+    {
+     "w": "had",
+     "start": 94.776,
+     "end": 94.956
+    },
+    {
+     "w": "no",
+     "start": 94.956,
+     "end": 95.276
+    },
+    {
+     "w": "reason",
+     "start": 95.276,
+     "end": 95.636
+    },
+    {
+     "w": "to",
+     "start": 95.636,
+     "end": 96.036
+    },
+    {
+     "w": "believe",
+     "start": 96.036,
+     "end": 96.396
+    },
+    {
+     "w": "in",
+     "start": 96.396,
+     "end": 96.616
+    },
+    {
+     "w": "me.",
+     "start": 96.616,
+     "end": 96.996
+    },
+    {
+     "w": "So",
+     "start": 97.336,
+     "end": 97.556
+    },
+    {
+     "w": "you",
+     "start": 97.556,
+     "end": 97.796
+    },
+    {
+     "w": "shouldn't",
+     "start": 97.796,
+     "end": 98.176
+    },
+    {
+     "w": "have.",
+     "start": 98.176,
+     "end": 98.436
+    }
+   ]
+  },
+  {
+   "shot": "infinite",
+   "speaker": "narr",
+   "text": "Turns out, it was never a two-option bet.",
+   "start": 99.353,
+   "end": 101.228,
+   "words": [
+    {
+     "w": "Turns",
+     "start": 99.353,
+     "end": 99.513
+    },
+    {
+     "w": "out,",
+     "start": 99.513,
+     "end": 99.753
+    },
+    {
+     "w": "it",
+     "start": 99.853,
+     "end": 99.913
+    },
+    {
+     "w": "was",
+     "start": 99.913,
+     "end": 100.033
+    },
+    {
+     "w": "never",
+     "start": 100.033,
+     "end": 100.273
+    },
+    {
+     "w": "a",
+     "start": 100.273,
+     "end": 100.473
+    },
+    {
+     "w": "two-option",
+     "start": 100.473,
+     "end": 100.593
+    },
+    {
+     "w": "bet.",
+     "start": 100.813,
+     "end": 101.013
+    }
+   ]
+  },
+  {
+   "shot": "infinite",
+   "speaker": "narr",
+   "text": "There were infinite possible gods, wanting infinite possible things. We only thought of one.",
+   "start": 101.328,
+   "end": 105.217,
+   "words": [
+    {
+     "w": "There",
+     "start": 101.328,
+     "end": 101.328
+    },
+    {
+     "w": "were",
+     "start": 101.328,
+     "end": 101.548
+    },
+    {
+     "w": "infinite",
+     "start": 101.548,
+     "end": 101.928
+    },
+    {
+     "w": "possible",
+     "start": 101.928,
+     "end": 102.288
+    },
+    {
+     "w": "gods,",
+     "start": 102.288,
+     "end": 102.548
+    },
+    {
+     "w": "wanting",
+     "start": 102.548,
+     "end": 102.848
+    },
+    {
+     "w": "infinite",
+     "start": 102.848,
+     "end": 103.208
+    },
+    {
+     "w": "possible",
+     "start": 103.208,
+     "end": 103.548
+    },
+    {
+     "w": "things.",
+     "start": 103.548,
+     "end": 103.908
+    },
+    {
+     "w": "We",
+     "start": 104.188,
+     "end": 104.288
+    },
+    {
+     "w": "only",
+     "start": 104.288,
+     "end": 104.488
+    },
+    {
+     "w": "thought",
+     "start": 104.488,
+     "end": 104.668
+    },
+    {
+     "w": "of",
+     "start": 104.668,
+     "end": 104.808
+    },
+    {
+     "w": "one.",
+     "start": 104.808,
+     "end": 105.008
+    }
+   ]
+  },
+  {
+   "shot": "burn",
+   "speaker": "narr",
+   "text": "We all burned.",
+   "start": 105.817,
+   "end": 106.621,
+   "words": [
+    {
+     "w": "We",
+     "start": 105.817,
+     "end": 105.977
+    },
+    {
+     "w": "all",
+     "start": 105.977,
+     "end": 106.117
+    },
+    {
+     "w": "burned.",
+     "start": 106.117,
+     "end": 106.357
+    }
+   ]
+  },
+  {
+   "shot": "hell",
+   "speaker": "narr",
+   "text": "And the worst part? I was right the first time.",
+   "start": 106.821,
+   "end": 108.801,
+   "words": [
+    {
+     "w": "And",
+     "start": 106.821,
+     "end": 106.981
+    },
+    {
+     "w": "the",
+     "start": 106.981,
+     "end": 107.081
+    },
+    {
+     "w": "worst",
+     "start": 107.081,
+     "end": 107.181
+    },
+    {
+     "w": "part?",
+     "start": 107.181,
+     "end": 107.481
+    },
+    {
+     "w": "I",
+     "start": 107.741,
+     "end": 107.841
+    },
+    {
+     "w": "was",
+     "start": 107.841,
+     "end": 107.961
+    },
+    {
+     "w": "right",
+     "start": 107.961,
+     "end": 108.121
+    },
+    {
+     "w": "the",
+     "start": 108.121,
+     "end": 108.241
+    },
+    {
+     "w": "first",
+     "start": 108.241,
+     "end": 108.401
+    },
+    {
+     "w": "time.",
+     "start": 108.401,
+     "end": 108.601
+    }
+   ]
+  }
+ ]
+}
