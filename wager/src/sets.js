@@ -27,7 +27,7 @@ function skyTex(stops) { return canvasTex(16, 512, (ctx, w, h) => { const g = ct
 function glowTex(c = '255,236,200') { return canvasTex(128, 128, (ctx) => { const g = ctx.createRadialGradient(64, 64, 0, 64, 64, 64); g.addColorStop(0, `rgba(${c},1)`); g.addColorStop(1, `rgba(${c},0)`); ctx.fillStyle = g; ctx.fillRect(0, 0, 128, 128); }); }
 function signTex(text, bg, fg = '#fff8e6', w = 512, h = 128, font = 64) {
   return canvasTex(w, h, (ctx) => { ctx.fillStyle = bg; ctx.beginPath(); ctx.roundRect(4, 4, w - 8, h - 8, 18); ctx.fill(); ctx.strokeStyle = '#3a2216'; ctx.lineWidth = 8; ctx.stroke();
-    ctx.fillStyle = fg; ctx.font = `bold ${font}px "DejaVu Sans", sans-serif`; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; const lines = text.split('\n'); lines.forEach((l, i) => ctx.fillText(l, w / 2, h / 2 + (i - (lines.length - 1) / 2) * font * 1.05)); });
+    ctx.fillStyle = fg; ctx.font = `bold ${font}px "DejaVu Sans", sans-serif`; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; const lines = text.split('\n'); lines.forEach((l, i) => ctx.fillText(l, w / 2, h / 2 + (i - (lines.length - 1) / 2) * font * 1.05, w - 44)); });
 }
 function windowsTex(wall, glass, rows = 6, cols = 3, lit = 0.3) { // building facade, big soft windows
   return canvasTex(256, 512, (ctx, w, h) => { ctx.fillStyle = wall; ctx.fillRect(0, 0, w, h); spots(ctx, w, h, 20, '255,255,255', 30, 80, 0.06);
@@ -519,14 +519,14 @@ export function buildChurch() {
   return finish(scene, cast, { cass, baby, flames, rays, reset() { cass.forEach((c) => (c.visible = false)); baby.visible = false; }, update(t) { flames.forEach((f, i) => f.scale.set(0.7, 1.4 + 0.25 * Math.sin(t * 11 + i * 2), 0.7)); rays.forEach((r, i) => (r.material.opacity = 0.8 + 0.2 * Math.sin(t * 0.8 + i))); } });
 }
 
-// 6. holy drive-thru (exterior)
+// 6. holy drive-through (exterior)
 export function buildDrive() {
   _s = 251; const scene = new THREE.Scene(); scene.fog = new THREE.Fog(0xf6e2c2, 40, 160);
   skyDome(scene, skyTex([[0, '#6aaee8'], [0.45, '#b8dcf4'], [0.5, '#fde8c8'], [1, '#fde8c8']]));
   ground(scene, std(0x6a6a72, 0.8), 200); const lot = new THREE.Mesh(new THREE.PlaneGeometry(6, 30), std(0x8a8a90, 0.85)); lot.rotation.x = -Math.PI / 2; lot.position.set(0, 0.005, 0); lot.userData.noCollide = true; scene.add(lot);
   const ch = steeple(scene, -4.6, -2, '#b8b0a8', 0x7a2a2a, 0.9); ch.rotation.y = Math.PI / 2;
   const win = new THREE.Group(); win.position.set(-1.75, 0, -1.2); scene.add(win); box(win, 0.9, 1.0, 1.8, std(0xd8ccb8, 0.6), 0, 0.5, 0); box(win, 1.0, 0.08, 1.9, std(0xc0261e, 0.4), 0.05, 1.04, 0); box(win, 0.1, 0.12, 1.9, std(0xc0261e, 0.4), 0.45, 2.75, 0); for (const z of [-0.95, 0.95]) box(win, 0.9, 1.7, 0.1, std(0xc0261e, 0.4), 0, 1.9, z); box(win, 0.9, 0.12, 2.0, std(0xc0261e, 0.4), 0, 2.8, 0);
-  sign(scene, 'HOLY DRIVE-THRU', '#c0261e', 2.4, 0.55, -1.25, 3.2, -1.2, Math.PI / 2, 60);
+  sign(scene, 'HOLY DRIVE-THROUGH', '#c0261e', 2.4, 0.55, -1.25, 3.2, -1.2, Math.PI / 2, 54);
   const menu = new THREE.Group(); menu.position.set(-1.6, 0, 3.0); menu.rotation.y = Math.PI / 2 - 0.35; scene.add(menu); box(menu, 0.12, 1.2, 0.12, std(0x3a3a42), 0, 0.6, 0, false);
   const mt = new THREE.Mesh(new THREE.PlaneGeometry(1.6, 1.3), new THREE.MeshBasicMaterial({ map: canvasTex(512, 416, (ctx, w, h) => { ctx.fillStyle = '#2a1a14'; ctx.fillRect(0, 0, w, h); chalk(ctx, 'MENU', 256, 50, 54, '#ffd84a'); [['Quick Prayer', 'FREE'], ['Confession', 'TO GO'], ['Blessed Fries', '$2'], ['Holy Water', 'REFILL']].forEach(([a, b], i) => { chalk(ctx, a, 30, 130 + i * 72, 40, '#ffffff', 'left'); chalk(ctx, b, 482, 130 + i * 72, 40, '#ffd84a', 'right'); }); }), toneMapped: false })); mt.position.set(0, 1.85, 0.07); menu.add(mt);
   const car = new THREE.Group(); car.position.set(0.15, 0, -1.2); scene.add(car); box(car, 1.5, 0.55, 2.8, std(0x3f7fd6, 0.3, { metalness: 0.2 }), 0, 0.55, 0); box(car, 1.3, 0.55, 1.5, std(0x3f7fd6, 0.3, { metalness: 0.2 }), 0, 1.1, -0.2);

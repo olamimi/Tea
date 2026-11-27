@@ -35,7 +35,7 @@ Lines are the narrator unless marked. Timecodes are from the final mix.
 | 0:23 | Narrator | But if you don't believe, and He's real? Infinite punishment. Forever. | "∞ FIRE — forever" in red. Flames rise at the bottom of the frame. |
 | 0:26 | Narrator | Infinite heaven, versus a little effort. The math was perfect. | "SAVED A LITTLE EFFORT", heaven circled, chalk check mark, "PERFECT". The philosopher gives a smug chef's kiss. |
 | 0:30 | Narrator | And it worked. 99.9% of the world didn't just believe. They went full religious. | Crane from the billboard down to a kneeling crowd. Close-up: a man throws his arms up in ecstatic prayer. |
-| 0:34 | Narrator | Prayer apps. Church drive-thrus. Babies baptized before they could even blink. | Phone: "PRAYR — 9,999 DAY STREAK". The HOLY DRIVE-THRU menu (Quick Prayer FREE, Confession TO GO, Blessed Fries $2). A pastor dips a wide-eyed baby in the font. |
+| 0:34 | Narrator | Prayer apps. Church drive-throughs. Babies baptized before they could even blink. | Phone: "PRAYR — 9,999 DAY STREAK". The HOLY DRIVE-THROUGH menu (Quick Prayer FREE, Confession TO GO, Blessed Fries $2). A pastor dips a wide-eyed baby in the font. |
 | 0:38 | Narrator | And then there was me. The last non-believer on Earth. | The narrator walks into the middle of the kneeling crowd and folds his arms. Crane up: one man standing in a sea of kneelers. |
 | 0:41 | Narrator | Because the argument just didn't sit right with me. | Bedroom at night, hand on chin, frowning in front of his research wall. |
 | 0:43 | Narrator | You can't flip a belief switch because someone offered you a prize. I'm not a robot. | He flips a wall switch labelled "BELIEF ON / OFF" again and again. Nothing happens. Deadpan to camera on "robot." |
@@ -118,7 +118,7 @@ All characters share the house style: big round white head, small dot eyes, thic
 | Agora | Marble temple, columns, cypress trees, olive tree, and the Burger Wager chalkboard on an easel |
 | Bedroom (night) | Research wall with sticky notes and red string, "BELIEF ON/OFF" switch, desk with lamp and book stack, TV showing the score, "QUESTION EVERYTHING" poster |
 | Church interior | Glowing rose window, stained-glass side windows, red aisle runner, pews, altar with candles, baptism font, pulpit |
-| Holy Drive-Thru (exterior) | Stone church with a steeple, red "HOLY DRIVE-THRU" window, menu board, little blue car |
+| Holy Drive-Through (exterior) | Stone church with a steeple, red "HOLY DRIVE-THROUGH" window, menu board, little blue car |
 | Hospital room | Bed, flowers, framed "CHURCH FAMILY ♥" photo, live heart monitor that flatlines |
 | White room | Endless white floor, the God orb, the glowing pit of fire, the floating chalkboard |
 | Hell | Dark red ground with glowing lava cracks, jagged rocks, a fire-gradient sky, flames and embers along the bottom of the frame |

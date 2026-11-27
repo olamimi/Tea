@@ -725,7 +725,7 @@
     {
      "shot": "world",
      "speaker": "narr",
-     "text": "Prayer apps. Church drive-thrus. Babies baptized before they could even blink.",
+     "text": "Prayer apps. Church drive-throughs. Babies baptized before they could even blink.",
      "start": 36.09,
      "end": 40.441,
      "words": [
@@ -745,7 +745,7 @@
        "end": 37.13
       },
       {
-       "w": "drive-thrus.",
+       "w": "drive-throughs.",
        "start": 37.13,
        "end": 37.49
       },
@@ -2937,7 +2937,7 @@
   {
    "shot": "world",
    "speaker": "narr",
-   "text": "Prayer apps. Church drive-thrus. Babies baptized before they could even blink.",
+   "text": "Prayer apps. Church drive-throughs. Babies baptized before they could even blink.",
    "start": 36.09,
    "end": 40.441,
    "words": [
@@ -2957,7 +2957,7 @@
      "end": 37.13
     },
     {
-     "w": "drive-thrus.",
+     "w": "drive-throughs.",
      "start": 37.13,
      "end": 37.49
     },
