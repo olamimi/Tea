@@ -1,0 +1,64 @@
+<svg viewBox="0 0 450.0 615.0" class="dg plan" role="img" aria-label="Top-down plan of the cemetery set with Max's path and the five camera positions">
+<defs><marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" class="d-arrow"/></marker></defs>
+<rect x="0" y="0" width="450.0" height="615.0" class="d-ground"/>
+<line x1="25.0" y1="0" x2="25.0" y2="615.0" class="d-grid"/>
+<line x1="75.0" y1="0" x2="75.0" y2="615.0" class="d-grid"/>
+<line x1="125.0" y1="0" x2="125.0" y2="615.0" class="d-grid"/>
+<line x1="175.0" y1="0" x2="175.0" y2="615.0" class="d-grid"/>
+<line x1="225.0" y1="0" x2="225.0" y2="615.0" class="d-grid"/>
+<line x1="275.0" y1="0" x2="275.0" y2="615.0" class="d-grid"/>
+<line x1="325.0" y1="0" x2="325.0" y2="615.0" class="d-grid"/>
+<line x1="375.0" y1="0" x2="375.0" y2="615.0" class="d-grid"/>
+<line x1="425.0" y1="0" x2="425.0" y2="615.0" class="d-grid"/>
+<line x1="0" y1="600.0" x2="450.0" y2="600.0" class="d-grid"/>
+<line x1="0" y1="550.0" x2="450.0" y2="550.0" class="d-grid"/>
+<line x1="0" y1="500.0" x2="450.0" y2="500.0" class="d-grid"/>
+<line x1="0" y1="450.0" x2="450.0" y2="450.0" class="d-grid"/>
+<line x1="0" y1="400.0" x2="450.0" y2="400.0" class="d-grid"/>
+<line x1="0" y1="350.0" x2="450.0" y2="350.0" class="d-grid"/>
+<line x1="0" y1="300.0" x2="450.0" y2="300.0" class="d-grid"/>
+<line x1="0" y1="250.0" x2="450.0" y2="250.0" class="d-grid"/>
+<line x1="0" y1="200.0" x2="450.0" y2="200.0" class="d-grid"/>
+<line x1="0" y1="150.0" x2="450.0" y2="150.0" class="d-grid"/>
+<line x1="0" y1="100.0" x2="450.0" y2="100.0" class="d-grid"/>
+<line x1="0" y1="50.0" x2="450.0" y2="50.0" class="d-grid"/>
+<line x1="0" y1="0.0" x2="450.0" y2="0.0" class="d-grid"/>
+<line x1="0.0" y1="460.0" x2="165.0" y2="460.0" class="d-fence"/><line x1="285.0" y1="460.0" x2="450.0" y2="460.0" class="d-fence"/>
+<rect x="153.0" y="453.0" width="14" height="14" class="d-stone"/>
+<rect x="283.0" y="453.0" width="14" height="14" class="d-stone"/>
+<text x="370.0" y="482.0" class="d-lab" text-anchor="middle">iron fence, y = −3.2</text>
+<rect x="7.5" y="195.0" width="35.0" height="9" rx="3" class="d-stone"/>
+<rect x="107.5" y="195.0" width="35.0" height="9" rx="3" class="d-stone"/>
+<rect x="207.5" y="195.0" width="35.0" height="9" rx="3" class="d-stone"/>
+<rect x="307.5" y="195.0" width="35.0" height="9" rx="3" class="d-stone"/>
+<rect x="407.5" y="195.0" width="35.0" height="9" rx="3" class="d-stone"/>
+<rect x="37.5" y="65.0" width="35.0" height="9" rx="3" class="d-stone"/>
+<rect x="137.5" y="65.0" width="35.0" height="9" rx="3" class="d-stone"/>
+<rect x="337.5" y="65.0" width="35.0" height="9" rx="3" class="d-stone"/>
+<rect x="207.5" y="64.0" width="55.00000000000001" height="11" rx="3" class="d-hero"/><text x="235.0" y="56.0" class="d-lab b" text-anchor="middle">MAX'S STONE (0.2, 4.6)</text>
+<polyline points="175.0,530.0 175.0,250.0" class="d-path a"/><polyline points="175.0,240.0 235.0,127.5" class="d-path b"/>
+<circle cx="235.0" cy="127.5" r="7" class="d-max"/><text x="223.0" y="132.5" class="d-lab" text-anchor="end">kneel (0.2, 3.45)</text>
+<circle cx="175.0" cy="530.0" r="5" class="d-max"/><text x="165.0" y="534.0" class="d-lab" text-anchor="end">Max starts (−1, −4.6)</text>
+<circle cx="285.0" cy="120.0" r="6" class="d-dog"/><text x="295.0" y="112.0" class="d-lab">Icey sits</text>
+<line x1="175.0" y1="430.0" x2="175.0" y2="170.0" class="d-dogpath"/>
+<line x1="305.0" y1="475.0" x2="165.0" y2="382.5" class="d-look cam-a"/>
+<line x1="305.0" y1="582.5" x2="305.0" y2="475.0" class="d-move cam-a" marker-end="url(#arr)"/>
+<rect x="296.0" y="575.5" width="18" height="14" rx="3" class="d-cam cam-a"/>
+<text x="319.0" y="586.5" class="d-lab b">A</text>
+<line x1="355.0" y1="107.5" x2="235.0" y2="100.0" class="d-look cam-b"/>
+<line x1="380.0" y1="125.0" x2="355.0" y2="107.5" class="d-move cam-b" marker-end="url(#arr)"/>
+<rect x="371.0" y="118.0" width="18" height="14" rx="3" class="d-cam cam-b"/>
+<text x="394.0" y="117.0" class="d-lab b">B</text>
+<line x1="305.0" y1="105.0" x2="235.0" y2="127.5" class="d-look cam-c"/>
+<rect x="296.0" y="98.0" width="18" height="14" rx="3" class="d-cam cam-c"/>
+<text x="319.0" y="97.0" class="d-lab b">C1</text>
+<line x1="290.0" y1="157.5" x2="235.0" y2="70.0" class="d-look cam-c"/>
+<line x1="295.0" y1="165.0" x2="290.0" y2="157.5" class="d-move cam-c" marker-end="url(#arr)"/>
+<rect x="286.0" y="158.0" width="18" height="14" rx="3" class="d-cam cam-c"/>
+<text x="309.0" y="179.0" class="d-lab b">C2</text>
+<line x1="277.5" y1="135.0" x2="235.0" y2="70.0" class="d-look cam-c"/>
+<line x1="282.5" y1="142.5" x2="277.5" y2="135.0" class="d-move cam-c" marker-end="url(#arr)"/>
+<rect x="273.5" y="135.5" width="18" height="14" rx="3" class="d-cam cam-c"/>
+<text x="296.5" y="146.5" class="d-lab b">C3</text>
+<text x="442.0" y="605.0" class="d-lab" text-anchor="end">grid = 1 m · Blender top view (numpad 7)</text>
+</svg>
