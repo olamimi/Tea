@@ -205,7 +205,8 @@ export function buildWishTown(mode = 'day') {
   const rim = new THREE.DirectionalLight(0x7fe8ff, 0); scene.add(rim, rim.target);
   const P = { day: [0xfff0d8, 0x8a6a4a, 1.05, 0xffe2b8, 3.0, 0xf6e2c2, 'day'], dusk: [0xffb8a0, 0x4a3a5a, 0.55, 0xff9a5a, 1.5, 0xe8a07a, 'dusk'], night: [0x5a6ac8, 0x1a1a2a, 0.35, 0x9ab0ff, 0.45, 0x1a2040, 'night'],
     gMorning: [0xf2d0e0, 0x8a8aa8, 0.95, 0xffd8e0, 1.0, 0xeedae2, 'gMorning'], gNoon: [0xe0ecff, 0x8a9ab0, 1.05, 0xf4f8ff, 1.1, 0xd8e0ea, 'gNoon'], gMid: [0x4a5aa8, 0x101428, 0.35, 0x9ab8ff, 0.5, 0x141a34, 'gMid'] };
-  const setTime = (k) => { const [hs, hg, hi, sc, si, fc, sk] = P[k]; hemi.color.setHex(hs); hemi.groundColor.setHex(hg); hemi.intensity = hi; sun.color.setHex(sc); sun.intensity = si; scene.fog.color.setHex(fc); dome.material.map = skyT[sk]; dome.material.needsUpdate = true;
+  const ENV = { day: 0.55, dusk: 0.3, night: 0.1, gMorning: 0.45, gNoon: 0.55, gMid: 0.12 };
+  const setTime = (k) => { scene.userData.envI = ENV[k]; const [hs, hg, hi, sc, si, fc, sk] = P[k]; hemi.color.setHex(hs); hemi.groundColor.setHex(hg); hemi.intensity = hi; sun.color.setHex(sc); sun.intensity = si; scene.fog.color.setHex(fc); dome.material.map = skyT[sk]; dome.material.needsUpdate = true;
     if (k === 'dusk') sun.position.set(-20, 5, 6); else sun.position.set(-12, 16, 10); };
   const fx = [];
   if (mode === 'day') fx.push(motes(scene, { n: 140, area: [-5, 5, 0.3, 4.5, -38, 12], color: '255,226,170', size: [0.03, 0.08], kind: 'dust', I: 1.2 }));
@@ -225,12 +226,12 @@ export function buildWishTown(mode = 'day') {
 
 // ================================================================== Max's bedroom (night)
 export function buildWishBedroom() {
-  _s = 331; const scene = new THREE.Scene(); scene.background = new THREE.Color(0x141a34);
+  _s = 331; const scene = new THREE.Scene(); scene.userData.envI = 0.22; scene.background = new THREE.Color(0x141a34);
   const fl = canvasTex(256, 256, (ctx, w, h) => { for (let i = 0; i < 4; i++) { ctx.fillStyle = ['#7a5a42', '#6e4f3a', '#80604a', '#735440'][i]; ctx.fillRect(0, i * 64, w, 62); } }, [4, 4]); ground(scene, new THREE.MeshStandardMaterial({ map: fl, roughness: 0.6 }), 20);
   const wm = new THREE.MeshStandardMaterial({ map: plaster('#4a5f8f'), roughness: 0.8 }); plane(scene, 9, 4, wm, 0, 2, -3); plane(scene, 8, 4, wm, -4, 2, 0.5, Math.PI / 2); plane(scene, 8, 4, wm, 4, 2, 0.5, -Math.PI / 2);
   // moonlit window (left wall)
   const win = plane(scene, 1.4, 1.2, new THREE.MeshBasicMaterial({ map: canvasTex(256, 220, (ctx, w, h) => { ctx.fillStyle = '#0e1a3a'; ctx.fillRect(0, 0, w, h); ctx.fillStyle = '#fbf2c8'; ctx.beginPath(); ctx.arc(170, 70, 34, 0, 7); ctx.fill(); ctx.fillStyle = '#fff'; for (let i = 0; i < 24; i++) ctx.fillRect(R(0, w), R(0, h), 2, 2); ctx.strokeStyle = '#3a2a22'; ctx.lineWidth = 12; ctx.strokeRect(0, 0, w, h); ctx.beginPath(); ctx.moveTo(w / 2, 0); ctx.lineTo(w / 2, h); ctx.moveTo(0, h / 2); ctx.lineTo(w, h / 2); ctx.stroke(); }), toneMapped: false }), -3.98, 2.3, -0.6, Math.PI / 2);
-  const moonBeam = new THREE.SpotLight(0x9ab4ff, 30, 12, 0.5, 0.8, 1.2); moonBeam.position.set(-5.5, 3.2, -0.6); moonBeam.target.position.set(-1.6, 0, 0.6); moonBeam.castShadow = true; moonBeam.shadow.bias = -0.003; moonBeam.shadow.normalBias = 0.05; scene.add(moonBeam, moonBeam.target);
+  const moonBeam = new THREE.SpotLight(0x9ab4ff, 14, 12, 0.5, 0.8, 1.2); moonBeam.position.set(-5.5, 3.2, -0.6); moonBeam.target.position.set(-1.6, 0, 0.6); moonBeam.castShadow = true; moonBeam.shadow.bias = -0.003; moonBeam.shadow.normalBias = 0.05; scene.add(moonBeam, moonBeam.target);
   // October calendar: X's fill toward the circled WISH! day
   const cal = dynTex(600, 640, (ctx, w, h, st) => { ctx.fillStyle = '#fbf8f0'; ctx.fillRect(0, 0, w, h); ctx.fillStyle = '#c0392b'; ctx.fillRect(0, 0, w, 110); chalk(ctx, 'OCTOBER', w / 2, 58, 70, '#ffffff');
     const n = st.x ?? 10; for (let d = 1; d <= 31; d++) { const c = (d + 2) % 7, r = Math.floor((d + 2) / 7); const x = 44 + c * 80, y = 150 + r * 92; chalk(ctx, String(d), x, y, 34, '#301420');
@@ -252,7 +253,7 @@ export function buildWishBedroom() {
 
 // ================================================================== the real world: warm kitchen
 export function buildKitchen() {
-  _s = 351; const scene = new THREE.Scene(); scene.background = new THREE.Color(0x3a2a22);
+  _s = 351; const scene = new THREE.Scene(); scene.userData.envI = 0.45; scene.background = new THREE.Color(0x3a2a22);
   const chk = canvasTex(256, 256, (ctx, w, h) => { for (let y = 0; y < 4; y++) for (let x = 0; x < 4; x++) { ctx.fillStyle = (x + y) % 2 ? '#f2e8d4' : '#c8584a'; ctx.fillRect(x * 64, y * 64, 64, 64); } }, [6, 6]); ground(scene, new THREE.MeshStandardMaterial({ map: chk, roughness: 0.5 }), 20);
   const wm = new THREE.MeshStandardMaterial({ map: plaster('#f2d8a8'), roughness: 0.8 }); plane(scene, 10, 4, wm, 0, 2, -3.2); plane(scene, 8, 4, wm, -4.5, 2, 0.5, Math.PI / 2); plane(scene, 8, 4, wm, 4.5, 2, 0.5, -Math.PI / 2);
   const counter = new THREE.Group(); counter.position.set(2.6, 0, -2.7); scene.add(counter); box(counter, 3.2, 0.9, 0.7, std(0x6a9ac0, 0.5), 0, 0.45, 0); box(counter, 3.3, 0.06, 0.8, std(0xf2eee6, 0.3), 0, 0.93, 0); box(counter, 3.2, 0.8, 0.4, std(0x6a9ac0, 0.5), 0, 2.1, 0.1);
@@ -278,7 +279,7 @@ function bareTree(parent, x, z, s = 1) { const g = new THREE.Group(); g.position
     const tip = new THREE.Vector3(0, len, 0).applyEuler(c.rotation).add(p); for (let k = 0; k < 2; k++) limb(tip, len * 0.7, r * 0.6, ang + (k ? 1.2 : -1.0) + R(-0.3, 0.3), tilt + R(0.35, 0.7), depth - 1); };
   limb(V(0, 0, 0), 2.2, 0.18, 0, 0, 3); return g; }
 export function buildCemetery() {
-  _s = 371; const scene = new THREE.Scene(); scene.fog = new THREE.Fog(0x1a2244, 8, 38);
+  _s = 371; const scene = new THREE.Scene(); scene.userData.envI = 0.1; scene.fog = new THREE.Fog(0x1a2244, 8, 38);
   skyDome(scene, skyTex([[0, '#060a1e'], [0.45, '#18224a'], [0.5, '#2a3460'], [1, '#2a3460']]));
   ground(scene, new THREE.MeshStandardMaterial({ color: 0x2f4a36, roughness: 0.95 }), 200);
   const moon = new THREE.Mesh(new THREE.CircleGeometry(4.5, 40), lit(0xfff4d0, 1.4)); moon.position.set(-8, 16, -60); scene.add(moon); const mh = new THREE.Sprite(new THREE.SpriteMaterial({ map: softTex(), transparent: true, depthWrite: false, blending: THREE.AdditiveBlending, color: new THREE.Color(0.6, 0.65, 0.9) })); mh.scale.set(26, 26, 1); mh.position.copy(moon.position); scene.add(mh);
@@ -302,7 +303,7 @@ export function buildCemetery() {
   for (const y of [0.3, 1.2]) box(scene, 24, 0.05, 0.05, iron, 0, y, 3.2, false);
   for (const x of [-1.3, 1.3]) box(scene, 0.3, 1.9, 0.3, stoneD, x, 0.95, 3.2);
   bareTree(scene, -5.5, -9, 1.3); bareTree(scene, 5.2, -12, 1.5); bareTree(scene, 7.5, -3, 1.1); bareTree(scene, -8, -2, 1.2);
-  scene.add(new THREE.HemisphereLight(0x5a6ad0, 0x101820, 0.5)); const ml = sunLight(scene, 0x9ab4ff, 0.9, V(-8, 14, -12), V(0, 0, -4), 14);
+  scene.add(new THREE.HemisphereLight(0x5a6ad0, 0x101820, 0.5)); const ml = sunLight(scene, 0x9ab4ff, 0.9, V(-8, 14, -12), V(0, 0, -4), 14); ml.shadow.mapSize.set(4096, 4096); Object.assign(ml.shadow.camera, { left: -8, right: 8, top: 8, bottom: -8 }); ml.shadow.camera.updateProjectionMatrix(); ml.shadow.radius = 3;
   const glowL = new THREE.PointLight(0x9ab8ff, 0, 5, 1.5); glowL.position.set(0.2, 1.5, -3.6); scene.add(glowL);
   const fx = [motes(scene, { n: 22, area: [-12, 12, 0.0, 0.45, -16, 0], color: '170,185,230', size: [2.8, 4.5], kind: 'mist' }), motes(scene, { n: 60, area: [-7, 7, 0.4, 2.6, -14, 3], color: '220,255,140', size: [0.05, 0.1], kind: 'firefly', I: 1.8 })];
   const cast = castOf(scene, [['max', 'max']]); const dog = new Dog(); scene.add(dog.root); const spark = sparkler(scene);

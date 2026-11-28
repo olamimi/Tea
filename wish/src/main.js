@@ -155,7 +155,7 @@ function renderOnce(t, forced, jitter) {
   runTick(seg, set, t, u);
   set.update(t, camera);
   runPost(seg, set, t, u);
-  renderer.toneMappingExposure = (set.exposure || 1) * 1.08;
+  set.scene.environmentIntensity = set.scene.userData.envI ?? 0.55; renderer.toneMappingExposure = (set.exposure || 1) * 1.08;
   const G = GRADES[seg.shot] || GRADES.default; grade.uniforms.sat.value = G.sat; grade.uniforms.warm.value = G.warm; grade.uniforms.gain.value = G.gain; grade.uniforms.tint.value.set(...G.tint); grade.uniforms.vig.value = G.vig ?? 0.18;
   bokeh.scene = set.scene; bokeh.uniforms.focus.value = focusD;
   renderPass.scene = set.scene; composer.render();
@@ -241,7 +241,7 @@ window.viewSet = async (o) => {
   const set = sets[o.set]; resetSet(o.set); const t = o.t || 1;
   camera.position.set(...o.p); camera.fov = o.fov || 40; camera.updateProjectionMatrix(); camera.lookAt(new THREE.Vector3(...o.l)); camera.updateMatrixWorld(true);
   if (o.js) new Function('S', 'THREE', 't', 'cam', o.js)(set, THREE, t, camera);
-  set.update(t, camera); if (o.js2) new Function('S', 'THREE', 't', 'cam', o.js2)(set, THREE, t, camera);
+  set.scene.environmentIntensity = set.scene.userData.envI ?? 0.55; set.update(t, camera); if (o.js2) new Function('S', 'THREE', 't', 'cam', o.js2)(set, THREE, t, camera);
   renderer.toneMappingExposure = (set.exposure || 1) * 1.08; const G = GRADES[o.grade] || GRADES.default; grade.uniforms.sat.value = G.sat; grade.uniforms.warm.value = G.warm; grade.uniforms.gain.value = G.gain; grade.uniforms.tint.value.set(...G.tint); grade.uniforms.vig.value = G.vig;
   focusD = camera.position.distanceTo(new THREE.Vector3(...o.l)); bokeh.scene = set.scene; bokeh.uniforms.focus.value = focusD; renderPass.scene = set.scene; mblur.uniforms.dirPx.value.set(0, 0); mblur.uniforms.radial.value = 0; composer.render();
   return renderer.domElement.toDataURL('image/jpeg', 0.9);
