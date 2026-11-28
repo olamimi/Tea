@@ -3,3 +3,5 @@ build/*
 !build/timeline.json
 __pycache__/
 refs/*.mp3
+refs/barks/*
+!refs/barks/CREDITS.txt

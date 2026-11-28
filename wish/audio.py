@@ -151,6 +151,30 @@ def bark(f0=620, d=0.17, big=1.0):  # a dog bark: falling voiced burst + breath 
     return (bp(v, 300, 3500) * 0.9 + bp(rng.standard_normal(len(t)), 800, 4000) * 0.25) * env * big
 
 
+# Real barks (Wikimedia Commons, CC BY-SA; credits in refs/barks/CREDITS.txt). Each entry: file, bark start, bark end (s).
+import subprocess
+BARKS = {
+    "sharp": [("Barking_of_a_dog_2.ogg", a, b) for a, b in [(0.04, 0.31), (0.64, 0.79), (1.49, 1.71), (2.42, 2.68), (3.35, 3.63)]],
+    "yap":   [("Barking_of_a_dog.ogg", a, b) for a, b in [(0.18, 0.32), (1.18, 1.31), (1.89, 2.02)]],
+    "big":   [("Dog_barking.webm", a, b) for a, b in [(1.62, 1.87), (4.09, 4.35), (7.31, 7.58), (12.04, 12.32), (31.08, 31.34)]],
+}
+_src = {}
+def _audio(f):
+    if f not in _src:
+        _src[f] = np.frombuffer(subprocess.run(["ffmpeg", "-v", "error", "-i", str(ROOT / "refs/barks" / f), "-ac", "1", "-ar", str(SR), "-f", "f32le", "-"],
+                                               capture_output=True, check=True).stdout, np.float32).astype(float)
+    return _src[f]
+PRE = 0.012
+def rbark(kind, i, semis=0.0):
+    """one recorded bark, peak 1.0, starting PRE s before its onset; semis shifts pitch (and length) by resampling"""
+    f, a, b = BARKS[kind][i % len(BARKS[kind])]; x = _audio(f)[int((a - PRE) * SR):int((b + 0.12) * SR)].copy()
+    x -= x.mean(); n = int(0.06 * SR); x[-n:] *= np.linspace(1, 0, n); x[:int(0.004 * SR)] *= np.linspace(0, 1, int(0.004 * SR))
+    if semis:
+        r = 2 ** (semis / 12); up, dn = int(round(1000 / r)), 1000; x = resample_poly(x, up, dn)
+    return x / (np.abs(x).max() + 1e-9)
+def addbark(kind, i, t, gain, pan, semis=0.0): add(rbark(kind, i, semis), t - PRE, gain, pan)
+
+
 def skate_roll(d):  # urethane wheels on asphalt: rumble + seam clacks
     t = tt(d); r = bp(rng.standard_normal(len(t)), 80, 900) * 1.4; x = r.copy(); step = int(SR * 0.42)
     for i in range(int(0.2 * SR), len(t) - 900, step): x[i:i + 900] += bp(rng.standard_normal(900), 300, 2500) * np.exp(-np.arange(900) / 150) * 1.5
@@ -204,11 +228,13 @@ tm = w("tricks", "mum"); add(whoosh(0.6), tm, 0.5); add(thud(160), w("tricks", "
 ts = w("road", "swerved."); add(horn(0.9), ts - 0.55, 1.0, 0.2); add(screech(1.0), ts - 0.1, 0.9, 0.3); add(rumble(1.6, 90), w("road", "truck") - 0.3, 0.8)
 add(impact(), st("late") - 0.03, 1.0)                                                # the crash, under the white flash
 # the dog
-for x in ["would", "not.", "stop.", "barking."]: add(bark(600, 0.18, 1.0), w("bark", x), 1.0, 0.35)
-for x in [0.15, 0.7, 1.25, 1.8]: add(bark(640, 0.15, 0.8), st("drag") + x, 0.8, 0.3)
+for i, x in enumerate(["would", "not.", "stop.", "barking."]): addbark("sharp", i, w("bark", x), 1.0, 0.35, [0, 0.4, -0.3, 0.2][i])
+for i, x in enumerate([0.15, 0.7, 1.25, 1.8]): addbark("sharp", i + 1, st("drag") + x, 0.75, 0.3, [0.6, 0.2, 0.8, 0.4][i])
 tb, l1, l2 = w("louder", "barking"), w("louder", "louder."), w("louder", "louder.", 2)
-for i, x in enumerate([tb, tb + 0.35, l1, l1 + 0.3, l2, l2 + 0.25, l2 + 0.5]): add(bark(580, 0.2, 1.0 + i * 0.12), x, 0.9 + i * 0.12, 0.2)
-for x in [0.1, 0.45, 0.85, 1.3, 1.75, 2.3]: add(bark(700, 0.13, 0.8), st("dog") + x, 0.85, 0.2)     # happy barks
+for i, x in enumerate([tb, tb + 0.35, l1, l1 + 0.3, l2, l2 + 0.25, l2 + 0.5]):      # escalating: sharp barks, then the bigger dog layered in
+    addbark("sharp", i + 2, x, 0.85 + i * 0.1, 0.2, [0.3, -0.2, 0, -0.4, -0.2, -0.6, -0.8][i])
+    if i >= 3: addbark("big", i, x, 0.25 + 0.1 * (i - 3), 0.15, 2.0)
+for i, x in enumerate([0.1, 0.45, 0.85, 1.3, 1.75, 2.3]): addbark("yap", i, st("dog") + x, 0.8, 0.2, [0, 0.5, -0.3, 0.8, 0.2, 1.0][i])   # happy barks
 # night ambience, ghost wind, reveal hits
 add(crickets(en("louder") - st("night")), st("night"), 0.9); add(crickets(en("back") - st("cem")), st("cem"), 0.9)
 add(wind(en("pick") - st("gtown") + 0.5), st("gtown"), 0.9)
