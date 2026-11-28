@@ -1,0 +1,343 @@
+{
+ "title": "The Wish",
+ "lines": [
+  {
+   "shot": "hook",
+   "text": "In this world, there's a town where once a year, one family gets to bring a loved one back from the dead.",
+   "engine": "cb",
+   "fx": "narr",
+   "exaggeration": 0.65,
+   "cfg": 0.35,
+   "temp": 0.8
+  },
+  {
+   "shot": "huss",
+   "text": "Huss... huss... huss...",
+   "engine": "cb",
+   "fx": "huss",
+   "exaggeration": 0.65,
+   "cfg": 0.35,
+   "temp": 0.8,
+   "verify": false
+  },
+  {
+   "shot": "turn",
+   "text": "And this year, it was finally my family's turn.",
+   "engine": "cb",
+   "fx": "narr",
+   "exaggeration": 0.65,
+   "cfg": 0.35,
+   "temp": 0.8
+  },
+  {
+   "shot": "fuzzy",
+   "text": "Funny thing is, I can't remember when Mum and Dad died. That part's all fuzzy.",
+   "engine": "cb",
+   "fx": "narr",
+   "exaggeration": 0.65,
+   "cfg": 0.35,
+   "temp": 0.8,
+   "say": "Funny thing is, I can't remember when Mum and Dad died. That part's all fuzzy."
+  },
+  {
+   "shot": "photo",
+   "text": "But my little brother, Leo? I remember it like it was yesterday.",
+   "engine": "cb",
+   "fx": "narr",
+   "exaggeration": 0.65,
+   "cfg": 0.35,
+   "temp": 0.8
+  },
+  {
+   "shot": "skate",
+   "text": "We did everything together. Especially skating.",
+   "engine": "cb",
+   "fx": "narr",
+   "exaggeration": 0.65,
+   "cfg": 0.35,
+   "temp": 0.8
+  },
+  {
+   "shot": "tricks",
+   "text": "Kickflips. Grinds. Even the risky stuff Mum banned us from doing.",
+   "engine": "cb",
+   "fx": "narr",
+   "exaggeration": 0.65,
+   "cfg": 0.35,
+   "temp": 0.8,
+   "say": "Kickflips. Grinds. Even the risky stuff Mum banned us from doing."
+  },
+  {
+   "shot": "road",
+   "text": "Then one day, Leo was skating on the road, and a truck swerved.",
+   "engine": "cb",
+   "fx": "narr",
+   "exaggeration": 0.65,
+   "cfg": 0.35,
+   "temp": 0.8
+  },
+  {
+   "shot": "sprint",
+   "text": "I ran faster than I've ever run in my life.",
+   "engine": "cb",
+   "fx": "narr",
+   "exaggeration": 0.65,
+   "cfg": 0.35,
+   "temp": 0.8
+  },
+  {
+   "shot": "late",
+   "text": "But I was too late.",
+   "engine": "cb",
+   "fx": "narr",
+   "exaggeration": 0.65,
+   "cfg": 0.35,
+   "temp": 0.8,
+   "pause": 0.5
+  },
+  {
+   "shot": "slump",
+   "text": "I haven't been the same since.",
+   "engine": "cb",
+   "fx": "narr",
+   "exaggeration": 0.65,
+   "cfg": 0.35,
+   "temp": 0.8
+  },
+  {
+   "shot": "resolve",
+   "text": "So I made up my mind. The wish was his. I was bringing Leo back.",
+   "engine": "cb",
+   "fx": "narr",
+   "exaggeration": 0.65,
+   "cfg": 0.35,
+   "temp": 0.8
+  },
+  {
+   "shot": "shrug",
+   "text": "Mum and Dad would understand. They're probably on some trip anyway.",
+   "engine": "cb",
+   "fx": "narr",
+   "exaggeration": 0.65,
+   "cfg": 0.35,
+   "temp": 0.8,
+   "say": "Mum and Dad would understand. They're probably on some trip anyway."
+  },
+  {
+   "shot": "wait",
+   "text": "So I waited. Days went by.",
+   "engine": "cb",
+   "fx": "narr",
+   "exaggeration": 0.65,
+   "cfg": 0.35,
+   "temp": 0.8
+  },
+  {
+   "shot": "night",
+   "text": "Then, the night before the wish, I saw Icey.",
+   "engine": "cb",
+   "fx": "narr",
+   "exaggeration": 0.65,
+   "cfg": 0.35,
+   "temp": 0.8,
+   "say": "Then, the night before the wish, I saw Icy."
+  },
+  {
+   "shot": "icey",
+   "text": "Icey was our dog. He died a year ago.",
+   "engine": "cb",
+   "fx": "narr",
+   "exaggeration": 0.65,
+   "cfg": 0.35,
+   "temp": 0.8,
+   "say": "Icy was our dog. He died a year ago."
+  },
+  {
+   "shot": "ear",
+   "text": "But there he was. Same floppy ear. Same crooked tail.",
+   "engine": "cb",
+   "fx": "narr",
+   "exaggeration": 0.65,
+   "cfg": 0.35,
+   "temp": 0.8
+  },
+  {
+   "shot": "bark",
+   "text": "And he would not. Stop. Barking.",
+   "engine": "cb",
+   "fx": "narr",
+   "exaggeration": 0.65,
+   "cfg": 0.35,
+   "temp": 0.8
+  },
+  {
+   "shot": "drag",
+   "text": "He kept dragging me toward the cemetery.",
+   "engine": "cb",
+   "fx": "narr",
+   "exaggeration": 0.65,
+   "cfg": 0.35,
+   "temp": 0.8
+  },
+  {
+   "shot": "refuse",
+   "text": "No, Icey. I'm not going to look at Leo's grave. He's coming back tomorrow.",
+   "engine": "cb",
+   "fx": "narr",
+   "exaggeration": 0.65,
+   "cfg": 0.35,
+   "temp": 0.8,
+   "say": "No, Icy! I'm not going to look at Leo's grave. He's coming back tomorrow."
+  },
+  {
+   "shot": "louder",
+   "text": "But the barking got louder. And louder.",
+   "engine": "cb",
+   "fx": "narr",
+   "exaggeration": 0.65,
+   "cfg": 0.35,
+   "temp": 0.8
+  },
+  {
+   "shot": "cem",
+   "text": "So I followed him.",
+   "engine": "cb",
+   "fx": "narr",
+   "exaggeration": 0.65,
+   "cfg": 0.35,
+   "temp": 0.8
+  },
+  {
+   "shot": "kneel",
+   "text": "We reached the grave, and before I could even read it, I broke down crying.",
+   "engine": "cb",
+   "fx": "narr",
+   "exaggeration": 0.65,
+   "cfg": 0.35,
+   "temp": 0.8
+  },
+  {
+   "shot": "name",
+   "text": "Then I looked up. And the name on the stone, was mine.",
+   "engine": "cb",
+   "fx": "narr",
+   "exaggeration": 0.65,
+   "cfg": 0.35,
+   "temp": 0.8,
+   "pause": 0.5
+  },
+  {
+   "shot": "back",
+   "text": "And it all came back.",
+   "engine": "cb",
+   "fx": "narr",
+   "exaggeration": 0.65,
+   "cfg": 0.35,
+   "temp": 0.8
+  },
+  {
+   "shot": "flash",
+   "text": "I wasn't too late. I pushed Leo out of the way. The truck hit me.",
+   "engine": "cb",
+   "fx": "narr",
+   "exaggeration": 0.65,
+   "cfg": 0.35,
+   "temp": 0.8
+  },
+  {
+   "shot": "real",
+   "text": "Mum and Dad never died. That's why I couldn't remember it.",
+   "engine": "cb",
+   "fx": "narr",
+   "exaggeration": 0.65,
+   "cfg": 0.35,
+   "temp": 0.8,
+   "say": "Mum and Dad never died. That's why I couldn't remember it."
+  },
+  {
+   "shot": "gtown",
+   "text": "This isn't the town that brings people back. It's the town they bring people back from.",
+   "engine": "cb",
+   "fx": "narr",
+   "exaggeration": 0.65,
+   "cfg": 0.35,
+   "temp": 0.8
+  },
+  {
+   "shot": "ghost",
+   "text": "A ghost town.",
+   "engine": "cb",
+   "fx": "narr",
+   "exaggeration": 0.65,
+   "cfg": 0.35,
+   "temp": 0.8
+  },
+  {
+   "shot": "hope",
+   "text": "But that was okay. Tomorrow was my family's turn. Surely, they'd pick me.",
+   "engine": "cb",
+   "fx": "narr",
+   "exaggeration": 0.65,
+   "cfg": 0.35,
+   "temp": 0.8
+  },
+  {
+   "shot": "gate",
+   "text": "So the day came. I waited by the gate.",
+   "engine": "cb",
+   "fx": "narr",
+   "exaggeration": 0.65,
+   "cfg": 0.35,
+   "temp": 0.8,
+   "pause": 0.5
+  },
+  {
+   "shot": "mnm",
+   "text": "Morning. Noon. Midnight.",
+   "engine": "cb",
+   "fx": "narr",
+   "exaggeration": 0.65,
+   "cfg": 0.35,
+   "temp": 0.8
+  },
+  {
+   "shot": "still",
+   "text": "I was still here.",
+   "engine": "cb",
+   "fx": "narr",
+   "exaggeration": 0.65,
+   "cfg": 0.35,
+   "temp": 0.8
+  },
+  {
+   "shot": "gone",
+   "text": "And Icey, was gone.",
+   "engine": "cb",
+   "fx": "narr",
+   "exaggeration": 0.65,
+   "cfg": 0.35,
+   "temp": 0.8,
+   "pause": 0.6,
+   "say": "And Icy, was gone."
+  },
+  {
+   "shot": "pick",
+   "text": "They didn't pick me.",
+   "engine": "cb",
+   "fx": "narr",
+   "exaggeration": 0.65,
+   "cfg": 0.35,
+   "temp": 0.8,
+   "pause": 0.5
+  },
+  {
+   "shot": "dog",
+   "text": "They picked the dog.",
+   "engine": "cb",
+   "fx": "narr",
+   "exaggeration": 0.65,
+   "cfg": 0.35,
+   "temp": 0.8
+  }
+ ]
+}

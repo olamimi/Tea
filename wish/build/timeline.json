@@ -1,0 +1,4223 @@
+{
+ "duration": 89.546,
+ "shots": [
+  {
+   "name": "hook",
+   "lines": [
+    {
+     "shot": "hook",
+     "speaker": "narr",
+     "text": "In this world, there's a town where once a year, one family gets to bring a loved one back from the dead.",
+     "start": 0.15,
+     "end": 4.203,
+     "words": [
+      {
+       "w": "In",
+       "start": 0.15,
+       "end": 0.31
+      },
+      {
+       "w": "this",
+       "start": 0.31,
+       "end": 0.45
+      },
+      {
+       "w": "world,",
+       "start": 0.45,
+       "end": 0.73
+      },
+      {
+       "w": "there's",
+       "start": 0.91,
+       "end": 1.05
+      },
+      {
+       "w": "a",
+       "start": 1.05,
+       "end": 1.15
+      },
+      {
+       "w": "town",
+       "start": 1.15,
+       "end": 1.31
+      },
+      {
+       "w": "where",
+       "start": 1.31,
+       "end": 1.53
+      },
+      {
+       "w": "once",
+       "start": 1.53,
+       "end": 1.69
+      },
+      {
+       "w": "a",
+       "start": 1.69,
+       "end": 1.83
+      },
+      {
+       "w": "year,",
+       "start": 1.83,
+       "end": 1.99
+      },
+      {
+       "w": "one",
+       "start": 2.21,
+       "end": 2.31
+      },
+      {
+       "w": "family",
+       "start": 2.31,
+       "end": 2.55
+      },
+      {
+       "w": "gets",
+       "start": 2.55,
+       "end": 2.79
+      },
+      {
+       "w": "to",
+       "start": 2.79,
+       "end": 2.93
+      },
+      {
+       "w": "bring",
+       "start": 2.93,
+       "end": 3.01
+      },
+      {
+       "w": "a",
+       "start": 3.01,
+       "end": 3.15
+      },
+      {
+       "w": "loved",
+       "start": 3.15,
+       "end": 3.25
+      },
+      {
+       "w": "one",
+       "start": 3.25,
+       "end": 3.43
+      },
+      {
+       "w": "back",
+       "start": 3.43,
+       "end": 3.59
+      },
+      {
+       "w": "from",
+       "start": 3.59,
+       "end": 3.75
+      },
+      {
+       "w": "the",
+       "start": 3.75,
+       "end": 3.83
+      },
+      {
+       "w": "dead.",
+       "start": 3.83,
+       "end": 4.01
+      }
+     ]
+    }
+   ],
+   "start": 0.0,
+   "end": 4.323,
+   "dur": 4.323
+  },
+  {
+   "name": "huss",
+   "lines": [
+    {
+     "shot": "huss",
+     "speaker": "huss",
+     "text": "Huss... huss... huss...",
+     "start": 4.403,
+     "end": 5.083,
+     "words": [
+      {
+       "w": "Huss...",
+       "start": 4.443,
+       "end": 4.673
+      },
+      {
+       "w": "huss...",
+       "start": 4.673,
+       "end": 4.853
+      },
+      {
+       "w": "huss...",
+       "start": 4.853,
+       "end": 5.083
+      }
+     ]
+    }
+   ],
+   "start": 4.323,
+   "end": 5.203,
+   "dur": 0.88
+  },
+  {
+   "name": "turn",
+   "lines": [
+    {
+     "shot": "turn",
+     "speaker": "narr",
+     "text": "And this year, it was finally my family's turn.",
+     "start": 5.283,
+     "end": 7.898,
+     "words": [
+      {
+       "w": "And",
+       "start": 5.283,
+       "end": 5.443
+      },
+      {
+       "w": "this",
+       "start": 5.443,
+       "end": 5.623
+      },
+      {
+       "w": "year,",
+       "start": 5.623,
+       "end": 5.883
+      },
+      {
+       "w": "it",
+       "start": 6.163,
+       "end": 6.263
+      },
+      {
+       "w": "was",
+       "start": 6.263,
+       "end": 6.343
+      },
+      {
+       "w": "finally",
+       "start": 6.343,
+       "end": 6.703
+      },
+      {
+       "w": "my",
+       "start": 6.703,
+       "end": 6.963
+      },
+      {
+       "w": "family's",
+       "start": 6.963,
+       "end": 7.463
+      },
+      {
+       "w": "turn.",
+       "start": 7.463,
+       "end": 7.683
+      }
+     ]
+    }
+   ],
+   "start": 5.203,
+   "end": 8.018,
+   "dur": 2.815
+  },
+  {
+   "name": "fuzzy",
+   "lines": [
+    {
+     "shot": "fuzzy",
+     "speaker": "narr",
+     "text": "Funny thing is, I can't remember when Mum and Dad died. That part's all fuzzy.",
+     "start": 8.098,
+     "end": 11.99,
+     "words": [
+      {
+       "w": "Funny",
+       "start": 8.098,
+       "end": 8.278
+      },
+      {
+       "w": "thing",
+       "start": 8.278,
+       "end": 8.458
+      },
+      {
+       "w": "is,",
+       "start": 8.458,
+       "end": 8.758
+      },
+      {
+       "w": "I",
+       "start": 8.998,
+       "end": 9.118
+      },
+      {
+       "w": "can't",
+       "start": 9.118,
+       "end": 9.358
+      },
+      {
+       "w": "remember",
+       "start": 9.358,
+       "end": 9.558
+      },
+      {
+       "w": "when",
+       "start": 9.558,
+       "end": 9.758
+      },
+      {
+       "w": "Mum",
+       "start": 9.758,
+       "end": 9.878
+      },
+      {
+       "w": "and",
+       "start": 9.878,
+       "end": 10.018
+      },
+      {
+       "w": "Dad",
+       "start": 10.018,
+       "end": 10.198
+      },
+      {
+       "w": "died.",
+       "start": 10.198,
+       "end": 10.538
+      },
+      {
+       "w": "That",
+       "start": 10.918,
+       "end": 11.078
+      },
+      {
+       "w": "part's",
+       "start": 11.078,
+       "end": 11.358
+      },
+      {
+       "w": "all",
+       "start": 11.358,
+       "end": 11.458
+      },
+      {
+       "w": "fuzzy.",
+       "start": 11.458,
+       "end": 11.638
+      }
+     ]
+    }
+   ],
+   "start": 8.018,
+   "end": 12.11,
+   "dur": 4.092
+  },
+  {
+   "name": "photo",
+   "lines": [
+    {
+     "shot": "photo",
+     "speaker": "narr",
+     "text": "But my little brother, Leo? I remember it like it was yesterday.",
+     "start": 12.19,
+     "end": 14.749,
+     "words": [
+      {
+       "w": "But",
+       "start": 12.19,
+       "end": 12.33
+      },
+      {
+       "w": "my",
+       "start": 12.33,
+       "end": 12.43
+      },
+      {
+       "w": "little",
+       "start": 12.43,
+       "end": 12.59
+      },
+      {
+       "w": "brother,",
+       "start": 12.59,
+       "end": 12.77
+      },
+      {
+       "w": "Leo?",
+       "start": 12.77,
+       "end": 13.07
+      },
+      {
+       "w": "I",
+       "start": 13.41,
+       "end": 13.57
+      },
+      {
+       "w": "remember",
+       "start": 13.57,
+       "end": 13.79
+      },
+      {
+       "w": "it",
+       "start": 13.79,
+       "end": 13.93
+      },
+      {
+       "w": "like",
+       "start": 13.93,
+       "end": 13.99
+      },
+      {
+       "w": "it",
+       "start": 13.99,
+       "end": 14.09
+      },
+      {
+       "w": "was",
+       "start": 14.09,
+       "end": 14.19
+      },
+      {
+       "w": "yesterday.",
+       "start": 14.19,
+       "end": 14.45
+      }
+     ]
+    }
+   ],
+   "start": 12.11,
+   "end": 14.869,
+   "dur": 2.759
+  },
+  {
+   "name": "skate",
+   "lines": [
+    {
+     "shot": "skate",
+     "speaker": "narr",
+     "text": "We did everything together. Especially skating.",
+     "start": 14.949,
+     "end": 17.061,
+     "words": [
+      {
+       "w": "We",
+       "start": 14.949,
+       "end": 15.069
+      },
+      {
+       "w": "did",
+       "start": 15.069,
+       "end": 15.189
+      },
+      {
+       "w": "everything",
+       "start": 15.189,
+       "end": 15.469
+      },
+      {
+       "w": "together.",
+       "start": 15.469,
+       "end": 15.849
+      },
+      {
+       "w": "Especially",
+       "start": 16.089,
+       "end": 16.369
+      },
+      {
+       "w": "skating.",
+       "start": 16.369,
+       "end": 16.769
+      }
+     ]
+    }
+   ],
+   "start": 14.869,
+   "end": 17.181,
+   "dur": 2.312
+  },
+  {
+   "name": "tricks",
+   "lines": [
+    {
+     "shot": "tricks",
+     "speaker": "narr",
+     "text": "Kickflips. Grinds. Even the risky stuff Mum banned us from doing.",
+     "start": 17.261,
+     "end": 20.605,
+     "words": [
+      {
+       "w": "Kickflips.",
+       "start": 17.261,
+       "end": 18.001
+      },
+      {
+       "w": "Grinds.",
+       "start": 18.001,
+       "end": 18.681
+      },
+      {
+       "w": "Even",
+       "start": 18.741,
+       "end": 18.861
+      },
+      {
+       "w": "the",
+       "start": 18.861,
+       "end": 19.001
+      },
+      {
+       "w": "risky",
+       "start": 19.001,
+       "end": 19.161
+      },
+      {
+       "w": "stuff",
+       "start": 19.161,
+       "end": 19.421
+      },
+      {
+       "w": "Mum",
+       "start": 19.421,
+       "end": 19.581
+      },
+      {
+       "w": "banned",
+       "start": 19.581,
+       "end": 19.821
+      },
+      {
+       "w": "us",
+       "start": 19.821,
+       "end": 19.981
+      },
+      {
+       "w": "from",
+       "start": 19.981,
+       "end": 20.101
+      },
+      {
+       "w": "doing.",
+       "start": 20.101,
+       "end": 20.361
+      }
+     ]
+    }
+   ],
+   "start": 17.181,
+   "end": 20.725,
+   "dur": 3.544
+  },
+  {
+   "name": "road",
+   "lines": [
+    {
+     "shot": "road",
+     "speaker": "narr",
+     "text": "Then one day, Leo was skating on the road, and a truck swerved.",
+     "start": 20.805,
+     "end": 23.739,
+     "words": [
+      {
+       "w": "Then",
+       "start": 20.805,
+       "end": 21.025
+      },
+      {
+       "w": "one",
+       "start": 21.025,
+       "end": 21.185
+      },
+      {
+       "w": "day,",
+       "start": 21.185,
+       "end": 21.445
+      },
+      {
+       "w": "Leo",
+       "start": 21.785,
+       "end": 21.865
+      },
+      {
+       "w": "was",
+       "start": 21.865,
+       "end": 22.025
+      },
+      {
+       "w": "skating",
+       "start": 22.025,
+       "end": 22.185
+      },
+      {
+       "w": "on",
+       "start": 22.185,
+       "end": 22.365
+      },
+      {
+       "w": "the",
+       "start": 22.365,
+       "end": 22.445
+      },
+      {
+       "w": "road,",
+       "start": 22.445,
+       "end": 22.685
+      },
+      {
+       "w": "and",
+       "start": 22.925,
+       "end": 23.005
+      },
+      {
+       "w": "a",
+       "start": 23.005,
+       "end": 23.085
+      },
+      {
+       "w": "truck",
+       "start": 23.085,
+       "end": 23.245
+      },
+      {
+       "w": "swerved.",
+       "start": 23.245,
+       "end": 23.565
+      }
+     ]
+    }
+   ],
+   "start": 20.725,
+   "end": 23.859,
+   "dur": 3.134
+  },
+  {
+   "name": "sprint",
+   "lines": [
+    {
+     "shot": "sprint",
+     "speaker": "narr",
+     "text": "I ran faster than I've ever run in my life.",
+     "start": 23.939,
+     "end": 25.807,
+     "words": [
+      {
+       "w": "I",
+       "start": 23.939,
+       "end": 24.099
+      },
+      {
+       "w": "ran",
+       "start": 24.099,
+       "end": 24.259
+      },
+      {
+       "w": "faster",
+       "start": 24.259,
+       "end": 24.559
+      },
+      {
+       "w": "than",
+       "start": 24.559,
+       "end": 24.739
+      },
+      {
+       "w": "I've",
+       "start": 24.739,
+       "end": 24.899
+      },
+      {
+       "w": "ever",
+       "start": 24.899,
+       "end": 25.059
+      },
+      {
+       "w": "run",
+       "start": 25.059,
+       "end": 25.219
+      },
+      {
+       "w": "in",
+       "start": 25.219,
+       "end": 25.319
+      },
+      {
+       "w": "my",
+       "start": 25.319,
+       "end": 25.439
+      },
+      {
+       "w": "life.",
+       "start": 25.439,
+       "end": 25.639
+      }
+     ]
+    }
+   ],
+   "start": 23.859,
+   "end": 25.927,
+   "dur": 2.068
+  },
+  {
+   "name": "late",
+   "lines": [
+    {
+     "shot": "late",
+     "speaker": "narr",
+     "text": "But I was too late.",
+     "start": 26.007,
+     "end": 27.311,
+     "words": [
+      {
+       "w": "But",
+       "start": 26.007,
+       "end": 26.307
+      },
+      {
+       "w": "I",
+       "start": 26.307,
+       "end": 26.647
+      },
+      {
+       "w": "was",
+       "start": 26.647,
+       "end": 26.767
+      },
+      {
+       "w": "too",
+       "start": 26.767,
+       "end": 26.887
+      },
+      {
+       "w": "late.",
+       "start": 26.887,
+       "end": 27.107
+      }
+     ]
+    }
+   ],
+   "start": 25.927,
+   "end": 27.731,
+   "dur": 1.804
+  },
+  {
+   "name": "slump",
+   "lines": [
+    {
+     "shot": "slump",
+     "speaker": "narr",
+     "text": "I haven't been the same since.",
+     "start": 27.811,
+     "end": 29.232,
+     "words": [
+      {
+       "w": "I",
+       "start": 27.811,
+       "end": 27.971
+      },
+      {
+       "w": "haven't",
+       "start": 27.971,
+       "end": 28.211
+      },
+      {
+       "w": "been",
+       "start": 28.211,
+       "end": 28.331
+      },
+      {
+       "w": "the",
+       "start": 28.331,
+       "end": 28.471
+      },
+      {
+       "w": "same",
+       "start": 28.471,
+       "end": 28.651
+      },
+      {
+       "w": "since.",
+       "start": 28.651,
+       "end": 28.891
+      }
+     ]
+    }
+   ],
+   "start": 27.731,
+   "end": 29.352,
+   "dur": 1.621
+  },
+  {
+   "name": "resolve",
+   "lines": [
+    {
+     "shot": "resolve",
+     "speaker": "narr",
+     "text": "So I made up my mind. The wish was his. I was bringing Leo back.",
+     "start": 29.432,
+     "end": 32.548,
+     "words": [
+      {
+       "w": "So",
+       "start": 29.432,
+       "end": 29.612
+      },
+      {
+       "w": "I",
+       "start": 29.612,
+       "end": 29.732
+      },
+      {
+       "w": "made",
+       "start": 29.732,
+       "end": 29.852
+      },
+      {
+       "w": "up",
+       "start": 29.852,
+       "end": 29.972
+      },
+      {
+       "w": "my",
+       "start": 29.972,
+       "end": 30.092
+      },
+      {
+       "w": "mind.",
+       "start": 30.092,
+       "end": 30.412
+      },
+      {
+       "w": "The",
+       "start": 30.672,
+       "end": 30.712
+      },
+      {
+       "w": "wish",
+       "start": 30.712,
+       "end": 30.852
+      },
+      {
+       "w": "was",
+       "start": 30.852,
+       "end": 31.032
+      },
+      {
+       "w": "his.",
+       "start": 31.032,
+       "end": 31.192
+      },
+      {
+       "w": "I",
+       "start": 31.512,
+       "end": 31.512
+      },
+      {
+       "w": "was",
+       "start": 31.512,
+       "end": 31.612
+      },
+      {
+       "w": "bringing",
+       "start": 31.612,
+       "end": 31.812
+      },
+      {
+       "w": "Leo",
+       "start": 31.812,
+       "end": 31.992
+      },
+      {
+       "w": "back.",
+       "start": 31.992,
+       "end": 32.312
+      }
+     ]
+    }
+   ],
+   "start": 29.352,
+   "end": 32.668,
+   "dur": 3.316
+  },
+  {
+   "name": "shrug",
+   "lines": [
+    {
+     "shot": "shrug",
+     "speaker": "narr",
+     "text": "Mum and Dad would understand. They're probably on some trip anyway.",
+     "start": 32.748,
+     "end": 35.262,
+     "words": [
+      {
+       "w": "Mum",
+       "start": 32.748,
+       "end": 32.928
+      },
+      {
+       "w": "and",
+       "start": 32.928,
+       "end": 33.028
+      },
+      {
+       "w": "Dad",
+       "start": 33.028,
+       "end": 33.148
+      },
+      {
+       "w": "would",
+       "start": 33.148,
+       "end": 33.268
+      },
+      {
+       "w": "understand.",
+       "start": 33.268,
+       "end": 33.648
+      },
+      {
+       "w": "They're",
+       "start": 33.928,
+       "end": 34.028
+      },
+      {
+       "w": "probably",
+       "start": 34.028,
+       "end": 34.228
+      },
+      {
+       "w": "on",
+       "start": 34.228,
+       "end": 34.448
+      },
+      {
+       "w": "some",
+       "start": 34.448,
+       "end": 34.608
+      },
+      {
+       "w": "trip",
+       "start": 34.608,
+       "end": 34.768
+      },
+      {
+       "w": "anyway.",
+       "start": 34.768,
+       "end": 34.988
+      }
+     ]
+    }
+   ],
+   "start": 32.668,
+   "end": 35.382,
+   "dur": 2.714
+  },
+  {
+   "name": "wait",
+   "lines": [
+    {
+     "shot": "wait",
+     "speaker": "narr",
+     "text": "So I waited. Days went by.",
+     "start": 35.462,
+     "end": 37.377,
+     "words": [
+      {
+       "w": "So",
+       "start": 35.462,
+       "end": 35.582
+      },
+      {
+       "w": "I",
+       "start": 35.582,
+       "end": 35.722
+      },
+      {
+       "w": "waited.",
+       "start": 35.722,
+       "end": 36.002
+      },
+      {
+       "w": "Days",
+       "start": 36.382,
+       "end": 36.562
+      },
+      {
+       "w": "went",
+       "start": 36.562,
+       "end": 36.822
+      },
+      {
+       "w": "by.",
+       "start": 36.822,
+       "end": 37.122
+      }
+     ]
+    }
+   ],
+   "start": 35.382,
+   "end": 37.497,
+   "dur": 2.115
+  },
+  {
+   "name": "night",
+   "lines": [
+    {
+     "shot": "night",
+     "speaker": "narr",
+     "text": "Then, the night before the wish, I saw Icey.",
+     "start": 37.577,
+     "end": 40.087,
+     "words": [
+      {
+       "w": "Then,",
+       "start": 37.577,
+       "end": 37.897
+      },
+      {
+       "w": "the",
+       "start": 38.117,
+       "end": 38.197
+      },
+      {
+       "w": "night",
+       "start": 38.197,
+       "end": 38.317
+      },
+      {
+       "w": "before",
+       "start": 38.317,
+       "end": 38.557
+      },
+      {
+       "w": "the",
+       "start": 38.557,
+       "end": 38.697
+      },
+      {
+       "w": "wish,",
+       "start": 38.697,
+       "end": 38.877
+      },
+      {
+       "w": "I",
+       "start": 39.277,
+       "end": 39.357
+      },
+      {
+       "w": "saw",
+       "start": 39.357,
+       "end": 39.537
+      },
+      {
+       "w": "Icey.",
+       "start": 39.537,
+       "end": 40.086
+      }
+     ]
+    }
+   ],
+   "start": 37.497,
+   "end": 40.207,
+   "dur": 2.71
+  },
+  {
+   "name": "icey",
+   "lines": [
+    {
+     "shot": "icey",
+     "speaker": "narr",
+     "text": "Icey was our dog. He died a year ago.",
+     "start": 40.287,
+     "end": 42.193,
+     "words": [
+      {
+       "w": "Icey",
+       "start": 40.287,
+       "end": 40.567
+      },
+      {
+       "w": "was",
+       "start": 40.567,
+       "end": 40.707
+      },
+      {
+       "w": "our",
+       "start": 40.707,
+       "end": 40.847
+      },
+      {
+       "w": "dog.",
+       "start": 40.847,
+       "end": 41.086
+      },
+      {
+       "w": "He",
+       "start": 41.326,
+       "end": 41.366
+      },
+      {
+       "w": "died",
+       "start": 41.366,
+       "end": 41.506
+      },
+      {
+       "w": "a",
+       "start": 41.506,
+       "end": 41.627
+      },
+      {
+       "w": "year",
+       "start": 41.627,
+       "end": 41.747
+      },
+      {
+       "w": "ago.",
+       "start": 41.747,
+       "end": 41.966
+      }
+     ]
+    }
+   ],
+   "start": 40.207,
+   "end": 42.313,
+   "dur": 2.106
+  },
+  {
+   "name": "ear",
+   "lines": [
+    {
+     "shot": "ear",
+     "speaker": "narr",
+     "text": "But there he was. Same floppy ear. Same crooked tail.",
+     "start": 42.393,
+     "end": 45.355,
+     "words": [
+      {
+       "w": "But",
+       "start": 42.393,
+       "end": 42.613
+      },
+      {
+       "w": "there",
+       "start": 42.613,
+       "end": 42.813
+      },
+      {
+       "w": "he",
+       "start": 42.813,
+       "end": 42.913
+      },
+      {
+       "w": "was.",
+       "start": 42.913,
+       "end": 43.233
+      },
+      {
+       "w": "Same",
+       "start": 43.673,
+       "end": 43.693
+      },
+      {
+       "w": "floppy",
+       "start": 43.693,
+       "end": 43.913
+      },
+      {
+       "w": "ear.",
+       "start": 43.913,
+       "end": 44.253
+      },
+      {
+       "w": "Same",
+       "start": 44.533,
+       "end": 44.693
+      },
+      {
+       "w": "crooked",
+       "start": 44.693,
+       "end": 45.024
+      },
+      {
+       "w": "tail.",
+       "start": 45.024,
+       "end": 45.355
+      }
+     ]
+    }
+   ],
+   "start": 42.313,
+   "end": 45.475,
+   "dur": 3.162
+  },
+  {
+   "name": "bark",
+   "lines": [
+    {
+     "shot": "bark",
+     "speaker": "narr",
+     "text": "And he would not. Stop. Barking.",
+     "start": 45.555,
+     "end": 47.604,
+     "words": [
+      {
+       "w": "And",
+       "start": 45.555,
+       "end": 45.715
+      },
+      {
+       "w": "he",
+       "start": 45.715,
+       "end": 45.835
+      },
+      {
+       "w": "would",
+       "start": 45.835,
+       "end": 45.935
+      },
+      {
+       "w": "not.",
+       "start": 45.935,
+       "end": 46.255
+      },
+      {
+       "w": "Stop.",
+       "start": 46.255,
+       "end": 46.875
+      },
+      {
+       "w": "Barking.",
+       "start": 46.875,
+       "end": 47.295
+      }
+     ]
+    }
+   ],
+   "start": 45.475,
+   "end": 47.724,
+   "dur": 2.249
+  },
+  {
+   "name": "drag",
+   "lines": [
+    {
+     "shot": "drag",
+     "speaker": "narr",
+     "text": "He kept dragging me toward the cemetery.",
+     "start": 47.804,
+     "end": 49.663,
+     "words": [
+      {
+       "w": "He",
+       "start": 47.804,
+       "end": 47.964
+      },
+      {
+       "w": "kept",
+       "start": 47.964,
+       "end": 48.124
+      },
+      {
+       "w": "dragging",
+       "start": 48.124,
+       "end": 48.424
+      },
+      {
+       "w": "me",
+       "start": 48.424,
+       "end": 48.624
+      },
+      {
+       "w": "toward",
+       "start": 48.624,
+       "end": 48.804
+      },
+      {
+       "w": "the",
+       "start": 48.804,
+       "end": 48.984
+      },
+      {
+       "w": "cemetery.",
+       "start": 48.984,
+       "end": 49.284
+      }
+     ]
+    }
+   ],
+   "start": 47.724,
+   "end": 49.783,
+   "dur": 2.059
+  },
+  {
+   "name": "refuse",
+   "lines": [
+    {
+     "shot": "refuse",
+     "speaker": "narr",
+     "text": "No, Icey. I'm not going to look at Leo's grave. He's coming back tomorrow.",
+     "start": 49.863,
+     "end": 53.401,
+     "words": [
+      {
+       "w": "No,",
+       "start": 49.863,
+       "end": 50.123
+      },
+      {
+       "w": "Icey.",
+       "start": 50.123,
+       "end": 50.723
+      },
+      {
+       "w": "I'm",
+       "start": 50.723,
+       "end": 50.843
+      },
+      {
+       "w": "not",
+       "start": 50.843,
+       "end": 51.003
+      },
+      {
+       "w": "going",
+       "start": 51.003,
+       "end": 51.163
+      },
+      {
+       "w": "to",
+       "start": 51.163,
+       "end": 51.303
+      },
+      {
+       "w": "look",
+       "start": 51.303,
+       "end": 51.423
+      },
+      {
+       "w": "at",
+       "start": 51.423,
+       "end": 51.523
+      },
+      {
+       "w": "Leo's",
+       "start": 51.523,
+       "end": 51.823
+      },
+      {
+       "w": "grave.",
+       "start": 51.823,
+       "end": 51.983
+      },
+      {
+       "w": "He's",
+       "start": 52.223,
+       "end": 52.383
+      },
+      {
+       "w": "coming",
+       "start": 52.383,
+       "end": 52.523
+      },
+      {
+       "w": "back",
+       "start": 52.523,
+       "end": 52.763
+      },
+      {
+       "w": "tomorrow.",
+       "start": 52.763,
+       "end": 53.063
+      }
+     ]
+    }
+   ],
+   "start": 49.783,
+   "end": 53.521,
+   "dur": 3.738
+  },
+  {
+   "name": "louder",
+   "lines": [
+    {
+     "shot": "louder",
+     "speaker": "narr",
+     "text": "But the barking got louder. And louder.",
+     "start": 53.601,
+     "end": 55.613,
+     "words": [
+      {
+       "w": "But",
+       "start": 53.601,
+       "end": 53.741
+      },
+      {
+       "w": "the",
+       "start": 53.741,
+       "end": 53.821
+      },
+      {
+       "w": "barking",
+       "start": 53.821,
+       "end": 54.021
+      },
+      {
+       "w": "got",
+       "start": 54.021,
+       "end": 54.201
+      },
+      {
+       "w": "louder.",
+       "start": 54.201,
+       "end": 54.521
+      },
+      {
+       "w": "And",
+       "start": 54.521,
+       "end": 55.021
+      },
+      {
+       "w": "louder.",
+       "start": 55.021,
+       "end": 55.281
+      }
+     ]
+    }
+   ],
+   "start": 53.521,
+   "end": 55.733,
+   "dur": 2.212
+  },
+  {
+   "name": "cem",
+   "lines": [
+    {
+     "shot": "cem",
+     "speaker": "narr",
+     "text": "So I followed him.",
+     "start": 55.813,
+     "end": 56.731,
+     "words": [
+      {
+       "w": "So",
+       "start": 55.813,
+       "end": 55.993
+      },
+      {
+       "w": "I",
+       "start": 55.993,
+       "end": 56.113
+      },
+      {
+       "w": "followed",
+       "start": 56.113,
+       "end": 56.313
+      },
+      {
+       "w": "him.",
+       "start": 56.313,
+       "end": 56.533
+      }
+     ]
+    }
+   ],
+   "start": 55.733,
+   "end": 56.851,
+   "dur": 1.118
+  },
+  {
+   "name": "kneel",
+   "lines": [
+    {
+     "shot": "kneel",
+     "speaker": "narr",
+     "text": "We reached the grave, and before I could even read it, I broke down crying.",
+     "start": 56.931,
+     "end": 60.202,
+     "words": [
+      {
+       "w": "We",
+       "start": 56.931,
+       "end": 57.071
+      },
+      {
+       "w": "reached",
+       "start": 57.071,
+       "end": 57.291
+      },
+      {
+       "w": "the",
+       "start": 57.291,
+       "end": 57.491
+      },
+      {
+       "w": "grave,",
+       "start": 57.491,
+       "end": 57.691
+      },
+      {
+       "w": "and",
+       "start": 57.891,
+       "end": 57.951
+      },
+      {
+       "w": "before",
+       "start": 57.951,
+       "end": 58.171
+      },
+      {
+       "w": "I",
+       "start": 58.171,
+       "end": 58.291
+      },
+      {
+       "w": "could",
+       "start": 58.291,
+       "end": 58.371
+      },
+      {
+       "w": "even",
+       "start": 58.371,
+       "end": 58.511
+      },
+      {
+       "w": "read",
+       "start": 58.511,
+       "end": 58.671
+      },
+      {
+       "w": "it,",
+       "start": 58.671,
+       "end": 58.871
+      },
+      {
+       "w": "I",
+       "start": 58.991,
+       "end": 59.051
+      },
+      {
+       "w": "broke",
+       "start": 59.051,
+       "end": 59.311
+      },
+      {
+       "w": "down",
+       "start": 59.311,
+       "end": 59.611
+      },
+      {
+       "w": "crying.",
+       "start": 59.611,
+       "end": 59.911
+      }
+     ]
+    }
+   ],
+   "start": 56.851,
+   "end": 60.322,
+   "dur": 3.471
+  },
+  {
+   "name": "name",
+   "lines": [
+    {
+     "shot": "name",
+     "speaker": "narr",
+     "text": "Then I looked up. And the name on the stone, was mine.",
+     "start": 60.402,
+     "end": 63.046,
+     "words": [
+      {
+       "w": "Then",
+       "start": 60.402,
+       "end": 60.542
+      },
+      {
+       "w": "I",
+       "start": 60.542,
+       "end": 60.662
+      },
+      {
+       "w": "looked",
+       "start": 60.662,
+       "end": 60.782
+      },
+      {
+       "w": "up.",
+       "start": 60.782,
+       "end": 61.022
+      },
+      {
+       "w": "And",
+       "start": 61.282,
+       "end": 61.342
+      },
+      {
+       "w": "the",
+       "start": 61.342,
+       "end": 61.462
+      },
+      {
+       "w": "name",
+       "start": 61.462,
+       "end": 61.622
+      },
+      {
+       "w": "on",
+       "start": 61.622,
+       "end": 61.822
+      },
+      {
+       "w": "the",
+       "start": 61.822,
+       "end": 61.922
+      },
+      {
+       "w": "stone,",
+       "start": 61.922,
+       "end": 62.222
+      },
+      {
+       "w": "was",
+       "start": 62.222,
+       "end": 62.502
+      },
+      {
+       "w": "mine.",
+       "start": 62.502,
+       "end": 62.782
+      }
+     ]
+    }
+   ],
+   "start": 60.322,
+   "end": 63.466,
+   "dur": 3.144
+  },
+  {
+   "name": "back",
+   "lines": [
+    {
+     "shot": "back",
+     "speaker": "narr",
+     "text": "And it all came back.",
+     "start": 63.546,
+     "end": 64.547,
+     "words": [
+      {
+       "w": "And",
+       "start": 63.546,
+       "end": 63.846
+      },
+      {
+       "w": "it",
+       "start": 63.846,
+       "end": 63.926
+      },
+      {
+       "w": "all",
+       "start": 63.926,
+       "end": 64.026
+      },
+      {
+       "w": "came",
+       "start": 64.026,
+       "end": 64.146
+      },
+      {
+       "w": "back.",
+       "start": 64.146,
+       "end": 64.386
+      }
+     ]
+    }
+   ],
+   "start": 63.466,
+   "end": 64.667,
+   "dur": 1.201
+  },
+  {
+   "name": "flash",
+   "lines": [
+    {
+     "shot": "flash",
+     "speaker": "narr",
+     "text": "I wasn't too late. I pushed Leo out of the way. The truck hit me.",
+     "start": 64.747,
+     "end": 67.435,
+     "words": [
+      {
+       "w": "I",
+       "start": 64.747,
+       "end": 64.867
+      },
+      {
+       "w": "wasn't",
+       "start": 64.867,
+       "end": 65.107
+      },
+      {
+       "w": "too",
+       "start": 65.107,
+       "end": 65.187
+      },
+      {
+       "w": "late.",
+       "start": 65.187,
+       "end": 65.387
+      },
+      {
+       "w": "I",
+       "start": 65.687,
+       "end": 65.747
+      },
+      {
+       "w": "pushed",
+       "start": 65.747,
+       "end": 65.887
+      },
+      {
+       "w": "Leo",
+       "start": 65.887,
+       "end": 66.107
+      },
+      {
+       "w": "out",
+       "start": 66.107,
+       "end": 66.287
+      },
+      {
+       "w": "of",
+       "start": 66.287,
+       "end": 66.387
+      },
+      {
+       "w": "the",
+       "start": 66.387,
+       "end": 66.447
+      },
+      {
+       "w": "way.",
+       "start": 66.447,
+       "end": 66.607
+      },
+      {
+       "w": "The",
+       "start": 66.747,
+       "end": 66.827
+      },
+      {
+       "w": "truck",
+       "start": 66.827,
+       "end": 66.987
+      },
+      {
+       "w": "hit",
+       "start": 66.987,
+       "end": 67.147
+      },
+      {
+       "w": "me.",
+       "start": 67.147,
+       "end": 67.287
+      }
+     ]
+    }
+   ],
+   "start": 64.667,
+   "end": 67.555,
+   "dur": 2.888
+  },
+  {
+   "name": "real",
+   "lines": [
+    {
+     "shot": "real",
+     "speaker": "narr",
+     "text": "Mum and Dad never died. That's why I couldn't remember it.",
+     "start": 67.635,
+     "end": 69.908,
+     "words": [
+      {
+       "w": "Mum",
+       "start": 67.635,
+       "end": 67.795
+      },
+      {
+       "w": "and",
+       "start": 67.795,
+       "end": 67.915
+      },
+      {
+       "w": "Dad",
+       "start": 67.915,
+       "end": 68.075
+      },
+      {
+       "w": "never",
+       "start": 68.075,
+       "end": 68.255
+      },
+      {
+       "w": "died.",
+       "start": 68.255,
+       "end": 68.515
+      },
+      {
+       "w": "That's",
+       "start": 68.775,
+       "end": 68.995
+      },
+      {
+       "w": "why",
+       "start": 68.995,
+       "end": 69.075
+      },
+      {
+       "w": "I",
+       "start": 69.075,
+       "end": 69.175
+      },
+      {
+       "w": "couldn't",
+       "start": 69.175,
+       "end": 69.335
+      },
+      {
+       "w": "remember",
+       "start": 69.335,
+       "end": 69.575
+      },
+      {
+       "w": "it.",
+       "start": 69.575,
+       "end": 69.815
+      }
+     ]
+    }
+   ],
+   "start": 67.555,
+   "end": 70.028,
+   "dur": 2.473
+  },
+  {
+   "name": "gtown",
+   "lines": [
+    {
+     "shot": "gtown",
+     "speaker": "narr",
+     "text": "This isn't the town that brings people back. It's the town they bring people back from.",
+     "start": 70.108,
+     "end": 73.166,
+     "words": [
+      {
+       "w": "This",
+       "start": 70.108,
+       "end": 70.228
+      },
+      {
+       "w": "isn't",
+       "start": 70.228,
+       "end": 70.488
+      },
+      {
+       "w": "the",
+       "start": 70.488,
+       "end": 70.548
+      },
+      {
+       "w": "town",
+       "start": 70.548,
+       "end": 70.688
+      },
+      {
+       "w": "that",
+       "start": 70.688,
+       "end": 70.868
+      },
+      {
+       "w": "brings",
+       "start": 70.868,
+       "end": 70.988
+      },
+      {
+       "w": "people",
+       "start": 70.988,
+       "end": 71.228
+      },
+      {
+       "w": "back.",
+       "start": 71.228,
+       "end": 71.468
+      },
+      {
+       "w": "It's",
+       "start": 71.608,
+       "end": 71.728
+      },
+      {
+       "w": "the",
+       "start": 71.728,
+       "end": 71.828
+      },
+      {
+       "w": "town",
+       "start": 71.828,
+       "end": 72.008
+      },
+      {
+       "w": "they",
+       "start": 72.008,
+       "end": 72.148
+      },
+      {
+       "w": "bring",
+       "start": 72.148,
+       "end": 72.268
+      },
+      {
+       "w": "people",
+       "start": 72.268,
+       "end": 72.488
+      },
+      {
+       "w": "back",
+       "start": 72.488,
+       "end": 72.668
+      },
+      {
+       "w": "from.",
+       "start": 72.668,
+       "end": 72.908
+      }
+     ]
+    }
+   ],
+   "start": 70.028,
+   "end": 73.286,
+   "dur": 3.258
+  },
+  {
+   "name": "ghost",
+   "lines": [
+    {
+     "shot": "ghost",
+     "speaker": "narr",
+     "text": "A ghost town.",
+     "start": 73.366,
+     "end": 74.554,
+     "words": [
+      {
+       "w": "A",
+       "start": 73.366,
+       "end": 73.626
+      },
+      {
+       "w": "ghost",
+       "start": 73.626,
+       "end": 74.006
+      },
+      {
+       "w": "town.",
+       "start": 74.006,
+       "end": 74.366
+      }
+     ]
+    }
+   ],
+   "start": 73.286,
+   "end": 74.674,
+   "dur": 1.388
+  },
+  {
+   "name": "hope",
+   "lines": [
+    {
+     "shot": "hope",
+     "speaker": "narr",
+     "text": "But that was okay. Tomorrow was my family's turn. Surely, they'd pick me.",
+     "start": 74.754,
+     "end": 78.246,
+     "words": [
+      {
+       "w": "But",
+       "start": 74.754,
+       "end": 74.934
+      },
+      {
+       "w": "that",
+       "start": 74.934,
+       "end": 75.094
+      },
+      {
+       "w": "was",
+       "start": 75.094,
+       "end": 75.214
+      },
+      {
+       "w": "okay.",
+       "start": 75.214,
+       "end": 75.594
+      },
+      {
+       "w": "Tomorrow",
+       "start": 76.074,
+       "end": 76.094
+      },
+      {
+       "w": "was",
+       "start": 76.094,
+       "end": 76.294
+      },
+      {
+       "w": "my",
+       "start": 76.294,
+       "end": 76.414
+      },
+      {
+       "w": "family's",
+       "start": 76.414,
+       "end": 76.794
+      },
+      {
+       "w": "turn.",
+       "start": 76.794,
+       "end": 76.994
+      },
+      {
+       "w": "Surely,",
+       "start": 77.314,
+       "end": 77.454
+      },
+      {
+       "w": "they'd",
+       "start": 77.454,
+       "end": 77.734
+      },
+      {
+       "w": "pick",
+       "start": 77.734,
+       "end": 77.834
+      },
+      {
+       "w": "me.",
+       "start": 77.834,
+       "end": 78.034
+      }
+     ]
+    }
+   ],
+   "start": 74.674,
+   "end": 78.366,
+   "dur": 3.692
+  },
+  {
+   "name": "gate",
+   "lines": [
+    {
+     "shot": "gate",
+     "speaker": "narr",
+     "text": "So the day came. I waited by the gate.",
+     "start": 78.446,
+     "end": 80.282,
+     "words": [
+      {
+       "w": "So",
+       "start": 78.446,
+       "end": 78.586
+      },
+      {
+       "w": "the",
+       "start": 78.586,
+       "end": 78.686
+      },
+      {
+       "w": "day",
+       "start": 78.686,
+       "end": 78.806
+      },
+      {
+       "w": "came.",
+       "start": 78.806,
+       "end": 79.106
+      },
+      {
+       "w": "I",
+       "start": 79.426,
+       "end": 79.506
+      },
+      {
+       "w": "waited",
+       "start": 79.506,
+       "end": 79.646
+      },
+      {
+       "w": "by",
+       "start": 79.646,
+       "end": 79.846
+      },
+      {
+       "w": "the",
+       "start": 79.846,
+       "end": 79.926
+      },
+      {
+       "w": "gate.",
+       "start": 79.926,
+       "end": 80.086
+      }
+     ]
+    }
+   ],
+   "start": 78.366,
+   "end": 80.702,
+   "dur": 2.336
+  },
+  {
+   "name": "mnm",
+   "lines": [
+    {
+     "shot": "mnm",
+     "speaker": "narr",
+     "text": "Morning. Noon. Midnight.",
+     "start": 80.782,
+     "end": 82.09,
+     "words": [
+      {
+       "w": "Morning.",
+       "start": 80.782,
+       "end": 81.042
+      },
+      {
+       "w": "Noon.",
+       "start": 81.362,
+       "end": 81.462
+      },
+      {
+       "w": "Midnight.",
+       "start": 81.642,
+       "end": 81.802
+      }
+     ]
+    }
+   ],
+   "start": 80.702,
+   "end": 82.21,
+   "dur": 1.508
+  },
+  {
+   "name": "still",
+   "lines": [
+    {
+     "shot": "still",
+     "speaker": "narr",
+     "text": "I was still here.",
+     "start": 82.29,
+     "end": 83.104,
+     "words": [
+      {
+       "w": "I",
+       "start": 82.29,
+       "end": 82.43
+      },
+      {
+       "w": "was",
+       "start": 82.43,
+       "end": 82.55
+      },
+      {
+       "w": "still",
+       "start": 82.55,
+       "end": 82.71
+      },
+      {
+       "w": "here.",
+       "start": 82.71,
+       "end": 82.95
+      }
+     ]
+    }
+   ],
+   "start": 82.21,
+   "end": 83.224,
+   "dur": 1.014
+  },
+  {
+   "name": "gone",
+   "lines": [
+    {
+     "shot": "gone",
+     "speaker": "narr",
+     "text": "And Icey, was gone.",
+     "start": 83.304,
+     "end": 84.464,
+     "words": [
+      {
+       "w": "And",
+       "start": 83.304,
+       "end": 83.464
+      },
+      {
+       "w": "Icey,",
+       "start": 83.464,
+       "end": 83.764
+      },
+      {
+       "w": "was",
+       "start": 83.764,
+       "end": 84.044
+      },
+      {
+       "w": "gone.",
+       "start": 84.044,
+       "end": 84.264
+      }
+     ]
+    }
+   ],
+   "start": 83.224,
+   "end": 84.984,
+   "dur": 1.76
+  },
+  {
+   "name": "pick",
+   "lines": [
+    {
+     "shot": "pick",
+     "speaker": "narr",
+     "text": "They didn't pick me.",
+     "start": 85.064,
+     "end": 86.006,
+     "words": [
+      {
+       "w": "They",
+       "start": 85.064,
+       "end": 85.224
+      },
+      {
+       "w": "didn't",
+       "start": 85.224,
+       "end": 85.444
+      },
+      {
+       "w": "pick",
+       "start": 85.444,
+       "end": 85.524
+      },
+      {
+       "w": "me.",
+       "start": 85.524,
+       "end": 85.744
+      }
+     ]
+    }
+   ],
+   "start": 84.984,
+   "end": 86.426,
+   "dur": 1.442
+  },
+  {
+   "name": "dog",
+   "lines": [
+    {
+     "shot": "dog",
+     "speaker": "narr",
+     "text": "They picked the dog.",
+     "start": 86.506,
+     "end": 87.546,
+     "words": [
+      {
+       "w": "They",
+       "start": 86.506,
+       "end": 86.706
+      },
+      {
+       "w": "picked",
+       "start": 86.706,
+       "end": 86.886
+      },
+      {
+       "w": "the",
+       "start": 86.886,
+       "end": 87.086
+      },
+      {
+       "w": "dog.",
+       "start": 87.086,
+       "end": 87.346
+      }
+     ]
+    }
+   ],
+   "start": 86.426,
+   "end": 89.546,
+   "dur": 3.12
+  }
+ ],
+ "lines": [
+  {
+   "shot": "hook",
+   "speaker": "narr",
+   "text": "In this world, there's a town where once a year, one family gets to bring a loved one back from the dead.",
+   "start": 0.15,
+   "end": 4.203,
+   "words": [
+    {
+     "w": "In",
+     "start": 0.15,
+     "end": 0.31
+    },
+    {
+     "w": "this",
+     "start": 0.31,
+     "end": 0.45
+    },
+    {
+     "w": "world,",
+     "start": 0.45,
+     "end": 0.73
+    },
+    {
+     "w": "there's",
+     "start": 0.91,
+     "end": 1.05
+    },
+    {
+     "w": "a",
+     "start": 1.05,
+     "end": 1.15
+    },
+    {
+     "w": "town",
+     "start": 1.15,
+     "end": 1.31
+    },
+    {
+     "w": "where",
+     "start": 1.31,
+     "end": 1.53
+    },
+    {
+     "w": "once",
+     "start": 1.53,
+     "end": 1.69
+    },
+    {
+     "w": "a",
+     "start": 1.69,
+     "end": 1.83
+    },
+    {
+     "w": "year,",
+     "start": 1.83,
+     "end": 1.99
+    },
+    {
+     "w": "one",
+     "start": 2.21,
+     "end": 2.31
+    },
+    {
+     "w": "family",
+     "start": 2.31,
+     "end": 2.55
+    },
+    {
+     "w": "gets",
+     "start": 2.55,
+     "end": 2.79
+    },
+    {
+     "w": "to",
+     "start": 2.79,
+     "end": 2.93
+    },
+    {
+     "w": "bring",
+     "start": 2.93,
+     "end": 3.01
+    },
+    {
+     "w": "a",
+     "start": 3.01,
+     "end": 3.15
+    },
+    {
+     "w": "loved",
+     "start": 3.15,
+     "end": 3.25
+    },
+    {
+     "w": "one",
+     "start": 3.25,
+     "end": 3.43
+    },
+    {
+     "w": "back",
+     "start": 3.43,
+     "end": 3.59
+    },
+    {
+     "w": "from",
+     "start": 3.59,
+     "end": 3.75
+    },
+    {
+     "w": "the",
+     "start": 3.75,
+     "end": 3.83
+    },
+    {
+     "w": "dead.",
+     "start": 3.83,
+     "end": 4.01
+    }
+   ]
+  },
+  {
+   "shot": "huss",
+   "speaker": "huss",
+   "text": "Huss... huss... huss...",
+   "start": 4.403,
+   "end": 5.083,
+   "words": [
+    {
+     "w": "Huss...",
+     "start": 4.443,
+     "end": 4.673
+    },
+    {
+     "w": "huss...",
+     "start": 4.673,
+     "end": 4.853
+    },
+    {
+     "w": "huss...",
+     "start": 4.853,
+     "end": 5.083
+    }
+   ]
+  },
+  {
+   "shot": "turn",
+   "speaker": "narr",
+   "text": "And this year, it was finally my family's turn.",
+   "start": 5.283,
+   "end": 7.898,
+   "words": [
+    {
+     "w": "And",
+     "start": 5.283,
+     "end": 5.443
+    },
+    {
+     "w": "this",
+     "start": 5.443,
+     "end": 5.623
+    },
+    {
+     "w": "year,",
+     "start": 5.623,
+     "end": 5.883
+    },
+    {
+     "w": "it",
+     "start": 6.163,
+     "end": 6.263
+    },
+    {
+     "w": "was",
+     "start": 6.263,
+     "end": 6.343
+    },
+    {
+     "w": "finally",
+     "start": 6.343,
+     "end": 6.703
+    },
+    {
+     "w": "my",
+     "start": 6.703,
+     "end": 6.963
+    },
+    {
+     "w": "family's",
+     "start": 6.963,
+     "end": 7.463
+    },
+    {
+     "w": "turn.",
+     "start": 7.463,
+     "end": 7.683
+    }
+   ]
+  },
+  {
+   "shot": "fuzzy",
+   "speaker": "narr",
+   "text": "Funny thing is, I can't remember when Mum and Dad died. That part's all fuzzy.",
+   "start": 8.098,
+   "end": 11.99,
+   "words": [
+    {
+     "w": "Funny",
+     "start": 8.098,
+     "end": 8.278
+    },
+    {
+     "w": "thing",
+     "start": 8.278,
+     "end": 8.458
+    },
+    {
+     "w": "is,",
+     "start": 8.458,
+     "end": 8.758
+    },
+    {
+     "w": "I",
+     "start": 8.998,
+     "end": 9.118
+    },
+    {
+     "w": "can't",
+     "start": 9.118,
+     "end": 9.358
+    },
+    {
+     "w": "remember",
+     "start": 9.358,
+     "end": 9.558
+    },
+    {
+     "w": "when",
+     "start": 9.558,
+     "end": 9.758
+    },
+    {
+     "w": "Mum",
+     "start": 9.758,
+     "end": 9.878
+    },
+    {
+     "w": "and",
+     "start": 9.878,
+     "end": 10.018
+    },
+    {
+     "w": "Dad",
+     "start": 10.018,
+     "end": 10.198
+    },
+    {
+     "w": "died.",
+     "start": 10.198,
+     "end": 10.538
+    },
+    {
+     "w": "That",
+     "start": 10.918,
+     "end": 11.078
+    },
+    {
+     "w": "part's",
+     "start": 11.078,
+     "end": 11.358
+    },
+    {
+     "w": "all",
+     "start": 11.358,
+     "end": 11.458
+    },
+    {
+     "w": "fuzzy.",
+     "start": 11.458,
+     "end": 11.638
+    }
+   ]
+  },
+  {
+   "shot": "photo",
+   "speaker": "narr",
+   "text": "But my little brother, Leo? I remember it like it was yesterday.",
+   "start": 12.19,
+   "end": 14.749,
+   "words": [
+    {
+     "w": "But",
+     "start": 12.19,
+     "end": 12.33
+    },
+    {
+     "w": "my",
+     "start": 12.33,
+     "end": 12.43
+    },
+    {
+     "w": "little",
+     "start": 12.43,
+     "end": 12.59
+    },
+    {
+     "w": "brother,",
+     "start": 12.59,
+     "end": 12.77
+    },
+    {
+     "w": "Leo?",
+     "start": 12.77,
+     "end": 13.07
+    },
+    {
+     "w": "I",
+     "start": 13.41,
+     "end": 13.57
+    },
+    {
+     "w": "remember",
+     "start": 13.57,
+     "end": 13.79
+    },
+    {
+     "w": "it",
+     "start": 13.79,
+     "end": 13.93
+    },
+    {
+     "w": "like",
+     "start": 13.93,
+     "end": 13.99
+    },
+    {
+     "w": "it",
+     "start": 13.99,
+     "end": 14.09
+    },
+    {
+     "w": "was",
+     "start": 14.09,
+     "end": 14.19
+    },
+    {
+     "w": "yesterday.",
+     "start": 14.19,
+     "end": 14.45
+    }
+   ]
+  },
+  {
+   "shot": "skate",
+   "speaker": "narr",
+   "text": "We did everything together. Especially skating.",
+   "start": 14.949,
+   "end": 17.061,
+   "words": [
+    {
+     "w": "We",
+     "start": 14.949,
+     "end": 15.069
+    },
+    {
+     "w": "did",
+     "start": 15.069,
+     "end": 15.189
+    },
+    {
+     "w": "everything",
+     "start": 15.189,
+     "end": 15.469
+    },
+    {
+     "w": "together.",
+     "start": 15.469,
+     "end": 15.849
+    },
+    {
+     "w": "Especially",
+     "start": 16.089,
+     "end": 16.369
+    },
+    {
+     "w": "skating.",
+     "start": 16.369,
+     "end": 16.769
+    }
+   ]
+  },
+  {
+   "shot": "tricks",
+   "speaker": "narr",
+   "text": "Kickflips. Grinds. Even the risky stuff Mum banned us from doing.",
+   "start": 17.261,
+   "end": 20.605,
+   "words": [
+    {
+     "w": "Kickflips.",
+     "start": 17.261,
+     "end": 18.001
+    },
+    {
+     "w": "Grinds.",
+     "start": 18.001,
+     "end": 18.681
+    },
+    {
+     "w": "Even",
+     "start": 18.741,
+     "end": 18.861
+    },
+    {
+     "w": "the",
+     "start": 18.861,
+     "end": 19.001
+    },
+    {
+     "w": "risky",
+     "start": 19.001,
+     "end": 19.161
+    },
+    {
+     "w": "stuff",
+     "start": 19.161,
+     "end": 19.421
+    },
+    {
+     "w": "Mum",
+     "start": 19.421,
+     "end": 19.581
+    },
+    {
+     "w": "banned",
+     "start": 19.581,
+     "end": 19.821
+    },
+    {
+     "w": "us",
+     "start": 19.821,
+     "end": 19.981
+    },
+    {
+     "w": "from",
+     "start": 19.981,
+     "end": 20.101
+    },
+    {
+     "w": "doing.",
+     "start": 20.101,
+     "end": 20.361
+    }
+   ]
+  },
+  {
+   "shot": "road",
+   "speaker": "narr",
+   "text": "Then one day, Leo was skating on the road, and a truck swerved.",
+   "start": 20.805,
+   "end": 23.739,
+   "words": [
+    {
+     "w": "Then",
+     "start": 20.805,
+     "end": 21.025
+    },
+    {
+     "w": "one",
+     "start": 21.025,
+     "end": 21.185
+    },
+    {
+     "w": "day,",
+     "start": 21.185,
+     "end": 21.445
+    },
+    {
+     "w": "Leo",
+     "start": 21.785,
+     "end": 21.865
+    },
+    {
+     "w": "was",
+     "start": 21.865,
+     "end": 22.025
+    },
+    {
+     "w": "skating",
+     "start": 22.025,
+     "end": 22.185
+    },
+    {
+     "w": "on",
+     "start": 22.185,
+     "end": 22.365
+    },
+    {
+     "w": "the",
+     "start": 22.365,
+     "end": 22.445
+    },
+    {
+     "w": "road,",
+     "start": 22.445,
+     "end": 22.685
+    },
+    {
+     "w": "and",
+     "start": 22.925,
+     "end": 23.005
+    },
+    {
+     "w": "a",
+     "start": 23.005,
+     "end": 23.085
+    },
+    {
+     "w": "truck",
+     "start": 23.085,
+     "end": 23.245
+    },
+    {
+     "w": "swerved.",
+     "start": 23.245,
+     "end": 23.565
+    }
+   ]
+  },
+  {
+   "shot": "sprint",
+   "speaker": "narr",
+   "text": "I ran faster than I've ever run in my life.",
+   "start": 23.939,
+   "end": 25.807,
+   "words": [
+    {
+     "w": "I",
+     "start": 23.939,
+     "end": 24.099
+    },
+    {
+     "w": "ran",
+     "start": 24.099,
+     "end": 24.259
+    },
+    {
+     "w": "faster",
+     "start": 24.259,
+     "end": 24.559
+    },
+    {
+     "w": "than",
+     "start": 24.559,
+     "end": 24.739
+    },
+    {
+     "w": "I've",
+     "start": 24.739,
+     "end": 24.899
+    },
+    {
+     "w": "ever",
+     "start": 24.899,
+     "end": 25.059
+    },
+    {
+     "w": "run",
+     "start": 25.059,
+     "end": 25.219
+    },
+    {
+     "w": "in",
+     "start": 25.219,
+     "end": 25.319
+    },
+    {
+     "w": "my",
+     "start": 25.319,
+     "end": 25.439
+    },
+    {
+     "w": "life.",
+     "start": 25.439,
+     "end": 25.639
+    }
+   ]
+  },
+  {
+   "shot": "late",
+   "speaker": "narr",
+   "text": "But I was too late.",
+   "start": 26.007,
+   "end": 27.311,
+   "words": [
+    {
+     "w": "But",
+     "start": 26.007,
+     "end": 26.307
+    },
+    {
+     "w": "I",
+     "start": 26.307,
+     "end": 26.647
+    },
+    {
+     "w": "was",
+     "start": 26.647,
+     "end": 26.767
+    },
+    {
+     "w": "too",
+     "start": 26.767,
+     "end": 26.887
+    },
+    {
+     "w": "late.",
+     "start": 26.887,
+     "end": 27.107
+    }
+   ]
+  },
+  {
+   "shot": "slump",
+   "speaker": "narr",
+   "text": "I haven't been the same since.",
+   "start": 27.811,
+   "end": 29.232,
+   "words": [
+    {
+     "w": "I",
+     "start": 27.811,
+     "end": 27.971
+    },
+    {
+     "w": "haven't",
+     "start": 27.971,
+     "end": 28.211
+    },
+    {
+     "w": "been",
+     "start": 28.211,
+     "end": 28.331
+    },
+    {
+     "w": "the",
+     "start": 28.331,
+     "end": 28.471
+    },
+    {
+     "w": "same",
+     "start": 28.471,
+     "end": 28.651
+    },
+    {
+     "w": "since.",
+     "start": 28.651,
+     "end": 28.891
+    }
+   ]
+  },
+  {
+   "shot": "resolve",
+   "speaker": "narr",
+   "text": "So I made up my mind. The wish was his. I was bringing Leo back.",
+   "start": 29.432,
+   "end": 32.548,
+   "words": [
+    {
+     "w": "So",
+     "start": 29.432,
+     "end": 29.612
+    },
+    {
+     "w": "I",
+     "start": 29.612,
+     "end": 29.732
+    },
+    {
+     "w": "made",
+     "start": 29.732,
+     "end": 29.852
+    },
+    {
+     "w": "up",
+     "start": 29.852,
+     "end": 29.972
+    },
+    {
+     "w": "my",
+     "start": 29.972,
+     "end": 30.092
+    },
+    {
+     "w": "mind.",
+     "start": 30.092,
+     "end": 30.412
+    },
+    {
+     "w": "The",
+     "start": 30.672,
+     "end": 30.712
+    },
+    {
+     "w": "wish",
+     "start": 30.712,
+     "end": 30.852
+    },
+    {
+     "w": "was",
+     "start": 30.852,
+     "end": 31.032
+    },
+    {
+     "w": "his.",
+     "start": 31.032,
+     "end": 31.192
+    },
+    {
+     "w": "I",
+     "start": 31.512,
+     "end": 31.512
+    },
+    {
+     "w": "was",
+     "start": 31.512,
+     "end": 31.612
+    },
+    {
+     "w": "bringing",
+     "start": 31.612,
+     "end": 31.812
+    },
+    {
+     "w": "Leo",
+     "start": 31.812,
+     "end": 31.992
+    },
+    {
+     "w": "back.",
+     "start": 31.992,
+     "end": 32.312
+    }
+   ]
+  },
+  {
+   "shot": "shrug",
+   "speaker": "narr",
+   "text": "Mum and Dad would understand. They're probably on some trip anyway.",
+   "start": 32.748,
+   "end": 35.262,
+   "words": [
+    {
+     "w": "Mum",
+     "start": 32.748,
+     "end": 32.928
+    },
+    {
+     "w": "and",
+     "start": 32.928,
+     "end": 33.028
+    },
+    {
+     "w": "Dad",
+     "start": 33.028,
+     "end": 33.148
+    },
+    {
+     "w": "would",
+     "start": 33.148,
+     "end": 33.268
+    },
+    {
+     "w": "understand.",
+     "start": 33.268,
+     "end": 33.648
+    },
+    {
+     "w": "They're",
+     "start": 33.928,
+     "end": 34.028
+    },
+    {
+     "w": "probably",
+     "start": 34.028,
+     "end": 34.228
+    },
+    {
+     "w": "on",
+     "start": 34.228,
+     "end": 34.448
+    },
+    {
+     "w": "some",
+     "start": 34.448,
+     "end": 34.608
+    },
+    {
+     "w": "trip",
+     "start": 34.608,
+     "end": 34.768
+    },
+    {
+     "w": "anyway.",
+     "start": 34.768,
+     "end": 34.988
+    }
+   ]
+  },
+  {
+   "shot": "wait",
+   "speaker": "narr",
+   "text": "So I waited. Days went by.",
+   "start": 35.462,
+   "end": 37.377,
+   "words": [
+    {
+     "w": "So",
+     "start": 35.462,
+     "end": 35.582
+    },
+    {
+     "w": "I",
+     "start": 35.582,
+     "end": 35.722
+    },
+    {
+     "w": "waited.",
+     "start": 35.722,
+     "end": 36.002
+    },
+    {
+     "w": "Days",
+     "start": 36.382,
+     "end": 36.562
+    },
+    {
+     "w": "went",
+     "start": 36.562,
+     "end": 36.822
+    },
+    {
+     "w": "by.",
+     "start": 36.822,
+     "end": 37.122
+    }
+   ]
+  },
+  {
+   "shot": "night",
+   "speaker": "narr",
+   "text": "Then, the night before the wish, I saw Icey.",
+   "start": 37.577,
+   "end": 40.087,
+   "words": [
+    {
+     "w": "Then,",
+     "start": 37.577,
+     "end": 37.897
+    },
+    {
+     "w": "the",
+     "start": 38.117,
+     "end": 38.197
+    },
+    {
+     "w": "night",
+     "start": 38.197,
+     "end": 38.317
+    },
+    {
+     "w": "before",
+     "start": 38.317,
+     "end": 38.557
+    },
+    {
+     "w": "the",
+     "start": 38.557,
+     "end": 38.697
+    },
+    {
+     "w": "wish,",
+     "start": 38.697,
+     "end": 38.877
+    },
+    {
+     "w": "I",
+     "start": 39.277,
+     "end": 39.357
+    },
+    {
+     "w": "saw",
+     "start": 39.357,
+     "end": 39.537
+    },
+    {
+     "w": "Icey.",
+     "start": 39.537,
+     "end": 40.086
+    }
+   ]
+  },
+  {
+   "shot": "icey",
+   "speaker": "narr",
+   "text": "Icey was our dog. He died a year ago.",
+   "start": 40.287,
+   "end": 42.193,
+   "words": [
+    {
+     "w": "Icey",
+     "start": 40.287,
+     "end": 40.567
+    },
+    {
+     "w": "was",
+     "start": 40.567,
+     "end": 40.707
+    },
+    {
+     "w": "our",
+     "start": 40.707,
+     "end": 40.847
+    },
+    {
+     "w": "dog.",
+     "start": 40.847,
+     "end": 41.086
+    },
+    {
+     "w": "He",
+     "start": 41.326,
+     "end": 41.366
+    },
+    {
+     "w": "died",
+     "start": 41.366,
+     "end": 41.506
+    },
+    {
+     "w": "a",
+     "start": 41.506,
+     "end": 41.627
+    },
+    {
+     "w": "year",
+     "start": 41.627,
+     "end": 41.747
+    },
+    {
+     "w": "ago.",
+     "start": 41.747,
+     "end": 41.966
+    }
+   ]
+  },
+  {
+   "shot": "ear",
+   "speaker": "narr",
+   "text": "But there he was. Same floppy ear. Same crooked tail.",
+   "start": 42.393,
+   "end": 45.355,
+   "words": [
+    {
+     "w": "But",
+     "start": 42.393,
+     "end": 42.613
+    },
+    {
+     "w": "there",
+     "start": 42.613,
+     "end": 42.813
+    },
+    {
+     "w": "he",
+     "start": 42.813,
+     "end": 42.913
+    },
+    {
+     "w": "was.",
+     "start": 42.913,
+     "end": 43.233
+    },
+    {
+     "w": "Same",
+     "start": 43.673,
+     "end": 43.693
+    },
+    {
+     "w": "floppy",
+     "start": 43.693,
+     "end": 43.913
+    },
+    {
+     "w": "ear.",
+     "start": 43.913,
+     "end": 44.253
+    },
+    {
+     "w": "Same",
+     "start": 44.533,
+     "end": 44.693
+    },
+    {
+     "w": "crooked",
+     "start": 44.693,
+     "end": 45.024
+    },
+    {
+     "w": "tail.",
+     "start": 45.024,
+     "end": 45.355
+    }
+   ]
+  },
+  {
+   "shot": "bark",
+   "speaker": "narr",
+   "text": "And he would not. Stop. Barking.",
+   "start": 45.555,
+   "end": 47.604,
+   "words": [
+    {
+     "w": "And",
+     "start": 45.555,
+     "end": 45.715
+    },
+    {
+     "w": "he",
+     "start": 45.715,
+     "end": 45.835
+    },
+    {
+     "w": "would",
+     "start": 45.835,
+     "end": 45.935
+    },
+    {
+     "w": "not.",
+     "start": 45.935,
+     "end": 46.255
+    },
+    {
+     "w": "Stop.",
+     "start": 46.255,
+     "end": 46.875
+    },
+    {
+     "w": "Barking.",
+     "start": 46.875,
+     "end": 47.295
+    }
+   ]
+  },
+  {
+   "shot": "drag",
+   "speaker": "narr",
+   "text": "He kept dragging me toward the cemetery.",
+   "start": 47.804,
+   "end": 49.663,
+   "words": [
+    {
+     "w": "He",
+     "start": 47.804,
+     "end": 47.964
+    },
+    {
+     "w": "kept",
+     "start": 47.964,
+     "end": 48.124
+    },
+    {
+     "w": "dragging",
+     "start": 48.124,
+     "end": 48.424
+    },
+    {
+     "w": "me",
+     "start": 48.424,
+     "end": 48.624
+    },
+    {
+     "w": "toward",
+     "start": 48.624,
+     "end": 48.804
+    },
+    {
+     "w": "the",
+     "start": 48.804,
+     "end": 48.984
+    },
+    {
+     "w": "cemetery.",
+     "start": 48.984,
+     "end": 49.284
+    }
+   ]
+  },
+  {
+   "shot": "refuse",
+   "speaker": "narr",
+   "text": "No, Icey. I'm not going to look at Leo's grave. He's coming back tomorrow.",
+   "start": 49.863,
+   "end": 53.401,
+   "words": [
+    {
+     "w": "No,",
+     "start": 49.863,
+     "end": 50.123
+    },
+    {
+     "w": "Icey.",
+     "start": 50.123,
+     "end": 50.723
+    },
+    {
+     "w": "I'm",
+     "start": 50.723,
+     "end": 50.843
+    },
+    {
+     "w": "not",
+     "start": 50.843,
+     "end": 51.003
+    },
+    {
+     "w": "going",
+     "start": 51.003,
+     "end": 51.163
+    },
+    {
+     "w": "to",
+     "start": 51.163,
+     "end": 51.303
+    },
+    {
+     "w": "look",
+     "start": 51.303,
+     "end": 51.423
+    },
+    {
+     "w": "at",
+     "start": 51.423,
+     "end": 51.523
+    },
+    {
+     "w": "Leo's",
+     "start": 51.523,
+     "end": 51.823
+    },
+    {
+     "w": "grave.",
+     "start": 51.823,
+     "end": 51.983
+    },
+    {
+     "w": "He's",
+     "start": 52.223,
+     "end": 52.383
+    },
+    {
+     "w": "coming",
+     "start": 52.383,
+     "end": 52.523
+    },
+    {
+     "w": "back",
+     "start": 52.523,
+     "end": 52.763
+    },
+    {
+     "w": "tomorrow.",
+     "start": 52.763,
+     "end": 53.063
+    }
+   ]
+  },
+  {
+   "shot": "louder",
+   "speaker": "narr",
+   "text": "But the barking got louder. And louder.",
+   "start": 53.601,
+   "end": 55.613,
+   "words": [
+    {
+     "w": "But",
+     "start": 53.601,
+     "end": 53.741
+    },
+    {
+     "w": "the",
+     "start": 53.741,
+     "end": 53.821
+    },
+    {
+     "w": "barking",
+     "start": 53.821,
+     "end": 54.021
+    },
+    {
+     "w": "got",
+     "start": 54.021,
+     "end": 54.201
+    },
+    {
+     "w": "louder.",
+     "start": 54.201,
+     "end": 54.521
+    },
+    {
+     "w": "And",
+     "start": 54.521,
+     "end": 55.021
+    },
+    {
+     "w": "louder.",
+     "start": 55.021,
+     "end": 55.281
+    }
+   ]
+  },
+  {
+   "shot": "cem",
+   "speaker": "narr",
+   "text": "So I followed him.",
+   "start": 55.813,
+   "end": 56.731,
+   "words": [
+    {
+     "w": "So",
+     "start": 55.813,
+     "end": 55.993
+    },
+    {
+     "w": "I",
+     "start": 55.993,
+     "end": 56.113
+    },
+    {
+     "w": "followed",
+     "start": 56.113,
+     "end": 56.313
+    },
+    {
+     "w": "him.",
+     "start": 56.313,
+     "end": 56.533
+    }
+   ]
+  },
+  {
+   "shot": "kneel",
+   "speaker": "narr",
+   "text": "We reached the grave, and before I could even read it, I broke down crying.",
+   "start": 56.931,
+   "end": 60.202,
+   "words": [
+    {
+     "w": "We",
+     "start": 56.931,
+     "end": 57.071
+    },
+    {
+     "w": "reached",
+     "start": 57.071,
+     "end": 57.291
+    },
+    {
+     "w": "the",
+     "start": 57.291,
+     "end": 57.491
+    },
+    {
+     "w": "grave,",
+     "start": 57.491,
+     "end": 57.691
+    },
+    {
+     "w": "and",
+     "start": 57.891,
+     "end": 57.951
+    },
+    {
+     "w": "before",
+     "start": 57.951,
+     "end": 58.171
+    },
+    {
+     "w": "I",
+     "start": 58.171,
+     "end": 58.291
+    },
+    {
+     "w": "could",
+     "start": 58.291,
+     "end": 58.371
+    },
+    {
+     "w": "even",
+     "start": 58.371,
+     "end": 58.511
+    },
+    {
+     "w": "read",
+     "start": 58.511,
+     "end": 58.671
+    },
+    {
+     "w": "it,",
+     "start": 58.671,
+     "end": 58.871
+    },
+    {
+     "w": "I",
+     "start": 58.991,
+     "end": 59.051
+    },
+    {
+     "w": "broke",
+     "start": 59.051,
+     "end": 59.311
+    },
+    {
+     "w": "down",
+     "start": 59.311,
+     "end": 59.611
+    },
+    {
+     "w": "crying.",
+     "start": 59.611,
+     "end": 59.911
+    }
+   ]
+  },
+  {
+   "shot": "name",
+   "speaker": "narr",
+   "text": "Then I looked up. And the name on the stone, was mine.",
+   "start": 60.402,
+   "end": 63.046,
+   "words": [
+    {
+     "w": "Then",
+     "start": 60.402,
+     "end": 60.542
+    },
+    {
+     "w": "I",
+     "start": 60.542,
+     "end": 60.662
+    },
+    {
+     "w": "looked",
+     "start": 60.662,
+     "end": 60.782
+    },
+    {
+     "w": "up.",
+     "start": 60.782,
+     "end": 61.022
+    },
+    {
+     "w": "And",
+     "start": 61.282,
+     "end": 61.342
+    },
+    {
+     "w": "the",
+     "start": 61.342,
+     "end": 61.462
+    },
+    {
+     "w": "name",
+     "start": 61.462,
+     "end": 61.622
+    },
+    {
+     "w": "on",
+     "start": 61.622,
+     "end": 61.822
+    },
+    {
+     "w": "the",
+     "start": 61.822,
+     "end": 61.922
+    },
+    {
+     "w": "stone,",
+     "start": 61.922,
+     "end": 62.222
+    },
+    {
+     "w": "was",
+     "start": 62.222,
+     "end": 62.502
+    },
+    {
+     "w": "mine.",
+     "start": 62.502,
+     "end": 62.782
+    }
+   ]
+  },
+  {
+   "shot": "back",
+   "speaker": "narr",
+   "text": "And it all came back.",
+   "start": 63.546,
+   "end": 64.547,
+   "words": [
+    {
+     "w": "And",
+     "start": 63.546,
+     "end": 63.846
+    },
+    {
+     "w": "it",
+     "start": 63.846,
+     "end": 63.926
+    },
+    {
+     "w": "all",
+     "start": 63.926,
+     "end": 64.026
+    },
+    {
+     "w": "came",
+     "start": 64.026,
+     "end": 64.146
+    },
+    {
+     "w": "back.",
+     "start": 64.146,
+     "end": 64.386
+    }
+   ]
+  },
+  {
+   "shot": "flash",
+   "speaker": "narr",
+   "text": "I wasn't too late. I pushed Leo out of the way. The truck hit me.",
+   "start": 64.747,
+   "end": 67.435,
+   "words": [
+    {
+     "w": "I",
+     "start": 64.747,
+     "end": 64.867
+    },
+    {
+     "w": "wasn't",
+     "start": 64.867,
+     "end": 65.107
+    },
+    {
+     "w": "too",
+     "start": 65.107,
+     "end": 65.187
+    },
+    {
+     "w": "late.",
+     "start": 65.187,
+     "end": 65.387
+    },
+    {
+     "w": "I",
+     "start": 65.687,
+     "end": 65.747
+    },
+    {
+     "w": "pushed",
+     "start": 65.747,
+     "end": 65.887
+    },
+    {
+     "w": "Leo",
+     "start": 65.887,
+     "end": 66.107
+    },
+    {
+     "w": "out",
+     "start": 66.107,
+     "end": 66.287
+    },
+    {
+     "w": "of",
+     "start": 66.287,
+     "end": 66.387
+    },
+    {
+     "w": "the",
+     "start": 66.387,
+     "end": 66.447
+    },
+    {
+     "w": "way.",
+     "start": 66.447,
+     "end": 66.607
+    },
+    {
+     "w": "The",
+     "start": 66.747,
+     "end": 66.827
+    },
+    {
+     "w": "truck",
+     "start": 66.827,
+     "end": 66.987
+    },
+    {
+     "w": "hit",
+     "start": 66.987,
+     "end": 67.147
+    },
+    {
+     "w": "me.",
+     "start": 67.147,
+     "end": 67.287
+    }
+   ]
+  },
+  {
+   "shot": "real",
+   "speaker": "narr",
+   "text": "Mum and Dad never died. That's why I couldn't remember it.",
+   "start": 67.635,
+   "end": 69.908,
+   "words": [
+    {
+     "w": "Mum",
+     "start": 67.635,
+     "end": 67.795
+    },
+    {
+     "w": "and",
+     "start": 67.795,
+     "end": 67.915
+    },
+    {
+     "w": "Dad",
+     "start": 67.915,
+     "end": 68.075
+    },
+    {
+     "w": "never",
+     "start": 68.075,
+     "end": 68.255
+    },
+    {
+     "w": "died.",
+     "start": 68.255,
+     "end": 68.515
+    },
+    {
+     "w": "That's",
+     "start": 68.775,
+     "end": 68.995
+    },
+    {
+     "w": "why",
+     "start": 68.995,
+     "end": 69.075
+    },
+    {
+     "w": "I",
+     "start": 69.075,
+     "end": 69.175
+    },
+    {
+     "w": "couldn't",
+     "start": 69.175,
+     "end": 69.335
+    },
+    {
+     "w": "remember",
+     "start": 69.335,
+     "end": 69.575
+    },
+    {
+     "w": "it.",
+     "start": 69.575,
+     "end": 69.815
+    }
+   ]
+  },
+  {
+   "shot": "gtown",
+   "speaker": "narr",
+   "text": "This isn't the town that brings people back. It's the town they bring people back from.",
+   "start": 70.108,
+   "end": 73.166,
+   "words": [
+    {
+     "w": "This",
+     "start": 70.108,
+     "end": 70.228
+    },
+    {
+     "w": "isn't",
+     "start": 70.228,
+     "end": 70.488
+    },
+    {
+     "w": "the",
+     "start": 70.488,
+     "end": 70.548
+    },
+    {
+     "w": "town",
+     "start": 70.548,
+     "end": 70.688
+    },
+    {
+     "w": "that",
+     "start": 70.688,
+     "end": 70.868
+    },
+    {
+     "w": "brings",
+     "start": 70.868,
+     "end": 70.988
+    },
+    {
+     "w": "people",
+     "start": 70.988,
+     "end": 71.228
+    },
+    {
+     "w": "back.",
+     "start": 71.228,
+     "end": 71.468
+    },
+    {
+     "w": "It's",
+     "start": 71.608,
+     "end": 71.728
+    },
+    {
+     "w": "the",
+     "start": 71.728,
+     "end": 71.828
+    },
+    {
+     "w": "town",
+     "start": 71.828,
+     "end": 72.008
+    },
+    {
+     "w": "they",
+     "start": 72.008,
+     "end": 72.148
+    },
+    {
+     "w": "bring",
+     "start": 72.148,
+     "end": 72.268
+    },
+    {
+     "w": "people",
+     "start": 72.268,
+     "end": 72.488
+    },
+    {
+     "w": "back",
+     "start": 72.488,
+     "end": 72.668
+    },
+    {
+     "w": "from.",
+     "start": 72.668,
+     "end": 72.908
+    }
+   ]
+  },
+  {
+   "shot": "ghost",
+   "speaker": "narr",
+   "text": "A ghost town.",
+   "start": 73.366,
+   "end": 74.554,
+   "words": [
+    {
+     "w": "A",
+     "start": 73.366,
+     "end": 73.626
+    },
+    {
+     "w": "ghost",
+     "start": 73.626,
+     "end": 74.006
+    },
+    {
+     "w": "town.",
+     "start": 74.006,
+     "end": 74.366
+    }
+   ]
+  },
+  {
+   "shot": "hope",
+   "speaker": "narr",
+   "text": "But that was okay. Tomorrow was my family's turn. Surely, they'd pick me.",
+   "start": 74.754,
+   "end": 78.246,
+   "words": [
+    {
+     "w": "But",
+     "start": 74.754,
+     "end": 74.934
+    },
+    {
+     "w": "that",
+     "start": 74.934,
+     "end": 75.094
+    },
+    {
+     "w": "was",
+     "start": 75.094,
+     "end": 75.214
+    },
+    {
+     "w": "okay.",
+     "start": 75.214,
+     "end": 75.594
+    },
+    {
+     "w": "Tomorrow",
+     "start": 76.074,
+     "end": 76.094
+    },
+    {
+     "w": "was",
+     "start": 76.094,
+     "end": 76.294
+    },
+    {
+     "w": "my",
+     "start": 76.294,
+     "end": 76.414
+    },
+    {
+     "w": "family's",
+     "start": 76.414,
+     "end": 76.794
+    },
+    {
+     "w": "turn.",
+     "start": 76.794,
+     "end": 76.994
+    },
+    {
+     "w": "Surely,",
+     "start": 77.314,
+     "end": 77.454
+    },
+    {
+     "w": "they'd",
+     "start": 77.454,
+     "end": 77.734
+    },
+    {
+     "w": "pick",
+     "start": 77.734,
+     "end": 77.834
+    },
+    {
+     "w": "me.",
+     "start": 77.834,
+     "end": 78.034
+    }
+   ]
+  },
+  {
+   "shot": "gate",
+   "speaker": "narr",
+   "text": "So the day came. I waited by the gate.",
+   "start": 78.446,
+   "end": 80.282,
+   "words": [
+    {
+     "w": "So",
+     "start": 78.446,
+     "end": 78.586
+    },
+    {
+     "w": "the",
+     "start": 78.586,
+     "end": 78.686
+    },
+    {
+     "w": "day",
+     "start": 78.686,
+     "end": 78.806
+    },
+    {
+     "w": "came.",
+     "start": 78.806,
+     "end": 79.106
+    },
+    {
+     "w": "I",
+     "start": 79.426,
+     "end": 79.506
+    },
+    {
+     "w": "waited",
+     "start": 79.506,
+     "end": 79.646
+    },
+    {
+     "w": "by",
+     "start": 79.646,
+     "end": 79.846
+    },
+    {
+     "w": "the",
+     "start": 79.846,
+     "end": 79.926
+    },
+    {
+     "w": "gate.",
+     "start": 79.926,
+     "end": 80.086
+    }
+   ]
+  },
+  {
+   "shot": "mnm",
+   "speaker": "narr",
+   "text": "Morning. Noon. Midnight.",
+   "start": 80.782,
+   "end": 82.09,
+   "words": [
+    {
+     "w": "Morning.",
+     "start": 80.782,
+     "end": 81.042
+    },
+    {
+     "w": "Noon.",
+     "start": 81.362,
+     "end": 81.462
+    },
+    {
+     "w": "Midnight.",
+     "start": 81.642,
+     "end": 81.802
+    }
+   ]
+  },
+  {
+   "shot": "still",
+   "speaker": "narr",
+   "text": "I was still here.",
+   "start": 82.29,
+   "end": 83.104,
+   "words": [
+    {
+     "w": "I",
+     "start": 82.29,
+     "end": 82.43
+    },
+    {
+     "w": "was",
+     "start": 82.43,
+     "end": 82.55
+    },
+    {
+     "w": "still",
+     "start": 82.55,
+     "end": 82.71
+    },
+    {
+     "w": "here.",
+     "start": 82.71,
+     "end": 82.95
+    }
+   ]
+  },
+  {
+   "shot": "gone",
+   "speaker": "narr",
+   "text": "And Icey, was gone.",
+   "start": 83.304,
+   "end": 84.464,
+   "words": [
+    {
+     "w": "And",
+     "start": 83.304,
+     "end": 83.464
+    },
+    {
+     "w": "Icey,",
+     "start": 83.464,
+     "end": 83.764
+    },
+    {
+     "w": "was",
+     "start": 83.764,
+     "end": 84.044
+    },
+    {
+     "w": "gone.",
+     "start": 84.044,
+     "end": 84.264
+    }
+   ]
+  },
+  {
+   "shot": "pick",
+   "speaker": "narr",
+   "text": "They didn't pick me.",
+   "start": 85.064,
+   "end": 86.006,
+   "words": [
+    {
+     "w": "They",
+     "start": 85.064,
+     "end": 85.224
+    },
+    {
+     "w": "didn't",
+     "start": 85.224,
+     "end": 85.444
+    },
+    {
+     "w": "pick",
+     "start": 85.444,
+     "end": 85.524
+    },
+    {
+     "w": "me.",
+     "start": 85.524,
+     "end": 85.744
+    }
+   ]
+  },
+  {
+   "shot": "dog",
+   "speaker": "narr",
+   "text": "They picked the dog.",
+   "start": 86.506,
+   "end": 87.546,
+   "words": [
+    {
+     "w": "They",
+     "start": 86.506,
+     "end": 86.706
+    },
+    {
+     "w": "picked",
+     "start": 86.706,
+     "end": 86.886
+    },
+    {
+     "w": "the",
+     "start": 86.886,
+     "end": 87.086
+    },
+    {
+     "w": "dog.",
+     "start": 87.086,
+     "end": 87.346
+    }
+   ]
+  }
+ ]
+}
