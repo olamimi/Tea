@@ -1,6 +1,6 @@
-"""Mix narration + orchestral score + bells + SFX.
+"""Mix narration + the user's track (Temporex - Numbers) + SFX for The Wish.
 
-Needs: build/voice.wav, build/timeline.json, build/music.wav + build/bells.wav (from score.py)
+Needs: build/voice.wav, build/timeline.json, build/numbers.wav, build/segs.json
 Output: build/mix_raw.wav (48 kHz stereo); master with ffmpeg loudnorm (see README).
 """
 import json
@@ -145,43 +145,83 @@ def impact():
     t = tt(1.8); return np.sin(2 * np.pi * 38 * t * (1 - 0.15 * t)) * np.exp(-t * 2.2) * 1.4 + lp(rng.standard_normal(len(t)), 250) * np.exp(-t * 10) * 0.8
 
 
+def bark(f0=620, d=0.17, big=1.0):  # a dog bark: falling voiced burst + breath noise
+    t = tt(d); f = f0 * (1.15 - 0.45 * t / d); ph = 2 * np.pi * np.cumsum(f) / SR
+    v = sum(np.sin(k * ph) / k for k in range(1, 7)); env = np.minimum(1, t / 0.008) * np.exp(-t * 14 / big)
+    return (bp(v, 300, 3500) * 0.9 + bp(rng.standard_normal(len(t)), 800, 4000) * 0.25) * env * big
+
+
+def skate_roll(d):  # urethane wheels on asphalt: rumble + seam clacks
+    t = tt(d); r = bp(rng.standard_normal(len(t)), 80, 900) * 1.4; x = r.copy(); step = int(SR * 0.42)
+    for i in range(int(0.2 * SR), len(t) - 900, step): x[i:i + 900] += bp(rng.standard_normal(900), 300, 2500) * np.exp(-np.arange(900) / 150) * 1.5
+    return x * np.minimum(1, t / 0.3) * np.minimum(1, (d - t) / 0.4) * 0.5
+
+
+def grind(d=0.9):
+    t = tt(d); return (bp(rng.standard_normal(len(t)), 1500, 6000) * (0.7 + 0.3 * np.sin(2 * np.pi * 23 * t)) + np.sin(2 * np.pi * 2900 * t) * 0.08) * np.minimum(1, t / 0.03) * np.minimum(1, (d - t) / 0.1) * 0.5
+
+
+def horn(d=0.8):
+    t = tt(d); x = np.sign(np.sin(2 * np.pi * 311 * t)) * 0.5 + np.sign(np.sin(2 * np.pi * 392 * t)) * 0.5
+    return lp(x, 2500) * np.minimum(1, t / 0.02) * np.minimum(1, (d - t) / 0.05) * 0.45
+
+
+def screech(d=1.1):
+    t = tt(d); return (bp(rng.standard_normal(len(t)), 1200, 4500) * 0.7 + np.sin(2 * np.pi * (2300 + 200 * np.sin(2 * np.pi * 7 * t)) * t) * 0.35) * np.minimum(1, t / 0.05) * np.minimum(1, (d - t) / 0.3) * 0.6
+
+
+def wind(d):
+    t = tt(d); am = 0.6 + 0.4 * np.sin(2 * np.pi * 0.17 * t + 1) * np.sin(2 * np.pi * 0.29 * t)
+    return bp(rng.standard_normal(len(t)), 150, 900) * am * np.minimum(1, t / 1.0) * np.minimum(1, (d - t) / 0.6) * 0.8
+
+
+def crickets(d):
+    t = tt(d); x = np.zeros(len(t))
+    for c in range(3):
+        f = 4300 + c * 450; per = 0.9 + c * 0.23; o = c * 0.31
+        g = ((t + o) % per < 0.18) * (np.sin(2 * np.pi * 32 * t) > 0)
+        x += np.sin(2 * np.pi * f * t) * g * 0.08
+    return lp(x, 7000) * np.minimum(1, t / 0.5) * np.minimum(1, (d - t) / 0.5)
+
+
 W = {}
 for ln in tl["lines"]:
     for x in ln["words"]:
         W.setdefault((ln["shot"], x["w"].lower()), []).append(x["start"])
 w = lambda shot, word, n=1: W[(shot, word.lower())][n - 1]
+st = lambda name: shot[name]["start"]; en = lambda name: shot[name]["end"]
 
 segs = json.loads((B / "segs.json").read_text())
 for i, sg in enumerate(segs[1:]):
     if sg[4] in ("zoom", "whip"): add(whoosh(0.35), sg[2] - 0.17, 0.45, pan=0.5 * (-1) ** i)
     if sg[4] == "flash": add(whoosh(0.5), sg[2] - 0.2, 0.35)
-add(tink(), w("wager", "burger"), 0.8)                                          # chalk ding on the title
-for wd_ in ("nothing.", "rewards.", "punishment.", "effort."): add(scratch(), w("wager", wd_) - 0.3, 0.6)
-add(scratch(0.6), w("wager", "if") - 0.1, 0.5); add(scratch(0.5), w("wager", "heaven,") - 0.2, 0.5); add(scratch(0.3), w("wager", "math") - 0.1, 0.6)
-tf, tz = w("doubt", "flip"), w("doubt", "prize.")
-for x in [tf, tf + 0.35, tf + 0.7, tf + 1.05, tf + 1.4, tz - 0.3, tz + 0.05]: add(click(), x, 0.9, 0.3)
-add(splash(), w("world", "baptized") + 0.15, 0.6)
-add(crackle(2.4), w("family", "literally.") - 0.05, 0.9)                       # "they're gonna roast you"
-hs = shot["death"]["start"]; td = w("death", "died.")
-th = w("death", "then,") - 0.2; k = th
-while k < td - 0.1: add(beep(), k, 0.6, 0.4); k += 1 / 1.2
-add(beep(1046, 1.4), td + 0.05, 0.6, 0.4)                                      # flatline
-add(crackle(shot["god"]["start"] - w("white", "being") + 0.5), w("white", "being") - 0.2, 0.45)
-add(impact(), w("god", "left"), 0.9)
-add(impact(), w("burn", "burned."), 1.0); add(crackle(0.8), w("burn", "burned."), 0.8)
-add(crackle(shot["hell"]["dur"] + 1), shot["hell"]["start"], 0.55)
-voice = load("voice.wav"); bells = load("bells.wav")
-# MUSIC (brief): "Numbers" by Temporex (instrumental, perfect intro loop), supplied by the user. Starts right after the
-# "huss", runs continuously, ducked under speech, dips at the death and under God, cuts out just before "We all burned."
+# skating
+add(skate_roll(en("road") - st("skate") + 0.2), st("skate"), 0.8, -0.2)
+tk = w("tricks", "kickflips."); add(click(), tk, 1.0); add(whoosh(0.3), tk, 0.4); add(click(), tk + 0.6, 0.9)
+add(grind(0.9), w("tricks", "grinds.") + 0.05, 0.9, -0.3)
+tm = w("tricks", "mum"); add(whoosh(0.6), tm, 0.5); add(thud(160), w("tricks", "doing.") + 0.45, 0.8)
+# the truck
+ts = w("road", "swerved."); add(horn(0.9), ts - 0.55, 1.0, 0.2); add(screech(1.0), ts - 0.1, 0.9, 0.3); add(rumble(1.6, 90), w("road", "truck") - 0.3, 0.8)
+add(impact(), st("late") - 0.03, 1.0)                                                # the crash, under the white flash
+# the dog
+for x in ["would", "not.", "stop.", "barking."]: add(bark(600, 0.18, 1.0), w("bark", x), 1.0, 0.35)
+for x in [0.15, 0.7, 1.25, 1.8]: add(bark(640, 0.15, 0.8), st("drag") + x, 0.8, 0.3)
+tb, l1, l2 = w("louder", "barking"), w("louder", "louder."), w("louder", "louder.", 2)
+for i, x in enumerate([tb, tb + 0.35, l1, l1 + 0.3, l2, l2 + 0.25, l2 + 0.5]): add(bark(580, 0.2, 1.0 + i * 0.12), x, 0.9 + i * 0.12, 0.2)
+for x in [0.1, 0.45, 0.85, 1.3, 1.75, 2.3]: add(bark(700, 0.13, 0.8), st("dog") + x, 0.85, 0.2)     # happy barks
+# night ambience, ghost wind, reveal hits
+add(crickets(en("louder") - st("night")), st("night"), 0.9); add(crickets(en("back") - st("cem")), st("cem"), 0.9)
+add(wind(en("pick") - st("gtown") + 0.5), st("gtown"), 0.9)
+add(impact(), w("name", "mine."), 1.1); add(impact(), w("flash", "me."), 1.1); add(horn(0.5), w("flash", "truck") - 0.2, 0.7)
+voice = load("voice.wav")
+# MUSIC (brief): "Numbers" by Temporex, supplied by the user. Starts right after the "huss", runs under the narration
+# ducked, dips at "too late", at the grave reveal and at "A ghost town", cuts out just before "They didn't pick me".
 _trk, _sr = sf.read(B / "numbers.wav", always_2d=True)
-m0, m1 = shot["proof"]["start"] - 0.05, shot["burn"]["start"] - 0.06
+m0, m1 = st("turn") - 0.05, st("pick") - 0.06
 music = np.zeros((N, 2)); i0 = int(m0 * SR); n = min(int((m1 - m0) * SR), len(_trk), N - i0); music[i0:i0 + n] = _trk[:n]
-f_in, f_out = int(0.03 * SR), int(0.05 * SR); music[i0:i0 + f_in] *= np.linspace(0, 1, f_in)[:, None]; music[i0 + n - f_out:i0 + n] *= np.linspace(1, 0, f_out)[:, None]
-for x in (music, bells):
-    x /= np.abs(x).max() + 1e-9
-bells *= 0.6
+f_in, f_out = int(0.03 * SR), int(0.12 * SR); music[i0:i0 + f_in] *= np.linspace(0, 1, f_in)[:, None]; music[i0 + n - f_out:i0 + n] *= np.linspace(1, 0, f_out)[:, None]
+music /= np.abs(music).max() + 1e-9
 
-# sidechain duck: music dips ~7 dB while the narrator speaks
 v = voice.mean(1)
 env = np.sqrt(np.maximum(lp(v ** 2, 6), 0)); env /= env.max() + 1e-9
 duck = lp(1 - 0.55 * np.clip(env * 5, 0, 1), 2.5)[:, None]
@@ -189,11 +229,12 @@ mute = np.ones(N)
 def dip(t0, t1, level, fade=0.4):
     i0, i1 = int(t0 * SR), int(t1 * SR); f = int(fade * SR); mute[i0:i1] = np.minimum(mute[i0:i1], level)
     mute[max(0, i0 - f):i0] = np.minimum(mute[max(0, i0 - f):i0], np.linspace(1, level, i0 - max(0, i0 - f))); mute[i1:i1 + f] = np.minimum(mute[i1:i1 + f], np.linspace(level, 1, len(mute[i1:i1 + f])))
-dip(w("death", "died."), shot["white"]["start"] + 0.3, 0.0, 0.25)
-dip(shot["god"]["start"], shot["infinite"]["start"], 0.45)
+dip(st("late"), en("late"), 0.25, 0.2)
+dip(w("name", "mine.") - 0.05, en("back"), 0.25, 0.25)
+dip(st("ghost"), en("ghost"), 0.35, 0.3)
 mute = mute[:, None]
-mix = voice * 1.0 + music * 0.55 * duck * mute + bells * 0.4 + sfx * 0.4 / 0.35 * 0.35
+mix = voice * 1.0 + music * 0.55 * duck * mute + sfx * 0.4
 mix /= np.abs(mix).max() / 0.89
-fade = int(1.2 * SR); mix[-fade:] *= np.linspace(1, 0, fade)[:, None]
+fade = int(1.0 * SR); mix[-fade:] *= np.linspace(1, 0, fade)[:, None]
 sf.write(B / "mix_raw.wav", mix.astype(np.float32), SR)
 print("wrote mix_raw.wav", round(DUR, 2), "s")
