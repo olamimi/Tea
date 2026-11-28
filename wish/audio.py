@@ -265,7 +265,7 @@ def dip(t0, t1, level, fade=0.4):
 dip(st("late"), en("late"), 0.25, 0.2)
 dip(st("ghost"), en("ghost"), 0.35, 0.3)
 mute = mute[:, None]
-mix = voice * 1.0 + music * 0.55 * duck * mute + sfx * 0.4
+mix = voice * 1.0 + music * 0.42 * duck * mute + sfx * 0.4
 mix /= np.abs(mix).max() / 0.89
 fade = int(1.0 * SR); mix[-fade:] *= np.linspace(1, 0, fade)[:, None]
 sf.write(B / "mix_raw.wav", mix.astype(np.float32), SR)
