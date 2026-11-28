@@ -1,6 +1,6 @@
 """Mix narration + the user's track (Temporex - Numbers) + SFX for The Wish.
 
-Needs: build/voice.wav, build/timeline.json, build/numbers.wav, build/segs.json
+Needs: build/voice.wav, build/timeline.json, build/numbers.wav, build/hero.wav, build/segs.json
 Output: build/mix_raw.wav (48 kHz stereo); master with ffmpeg loudnorm (see README).
 """
 import json
@@ -243,10 +243,17 @@ voice = load("voice.wav")
 # MUSIC (brief): "Numbers" by Temporex, supplied by the user. Starts right after the "huss", runs under the narration
 # ducked, dips at "too late", at the grave reveal and at "A ghost town", cuts out just before "They didn't pick me".
 _trk, _sr = sf.read(B / "numbers.wav", always_2d=True)
-m0, m1 = st("turn") - 0.05, st("pick") - 0.06
-music = np.zeros((N, 2)); i0 = int(m0 * SR); n = min(int((m1 - m0) * SR), len(_trk), N - i0); music[i0:i0 + n] = _trk[:n]
-f_in, f_out = int(0.03 * SR), int(0.12 * SR); music[i0:i0 + f_in] *= np.linspace(0, 1, f_in)[:, None]; music[i0 + n - f_out:i0 + n] *= np.linspace(1, 0, f_out)[:, None]
-music /= np.abs(music).max() + 1e-9
+def place(trk, m0, m1, fin, fout):
+    out = np.zeros((N, 2)); i0 = int(m0 * SR); n = min(int((m1 - m0) * SR), len(trk), N - i0); out[i0:i0 + n] = trk[:n]
+    a, b = int(fin * SR), int(fout * SR); out[i0:i0 + a] *= np.linspace(0, 1, a)[:, None]; out[i0 + n - b:i0 + n] *= np.linspace(1, 0, b)[:, None]
+    return out / (np.abs(out).max() + 1e-9)
+# "Numbers" plays until Max reads his own name on the stone ("...was mine."), then fades out under the impact.
+music = place(_trk, st("turn") - 0.05, w("name", "mine.") + 0.35, 0.03, 0.6)
+# Then the user's second track, "Hero" (Prod. by Primary), resumes the score after the reveal. Its beat drop (11.05 s
+# into the track) is lined up with "But that was okay" (start of the hope shot); it cuts before "They didn't pick me".
+_hero, _hsr = sf.read(B / "hero.wav", always_2d=True); assert _hsr == SR
+HERO_DROP = 11.05
+music += place(_hero, st("hope") - HERO_DROP, st("pick") - 0.06, 0.4, 0.12)
 
 v = voice.mean(1)
 env = np.sqrt(np.maximum(lp(v ** 2, 6), 0)); env /= env.max() + 1e-9
@@ -256,7 +263,6 @@ def dip(t0, t1, level, fade=0.4):
     i0, i1 = int(t0 * SR), int(t1 * SR); f = int(fade * SR); mute[i0:i1] = np.minimum(mute[i0:i1], level)
     mute[max(0, i0 - f):i0] = np.minimum(mute[max(0, i0 - f):i0], np.linspace(1, level, i0 - max(0, i0 - f))); mute[i1:i1 + f] = np.minimum(mute[i1:i1 + f], np.linspace(level, 1, len(mute[i1:i1 + f])))
 dip(st("late"), en("late"), 0.25, 0.2)
-dip(w("name", "mine.") - 0.05, en("back"), 0.25, 0.25)
 dip(st("ghost"), en("ghost"), 0.35, 0.3)
 mute = mute[:, None]
 mix = voice * 1.0 + music * 0.55 * duck * mute + sfx * 0.4
